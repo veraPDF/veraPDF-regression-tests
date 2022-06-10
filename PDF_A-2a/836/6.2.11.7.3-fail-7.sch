@@ -26,9 +26,14 @@
 
     </sch:pattern>
 
-    <sch:pattern>name = "Checking for the absence of logs"
-        <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+    <sch:pattern>name = "Checking the logs"
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(/, "Can&apos;t parse CMap Adobe-Identity-UCS2, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Can't parse CMap Adobe-Identity-UCS2, using default' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
