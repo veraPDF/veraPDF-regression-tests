@@ -31,9 +31,9 @@
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(/, "Incorrect xref section") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "resulticbe852e3-c9ed-4668-998b-203d2a354a06.pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(/, ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Incorrect xref section' with 3 occurrences, or 
-            'WARNING: resulticbe852e3-c9ed-4668-998b-203d2a354a06.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            'WARNING: .pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
