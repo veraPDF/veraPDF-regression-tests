@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '4.1.2' and @testNumber = '20' and @failedChecks = '3') or 
+            <sch:assert test="(@clause = '4.1.2' and @testNumber = '20' and @failedChecks = '4') or 
             (@clause = '4.1.2' and @testNumber = '10' and @failedChecks = '7') or 
             (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '65') or 
             (@clause = '1.3.1' and @testNumber = '3' and @failedChecks = '2') or 
