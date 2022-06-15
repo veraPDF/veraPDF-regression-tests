@@ -30,9 +30,9 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "23.pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
+            <sch:assert test='(contains(/, ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
             (contains(/, "Incorrect end of line in cross-reference table.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: 23.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
+            'WARNING: .pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
             'WARNING: Incorrect end of line in cross-reference table.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
