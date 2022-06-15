@@ -40,7 +40,7 @@
             <sch:assert test="(@clause != '4.1.2' or
             (@testNumber = '22' and @failedChecks = '1') or
             (@testNumber = '15' and @failedChecks = '5') or
-            (@testNumber = '20' and @failedChecks = '3') or
+            (@testNumber = '20' and @failedChecks = '4') or
             (@testNumber = '5' and @failedChecks = '8') or
             (@testNumber = '10' and @failedChecks = '7') or
             (@testNumber = '1' and @failedChecks = '1') or
