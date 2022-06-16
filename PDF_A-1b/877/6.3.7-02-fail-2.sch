@@ -28,12 +28,12 @@
 
     <sch:pattern>name = "Checking the logs"
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '6'">Failed check, Expected: 6</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of Differences key is not an array. Ignoring Difference") and @occurrences = "6" and @level = "SEVERE")'>Invalid logs, Expected: 
-            'SEVERE: Value of Differences key is not an array. Ignoring Difference' with 6 occurrences</sch:assert>
+            <sch:assert test='(contains(/, "Value of Differences key is not an array. Ignoring Difference") and @occurrences = "2" and @level = "SEVERE")'>Invalid logs, Expected: 
+            'SEVERE: Value of Differences key is not an array. Ignoring Difference' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
