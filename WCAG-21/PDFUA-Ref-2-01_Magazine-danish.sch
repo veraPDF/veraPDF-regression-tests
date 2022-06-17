@@ -25,26 +25,26 @@
             (@clause = '1.3.1' and @testNumber = '2' and @failedChecks = '3') or
             (@clause = '1.4.4' and @testNumber = '1' and @failedChecks = '23') or
             (@clause = '4.1.2')">Failed rules, Expected:
-            4.1.2-20, 3 checks, or 
-            4.1.2-10, 7 checks, or 
-            1.4.3-1, 65 checks, or 
+            1.4.3-1, 65 checks, or
             1.3.1-3, 2 checks, or 
             1.3.1-4, 323 checks, or 
-            4.1.2-5, 8 checks, or 
-            4.1.2-15, 5 checks, or 
-            4.1.2-21, 2 checks, or 
-            1.3.1-2, 3 checks, or 
-            4.1.2-22, 1 check, or 
-            1.4.4-1, 23 checks, or 
-            4.1.2-1, 1 check</sch:assert>
+            1.3.1-2, 3 checks, or
+            1.4.4-1, 23 checks</sch:assert>
             <sch:assert test="(@clause != '4.1.2' or
             (@testNumber = '22' and @failedChecks = '1') or
-            (@testNumber = '15' and @failedChecks = '5') or
+            (@testNumber = '15' and @failedChecks = '2') or
             (@testNumber = '20' and @failedChecks = '4') or
-            (@testNumber = '5' and @failedChecks = '8') or
+            (@testNumber = '5' and @failedChecks = '11') or
             (@testNumber = '10' and @failedChecks = '7') or
             (@testNumber = '1' and @failedChecks = '1') or
-            (@testNumber = '21' and @failedChecks = '2'))">Failed rules</sch:assert>
+            (@testNumber = '21' and @failedChecks = '2'))">Failed rules, Expected:
+            4.1.2-22, 1 check, or
+            4.1.2-15, 2 checks, or
+            4.1.2-20, 4 checks, or
+            4.1.2-5, 11 checks, or
+            4.1.2-10, 7 checks, or
+            4.1.2-1, 1 check, or
+            4.1.2-21, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
