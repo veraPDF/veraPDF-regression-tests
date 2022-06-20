@@ -23,7 +23,7 @@
             (@clause = '4.1.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '4.1.2' and @testNumber = '21' and @failedChecks = '26') or 
             (@clause = '4.1.2' and @testNumber = '22' and @failedChecks = '2') or 
-            (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '27') or 
+            (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '25') or
             (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '80') or 
             (@clause = '4.1.2' and @testNumber = '20' and @failedChecks = '3')">Failed rules, Expected: 
             4.1.2-9, 15 checks, or 
