@@ -28,12 +28,12 @@
 
     <sch:pattern>name = "Checking the logs"
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of ca key is not a number. Ignoring ca") and @occurrences = "2" and @level = "SEVERE")'>Invalid logs, Expected: 
-            'SEVERE: Value of ca key is not a number. Ignoring ca' with 2 occurrences</sch:assert>
+            <sch:assert test='(contains(/, "Value of ca key is not a number. Ignoring ca") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 
+            'SEVERE: Value of ca key is not a number. Ignoring ca' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
