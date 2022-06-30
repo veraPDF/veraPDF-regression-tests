@@ -27,7 +27,7 @@
             (@clause = '4.1.2')">Failed rules, Expected:
             1.4.3-1, 65 checks, or
             1.3.1-3, 2 checks, or 
-            1.3.1-4, 323 checks, or 
+            1.3.1-4, 58 checks, or
             1.3.1-2, 3 checks, or
             1.4.4-1, 23 checks</sch:assert>
             <sch:assert test="(@clause != '4.1.2' or
@@ -40,7 +40,7 @@
             (@testNumber = '21' and @failedChecks = '2'))">Failed rules, Expected:
             4.1.2-22, 1 check, or
             4.1.2-15, 2 checks, or
-            4.1.2-20, 4 checks, or
+            4.1.2-20, 3 checks, or
             4.1.2-5, 11 checks, or
             4.1.2-10, 7 checks, or
             4.1.2-1, 1 check, or

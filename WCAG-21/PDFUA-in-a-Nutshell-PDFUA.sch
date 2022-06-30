@@ -34,8 +34,8 @@
             7.2-11, 1 check, or 
             7.5-1, 8 checks, or 
             1.3.1-2, 1 check, or 
-            1.3.1-4, 92 checks, or 
-            1.4.3-1, 28 checks, or
+            1.3.1-4, 86 checks, or
+            1.4.3-1, 27 checks, or
             1.4.2-x, y checks</sch:assert>
         </sch:rule>
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
