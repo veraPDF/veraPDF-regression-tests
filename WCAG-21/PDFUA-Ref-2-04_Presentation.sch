@@ -25,7 +25,7 @@
             (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '80')">Failed rules, Expected: 
             4.1.2-10, 4 checks, or 
             4.1.2-15, 1 check, or 
-            1.3.1-4, 7 checks, or 
+            1.3.1-4, 4 checks, or 
             1.4.3-1, 80 checks</sch:assert>
         </sch:rule>
 
