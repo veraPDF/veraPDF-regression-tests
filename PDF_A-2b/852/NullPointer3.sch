@@ -16,13 +16,11 @@
 
     <sch:pattern>name = "Checking the validationReport: rules"
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '2')">Failed check, Expected: 2</sch:assert>	
+            <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.2' and @testNumber = '2' and @failedChecks = '2') or 
-            (@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '3')">Failed rules, Expected: 
-            6.2.2-2, 2 checks, or 
+            <sch:assert test="(@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '3')">Failed rules, Expected: 
             6.2.4.3-4, 3 checks</sch:assert>
         </sch:rule>
 
