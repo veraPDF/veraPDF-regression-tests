@@ -26,12 +26,16 @@
 
     <sch:pattern>name = "Checking the logs"
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Exception caught when validating item' with 1 occurrences</sch:assert>
+            <sch:assert test='
+			(contains(/, "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING") or
+			(contains(/, "Undefined color space /g in a content stream") and @occurrences = "1" and @level = "SEVERE")
+			'>Invalid logs, Expected: 
+            'WARNING: Exception caught when validating item' with 1 occurrences or
+			'SEVERE: Undefined color space /g in a content stream' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
