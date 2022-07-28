@@ -16,21 +16,22 @@
 
     <sch:pattern>name = "Checking the validationReport: rules"
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '2')">Failed check, Expected: 2</sch:assert>	
+            <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '2') or 
-            (@clause = '6.2.2' and @testNumber = '2' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2.4.3-4, 2 checks, or 
-            6.2.2-2, 2 checks</sch:assert>
+            <sch:assert test="(@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '2')">Failed rules, Expected: 
+            6.2.4.3-4, 2 checks</sch:assert>
         </sch:rule>
-
     </sch:pattern>
 
-    <sch:pattern>name = "Checking for the absence of logs"
-        <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+    <sch:pattern>name = "Checking the logs"
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(/, "Undefined color space /DeviceCMYK in a content stream") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 'SEVERE: Undefined color space /DeviceCMYK in a content stream' with 1 occurrence</sch:assert>
         </sch:rule>
     </sch:pattern>
 
