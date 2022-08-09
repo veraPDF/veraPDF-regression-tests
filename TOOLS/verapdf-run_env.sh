@@ -3,7 +3,7 @@
 # Performing installation of the veraPDF by running the script:
 
 #Downloding the script:
-curl -LO https://github.com/veraPDF/veraPDF-regression-tests/trunk/TOOLS/verapdf-env.sh
+svn export https://github.com/veraPDF/veraPDF-regression-tests/trunk/TOOLS/verapdf-env.sh
 chmod 700 verapdf-env.sh
 
 VERAPDF_ENV="./verapdf-env.sh"
