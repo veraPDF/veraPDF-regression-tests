@@ -9,7 +9,7 @@
 # When the script finished, the variable $varaPATH will be defined and point on the latest installation.   
 #
 # Use this variable to run scripts, example: 
-#test@ubuntu:~/CLI/399$ ./a_internal_oprions_check.sh "$veraPATH"/verapdf
+# test@ubuntu:~/CLI/399$ ./a_internal_oprions_check.sh "$veraPATH"/verapdf
 
 
 #Definition of the TimeStamp
@@ -50,7 +50,7 @@ export veraPATH="/tmp/verapdf_${VERSION}_${timestamp}"
 #
 # cp from to
 
-curl -LO  https://github.com/veraPDF/veraPDF-regression-tests/trunk/TOOLS/auto-install.xml 
+svn export https://github.com/veraPDF/veraPDF-regression-tests/trunk/TOOLS/auto-install.xml 
 #cp /home/test/auto-install.xml ./
 
 
