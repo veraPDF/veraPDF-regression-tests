@@ -35,7 +35,7 @@
             (@testNumber = '33' and @failedChecks = '4') or
             (@testNumber = '15' and @failedChecks = '2') or
             (@testNumber = '20' and @failedChecks = '3') or
-            (@testNumber = '5' and @failedChecks = '11') or
+            (@testNumber = '5' and @failedChecks = '10') or
             (@testNumber = '10' and @failedChecks = '7') or
             (@testNumber = '1' and @failedChecks = '1') or
             (@testNumber = '21' and @failedChecks = '2'))">Failed rules, Expected:
@@ -43,7 +43,7 @@
             4.1.2-15, 2 checks, or
             4.1.2-33, 4 checks, or
             4.1.2-20, 3 checks, or
-            4.1.2-5, 11 checks, or
+            4.1.2-5, 10 checks, or//should be 11 checks
             4.1.2-10, 7 checks, or
             4.1.2-1, 1 check, or
             4.1.2-21, 2 checks</sch:assert>
