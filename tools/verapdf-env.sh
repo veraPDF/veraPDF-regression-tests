@@ -13,11 +13,6 @@ unzip verapdf-installer.zip
 veradir=$(ls | grep verapdf-greenfield)
 cd "$veradir"
 
-#Checking version
-IFS='-' 
-read -r -a array <<< "$veradir"
-VERSION="${array[2]}"
-
 #Definition of the Env variable
 export veraPATH="${timestamp}/../verapdf"
 echo "veraPATH: $veraPATH" 
@@ -38,6 +33,13 @@ echo "veraizpack: $veraizpack"
 #Performing installation
 echo "Performing installation veraPDF ... "
 java -jar "$veraizpack" auto-install.xml
+
+#Checking version
+currentIFS=$IFS 
+IFS='-'
+read -r -a array <<< "$veradir"
+VERSION="${array[2]}"
+IFS=$currentIFS
 
 echo "veraPDF version: $VERSION"
 echo "veraPATH: $veraPATH" 
