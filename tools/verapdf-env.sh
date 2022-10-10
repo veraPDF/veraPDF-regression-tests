@@ -27,7 +27,7 @@ echo "veraPATH: $veraPATH"
 # OR
 #cp /home/test/auto-install.xml ./
 
-curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/integration/TOOLS/auto-install.xml
+curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/integration/tools/auto-install.xml
 
 #Definition of the 'PATH' to install veraPDF using the auto-install.xml file
 sed -i '5 c\        <installpath>'$(echo $veraPATH)'</installpath>' ./auto-install.xml
