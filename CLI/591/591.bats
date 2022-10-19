@@ -5,11 +5,25 @@ setup() {
 }
 
 # https://github.com/veraPDF/veraPDF-library/issues/591
-@test "#591: Specifying --passed or --success options in combination with verbosity -v (--verbose)" {
+@test "#591: Specifying --passed or --success options in combination with verbosity -v (--verbose), --passed" {
 
-    run echo $(verapdf/verapdf $BATS_TEST_DIRNAME/68_1_fail.pdf -v --passed --format text 2>&1 | grep -w -c FAIL)
-    assert_equal $output '3'
+    out=$(echo $(verapdf/verapdf $BATS_TEST_DIRNAME/68_1_fail.pdf -v --passed --format text))
 
-    run echo $(verapdf/verapdf $BATS_TEST_DIRNAME/68_1_fail.pdf -v --passed --format text 2>&1 | grep -w -c PASS)
-    assert_equal $output '68'
+    run echo $(echo $out | grep -w -o FAIL | wc -w)
+    assert_output --partial '3'
+
+    run echo $(echo $out | grep -w -o PASS | wc -w)
+    assert_output --partial '68'
+}
+
+# https://github.com/veraPDF/veraPDF-library/issues/591
+@test "#591: Specifying --passed or --success options in combination with verbosity -v (--verbose), --success" {
+
+    out=$(echo $(verapdf/verapdf $BATS_TEST_DIRNAME/68_1_fail.pdf -v --success --format text))
+
+    run echo $(echo $out | grep -w -o FAIL | wc -w)
+    assert_output --partial '3'
+
+    run echo $(echo $out | grep -w -o PASS | wc -w)
+    assert_output --partial '68'
 }

@@ -6,7 +6,10 @@ setup() {
 
 # https://github.com/veraPDF/veraPDF-library/issues/802
 @test "#802: Non-existing file on verapdf command line" {
-    run echo $(verapdf/verapdf no_68_1_fail.pdf -v --passed --format text 2>&1)
+    run verapdf/verapdf no_68_1_fail.pdf --format text 2>&1
+
+    [ "$status" -eq 4 ]
+
     assert_output --partial "pdf doesn't exist."
     assert_output --partial 'SEVERE: There are no files to process.'
 }

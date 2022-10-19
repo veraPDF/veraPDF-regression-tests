@@ -6,15 +6,16 @@ setup() {
 
 # https://github.com/veraPDF/veraPDF-library/issues/399
 @test "#399, CLI: --profile argument, external options check" {
-    run echo $(verapdf/verapdf -p verapdf/profiles/veraPDF-validation-profiles-integration/PDF_A/PDFA-4.xml --policyfile $BATS_TEST_DIRNAME/a.sch $BATS_TEST_DIRNAME/a.pdf)
-    assert_output --partial 'failedChecks="0"'
+    run verapdf/verapdf -p verapdf/profiles/veraPDF-validation-profiles-integration/PDF_A/PDFA-4.xml $BATS_TEST_DIRNAME/a.pdf
+
+    [ "$status" -eq 0 ]
+    assert_output --partial '<batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">'
 }
 
 # https://github.com/veraPDF/veraPDF-library/issues/399
 @test "#399, CLI: --profile argument, internal options check" {
-    run echo $(verapdf/verapdf -f 4 --policyfile $BATS_TEST_DIRNAME/a.sch $BATS_TEST_DIRNAME/a.pdf)
-    assert_output --partial 'failedChecks="0"'
-    assert_output --partial 'outOfMemory="0"'
-    assert_output --partial 'encrypted="0"'
-    assert_output --partial 'veraExceptions="0"'
+    run verapdf/verapdf -f 4 $BATS_TEST_DIRNAME/a.pdf
+
+    [ "$status" -eq 0 ]
+    assert_output --partial '<batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">'
 }
