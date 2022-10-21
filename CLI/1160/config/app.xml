@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+qwerty <appConfig type="EXTRACT" format="XML" isVerbose="false">
+    <fixerFolder></fixerFolder>
+    <wikiPath>https://github.com/veraPDF/veraPDF-validation-profiles/my_wiki/</wikiPath>
+    <policyFile></policyFile>
+</appConfig>
