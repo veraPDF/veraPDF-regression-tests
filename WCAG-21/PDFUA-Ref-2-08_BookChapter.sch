@@ -15,7 +15,7 @@
 
     <sch:pattern>name = "Checking the validationReport: rules"
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '9')">Failed check, Expected: 8</sch:assert>
+            <sch:assert test="(@failedRules = '8')">Failed check, Expected: 8</sch:assert>
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
