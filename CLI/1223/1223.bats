@@ -15,7 +15,6 @@ setup() {
 @test "#1223: exit-status.sh OOM test fails (verapdf-apps)" {
 
     out=$($BATS_TEST_TMPDIR/exit-status.sh $BATS_TEST_TMPDIR)
-    
     run echo $out
 
     assert_output --partial 'RESULTS ======='
@@ -25,7 +24,7 @@ setup() {
     assert_output --partial '- batch fail exit code: 1 (expected 1)'
     assert_output --partial '- batch mixed exit code: 1 (expected 1)'
     assert_output --partial '- bad params exit code: 2 (expected 2)'
-    assert_output --partial '- out of memory exit code: 1 (expected 3 or 1)'
+    assert_output --regexp '( - out of memory exit code:)\s*(1|3)\s*\(expected 3 or 1\)'
     assert_output --partial '- parse error exit code: 7 (expected 7)'
     assert_output --partial 'PASSED'
 }

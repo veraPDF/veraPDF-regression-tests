@@ -13,7 +13,7 @@ setup() {
     assert_output --partial '3'
 
     run echo $(echo $out | grep -w -o PASS | wc -w)
-    assert_output --partial '68'
+    assert_output --partial '67'
 }
 
 # https://github.com/veraPDF/veraPDF-library/issues/591
@@ -25,5 +25,5 @@ setup() {
     assert_output --partial '3'
 
     run echo $(echo $out | grep -w -o PASS | wc -w)
-    assert_output --partial '68'
+    assert_output --partial '67'
 }
