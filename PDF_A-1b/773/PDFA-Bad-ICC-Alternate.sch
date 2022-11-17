@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Alternate color space does not match the number of components in the ICC profile") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Alternate color space does not match the number of components in the ICC profile") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Alternate color space does not match the number of components in the ICC profile' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

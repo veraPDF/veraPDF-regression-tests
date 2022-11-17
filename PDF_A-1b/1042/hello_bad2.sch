@@ -40,7 +40,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

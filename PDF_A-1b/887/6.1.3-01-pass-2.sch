@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of ID key is not a string. Ignoring ID") and @occurrences = "4" and @level = "SEVERE")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Value of ID key is not a string. Ignoring ID") and @occurrences = "4" and @level = "SEVERE")'>Invalid logs, Expected:
             'SEVERE: Value of ID key is not a string. Ignoring ID' with 4 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Invalid glyph code: -58") and @occurrences = "102" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Invalid glyph code: -58") and @occurrences = "102" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Invalid glyph code: -58' with 102 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
