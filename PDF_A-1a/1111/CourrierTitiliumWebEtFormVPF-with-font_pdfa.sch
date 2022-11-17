@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Embedded TrueType font program is incorrect: numberOfGlyphs field of &apos;post&apos; table does not match numGlyphs field of the &apos;maxp&apos; table") and @occurrences = "3" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Embedded TrueType font program is incorrect: numberOfGlyphs field of &apos;post&apos; table does not match numGlyphs field of the &apos;maxp&apos; table") and @occurrences = "3" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Embedded TrueType font program is incorrect: numberOfGlyphs field of 'post' table does not match numGlyphs field of the 'maxp' table' with 3 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

@@ -19,9 +19,9 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Special graphics state operator (q) inside Text object") and @occurrences = "98" and @level = "WARNING") or 
-            (contains(/, "Special graphics state operator (Q) inside Text object") and @occurrences = "98" and @level = "WARNING") or 
-            (contains(/, "Special graphics state operator (cm) inside Text object") and @occurrences = "98" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Special graphics state operator (q) inside Text object") and @occurrences = "98" and @level = "WARNING") or
+            (contains(., "Special graphics state operator (Q) inside Text object") and @occurrences = "98" and @level = "WARNING") or
+            (contains(., "Special graphics state operator (cm) inside Text object") and @occurrences = "98" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Special graphics state operator (q) inside Text object' with 98 occurrences, or 
             'WARNING: Special graphics state operator (Q) inside Text object' with 98 occurrences, or 
             'WARNING: Special graphics state operator (cm) inside Text object' with 98 occurrences</sch:assert>

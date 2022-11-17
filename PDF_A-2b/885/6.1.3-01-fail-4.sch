@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of ID is not an array of two byte strings") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Value of ID is not an array of two byte strings") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Value of ID is not an array of two byte strings' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

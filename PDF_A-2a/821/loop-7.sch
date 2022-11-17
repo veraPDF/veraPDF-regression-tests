@@ -31,8 +31,8 @@
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='
-			(contains(/, "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING") or
-			(contains(/, "Undefined color space /g in a content stream") and @occurrences = "1" and @level = "SEVERE")
+			(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING") or
+			(contains(., "Undefined color space /g in a content stream") and @occurrences = "1" and @level = "SEVERE")
 			'>Invalid logs, Expected: 
             'WARNING: Exception caught when validating item' with 1 occurrences or
 			'SEVERE: Undefined color space /g in a content stream' with 1 occurrences</sch:assert>

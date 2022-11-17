@@ -34,7 +34,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Can&apos;t parse CMap Adabe-Karea1-UCS2, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Can&apos;t parse CMap Adabe-Karea1-UCS2, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Can't parse CMap Adabe-Karea1-UCS2, using default' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

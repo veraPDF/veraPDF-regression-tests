@@ -19,7 +19,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Error in parsing private data in Type 1 font: incorrect amount of charstings specified.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstings specified.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstings specified.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

@@ -34,9 +34,9 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Can&apos;t parse CMap WinAnsiEncoding, using default") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Can&apos;t parse CMap null-null-UCS2, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Can't parse CMap WinAnsiEncoding, using default, or 
+            <sch:assert test='(contains(., "Can&apos;t parse CMap WinAnsiEncoding, using default") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Can&apos;t parse CMap null-null-UCS2, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
+            'WARNING: Can't parse CMap WinAnsiEncoding, using default' with 1 occurrences, or
             'WARNING: Can't parse CMap null-null-UCS2, using default' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

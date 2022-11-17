@@ -31,7 +31,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Undefined color space /DeviceCMYK in a content stream") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 'SEVERE: Undefined color space /DeviceCMYK in a content stream' with 1 occurrence</sch:assert>
+            <sch:assert test='(contains(., "Undefined color space /DeviceCMYK in a content stream") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 'SEVERE: Undefined color space /DeviceCMYK in a content stream' with 1 occurrence</sch:assert>
         </sch:rule>
     </sch:pattern>
 

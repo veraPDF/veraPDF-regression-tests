@@ -30,7 +30,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Exception caught when validating item' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

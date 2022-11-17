@@ -36,7 +36,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Incorrect end of line in cross-reference table.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Incorrect end of line in cross-reference table.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Incorrect end of line in cross-reference table.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
