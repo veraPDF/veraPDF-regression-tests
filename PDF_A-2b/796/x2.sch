@@ -33,12 +33,12 @@
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='
-			(contains(., "Undefined color space /c in a content stream") and @occurrences = "1" and @level = "SEVERE") and
-			(contains(., "Undefined color space /a in a content stream") and @occurrences = "1" and @level = "SEVERE") and
-			(contains(., "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE") and
-			(contains(., "Undefined color space /d in a content stream") and @occurrences = "1" and @level = "SEVERE") and
-			(contains(., "Undefined color space /f in a content stream") and @occurrences = "1" and @level = "SEVERE") and
-			(contains(., "Undefined color space /e in a content stream") and @occurrences = "1" and @level = "SEVERE") and
+			(contains(., "Undefined color space /c in a content stream") and @occurrences = "1" and @level = "SEVERE") or
+			(contains(., "Undefined color space /a in a content stream") and @occurrences = "1" and @level = "SEVERE") or
+			(contains(., "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE") or
+			(contains(., "Undefined color space /d in a content stream") and @occurrences = "1" and @level = "SEVERE") or
+			(contains(., "Undefined color space /f in a content stream") and @occurrences = "1" and @level = "SEVERE") or
+			(contains(., "Undefined color space /e in a content stream") and @occurrences = "1" and @level = "SEVERE") or
 			(contains(., "Undefined color space /b in a content stream") and @occurrences = "1" and @level = "SEVERE")
 			'>Invalid logs, Expected: 
             'SEVERE: Undefined color space /c in a content stream' with 1 occurrences or
