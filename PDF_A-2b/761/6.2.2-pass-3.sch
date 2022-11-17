@@ -34,7 +34,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected:
             'SEVERE: Color space has to be a name or array, but it is not' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

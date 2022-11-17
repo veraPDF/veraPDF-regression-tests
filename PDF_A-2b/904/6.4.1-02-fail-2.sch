@@ -32,7 +32,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of NeedAppearances key is not a boolean. Ignoring NeedAppearances") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Value of NeedAppearances key is not a boolean. Ignoring NeedAppearances") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected:
             'SEVERE: Value of NeedAppearances key is not a boolean. Ignoring NeedAppearances' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

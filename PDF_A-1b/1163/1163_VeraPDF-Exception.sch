@@ -34,7 +34,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "The Top DICT does not begin with ROS operator") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "The Top DICT does not begin with ROS operator") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: The Top DICT does not begin with ROS operator' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

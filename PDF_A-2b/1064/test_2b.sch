@@ -19,32 +19,32 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Invalid glyph code: -55") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -12") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -28") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -62") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -63") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -45") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -30") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -60") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -43") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -14") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -15") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -11") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -24") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -16") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -59") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -25") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -58") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -26") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -44") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -61") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -41") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -46") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -13") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -39") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -42") and @occurrences = "4" and @level = "WARNING") or 
-            (contains(/, "Invalid glyph code: -47") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Invalid glyph code: -55") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -12") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -28") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -62") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -63") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -45") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -30") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -60") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -43") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -14") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -15") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -11") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -24") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -16") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -59") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -25") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -58") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -26") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -44") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -61") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -41") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -46") and @occurrences = "1" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -13") and @occurrences = "2" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -39") and @occurrences = "3" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -42") and @occurrences = "4" and @level = "WARNING") or
+            (contains(., "Invalid glyph code: -47") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Invalid glyph code: -55' with 3 occurrences, or 
             'WARNING: Invalid glyph code: -12' with 2 occurrences, or 
             'WARNING: Invalid glyph code: -28' with 1 occurrences, or 

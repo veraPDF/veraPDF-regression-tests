@@ -3,9 +3,9 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://purl.oclc.org/dsdl/schematron ">
 
-    <!-- Issue# 1209 -->
-    <!-- https://github.com/veraPDF/veraPDF-library/issues/1209 -->
-    <!-- File: Result._Metrics (1).pdf -->
+    <!-- Issue# 1184 -->
+    <!-- https://github.com/veraPDF/veraPDF-library/issues/1184 -->
+    <!-- File: preflight-PDF_675_184127.pdf -->
 
     <sch:pattern>name = "Checking the validationReport: profile"
         <sch:rule context="/report/jobs/job/validationReport">

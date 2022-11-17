@@ -5,7 +5,7 @@
 
     <!-- Issue# 1183 -->
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1183 -->
-    <!-- File: preflight-PDF_1575_492551 (1).pdf -->
+    <!-- File: preflight-PDF_1575_492551.pdf -->
 
 
     <sch:pattern>name = "Checking the validationReport: document is not compliant"
