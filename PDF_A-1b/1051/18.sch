@@ -33,7 +33,7 @@
             <sch:assert test='(contains(., "Incorrect end of line in cross-reference table.") and @occurrences = "2" and @level = "WARNING") or
             (contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Incorrect end of line in cross-reference table.' with 2 occurrences, or 
-            'WARNING: .pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            'WARNING: 18.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
