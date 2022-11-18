@@ -20,9 +20,9 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.3.3' and @testNumber = '1' and @failedChecks = '38') or
+            <sch:assert test="(@clause = '6.2.3.3' and @testNumber = '1' and @failedChecks = '38') or 
             (@clause = '6.7.11' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2.3.3-1, 38 checks, or
+            6.2.3.3-1, 38 checks, or 
             6.7.11-1, 1 check</sch:assert>
         </sch:rule>
 
@@ -30,12 +30,14 @@
 
     <sch:pattern>name = "Checking the logs"
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
+            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "The Top DICT does not begin with ROS operator") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: The Top DICT does not begin with ROS operator' with 2 occurrences</sch:assert>
+            <sch:assert test='(contains(., "The Top DICT does not begin with ROS operator") and @occurrences = "2" and @level = "WARNING") or 
+            (contains(., "Invalid embedded cff font. Charset range exceeds number of glyphs") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: The Top DICT does not begin with ROS operator' with 2 occurrences, or 
+            'WARNING: Invalid embedded cff font. Charset range exceeds number of glyphs' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
