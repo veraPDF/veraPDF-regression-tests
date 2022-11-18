@@ -30,7 +30,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "v6_startxref.pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "v6_startxref.pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: v6_startxref.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
