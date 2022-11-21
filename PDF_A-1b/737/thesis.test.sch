@@ -14,12 +14,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the validationReport: rules"
-        <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '13')">Failed check, Expected: 13</sch:assert>	
-        </sch:rule>
-		
-		<sch:pattern>name = "Checking the batchSummary"
+	<sch:pattern>name = "Checking the batchSummary"
         <sch:rule context="/report/batchSummary">
             <sch:assert test="(@totalJobs = '1' and @failedToParse = '0' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '0')">
                 Failed check, Expected: totalJobs = '1' failedToParse = '0' encrypted = '0' outOfMemory = '0' veraExceptions = '0'
@@ -27,10 +22,19 @@
         </sch:rule>
     </sch:pattern>
 		
+    <sch:pattern>name = "Checking the validationReport: rules"
+        <sch:rule context="/report/jobs/job/validationReport/details">
+            <sch:assert test="(@failedRules = '18')">Failed check, Expected: 18</sch:assert>
+        </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="(@clause = '6.2.4' and @testNumber = '3' and @failedChecks = '1') or 
-			(@clause = '6.7.3' and @testNumber = '1' and @failedChecks = '1') or 
+			(@clause = '6.7.3' and @testNumber = '2' and @failedChecks = '1') or
+			(@clause = '6.7.3' and @testNumber = '3' and @failedChecks = '1') or
+			(@clause = '6.7.3' and @testNumber = '4' and @failedChecks = '1') or
+			(@clause = '6.7.3' and @testNumber = '5' and @failedChecks = '1') or
+			(@clause = '6.7.3' and @testNumber = '6' and @failedChecks = '1') or
+			(@clause = '6.7.3' and @testNumber = '7' and @failedChecks = '1') or
 			(@clause = '6.4' and @testNumber = '6' and @failedChecks = '10') or 
 			(@clause = '6.4' and @testNumber = '3' and @failedChecks = '642') or 
 			(@clause = '6.5.3' and @testNumber = '3' and @failedChecks = '470') or 
@@ -43,7 +47,12 @@
 			(@clause = '6.5.3' and @testNumber = '2' and @failedChecks = '470') or 
             (@clause = '6.3.5' and @testNumber = '3' and @failedChecks = '2')">Failed rules, Expected: 
             6.2.4-3, 1 check, or
-            6.7.3-1, 1 check, or
+            6.7.3-1, 2 check, or
+            6.7.3-1, 3 check, or
+            6.7.3-1, 4 check, or
+            6.7.3-1, 5 check, or
+            6.7.3-1, 6 check, or
+            6.7.3-1, 7 check, or
             6.4-6, 10 check, or
             6.4-3, 642 checks, or
             6.5.3-3, 470 checks, or
