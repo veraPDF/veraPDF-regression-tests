@@ -23,12 +23,12 @@
             <sch:assert test="(@clause = '6.1.3' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.7.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '8') or
-            (@clause = '6.7.3' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.7.3' and @testNumber = '7' and @failedChecks = '1') or
             (@clause = '6.1.2' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
             6.1.3-1, 1 check, or 
             6.7.2-1, 1 check, or 
             6.2.3.3-3, 8 checks, or
-            6.7.3-1, 1 check, or 
+            6.7.3-7, 1 check, or
             6.1.2-2, 1 check</sch:assert>
         </sch:rule>
 
