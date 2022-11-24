@@ -25,7 +25,7 @@ teardown() {
     echo -e "Done ... \n" >&3
 }
 
-@test 'Metadata check. Expected status: ID Removed, Expected result: No action' {
+@test 'Metadata check. Expected status: ID Removed, Expected result: Metadata fixes' {
     echo "Going ahead ... " >&3
 
     for x in $(ls $BATS_TEST_TMPDIR/**/$PATTERN*.pdf); do

@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 RULE_FAIL='3'
-RULE_PASS='67'
+RULE_PASS='71'
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
