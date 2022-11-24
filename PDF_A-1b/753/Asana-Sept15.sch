@@ -22,14 +22,14 @@
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="(@clause = '6.7.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.1.3' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = '6.2.3' and @testNumber = '2' and @failedChecks = '2130') or 
+            (@clause = '6.2.3.3' and @testNumber = '1' and @failedChecks = '2130') or
             (@clause = '6.4' and @testNumber = '2' and @failedChecks = '1') or 
-            (@clause = '6.2.3' and @testNumber = '4' and @failedChecks = '363')">Failed rules, Expected: 
+            (@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '363')">Failed rules, Expected:
             6.7.2-1, 1 check, or 
             6.1.3-1, 1 check, or 
-            6.2.3-2, 2130 checks, or 
+            6.2.3.3-1, 2130 checks, or
             6.4-2, 1 check, or 
-            6.2.3-4, 363 checks</sch:assert>
+            6.2.3.3-3, 363 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>

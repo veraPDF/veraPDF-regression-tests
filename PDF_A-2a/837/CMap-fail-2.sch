@@ -20,8 +20,8 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.11.7' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2.11.7-1, 1 check</sch:assert>
+            <sch:assert test="(@clause = '6.2.11.7.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected:
+            6.2.11.7.2-1, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -32,7 +32,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Can&apos;t parse CMap foo, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Can&apos;t parse CMap foo, using default") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Can't parse CMap foo, using default' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
