@@ -19,5 +19,5 @@ setup() {
     [ "$status" -eq 0 ]
 
     assert_output --partial "--sdggdf doesn't exist"
-    assert_output --partial '<validationReport profileName="PDF/A-1A validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">'
+    assert_output --partial 'validationReport jobEndStatus="normal" profileName="PDF/A-1A validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true"'
 }
