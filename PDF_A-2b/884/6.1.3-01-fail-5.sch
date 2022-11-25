@@ -19,8 +19,8 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of ID key is not a string. Ignoring ID") and @occurrences = "2" and @level = "SEVERE") or 
-            (contains(/, "Value of ID is not an array of two byte strings") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Value of ID key is not a string. Ignoring ID") and @occurrences = "2" and @level = "SEVERE") or
+            (contains(., "Value of ID is not an array of two byte strings") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
             'SEVERE: Value of ID key is not a string. Ignoring ID' with 2 occurrences, or 
             'WARNING: Value of ID is not an array of two byte strings' with 2 occurrences</sch:assert>
         </sch:rule>

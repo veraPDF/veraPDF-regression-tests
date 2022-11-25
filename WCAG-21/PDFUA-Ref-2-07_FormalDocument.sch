@@ -3,7 +3,8 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://purl.oclc.org/dsdl/schematron ">
 
-
+    <!-- Issue# 140 -->
+    <!-- https://github.com/veraPDF/veraPDF-wcag-algs/issues/140 -->
     <!-- File: PDFUA-Ref-2-07_FormalDocument.pdf -->
 
 

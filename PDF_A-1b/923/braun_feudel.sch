@@ -30,7 +30,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "D:\verapdf\regress_testing_policy\PDF_A-1b\923\braun_feudel.sch doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "D:\verapdf\regress_testing_policy\PDF_A-1b\923\braun_feudel.sch doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: D:\verapdf\regress_testing_policy\PDF_A-1b\923\braun_feudel.sch doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

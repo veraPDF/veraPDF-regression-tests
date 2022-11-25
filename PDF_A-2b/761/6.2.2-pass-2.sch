@@ -20,8 +20,8 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.1.7' and @testNumber = '4' and @failedChecks = '1')">Failed rules, Expected: 
-            6.1.7-4, 1 check</sch:assert>
+            <sch:assert test="(@clause = '6.1.7.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected:
+            6.1.7.2-1, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -32,7 +32,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Color space has to be a name or array, but it is not") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected:
             'SEVERE: Color space has to be a name or array, but it is not' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

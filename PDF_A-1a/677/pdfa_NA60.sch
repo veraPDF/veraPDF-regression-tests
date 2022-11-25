@@ -33,7 +33,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Invalid glyph code: ") and @level = "WARNING")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Invalid glyph code: ") and @level = "WARNING")'>Invalid logs, Expected:
             'WARNING: Invalid glyph code: -32' with 1 occurrences, or 
             'WARNING: Invalid glyph code: -28' with 1 occurrences, or 
             'WARNING: Invalid glyph code: -119' with 34 occurrences, or 

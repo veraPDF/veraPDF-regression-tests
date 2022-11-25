@@ -32,7 +32,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(/, "Value of Differences key is not an array. Ignoring Difference") and @occurrences = "2" and @level = "SEVERE")'>Invalid logs, Expected: 
+            <sch:assert test='(contains(., "Value of Differences key is not an array. Ignoring Difference") and @occurrences = "2" and @level = "SEVERE")'>Invalid logs, Expected:
             'SEVERE: Value of Differences key is not an array. Ignoring Difference' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
