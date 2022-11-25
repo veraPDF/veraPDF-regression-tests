@@ -42,10 +42,6 @@ teardown() {
 
         echo -e "status veraFixMd_$(basename $x): $status \n" >&3
         [ "$status" -eq 1 ]
-        # assert_output --partial 'isCompliant="true"'
         assert_output --regexp 'clause="6.7.(2" testNumber="1"|11" testNumber="1") status="failed" passedChecks="0" failedChecks="1"'
-
-
-
     done
 }
