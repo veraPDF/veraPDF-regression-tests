@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskResult">
         <sch:rule context="/report/jobs/job/taskResult">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Failed to initialize objects ids")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Failed to initialize objects ids
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: PDFParser::GetXRefSection(...)can not locate xref table")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)can not locate xref table
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -34,10 +34,10 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or
-            (contains(., "Stream length is missing") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: 22.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or
-            'WARNING: Stream length is missing' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Stream length is missing") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Stream length is missing' with 1 occurrences, or 
+            'WARNING: 22.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
