@@ -8,7 +8,7 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1051 -->
     <!-- File: 22.pdf -->
 
-    <sch:pattern>name = "Checking the taskResult"
+    <sch:pattern name = "Checking the taskResult">
         <sch:rule context="/report/jobs/job/taskResult">
             <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Failed to initialize objects ids")'>
                 Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Failed to initialize objects ids
@@ -16,7 +16,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the batchSummary"
+    <sch:pattern name = "Checking the batchSummary">
         <sch:rule context="/report/batchSummary">
             <sch:assert test="(@totalJobs = '1' and @failedToParse = '1' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '1')">
                 Failed check, Expected: totalJobs = '1' failedToParse = '1' encrypted = '0' outOfMemory = '0' veraExceptions = '1'
@@ -24,7 +24,11 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the logs"
+    <sch:pattern name = "Checking the logs">
+        <sch:rule context="/report/jobs/job">
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
         <sch:rule context="/report/jobs/job/logs">
             <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>

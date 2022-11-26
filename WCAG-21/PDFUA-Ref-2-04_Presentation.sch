@@ -7,13 +7,13 @@
     <!-- File: PDFUA-Ref-2-04_Presentation.pdf -->
 
 
-    <sch:pattern>name = "Checking the validationReport: document is not compliant"
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the validationReport: rules"
+    <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
             <sch:assert test="(@failedRules = '4')">Failed check, Expected: 4</sch:assert>	
         </sch:rule>
