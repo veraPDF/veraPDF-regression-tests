@@ -8,13 +8,13 @@
     <!-- File: 6.2.11.3.2-unknown-1.pdf -->
 
 
-    <sch:pattern>name = "Checking the validationReport: document is not compliant"
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the validationReport: rules"
+    <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
             <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
         </sch:rule>

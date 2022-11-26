@@ -8,13 +8,13 @@
     <!-- File: thesis.test.pdf -->
 
 
-    <sch:pattern>name = "Checking the validationReport: document is not compliant"
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-	<sch:pattern>name = "Checking the batchSummary"
+	<sch:pattern name = "Checking the batchSummary">
         <sch:rule context="/report/batchSummary">
             <sch:assert test="(@totalJobs = '1' and @failedToParse = '0' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '0')">
                 Failed check, Expected: totalJobs = '1' failedToParse = '0' encrypted = '0' outOfMemory = '0' veraExceptions = '0'
@@ -22,7 +22,7 @@
         </sch:rule>
     </sch:pattern>
 		
-    <sch:pattern>name = "Checking the validationReport: rules"
+    <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
             <sch:assert test="(@failedRules = '18')">Failed check, Expected: 18</sch:assert>
         </sch:rule>

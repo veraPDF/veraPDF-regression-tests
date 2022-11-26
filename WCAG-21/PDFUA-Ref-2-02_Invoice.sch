@@ -7,7 +7,7 @@
     <!-- File: PDFUA-Ref-2-02_Invoice.pdf -->
 
 
-    <sch:pattern>name = "Checking the validationReport: document is not compliant"
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'true')">Failed check, Expected: isCompliant=true</sch:assert>
         </sch:rule>
