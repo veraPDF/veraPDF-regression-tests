@@ -8,7 +8,7 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/886 -->
     <!-- File: 6.1.3-03-fail-1.pdf -->
 
-    <sch:pattern>name = "Checking the taskResult"
+    <sch:pattern name = "Checking the taskResult">
         <sch:rule context="/report/jobs/job/taskResult">
             <sch:assert test='contains(exceptionMessage, "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported")'>
                 Failed check, Expected Error: Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported
@@ -16,7 +16,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the batchSummary"
+    <sch:pattern name = "Checking the batchSummary">
         <sch:rule context="/report/batchSummary">
             <sch:assert test="(@totalJobs = '1' and @failedToParse = '0' and @encrypted = '1' and @outOfMemory = '0' and @veraExceptions = '1')">
                 Failed check, Expected: totalJobs = '1' failedToParse = '0' encrypted = '1' outOfMemory = '0' veraExceptions = '1'
@@ -24,7 +24,11 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking the logs"
+    <sch:pattern name = "Checking the logs">
+        <sch:rule context="/report/jobs/job">
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
         <sch:rule context="/report/jobs/job/logs">
             <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
         </sch:rule>

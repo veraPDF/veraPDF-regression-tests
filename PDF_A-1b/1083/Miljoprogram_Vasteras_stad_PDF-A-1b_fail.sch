@@ -7,7 +7,7 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1083 -->
     <!-- File: Miljoprogram_Vasteras_stad_PDF-A-1b_fail.pdf -->
 
-    <sch:pattern>name = "Checking the validationReport: profile"
+    <sch:pattern name = "Checking the validationReport: profile">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'true')">Failed check, Expected: isCompliant=true</sch:assert>
         </sch:rule>
