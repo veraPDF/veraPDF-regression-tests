@@ -11,7 +11,7 @@ setup() {
     
     run verapdf/verapdf $BATS_TEST_DIRNAME/1_ªµ_Hello_World_12345_Hello.pdf --format text --password 12345_Hello
 
-    #[ "$status" -eq 1 ]
+    [ "$status" -eq 1 ]
     assert_output --partial "FAIL $BATS_TEST_DIRNAME/1_ªµ_Hello_World_12345_Hello.pdf"
 }
 

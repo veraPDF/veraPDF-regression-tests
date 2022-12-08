@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<validatorConfig flavour="NO_FLAVOUR" defaultFlavour="PDFA_1_B" recordPasses="false" maxFails="1" debug="false" showErrorMessages="true" isLogsEnabled="false" loggingLevel="WARNING" maxNumberOfDisplayedFailedChecks="2" showProgress="false"/>
