@@ -5,6 +5,8 @@ setup() {
     load "$PROJECT_ROOT/tools/test_helper/common-setup.bash"
     _common_setup
 
+    FILE_PATH="$PROJECT_ROOT/CLI/Resources"
+
     cp -r verapdf/* $BATS_TEST_TMPDIR
 }
 
@@ -15,8 +17,8 @@ setup() {
     # update app.xml with a path to a policy file
     sed -i "5 c\    <policyFile>$BATS_TEST_DIRNAME/TestList.sch</policyFile>" $BATS_TEST_TMPDIR/config/app.xml
 
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_DIRNAME/TestList.pdf --config
-
+    run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/TestList.pdf --config
+    
     [ "$status" -eq 0 ]
     assert_output --partial '<policyReport passedChecks="0" failedChecks="0" xmlns:vera="http://www.verapdf.org/MachineReadableReport">'
 }
@@ -26,7 +28,7 @@ setup() {
     cp -r $BATS_TEST_DIRNAME/config_features/app* $BATS_TEST_TMPDIR/config/
     cp -r $BATS_TEST_DIRNAME/config_features/features* $BATS_TEST_TMPDIR/config/
 
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_DIRNAME/TestList.pdf --config
+    run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/TestList.pdf --config
 
     [ "$status" -eq 0 ]
     assert_output --partial '<informationDict>'
@@ -43,7 +45,7 @@ setup() {
     cp -r $BATS_TEST_DIRNAME/config_fixer/app* $BATS_TEST_TMPDIR/config/
     cp -r $BATS_TEST_DIRNAME/config_fixer/validator* $BATS_TEST_TMPDIR/config/
     cp -r $BATS_TEST_DIRNAME/config_fixer/fixer* $BATS_TEST_TMPDIR/config/
-    cp -r $BATS_TEST_DIRNAME/TestList.pdf $BATS_TEST_TMPDIR/
+    cp -r $FILE_PATH/TestList.pdf $BATS_TEST_TMPDIR/
 
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/TestList.pdf --config
 
@@ -67,7 +69,7 @@ setup() {
     cp -r $BATS_TEST_DIRNAME/config_validator/app* $BATS_TEST_TMPDIR/config/
     cp -r $BATS_TEST_DIRNAME/config_validator/validator* $BATS_TEST_TMPDIR/config/
 
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_DIRNAME/TestList.pdf --config
+    run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/TestList.pdf --config
 
     [ "$status" -eq 1 ]
     assert_output --partial 'profileName="PDF/UA-1 validation profile"'
