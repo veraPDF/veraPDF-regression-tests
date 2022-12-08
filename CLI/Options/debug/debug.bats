@@ -4,6 +4,7 @@ setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
     load "$PROJECT_ROOT/tools/test_helper/common-setup.bash"
     _common_setup
+    
 }
 
 @test "--debug, Outputs all processed file names." {
