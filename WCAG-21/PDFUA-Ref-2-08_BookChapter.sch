@@ -24,7 +24,7 @@
             (@clause = '4.1.2' and @testNumber = '5' and @failedChecks = '1') or
             (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '180') or 
             (@clause = '1.3.1' and @testNumber = '1' and @failedChecks = '3') or 
-            (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '123') or 
+            (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '90') or
             (@clause = '1.3.1' and @testNumber = '2' and @failedChecks = '2') or 
             (@clause = '4.1.2' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
             4.1.2-22, 2 checks, or 
@@ -32,7 +32,7 @@
             4.1.2-5, 1 check, or
             1.3.1-4, 180 checks, or 
             1.3.1-1, 3 checks, or 
-            1.4.3-1, 123 checks, or 
+            1.4.3-1, 90 checks, or
             1.3.1-2, 2 checks, or 
             4.1.2-2, 1 check</sch:assert>
         </sch:rule>
