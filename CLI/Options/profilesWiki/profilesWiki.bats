@@ -10,9 +10,9 @@ setup() {
 }
 
 @test "--profilesWiki, Sets location of the Validation Profiles wiki" {
-    skip
+    
     run verapdf/verapdf $FILE_PATH/68_1_fail.pdf --format html --profilesWiki https://localhost/veraPDF/veraPDF-validation-profiles/wiki-new/
 
     [ "$status" -eq 1 ]
-    assert_output --partial 'href="https://localhost/veraPDF/veraPDF-validation-profiles/wiki-new/"'
+    assert_output --partial 'href="https://localhost/veraPDF/veraPDF-validation-profiles/wiki-new/'
 }
