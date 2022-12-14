@@ -60,8 +60,7 @@ setup() {
 }
 
 @test "--config, Sets settings from the config files, if no cli parameters are specified. plugins.xml check" {
-    skip
-    # Need to be added later
+    skip "Need to be added later"
 }
 
 @test "--config, Sets settings from the config files, if no cli parameters are specified. validator.xml check" {
