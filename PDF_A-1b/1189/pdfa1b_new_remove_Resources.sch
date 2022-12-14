@@ -19,16 +19,18 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
+            <sch:assert test="@logsCount = '7'">Failed check, Expected: 7</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Undefined font /F2 in a content stream") and @occurrences = "1" and @level = "SEVERE") or 
-            (contains(., "Undefined color space /DeviceGray in a content stream") and @occurrences = "2" and @level = "SEVERE") or 
-            (contains(., "Undefined font /F1 in a content stream") and @occurrences = "1" and @level = "SEVERE")'>Invalid logs, Expected: 
-            'SEVERE: Undefined font /F2 in a content stream' with 1 occurrences, or 
+            <sch:assert test='(contains(., "Undefined color space /DeviceGray in a content stream") and @occurrences = "2" and @level = "SEVERE") or 
+            (contains(., "Undefined font /F2 in a content stream") and @occurrences = "1" and @level = "SEVERE") or 
+            (contains(., "Undefined font /F1 in a content stream") and @occurrences = "1" and @level = "SEVERE") or 
+            (contains(., "Missing /Resources entry or inherited resources in the page dictionary") and @occurrences = "3" and @level = "WARNING")'>Invalid logs, Expected: 
             'SEVERE: Undefined color space /DeviceGray in a content stream' with 2 occurrences, or 
-            'SEVERE: Undefined font /F1 in a content stream' with 1 occurrences</sch:assert>
+            'SEVERE: Undefined font /F2 in a content stream' with 1 occurrences, or 
+            'SEVERE: Undefined font /F1 in a content stream' with 1 occurrences, or 
+            'WARNING: Missing /Resources entry or inherited resources in the page dictionary' with 3 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

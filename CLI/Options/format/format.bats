@@ -62,6 +62,10 @@ setup() {
     run verapdf/verapdf $FILE_PATH/6.1.3-01-fail-5.pdf --format json
 
     [ "$status" -eq 0 ]
-    assert_output --partial '"validationSummary":{"nonCompliantPdfaCount":0,"compliantPdfaCount":1,"failedJobCount":0,"totalJobCount":1,"successfulJobCount":1}'
+
+    assert_output --partial '"jobEndStatus":"normal"'
+    assert_output --partial '"profileName":"PDF/A-2B validation profile"'
+    assert_output --partial '"statement":"PDF file is compliant with Validation Profile requirements."'
+    assert_output --partial '"compliant":true'
 
 }

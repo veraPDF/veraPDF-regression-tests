@@ -12,7 +12,7 @@ setup() {
 }
 
 # FastFailedValidator not supported 'maxNumberOfDisplayedFailedChecks'
-@test "#'maxNumberOfDisplayedFailedChecks' was ignored if 'maxFails' defined, --config option" {
+@test "#'maxfailuresdisplayed' was ignored if 'maxFails' defined, --config option" {
 
     cp -r $BATS_TEST_DIRNAME/config_maxNumberOfDisplayedFailedChecks/validator* $BATS_TEST_TMPDIR/config/
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/68_1_fail.pdf --format html --config
@@ -24,13 +24,38 @@ setup() {
 }
 
 # FastFailedValidator not supported 'maxNumberOfDisplayedFailedChecks'
-@test "#'maxNumberOfDisplayedFailedChecks' was ignored if 'maxFails' defined, cli '--maxfailures' option" {
+@test "#'maxfailuresdisplayed' was ignored if 'maxFails' defined: --maxfailures 1, --maxfailuresdisplayed 2" {
 
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/68_1_fail.pdf --format html --maxfailures 2 --maxfailuresdisplayed 0
+    MESSAGES='1'
+
+    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/68_1_fail.pdf --format html --maxfailures 1 --maxfailuresdisplayed 2
 
     [ "$status" -eq 1 ]
     assert_output --partial '<b>Validation Profile:</b></td><td>PDF/A-3A validation profile</td>'
-    refute_output --partial '<b>Rule</b>'
-    refute_output --partial 'occurrences'
+    assert_output --partial '1 occurrences'
+    refute_output --partial "2 occurrences"
+
+    # Checking maxfailuresdisplayed ...
+    output_results=$(echo ${output} | grep -w -o "MIME type text" | grep -w -o MIME | wc -w)
+    run echo $output_results
+    assert_equal $output_results $MESSAGES
+
+}
+
+# FastFailedValidator not supported 'maxNumberOfDisplayedFailedChecks'
+@test "#'maxfailuresdisplayed' was ignored if 'maxFails' defined: --maxfailures 2, --maxfailuresdisplayed 1" {
+
+    MESSAGES='1'
+
+    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/68_1_fail.pdf --format html --maxfailures 2 --maxfailuresdisplayed 1
+
+    [ "$status" -eq 1 ]
+    assert_output --partial '<b>Validation Profile:</b></td><td>PDF/A-3A validation profile</td>'
+    assert_output --partial "2 occurrences"
+
+    # Checking maxfailuresdisplayed ...
+    output_results=$(echo ${output} | grep -w -o "MIME type text" | grep -w -o MIME | wc -w)
+    run echo $output_results
+    assert_equal $output_results $MESSAGES
 
 }
