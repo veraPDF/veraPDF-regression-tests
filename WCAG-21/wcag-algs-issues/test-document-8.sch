@@ -29,11 +29,11 @@
             (@clause = '1.4.10' and @testNumber = '1' and @failedChecks = '11') or 
             (@clause = '7.9' and @testNumber = '1' and @failedChecks = '7') or 
             (@clause = '4.1.1' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = '7.10' and @testNumber = '2' and @failedChecks = '1') or 
+            (@clause = '7.10' and @testNumber = '2' and @failedChecks = '1') or
+            (@clause = '1.4.4' and @testNumber = '1' and @failedChecks = '2') or
             (@clause = '4.1.2' and @testNumber = '41' and @failedChecks = '1') or
             (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '211') or 
-            (@clause = '1.3.1' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = '7.1' and @testNumber = '3' and @failedChecks = '1745') or 
+            (@clause = '7.1' and @testNumber = '3' and @failedChecks = '1745') or
             (@clause = '4.1.2' and @testNumber = '44' and @failedChecks = '1') or 
             (@clause = '1.3.1' and @testNumber = '2' and @failedChecks = '6') or 
             (@clause = '4.1.2' and @testNumber = '1' and @failedChecks = '3') or 
@@ -42,27 +42,27 @@
             (@clause = '4.1.2' and @testNumber = '48' and @failedChecks = '24') or 
             (@clause = '7.21.3.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '7.10' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            4.1.2-21, 15 checks, or 
-            4.1.2-10, 9 checks, or 
-            7.21.4.2-1, 22 checks, or 
-            4.1.1-2, 2 checks, or 
-            7.5-1, 1 check, or 
-            1.3.1-3, 17 checks, or 
-            1.4.10-1, 11 checks, or 
-            7.9-1, 7 checks, or 
-            4.1.1-1, 1 check, or 
-            7.10-2, 1 check, or 
+            4.1.2-21, 15 checks, or
+            4.1.2-10, 9 checks, or
+            7.21.4.2-1, 22 checks, or
+            4.1.1-2, 2 checks, or
+            7.5-1, 1 check, or
+            1.3.1-3, 17 checks, or
+            1.4.10-1, 11 checks, or
+            7.9-1, 7 checks, or
+            4.1.1-1, 1 check, or
+            7.10-2, 1 check, or
+            1.4.4-1, 2 check, or
             4.1.2-41, 1 check, or
-            1.3.1-4, 211 checks, or 
-            1.3.1-1, 1 check, or 
-            7.1-3, 1745 checks, or 
-            4.1.2-44, 1 check, or 
-            1.3.1-2, 6 checks, or 
-            4.1.2-1, 3 checks, or 
-            5-1, 1 check, or 
-            7.21.4.2-2, 1 check, or 
-            4.1.2-48, 24 checks, or 
-            7.21.3.2-1, 1 check, or 
+            1.3.1-4, 211 checks, or
+            7.1-3, 1745 checks, or
+            4.1.2-44, 1 check, or
+            1.3.1-2, 6 checks, or
+            4.1.2-1, 3 checks, or
+            5-1, 1 check, or
+            7.21.4.2-2, 1 check, or
+            4.1.2-48, 24 checks, or
+            7.21.3.2-1, 1 check, or
             7.10-1, 1 check</sch:assert>
         </sch:rule>
 
