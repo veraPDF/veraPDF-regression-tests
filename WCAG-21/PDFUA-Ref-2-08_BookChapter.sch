@@ -26,7 +26,7 @@
             (@clause = '1.3.1' and @testNumber = '1' and @failedChecks = '3') or 
             (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '90') or
             (@clause = '1.3.1' and @testNumber = '2' and @failedChecks = '2') or
-            (@clause = '4.1.2' and @testNumber = '1' and @failedChecks = '6')">Failed rules, Expected:
+            (@clause = '4.1.2' and @testNumber = '1' and @failedChecks = '6') or
             (@clause = '4.1.2' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
             4.1.2-22, 2 checks, or 
             4.1.2-9, 9 checks, or
