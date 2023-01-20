@@ -18,7 +18,7 @@ setup() {
     assert_output --partial "<errorMessage>MIME type text/plain;charset=UTF-8 of an embedded file is missing or invalid</errorMessage>"
 
     run echo $stderr
-    assert_output --partial "WARNING: Argument of option maxfailuresdisplayed 0 is not supported and changed to 1"
+    assert_output --partial "WARNING: Argument 0 of option maxfailuresdisplayed is not supported and changed to 1"
 
 }
 
