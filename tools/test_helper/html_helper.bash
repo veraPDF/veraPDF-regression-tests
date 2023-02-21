@@ -29,3 +29,11 @@ get_last_build_page_on_jenkins() {
     #store the index.html file in the current directory
     wget https://jenkins.openpreservation.org/job/veraPDF/job/$1/job/plugins/lastBuild/
 }
+
+get_last_plugins_version(){
+
+    echo "FOLDER: $1" >&3
+    BUILD_VERSION=$(curl https://jenkins.openpreservation.org/job/veraPDF/job/$1/job/plugins/lastBuild/ | grep -o 'class="jenkins-breadcrumbs__list-item">[0-9].[0-9][0-9].[0-9]*' | grep -o [0-9].[0-9][0-9].[0-9]*)
+    echo "BUILD_VERSION: $BUILD_VERSION" >&3
+    echo "$BUILD_VERSION"
+}

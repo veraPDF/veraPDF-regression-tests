@@ -20,23 +20,23 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '1') or
-            (@clause = '6.1.2' and @testNumber = '2' and @failedChecks = '1') or 
-            (@clause = '6.1.7' and @testNumber = '1' and @failedChecks = '1') or 
+            <sch:assert test="(@clause = '6.1.7' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.3.4' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.1.3' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '1') or 
             (@clause = '6.7.2' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = '6.1.3' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2.3.3-3, 1 check, or
-            6.1.2-2, 1 check, or 
+            (@clause = '6.1.2' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
             6.1.7-1, 1 check, or 
             6.3.4-1, 1 check, or 
+            6.1.3-1, 1 check, or 
+            6.2.3.3-3, 1 check, or 
             6.7.2-1, 1 check, or 
-            6.1.3-1, 1 check</sch:assert>
+            6.1.2-2, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
 
-    <sch:pattern>name = "Checking for the absence of logs"
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
             <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>

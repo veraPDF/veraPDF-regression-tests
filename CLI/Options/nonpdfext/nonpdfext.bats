@@ -13,5 +13,12 @@ setup() {
 
     [ "$status" -eq 0 ]
     assert_output --partial 'batchSummary totalJobs="1"'
+}
 
+@test "--nonpdfext, Select files without .pdf extension, zip file" {
+    skip "Need to be fixed"
+    run verapdf/verapdf $BATS_TEST_DIRNAME/6.1.3-01-fail-5.zip --nonpdfext 
+
+    [ "$status" -eq 0 ]
+    assert_output --partial 'batchSummary totalJobs="1"'
 }
