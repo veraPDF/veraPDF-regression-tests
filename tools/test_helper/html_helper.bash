@@ -37,3 +37,4 @@ get_last_plugins_version(){
     echo "BUILD_VERSION: $BUILD_VERSION" >&3
     echo "$BUILD_VERSION"
 }
+

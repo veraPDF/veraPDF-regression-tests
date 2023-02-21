@@ -9,6 +9,7 @@ setup() {
     cp -r $FILE_PATH/veraPDF_MF3.pdf $BATS_TEST_TMPDIR
 
     cd $BATS_TEST_TMPDIR
+
     LAST_BUILD=$(get_last_plugins_version $(verapdf_folder))
 
 }
