@@ -1,4 +1,7 @@
 #!/usr/bin/env bats
+FILES_TO_CHECK=(
+    "a.pdf"
+    "a.zip")
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
@@ -6,14 +9,19 @@ setup() {
     _common_setup
 
     FILE_PATH="$PROJECT_ROOT/CLI/Resources"
-
+    assert [ ${#FILES_TO_CHECK[@]} != 0 ]
 }
 
 @test "--progress, Shows the current status of the validation job" {
 
-    run verapdf/verapdf $FILE_PATH/a.pdf --progress
+    for file in "${FILES_TO_CHECK[@]}"; do
+        progress_check $file
+    done
+}
 
-    [ "$status" -eq 1 ]
+progress_check() {
+    echo "Running: $1" >&3
+    run verapdf/verapdf $FILE_PATH/$1 --progress
     assert_output --partial 'Progress: 237 checks / 4 failed / 183 processed objects / 0 in stack'
-
+    [ "$status" -eq 1 ]
 }
