@@ -16,3 +16,15 @@ setup() {
     assert_output --partial "WARNING: $BATS_TEST_DIRNAME/veraFixMd_a.pdf"
     assert_output --partial "WARNING: $BATS_TEST_DIRNAME/veraFixMd_a_(0).pdf"
 }
+
+@test "--debug, Outputs all processed file names, zip file" {
+
+    run verapdf/verapdf $PROJECT_ROOT/CLI/Resources/files_debug_option.zip --debug --format text
+
+    [ "$status" -eq 1 ]
+
+    echo $(ls -la $BATS_TEST_DIRNAME)
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\a.pdf"
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\veraFixMd_a.pdf"
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\veraFixMd_a_(0).pdf"
+}

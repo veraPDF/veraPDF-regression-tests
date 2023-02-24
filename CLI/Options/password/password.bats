@@ -6,7 +6,6 @@ setup() {
     _common_setup
 
     FILE_PATH="$PROJECT_ROOT/CLI/Resources"
-
 }
 
 @test "--password, Sets the password for an encrypted documen, correct password" {
@@ -15,7 +14,15 @@ setup() {
 
     [ "$status" -eq 1 ]
     refute_output --partial "encrypted pdf is not supported"
+}
 
+@test "--password, Sets the password for an encrypted documen, correct password, zip file" {
+    skip "Need to be fixed"
+    run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello
+
+    echo $status >&3
+    [ "$status" -eq 1 ]
+    refute_output --partial "encrypted pdf is not supported"
 }
 
 @test "--password, Sets the password for an encrypted document, incorrect password" {
@@ -24,5 +31,12 @@ setup() {
 
     [ "$status" -eq 8 ]
     assert_output --partial "encrypted pdf is not supported"
+}
 
+@test "--password, Sets the password for an encrypted document, incorrect password, zip file" {
+    skip "Need to be fixed"
+    run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello2
+
+    [ "$status" -eq 8 ]
+    assert_output --partial "encrypted pdf is not supported"
 }
