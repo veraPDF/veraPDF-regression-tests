@@ -1,0 +1,96 @@
+name: Testing veraPDF GUI with RemoteSwingLibrary and Robot Framework
+on: [push, pull_request]
+
+jobs:
+  veraPDF-GUI-check:
+    runs-on: ubuntu-latest
+    container:
+      image: x11vnc/docker-desktop
+    strategy:
+      matrix:
+        java: ["8", "11"]
+    name: Running on Java ${{ matrix.Java }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+
+      - name: Set up Java # See 'Supported distributions': https://github.com/actions/setup-java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: ${{ matrix.java }}
+
+      - name: Preparing Linux packages(veraPDf, Python, xvfb, unzip)
+        if: runner.os == 'Linux'
+        run: |
+          echo pwd: $PWD
+          echo dir: $(ls ./)
+
+          sudo apt update -y
+
+          sudo apt install xvfb -y
+          sudo apt install python3 -y
+          sudo apt install python3-pip -y 
+          sudo pip install robotframework 
+          sudo apt install unzip -y 
+
+          echo "Performing veraPDF installation ... "
+          echo "#Downloading veraPDF, latest dev version ... unziping to $PWD" 
+          curl -LO https://software.verapdf.org/dev/verapdf-installer.zip
+          unzip verapdf-installer.zip
+
+          echo "Definition of the variables"
+          veradir=$(ls | grep verapdf-greenfield)
+          cd "$veradir"
+
+          export veraPATH="$GITHUB_WORKSPACE/verapdf"
+          echo "veraPATH: $veraPATH" 
+
+          echo "#Downloading auto-install.xml ..." 
+          curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/integration/tools/auto-install.xml
+
+          #Definition of the 'PATH' to install veraPDF using the auto-install.xml file
+          sed -i '5 c\        <installpath>'$(echo $veraPATH)'</installpath>' ./auto-install.xml
+          echo $(cat auto-install.xml)
+
+          veraizpack=$(ls | grep verapdf-izpack-installer)
+          echo "veraizpack: $veraizpack"
+
+          echo "Performing installation veraPDF ... "
+          java -jar "$veraizpack" auto-install.xml
+
+          echo verapdf dir: $(ls $GITHUB_WORKSPACE/verapdf)
+          $GITHUB_WORKSPACE/verapdf/verapdf --version
+
+          java -version
+          javac -version
+          python3 --version
+          python3 -m pip list
+          whoami 
+
+          echo PATH: "$PATH"
+          cd $GITHUB_WORKSPACE
+          echo "running curl to get remoteswinglibrary-x.x.x.jar ..."
+          curl -LO https://repo1.maven.org/maven2/org/robotframework/remoteswinglibrary/2.3.1/remoteswinglibrary-2.3.1.jar
+          export
+                    
+          mkdir Results
+          echo dir: $(ls ./)
+
+      - name: Running verapdf-gui
+        run: |
+          echo "Running regression-tests: robot  ./tests/"
+          export DISPLAY=:99; Xvfb :99 -screen 0 1024x768x16 -ac -noreset & sleep 3
+          export PYTHONPATH=${PYTHONPATH}:./:$GITHUB_WORKSPACE/remoteswinglibrary-2.3.1.jar
+
+          export ROBOT_OPTIONS="--outputdir Results"
+          robot  $GITHUB_WORKSPACE/GUI/
+
+      - name: Generating report
+        uses: actions/upload-artifact@v1
+        if: success() || failure()
+        with:
+          name: Results
+          path: "./Results"
