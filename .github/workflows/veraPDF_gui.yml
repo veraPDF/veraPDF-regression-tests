@@ -1,5 +1,11 @@
 name: Testing veraPDF GUI with RemoteSwingLibrary and Robot Framework
-on: [push, pull_request]
+
+on:
+  schedule:
+    - cron: "05 02 * * *"
+  push:
+  pull_request:
+
 
 jobs:
   veraPDF-GUI-check:
@@ -8,8 +14,8 @@ jobs:
       image: x11vnc/docker-desktop
     strategy:
       matrix:
-        java: ["8", "11"]
-    name: Running on Java ${{ matrix.Java }}
+        java: ["8", "11", "17"]
+    name: Running on Java ${{ matrix.java }}
 
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +28,7 @@ jobs:
           distribution: "temurin"
           java-version: ${{ matrix.java }}
 
-      - name: Preparing Linux packages(veraPDf, Python, xvfb, unzip)
+      - name: Preparing Linux packages(veraPDF, Python, xvfb, unzip)
         if: runner.os == 'Linux'
         run: |
           echo pwd: $PWD
@@ -34,6 +40,7 @@ jobs:
           sudo apt install python3 -y
           sudo apt install python3-pip -y 
           sudo pip install robotframework 
+          sudo apt-get install scrot -y
           sudo apt install unzip -y 
 
           echo "Performing veraPDF installation ... "
@@ -81,8 +88,8 @@ jobs:
 
       - name: Running verapdf-gui
         run: |
-          echo "Running regression-tests: robot  ./tests/"
-          export DISPLAY=:99; Xvfb :99 -screen 0 1024x768x16 -ac -noreset & sleep 3
+          echo "Running regression-tests ..."
+          export DISPLAY=:99; Xvfb :99 -screen 0 1920x1080x24 -ac -noreset & sleep 3
           export PYTHONPATH=${PYTHONPATH}:./:$GITHUB_WORKSPACE/remoteswinglibrary-2.3.1.jar
 
           export ROBOT_OPTIONS="--outputdir Results"
