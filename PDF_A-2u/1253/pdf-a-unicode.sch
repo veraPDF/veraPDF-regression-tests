@@ -3,9 +3,9 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://purl.oclc.org/dsdl/schematron ">
 
-    <!-- Issue# 834 -->
-    <!-- https://github.com/veraPDF/veraPDF-library/issues/834 -->
-    <!-- File: CIDSet-6.pdf -->
+    <!-- Issue# 1253 -->
+    <!-- https://github.com/veraPDF/veraPDF-library/issues/1253 -->
+    <!-- File: pdf-a-unicode.pdf -->
 
     <sch:pattern name = "Checking the validationReport: profile">
         <sch:rule context="/report/jobs/job/validationReport">
@@ -19,12 +19,12 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '61'">Failed check, Expected: 61</sch:assert>	
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.") and @occurrences = "61" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.' with 61 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
