@@ -13,9 +13,18 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>name = "Checking for the absence of logs"
+    <sch:pattern name = "Checking the logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '61'">Failed check, Expected: 61</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(., "Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.") and @occurrences = "61" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.' with 61 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
