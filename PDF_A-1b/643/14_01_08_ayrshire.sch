@@ -34,7 +34,7 @@
 
     </sch:pattern>
 
-    <sch:pattern>name = "Checking for the absence of logs"
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
             <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
