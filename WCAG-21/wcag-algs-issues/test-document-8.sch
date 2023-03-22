@@ -25,7 +25,7 @@
             (@clause = '7.21.4.2' and @testNumber = '1' and @failedChecks = '22') or
             (@clause = '4.1.1' and @testNumber = '2' and @failedChecks = '2') or
             (@clause = '7.5' and @testNumber = '1' and @failedChecks = '1') or
-            (@clause = '1.3.1' and @testNumber = '3' and @failedChecks = '17') or
+            (@clause = '1.3.1' and @testNumber = '3' and @failedChecks = '4') or
             (@clause = '1.4.10' and @testNumber = '1' and @failedChecks = '11') or
             (@clause = '7.9' and @testNumber = '1' and @failedChecks = '7') or
             (@clause = '4.1.1' and @testNumber = '1' and @failedChecks = '1') or
@@ -45,7 +45,7 @@
             7.21.4.2-1, 22 checks, or
             4.1.1-2, 2 checks, or
             7.5-1, 1 check, or
-            1.3.1-3, 17 checks, or
+            1.3.1-3, 4 checks, or
             1.4.10-1, 11 checks, or
             7.9-1, 7 checks, or
             4.1.1-1, 1 check, or

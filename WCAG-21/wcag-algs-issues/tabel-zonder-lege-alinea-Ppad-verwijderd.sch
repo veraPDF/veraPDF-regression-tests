@@ -20,9 +20,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '4.1.2' and @testNumber = '20' and @failedChecks = '1') or 
-            (@clause = '5' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            4.1.2-20, 1 check, or 
+            <sch:assert test="(@clause = '5' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected:
             5-1, 1 check</sch:assert>
         </sch:rule>
 
