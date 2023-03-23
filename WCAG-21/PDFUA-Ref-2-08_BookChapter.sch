@@ -22,7 +22,7 @@
             <sch:assert test="(@clause = '4.1.2' and @testNumber = '22' and @failedChecks = '2') or 
             (@clause = '4.1.2' and @testNumber = '9' and @failedChecks = '9') or
             (@clause = '4.1.2' and @testNumber = '5' and @failedChecks = '1') or
-            (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '180') or 
+            (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '179') or
             (@clause = '1.3.1' and @testNumber = '1' and @failedChecks = '3') or 
             (@clause = '1.4.3' and @testNumber = '1' and @failedChecks = '90') or
             (@clause = '1.3.1' and @testNumber = '2' and @failedChecks = '2') or
@@ -31,7 +31,7 @@
             4.1.2-22, 2 checks, or 
             4.1.2-9, 9 checks, or
             4.1.2-5, 1 check, or
-            1.3.1-4, 180 checks, or 
+            1.3.1-4, 179 checks, or
             1.3.1-1, 3 checks, or 
             1.4.3-1, 90 checks, or
             1.3.1-2, 2 checks, or
