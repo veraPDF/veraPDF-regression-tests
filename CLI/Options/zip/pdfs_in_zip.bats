@@ -9,6 +9,18 @@ setup() {
 }
 
 @test "— Support validation of pdfs in zip" {
+
+    run verapdf/verapdf $FILE_PATH/recurse_next_level.zip
+
+    assert_output --partial 'recurse_next_level.zip/a.pdf'
+    assert_output --partial 'recurse_next_level.zip/recurse_next_level/next_a.pdf'
+    assert_output --partial 'recurse_next_level.zip/recurse_next_level/final_level/final_a.pdf'
+    refute_output --partial 'recurse_next_level/without_pdf'
+
+    [ "$status" -eq 0 ]
+}
+
+@test "— Support validation of pdfs in zip, zip in zip" {
     skip 'Waiting for to be fixed'
     run verapdf/verapdf $FILE_PATH/recurse_next_level_a.zip
 
@@ -18,5 +30,4 @@ setup() {
     assert_output --partial 'recurse_next_level.zip\recurse_next_level\next_a.pdf'
     assert_output --partial 'recurse_next_level.zip\recurse_next_level\final_level\final_a.pdf'
     refute_output --partial 'without_pdf'
-
 }

@@ -45,7 +45,7 @@ setup() {
 
     run verapdf/verapdf $FILE_PATH/6.1.3-01-fail-5.zip --format text
     [ "$status" -eq 0 ]
-    assert_output --partial "PASS $FILE_PATH/6.1.3-01-fail-5.zip\\6.1.3-01-fail-5.pdf"
+    assert_output --partial "PASS $FILE_PATH/6.1.3-01-fail-5.zip/6.1.3-01-fail-5.pdf"
 }
 
 @test "--format. Chooses output format, html" {

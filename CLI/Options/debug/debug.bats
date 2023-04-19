@@ -24,7 +24,7 @@ setup() {
     [ "$status" -eq 1 ]
 
     echo $(ls -la $BATS_TEST_DIRNAME)
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\a.pdf"
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\veraFixMd_a.pdf"
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip\\veraFixMd_a_(0).pdf"
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/a.pdf"
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a.pdf"
+    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a_(0).pdf"
 }
