@@ -39,40 +39,10 @@ setup() {
 
 @test "--config, Sets settings from the config files, if no cli parameters are specified. fixer.xml check" {
 
-    cp -r $BATS_TEST_DIRNAME/config_fixer/app* $BATS_TEST_TMPDIR/config/
-    cp -r $BATS_TEST_DIRNAME/config_fixer/validator* $BATS_TEST_TMPDIR/config/
-    cp -r $BATS_TEST_DIRNAME/config_fixer/fixer* $BATS_TEST_TMPDIR/config/
-    cp -r $FILE_PATH/TestList.pdf $BATS_TEST_TMPDIR/
+    for file in "${FILES_TO_CHECK[@]}"; do
+        config_app_fixer_check $file
+    done
 
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/TestList.pdf --config
-
-    [ "$status" -eq 1 ]
-    assert_output --partial '<fix>Identification schema added</fix>'
-    assert_output --partial '<fix>Set new modification date to metadata</fix>'
-    assert_output --partial '<fix>Set new modification date to info dictionary</fix>'
-    assert_output --partial '<fix>Metadata stream filtered with FlateDecode</fix>'
-
-    FILE=$BATS_TEST_TMPDIR/veraFixMd_to_check_TestList.pdf
-    assert [ -f "$FILE" ] # Check if File exists
-}
-
-@test "--config, Sets settings from the config files, if no cli parameters are specified. fixer.xml check, zip file" {
-
-    cp -r $BATS_TEST_DIRNAME/config_fixer/app* $BATS_TEST_TMPDIR/config/
-    cp -r $BATS_TEST_DIRNAME/config_fixer/validator* $BATS_TEST_TMPDIR/config/
-    cp -r $BATS_TEST_DIRNAME/config_fixer/fixer* $BATS_TEST_TMPDIR/config/
-    cp -r $FILE_PATH/TestList.zip $BATS_TEST_TMPDIR/
-
-    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/TestList.zip --config --savefolder $BATS_TEST_TMPDIR
-
-    [ "$status" -eq 1 ]
-    assert_output --partial '<fix>Identification schema added</fix>'
-    assert_output --partial '<fix>Set new modification date to metadata</fix>'
-    assert_output --partial '<fix>Set new modification date to info dictionary</fix>'
-    assert_output --partial '<fix>Metadata stream filtered with FlateDecode</fix>'
-
-    FILE=$BATS_TEST_TMPDIR/veraFixMd_to_check_TestList.zip\\TestList.pdf
-    assert [ -f "$FILE" ] # Check if File exists
 }
 
 @test "--config, Sets settings from the config files, if no cli parameters are specified. plugins.xml check" {
@@ -145,4 +115,24 @@ config_app_validator_check() {
     run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/$1 --config
     assert_output --partial 'profileName="PDF/UA-1 validation profile"'
     [ "$status" -eq 1 ]
+}
+
+config_app_fixer_check() {
+    echo "Running: $1" >&3
+
+    cp -r $BATS_TEST_DIRNAME/config_fixer/app* $BATS_TEST_TMPDIR/config/
+    cp -r $BATS_TEST_DIRNAME/config_fixer/validator* $BATS_TEST_TMPDIR/config/
+    cp -r $BATS_TEST_DIRNAME/config_fixer/fixer* $BATS_TEST_TMPDIR/config/
+    cp -r $FILE_PATH/TestList.zip $BATS_TEST_TMPDIR/
+
+    run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/TestList.zip --config --savefolder $BATS_TEST_TMPDIR
+
+    [ "$status" -eq 1 ]
+    assert_output --partial '<fix>Identification schema added</fix>'
+    assert_output --partial '<fix>Set new modification date to metadata</fix>'
+    assert_output --partial '<fix>Set new modification date to info dictionary</fix>'
+    assert_output --partial '<fix>Metadata stream filtered with FlateDecode</fix>'
+
+    FILE=$BATS_TEST_TMPDIR/veraFixMd_to_check_TestList.pdf
+    assert [ -f "$FILE" ] # Check if File exists
 }
