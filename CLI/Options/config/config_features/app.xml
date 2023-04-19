@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<appConfig type="EXTRACT_FIX" format="XML" isVerbose="false">
+<appConfig type="EXTRACT" format="XML" isVerbose="false">
     <fixerFolder></fixerFolder>
     <wikiPath>https://github.com/veraPDF/veraPDF-validation-profiles/wiki/</wikiPath>
     <policyFile></policyFile>

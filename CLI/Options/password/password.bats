@@ -1,4 +1,5 @@
 #!/usr/bin/env bats
+bats_require_minimum_version 1.5.0
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
@@ -16,15 +17,6 @@ setup() {
     refute_output --partial "encrypted pdf is not supported"
 }
 
-@test "--password, Sets the password for an encrypted documen, correct password, zip file" {
-    skip "Need to be fixed"
-    run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello
-
-    echo $status >&3
-    [ "$status" -eq 1 ]
-    refute_output --partial "encrypted pdf is not supported"
-}
-
 @test "--password, Sets the password for an encrypted document, incorrect password" {
 
     run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.pdf --password 12345_Hello2
@@ -33,10 +25,24 @@ setup() {
     assert_output --partial "encrypted pdf is not supported"
 }
 
-@test "--password, Sets the password for an encrypted document, incorrect password, zip file" {
-    skip "Need to be fixed"
-    run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello2
+@test "--password, Password option should not work for zip processing, ignore password option" {
 
+    run --separate-stderr -- verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello
+
+    assert_output --partial "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported"
     [ "$status" -eq 8 ]
-    assert_output --partial "encrypted pdf is not supported"
+
+    run echo $stderr
+    assert_output --partial "WARNING: Password handling for encrypted files is not supported for zip processing."
+}
+
+@test "--password, Password option should not work for batch processing, ignore password option" {
+
+    run --separate-stderr -- verapdf/verapdf -r $FILE_PATH/1_ªµ_Hello_World_12345_Hello.* --password 12345_Hello
+    [ "$status" -eq 8 ]
+
+    run echo $stderr
+    assert_output --partial "WARNING: Password handling for encrypted files is not supported for batch processing."
+    assert_output --partial "WARNING: $FILE_PATH/1_ªµ_Hello_World_12345_Hello.pdf appears to be an encrypted PDF."
+    assert_output --partial "WARNING: $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip/1_ªµ_Hello_World_12345_Hello.pdf appears to be an encrypted PDF."
 }
