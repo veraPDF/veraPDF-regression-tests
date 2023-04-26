@@ -30,7 +30,7 @@ setup() {
     [ "$status" -eq 1 ]
 
     run echo $stderr
-    assert_output --partial "WARNING: Fixing metadata are not supported for zip processing, if save folder isn't defined"
+    assert_output --partial "WARNING: Fixing metadata is not supported for zip processing, if save folder isn't defined"
 
 }
 
