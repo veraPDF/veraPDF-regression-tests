@@ -6,6 +6,10 @@ _common_setup() {
 
     load "$PROJECT_ROOT/bats-support/load.bash"
     load "$PROJECT_ROOT/bats-assert/load.bash"
+
+    if [ -d "$HOME/.verapdf/config/" ]; then
+        rm -r "$HOME/.verapdf/config/"
+    fi
 }
 
 get_verapdf_version() {

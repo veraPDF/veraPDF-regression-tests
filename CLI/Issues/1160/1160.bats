@@ -5,6 +5,8 @@ setup() {
     load "$PROJECT_ROOT/tools/test_helper/common-setup.bash"
     _common_setup
 
+
+
     cp -r verapdf/* $BATS_TEST_TMPDIR
     cp -r $BATS_TEST_DIRNAME/config/* $BATS_TEST_TMPDIR/config/
 }
@@ -13,7 +15,8 @@ setup() {
 @test "#1160: javax.xml.bind.UnmarshalException check" {
 
     run --separate-stderr -- $BATS_TEST_TMPDIR/verapdf $BATS_TEST_DIRNAME/c_.pdf --off --extract error
-    
+
+    run echo $stderr
+    assert_output --partial "WARNING: The application config file $BATS_TEST_TMPDIR/config/app.xml is missing or damaged"
     [ "$status" -eq 0 ]
-    [ "${stderr_lines[1]}" = "WARNING: The application config file is missing or damaged" ]
 }
