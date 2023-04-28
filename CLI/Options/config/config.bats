@@ -18,7 +18,9 @@ setup() {
     cp -r verapdf/* $BATS_TEST_TMPDIR
 
     cd $BATS_TEST_TMPDIR
-    VERAPDF_FOLDER=$(verapdf_folder)
+
+    VERAPDF_FOLDER=1.24rc
+
     assert [ ${#FILES_TO_CHECK[@]} != 0 ]
     assert [ ${#PLUGIN_FILES_TO_CHECK[@]} != 0 ]
 }
@@ -92,7 +94,7 @@ config_app_plugins_check() {
     echo "Running: $1" >&3
     local LAST_BUILD=$(get_last_plugins_version $VERAPDF_FOLDER)
     plugin_version=$(get_plugin_version "fontSample-plugin")
-    assert_equal $LAST_BUILD $plugin_version
+    assert_equal $plugin_version $LAST_BUILD
 
     cp -r $BATS_TEST_DIRNAME/config_plugins/app* $BATS_TEST_TMPDIR/config/
     cp -r $BATS_TEST_DIRNAME/config_plugins/features* $BATS_TEST_TMPDIR/config/

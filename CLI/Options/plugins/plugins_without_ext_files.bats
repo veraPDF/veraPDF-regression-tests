@@ -10,7 +10,7 @@ setup() {
 
     cd $BATS_TEST_TMPDIR
 
-    LAST_BUILD=$(get_last_plugins_version $(verapdf_folder))
+    LAST_BUILD=$(get_last_plugins_version "1.24rc")
 
 }
 
@@ -116,8 +116,8 @@ setup() {
 }
 
 @test '— metsMetadata-plugin(METS metadata extraction Sample) check' {
-    plugin_verion=$(get_plugin_version "metsMetadata-plugin")
-    assert_equal $plugin_verion $LAST_BUILD
+    plugin_version=$(get_plugin_version "metsMetadata-plugin")
+    assert_equal $plugin_version $LAST_BUILD
 
     #Enabling "metsMetadata-plugin" plugin, file plugins.xml, line № 73
     sed -i '73 c\  <plugin enabled="true">' ./config/plugins.xml
