@@ -4,7 +4,7 @@
             xsi:schemaLocation="http://purl.oclc.org/dsdl/schematron ">
 
     <!-- Issue# String Tabs in page -->
-    <!-- https://github.com/veraPDF/veraPDF-library/issues/.\7-18.3-t01-pass-a -->
+    <!-- https://github.com/orgs/veraPDF/projects/2/views/6?pane=issue&itemId=28318192 -->
     <!-- File: .\7-18.3-t01-pass-a_S2F.pdf -->
 
 
@@ -32,14 +32,14 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Entry Tabs in page dictionary 6 0 obj does not have type name") and @occurrences = "2" and @level = "WARNING") or 
-            (contains(., "Entry Tabs in page dictionary 21 0 obj does not have type name") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Entry Tabs in page dictionary 6 0 obj does not have type name' with 2 occurrences, or 
-            'WARNING: Entry Tabs in page dictionary 21 0 obj does not have type name' with 2 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Entry Tabs in page dictionary 6 0 obj does not have type name") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Entry Tabs in page dictionary 21 0 obj does not have type name") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Entry Tabs in page dictionary 6 0 obj does not have type name' with 1 occurrences, or 
+            'WARNING: Entry Tabs in page dictionary 21 0 obj does not have type name' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
