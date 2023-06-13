@@ -52,7 +52,7 @@ Check TextFields on startup
     Should Contain    ${textFieldContents}    PDF file not chosen
 
     ${textFieldContents}=    getTextFieldValue    1
-    Should Contain    ${textFieldContents}    Please, specify validation profile
+    Should Contain    ${textFieldContents}    Validation profile not chosen
 
     ${textFieldContents}=    getTextFieldValue    2
     Should Contain    ${textFieldContents}    Policy file not chosen
