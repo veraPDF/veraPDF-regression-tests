@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 file=""
 
-STATUS_TO_CHECK=("0" "1")
+STATUS_TO_CHECK=("0" "1" "8")
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
