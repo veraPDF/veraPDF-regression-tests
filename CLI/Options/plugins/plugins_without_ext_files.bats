@@ -10,7 +10,7 @@ setup() {
 
     cd $BATS_TEST_TMPDIR
 
-    LAST_BUILD=$(get_last_plugins_version "1.24rc")
+    LAST_BUILD=$(get_last_plugins_version "1.24rel")
 
 }
 

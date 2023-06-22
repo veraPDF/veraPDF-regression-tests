@@ -19,7 +19,7 @@ setup() {
 
     cd $BATS_TEST_TMPDIR
 
-    VERAPDF_FOLDER=1.24rc
+    VERAPDF_FOLDER=1.24rel
 
     assert [ ${#FILES_TO_CHECK[@]} != 0 ]
     assert [ ${#PLUGIN_FILES_TO_CHECK[@]} != 0 ]

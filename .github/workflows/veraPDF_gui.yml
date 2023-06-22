@@ -3,8 +3,6 @@ name: Testing veraPDF GUI with RemoteSwingLibrary and Robot Framework
 on:
   schedule:
     - cron: "05 02 * * *"
-  push:
-  pull_request:
 
 
 jobs:
@@ -45,8 +43,8 @@ jobs:
 
           echo "Performing veraPDF installation ... "
           echo "#Downloading veraPDF, latest dev version ... unziping to $PWD" 
-          curl -LO https://software.verapdf.org/releases/verapdf-installer-rc.zip
-          unzip verapdf-installer-rc.zip
+          curl -LO https://software.verapdf.org/releases/verapdf-installer.zip
+          unzip verapdf-installer.zip
 
           echo "Definition of the variables"
           veradir=$(ls | grep verapdf-greenfield)
@@ -56,7 +54,7 @@ jobs:
           echo "veraPATH: $veraPATH" 
 
           echo "#Downloading auto-install.xml ..." 
-          curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/rc/1.24/tools/auto-install.xml
+          curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/rel/1.24/tools/auto-install.xml
 
           #Definition of the 'PATH' to install veraPDF using the auto-install.xml file
           sed -i '5 c\        <installpath>'$(echo $veraPATH)'</installpath>' ./auto-install.xml
