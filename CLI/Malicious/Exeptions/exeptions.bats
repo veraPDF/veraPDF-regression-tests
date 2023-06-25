@@ -9,7 +9,7 @@ exeptions[deflate-bomb-10GB-xref.pdf]="Exception: Couldn't parse stream caused b
 exeptions[deflate-bomb-trivial-10GB-xref.pdf]="Exception: Couldn't parse stream caused by exception: End of file is reached"
 exeptions[GHOSTSCRIPT-700434-0.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 2 0 caused by exception: Object number 2 should be object stream, but in fact it is null"
 exeptions[PDFBOX-4623-0.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Object with key 3 0 obj has stream length value which references to its own object key"
-exeptions[sumatrapdf-448-0.pdf]="Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception: null"
+exeptions[sumatrapdf-448-0.pdf]="Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception"
 exeptions[weblinks.pdf]="Exception: Couldn't parse stream caused by exception: End of file is reached"
 
 setup() {

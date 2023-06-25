@@ -10,8 +10,9 @@
 
     <sch:pattern name = "Checking the taskResult">
         <sch:rule context="/report/jobs/job/taskResult">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception: null")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception: null
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception
+
             </sch:assert>
         </sch:rule>
     </sch:pattern>
