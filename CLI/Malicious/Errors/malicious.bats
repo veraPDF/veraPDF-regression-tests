@@ -1,5 +1,4 @@
 #!/usr/bin/env bats
-file=""
 
 STATUS_TO_CHECK=("0" "1" "8")
 
@@ -32,7 +31,11 @@ teardown() {
 }
 
 malicious_check() {
+    file=""
     echo "Checking files with status: $1" >&3
+    file_count=$(find $FILE_PATH/status$1 -name "*.*" | wc -l)
+    [ $file_count -gt 0 ]
+
     FILES="status$1/*.pdf"
     for x in $(ls $FILE_PATH/$FILES); do
         printf "%s\n" $x >&3

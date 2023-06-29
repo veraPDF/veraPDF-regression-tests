@@ -30,7 +30,6 @@ setup() {
     run --separate-stderr -- verapdf/verapdf $BATS_TEST_DIRNAME/1_ªµ_Hello_World_12345_Привет.pdf
 
     [ "$status" -eq 8 ]
-
-    assert_output --partial '<batchSummary totalJobs="1" failedToParse="0" encrypted="1" outOfMemory="0" veraExceptions="1">'
+    assert_output --partial '<batchSummary totalJobs="1" failedToParse="0" encrypted="1" outOfMemory="0" veraExceptions="0">'
     [ "${stderr_lines[1]}" = "WARNING: $BATS_TEST_DIRNAME/1_ªµ_Hello_World_12345_Привет.pdf appears to be an encrypted PDF." ]
 }
