@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskResult">
         <sch:rule context="/report/jobs/job/taskResult">
-            <sch:assert test='contains(exceptionMessage, "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported")'>
-                Failed check, Expected Error: Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported
+            <sch:assert test='contains(exceptionMessage, "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password")'>
+                Failed check, Expected Error: Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password
             </sch:assert>
         </sch:rule>
     </sch:pattern>
