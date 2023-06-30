@@ -9,12 +9,12 @@ setup() {
     FILE_PATH="$PROJECT_ROOT/CLI/Resources"
 }
 
-@test "--password, Sets the password for an encrypted documen, correct password" {
+@test "--password, Sets the password for an encrypted document, correct password" {
 
     run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.pdf --password 12345_Hello
 
     [ "$status" -eq 1 ]
-    refute_output --partial "encrypted pdf is not supported"
+    refute_output --partial "encrypted PDF with unknown or wrong password"
 }
 
 @test "--password, Sets the password for an encrypted document, incorrect password" {
@@ -22,14 +22,14 @@ setup() {
     run verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.pdf --password 12345_Hello2
 
     [ "$status" -eq 8 ]
-    assert_output --partial "encrypted pdf is not supported"
+    assert_output --partial "encrypted PDF with unknown or wrong password"
 }
 
 @test "--password, Password option should not work for zip processing, ignore password option" {
 
     run --separate-stderr -- verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello
 
-    assert_output --partial "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported"
+    assert_output --partial "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password"
     [ "$status" -eq 8 ]
 
     run echo $stderr
