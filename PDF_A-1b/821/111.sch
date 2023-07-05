@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/821 -->
     <!-- File: 111.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected exception during parsing caused by exception: XRef loop")'>
                 Failed check, Expected Error: Exception: Caught unexpected exception during parsing caused by exception: XRef loop
             </sch:assert>

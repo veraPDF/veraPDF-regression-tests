@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1042 -->
     <!-- File: hello.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: PDFParser::GetDictionary()invalid pdf dictonary")'>
                 Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: PDFParser::GetDictionary()invalid pdf dictonary
             </sch:assert>
