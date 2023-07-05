@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/821 -->
     <!-- File: loop-1.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected exception during parsing caused by exception: Page tree loop found")'>
                 Failed check, Expected Error: Exception: Caught unexpected exception during parsing caused by exception: Page tree loop found
             </sch:assert>

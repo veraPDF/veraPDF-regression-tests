@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/821 -->
     <!-- File: loop-6.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Loop in name tree")'>
                 Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Loop in name tree
             </sch:assert>

@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/564 -->
     <!-- File: resulticbe852e3-c9ed-4668-998b-203d2a354a06.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Pages not found")'>
                 Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Pages not found
             </sch:assert>
