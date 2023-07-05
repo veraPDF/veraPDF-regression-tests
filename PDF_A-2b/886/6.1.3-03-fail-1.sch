@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/886 -->
     <!-- File: 6.1.3-03-fail-1.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password")'>
                 Failed check, Expected Error: Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password
             </sch:assert>

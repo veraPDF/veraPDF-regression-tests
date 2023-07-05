@@ -8,8 +8,8 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1051 -->
     <!-- File: 00.pdf -->
 
-    <sch:pattern name = "Checking the taskResult">
-        <sch:rule context="/report/jobs/job/taskResult">
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
             <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: PDFParser::GetXRefSection(...)can not locate xref table")'>
                 Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)can not locate xref table
             </sch:assert>
