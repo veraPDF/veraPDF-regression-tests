@@ -5,6 +5,16 @@ typeset -Ag branch_list
 branch_list[master]="apps-*"
 branch_list[integration]="apps-*-SNAPSHOT"
 
+setup_file() {
+    echo "Dowloading Maven ... to $BATS_SUITE_TMPDIR" >&3
+    (cd $BATS_SUITE_TMPDIR && curl -O https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.zip)
+    unzip $BATS_SUITE_TMPDIR/apache-maven-3.9.3-bin.zip -d $BATS_SUITE_TMPDIR/
+
+    PATH="$BATS_SUITE_TMPDIR/apache-maven-3.9.3/bin:$PATH"
+    echo $(mvn --version) >&3
+
+}
+
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
     load "$PROJECT_ROOT/tools/test_helper/common-setup.bash"
