@@ -5,12 +5,25 @@
 
     <!-- Issue# 1184 -->
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1184 -->
-    <!-- File: preflight-PDF_675_184127.pdf -->
+    <!-- File: .\preflight-PDF_675_184127.pdf -->
 
-    <sch:pattern name = "Checking the validationReport: profile">
+
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
-            <sch:assert test="(@isCompliant = 'true')">Failed check, Expected: isCompliant=true</sch:assert>
+            <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
+    </sch:pattern>
+
+    <sch:pattern name = "Checking the validationReport: rules">
+        <sch:rule context="/report/jobs/job/validationReport/details">
+            <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="(@clause = '6.2.4.4' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2.4.4-2, 1 check</sch:assert>
+        </sch:rule>
+
     </sch:pattern>
 
     <sch:pattern name = "Checking for the absence of logs">
