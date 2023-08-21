@@ -8,7 +8,7 @@ setup() {
 
 # https://github.com/veraPDF/veraPDF-library/issues/1214
 @test "#1214: Online REST API (demo.verapdf.org), server response check" {
-    skip
+     
     run curl -F "file=@$BATS_TEST_DIRNAME/6.1.3-01-fail-5.pdf" demo.verapdf.org/api/validate/1b
 
     [ "$status" -eq 0 ]
