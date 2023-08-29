@@ -29,7 +29,7 @@ setup() {
 
     run --separate-stderr -- verapdf/verapdf $FILE_PATH/1_ªµ_Hello_World_12345_Hello.zip --password 12345_Hello
 
-    assert_output --partial "Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted PDF with unknown or wrong password"
+    assert_output --partial "Exception: The PDF stream appears to be encrypted. caused by exception: encrypted PDF with unknown or wrong password"
     [ "$status" -eq 8 ]
 
     run echo $stderr

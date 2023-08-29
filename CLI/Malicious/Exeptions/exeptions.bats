@@ -5,7 +5,7 @@ exeption_file=""
 typeset -Ag exeptions_status_9
 exeptions_status_9[01-dos-01-infinite-loop-A4.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Page tree loop found"
 exeptions_status_9[A4-pages-tree-loop-complex.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Page tree loop found"
-exeptions_status_9[PDFBOX-4623-0.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Object with key 3 0 obj has stream length value which references to its own object key"
+exeptions_status_9[PDFBOX-4623-0.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Object has stream length value which references to its own object key(object key = 3 0 obj, offset = 74)"
 exeptions_status_9[GHOSTSCRIPT-700434-0.pdf]="Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 2 0 caused by exception: Object number 2 should be object stream, but in fact it is null"
 
 
@@ -13,7 +13,7 @@ exeptions_status_9[GHOSTSCRIPT-700434-0.pdf]="Exception: Caught unexpected excep
 typeset -Ag exeptions_status_7
 exeptions_status_7[deflate-bomb-10GB-xref.pdf]="Exception: Couldn't parse stream caused by exception: End of file is reached"
 exeptions_status_7[deflate-bomb-trivial-10GB-xref.pdf]="Exception: Couldn't parse stream caused by exception: End of file is reached"
-exeptions_status_7[sumatrapdf-448-0.pdf]="Exception: Couldn't parse stream caused by exception: PDFParser::GetXRefSection(...)Exception during parsing xref stream at offset 0 caused by exception"
+exeptions_status_7[sumatrapdf-448-0.pdf]="Exception: Couldn't parse stream caused by exception: Exception during parsing xref stream(offset = 78) caused by exception:"
 exeptions_status_7[weblinks.pdf]="Exception: Couldn't parse stream caused by exception: End of file is reached"
 
 setup() {
