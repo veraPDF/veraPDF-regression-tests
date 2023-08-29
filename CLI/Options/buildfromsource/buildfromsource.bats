@@ -7,7 +7,7 @@ branch_list[integration]="apps-*-SNAPSHOT"
 
 setup_file() {
     echo "Dowloading Maven ... to $BATS_SUITE_TMPDIR" >&3
-    (cd $BATS_SUITE_TMPDIR && curl -O https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.zip)
+    (cd $BATS_SUITE_TMPDIR && curl -O https://archive.apache.org/dist/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.zip)
     unzip $BATS_SUITE_TMPDIR/apache-maven-3.9.3-bin.zip -d $BATS_SUITE_TMPDIR/
 
     PATH="$BATS_SUITE_TMPDIR/apache-maven-3.9.3/bin:$PATH"
