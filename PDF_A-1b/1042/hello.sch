@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: PDFParser::GetDictionary()invalid pdf dictonary")'>
-                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: PDFParser::GetDictionary()invalid pdf dictonary
+            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: invalid pdf dictonary(object key = 5 0 obj, offset = 573)")'>
+                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Error while parsing object : 5 0 caused by exception: invalid pdf dictonary(object key = 5 0 obj, offset = 573)
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -34,7 +34,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
+            <sch:assert test='(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Exception caught when validating item' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

@@ -10,16 +10,16 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Trailer is empty or has invalid type")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Trailer is empty or has invalid type
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Trailer is empty or has invalid type(offset = 710)")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Trailer is empty or has invalid type(offset = 710)
             </sch:assert>
         </sch:rule>
     </sch:pattern>
 
     <sch:pattern name = "Checking the batchSummary">
         <sch:rule context="/report/batchSummary">
-            <sch:assert test="(@totalJobs = '1' and @failedToParse = '1' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '1')">
-                Failed check, Expected: totalJobs = '1' failedToParse = '1' encrypted = '0' outOfMemory = '0' veraExceptions = '1'
+            <sch:assert test="(@totalJobs = '1' and @failedToParse = '1' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '0')">
+                Failed check, Expected: totalJobs = '1' failedToParse = '1' encrypted = '0' outOfMemory = '0' veraExceptions = '0'
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -34,10 +34,16 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Incorrect end of line in cross-reference table.") and @occurrences = "4" and @level = "WARNING") or
-            (contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: Incorrect end of line in cross-reference table.' with 4 occurrences, or 
-            'WARNING: 15.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table.(offset = 591)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table.(offset = 611)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table.(offset = 625)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table.(offset = 645)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: 15.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table.(offset = 591)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table.(offset = 611)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table.(offset = 625)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table.(offset = 645)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
