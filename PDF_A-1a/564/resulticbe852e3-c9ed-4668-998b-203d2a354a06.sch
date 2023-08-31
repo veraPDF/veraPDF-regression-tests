@@ -18,24 +18,30 @@
 
     <sch:pattern name = "Checking the batchSummary">
         <sch:rule context="/report/batchSummary">
-            <sch:assert test="(@totalJobs = '1' and @failedToParse = '1' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '1')">
-                Failed check, Expected: totalJobs = '1' failedToParse = '1' encrypted = '0' outOfMemory = '0' veraExceptions = '1'
+            <sch:assert test="(@totalJobs = '1' and @failedToParse = '1' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '0')">
+                Failed check, Expected: totalJobs = '1' failedToParse = '1' encrypted = '0' outOfMemory = '0' veraExceptions = '0'
             </sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs"> <sch:rule context="/report/jobs/job">
+    <sch:pattern name = "Checking the logs">
+        <sch:rule context="/report/jobs/job">
             <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
         </sch:rule>
+
         <sch:rule context="/report/jobs/job/logs">
             <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Incorrect xref section") and @occurrences = "3" and @level = "WARNING") or
-            (contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: Incorrect xref section' with 3 occurrences, or 
-            'WARNING: resulticbe852e3-c9ed-4668-998b-203d2a354a06.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect xref section(offset = 226333)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect xref section(offset = 227776)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect xref section(offset = 228688)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: resulticbe852e3-c9ed-4668-998b-203d2a354a06.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
+            'WARNING: Incorrect xref section(offset = 226333)' with 1 occurrences, or 
+            'WARNING: Incorrect xref section(offset = 227776)' with 1 occurrences, or 
+            'WARNING: Incorrect xref section(offset = 228688)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
