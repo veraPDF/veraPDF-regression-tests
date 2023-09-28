@@ -13,7 +13,7 @@ Force Tags          Regress
 
 *** Variables ***
 ${labelOnTop}
-...                 ${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}Please choose a PDF and a Validation Profile, then press "Execute"
+...                 ${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}Please choose a PDF and a PDF flavour or custom validation profile, then press "Execute"
 ${checkBox}         ${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}Fix metadata:
 
 
