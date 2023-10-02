@@ -35,15 +35,15 @@
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect end of line in cross-reference table.(offset = 642)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect end of line in cross-reference table.(offset = 662)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect end of line in cross-reference table.(offset = 682)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect end of line in cross-reference table.(offset = 702)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(., "Incorrect end of line in cross-reference table(offset = 642)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table(offset = 662)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table(offset = 682)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table(offset = 702)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: 26.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
-            'WARNING: Incorrect end of line in cross-reference table.(offset = 642)' with 1 occurrences, or 
-            'WARNING: Incorrect end of line in cross-reference table.(offset = 662)' with 1 occurrences, or 
-            'WARNING: Incorrect end of line in cross-reference table.(offset = 682)' with 1 occurrences, or 
-            'WARNING: Incorrect end of line in cross-reference table.(offset = 702)' with 1 occurrences</sch:assert>
+            'WARNING: Incorrect end of line in cross-reference table(offset = 642)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table(offset = 662)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table(offset = 682)' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table(offset = 702)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

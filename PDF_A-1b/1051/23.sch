@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Trailer is empty or has invalid type")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Trailer is empty or has invalid type
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Trailer is empty or has invalid type(offset = 743)")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Trailer is empty or has invalid type(offset = 743)
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -34,10 +34,10 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or
-            (contains(., "Incorrect end of line in cross-reference table.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: 23.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or
-            'WARNING: Incorrect end of line in cross-reference table.' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Incorrect end of line in cross-reference table(offset = 627)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: 23.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
+            'WARNING: Incorrect end of line in cross-reference table(offset = 627)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
