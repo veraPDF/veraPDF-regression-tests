@@ -128,7 +128,7 @@ config_app_fixer_check() {
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/TestList.zip --config --savefolder $BATS_TEST_TMPDIR
 
     [ "$status" -eq 1 ]
-    assert_output --partial '<fix>Identification schema added</fix>'
+    assert_output --partial '<fix>Set property part value to 2 in Identification schema</fix>'
     assert_output --partial '<fix>Set new modification date to metadata</fix>'
     assert_output --partial '<fix>Set new modification date to info dictionary</fix>'
     assert_output --partial '<fix>Metadata stream filtered with FlateDecode</fix>'
