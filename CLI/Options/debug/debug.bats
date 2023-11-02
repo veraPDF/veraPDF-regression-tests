@@ -12,9 +12,9 @@ setup() {
     run verapdf/verapdf $BATS_TEST_DIRNAME --debug --format text
 
     [ "$status" -eq 1 ]
-    assert_output --partial "WARNING: $BATS_TEST_DIRNAME/a.pdf"
-    assert_output --partial "WARNING: $BATS_TEST_DIRNAME/veraFixMd_a.pdf"
-    assert_output --partial "WARNING: $BATS_TEST_DIRNAME/veraFixMd_a_(0).pdf"
+    assert_output --partial "INFO: $BATS_TEST_DIRNAME/a.pdf"
+    assert_output --partial "INFO: $BATS_TEST_DIRNAME/veraFixMd_a.pdf"
+    assert_output --partial "INFO: $BATS_TEST_DIRNAME/veraFixMd_a_(0).pdf"
 }
 
 @test "--debug, Outputs all processed file names, zip file" {
@@ -24,7 +24,7 @@ setup() {
     [ "$status" -eq 1 ]
 
     echo $(ls -la $BATS_TEST_DIRNAME)
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/a.pdf"
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a.pdf"
-    assert_output --partial "WARNING: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a_(0).pdf"
+    assert_output --partial "INFO: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/a.pdf"
+    assert_output --partial "INFO: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a.pdf"
+    assert_output --partial "INFO: $PROJECT_ROOT/CLI/Resources/files_debug_option.zip/veraFixMd_a_(0).pdf"
 }
