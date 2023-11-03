@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Loop inside number tree")'>
-                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Loop inside number tree
+            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree (unnamed script#1) caused by exception: Loop inside number tree")'>
+                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree (unnamed script#1) caused by exception: Loop inside number tree
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -34,12 +34,10 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='
-			(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING") or
-			(contains(., "Undefined color space /g in a content stream") and @occurrences = "1" and @level = "SEVERE")
-			'>Invalid logs, Expected: 
-            'WARNING: Exception caught when validating item' with 1 occurrences or
-			'SEVERE: Undefined color space /g in a content stream' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Undefined color space /g in a content stream") and @occurrences = "1" and @level = "SEVERE") or 
+            (contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'SEVERE: Undefined color space /g in a content stream' with 1 occurrences, or 
+            'WARNING: Exception caught when validating item' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
