@@ -22,6 +22,6 @@ setup() {
 progress_check() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --progress
-    assert_output --partial 'Progress: 255 checks / 4 failed / 189 processed objects / 0 in stack'
+    assert_output --partial 'Progress: 256 checks / 4 failed / 189 processed objects / 0 in stack'
     [ "$status" -eq 1 ]
 }
