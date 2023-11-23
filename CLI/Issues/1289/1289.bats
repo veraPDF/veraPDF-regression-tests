@@ -11,5 +11,36 @@ setup() {
     
     [ "$status" -eq 1 ]
     
-    assert_output --partial '"featuresReport":{"informationDict":{"entry":{"key":"Title","value":"REPORT BY THE INDEPENDENT SCRUTINY PANEL"},"entry":{"key":"Author","value":"Sandra McDougall"},"entry":{"key":"Creator","value":"Acrobat PDFMaker 8.0 for Word"},"entry":{"key":"Producer","value":"Acrobat Distiller 8.0.0 (Windows)"},"entry":{"key":"CreationDate","value":"2008-01-14T10:41:15.000Z"},"entry":{"key":"ModDate","value":"2008-01-14T10:41:30.000Z"},"entry":{"key":"Company","value":" "}}}'
+    assert_output --partial '"featuresReport":{
+  "informationDict" : {
+    "entry" : {
+      "key" : "Title",
+      "value" : "REPORT BY THE INDEPENDENT SCRUTINY PANEL"
+    },
+    "entry" : {
+      "key" : "Author",
+      "value" : "Sandra McDougall"
+    },
+    "entry" : {
+      "key" : "Creator",
+      "value" : "Acrobat PDFMaker 8.0 for Word"
+    },
+    "entry" : {
+      "key" : "Producer",
+      "value" : "Acrobat Distiller 8.0.0 (Windows)"
+    },
+    "entry" : {
+      "key" : "CreationDate",
+      "value" : "2008-01-14T10:41:15.000Z"
+    },
+    "entry" : {
+      "key" : "ModDate",
+      "value" : "2008-01-14T10:41:30.000Z"
+    },
+    "entry" : {
+      "key" : "Company",
+      "value" : " "
+    }
+  }
+}'
 }

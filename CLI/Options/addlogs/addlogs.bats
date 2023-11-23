@@ -44,8 +44,16 @@ logs_mrr_check() {
 logs_json_check() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --addlogs --format json
-    assert_output --partial '{"occurrences":2,"level":"WARNING","message":"Value of ID is not an array of two byte strings"}'
-    assert_output --partial '{"occurrences":2,"level":"SEVERE","message":"Value of ID key is not a string. Ignoring ID"}'
+    assert_output --partial '{
+    "occurrences" : 2,
+    "level" : "SEVERE",
+    "message" : "Value of ID key is not a string. Ignoring ID"
+  }'
+    assert_output --partial '{
+    "occurrences" : 2,
+    "level" : "WARNING",
+    "message" : "Value of ID is not an array of two byte strings"
+  }'
     [ "$status" -eq 0 ]
 }
 

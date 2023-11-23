@@ -12,8 +12,10 @@ setup() {
     run verapdf/verapdf --extract page --format json --off $BATS_TEST_DIRNAME/6.1.3-01-fail-5.pdf
 
     [ "$status" -eq 0 ]
-    assert_output --partial '"orderNumber":"1"'
-    assert_output --partial '"width":"300.000"'
-    assert_output --partial '"height":"400.000"'
-    assert_output --partial '"rotation":"0"'
+
+    assert_output --partial '"orderNumber" : "1",
+    "width" : "300.000",
+    "height" : "400.000",'
+
+    assert_output --partial '"rotation" : "0"'
 }

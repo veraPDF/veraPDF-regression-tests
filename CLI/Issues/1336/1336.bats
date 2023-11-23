@@ -27,8 +27,13 @@ setup() {
 
     run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/corruptionOneByteMissing.pdf --format json
 
-    assert_output --partial '"taskException":'
-    assert_output --partial "\"executed\":true,\"success\":false,\"exceptionMessage\":\"Exception: Couldn't parse stream caused by exception: Pages not found\""
+    assert_output --partial "\"taskException\":{
+  \"exception\" : \"Couldn't parse stream\","
+
+    assert_output --partial "\"executed\" : true,
+  \"success\" : false,
+  \"exceptionMessage\" : \"Exception: Couldn't parse stream caused by exception: Pages not found\""
+
     [ "$status" -eq 7 ]
 }
 
