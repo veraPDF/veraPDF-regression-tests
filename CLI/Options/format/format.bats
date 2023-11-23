@@ -103,9 +103,10 @@ format_html() {
 format_json() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --format json
-    assert_output --partial '"jobEndStatus":"normal"'
-    assert_output --partial '"profileName":"PDF/A-2B validation profile"'
-    assert_output --partial '"statement":"PDF file is compliant with Validation Profile requirements."'
-    assert_output --partial '"compliant":true'
+    assert_output --partial '"jobEndStatus" : "normal",
+  "profileName" : "PDF/A-2B validation profile",
+  "statement" : "PDF file is compliant with Validation Profile requirements.",
+  "compliant" : true'
+
     [ "$status" -eq 0 ]
 }
