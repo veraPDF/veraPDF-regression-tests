@@ -20,7 +20,7 @@ setup() {
 processes_check() {
     echo "Running: $1" >&3
     run verapdf/verapdf $BATS_TEST_DIRNAME/a1.$1 $BATS_TEST_DIRNAME/a2.$1 $BATS_TEST_DIRNAME/a3.$1 $BATS_TEST_DIRNAME/a4.$1 --processes 2 --format json
-    assert_output --partial '"multiJob":false'
-    refute_output --partial '"multiJob":true' # expected is not present when using --processes
+    assert_output --partial '"multiJob" : false'
+    refute_output --partial '"multiJob" : true' # expected is not present when using --processes
     [ "$status" -eq 1 ]
 }

@@ -76,18 +76,57 @@ setup() {
     run verapdf/verapdf $BATS_TEST_DIRNAME/inputs/. --debug --format json 
 
     [ "$status" -eq 0 ]
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Japanese-日本.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Chinese-中國人.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Česká republika.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Русский.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Deutschland.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Arabic-عربي.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Hebrew-עִברִית.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./čeština.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Hindi-हिन्दी.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Română.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Magyarország.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Greek_Ελληνικά.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Japanese-日本.pdf"
-    assert_output --partial "{\"itemDetails\":{\"name\":\"$BATS_TEST_DIRNAME/inputs/./file-Slovensko.pdf"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Japanese-日本.pdf\",
+  \"size\" : 909
+}"
+
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Chinese-中國人.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Česká republika.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Русский.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Deutschland.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Arabic-عربي.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Hebrew-עִברִית.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./čeština.pdf\",
+  \"size\" : 25683
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Hindi-हिन्दी.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Română.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Magyarország.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Greek_Ελληνικά.pdf\",
+  \"size\" : 909
+}"
+    assert_output --partial "{\"itemDetails\":{
+  \"name\" : \"$BATS_TEST_DIRNAME/inputs/./file-Slovensko.pdf\",
+  \"size\" : 909
+}"
 }

@@ -24,5 +24,5 @@ setup() {
 @test "— Reading pdf from stdin & --format json option" {
 
     run echo $(cat $FILE_PATH/a.pdf | verapdf/verapdf --format json)
-    assert_output --partial '"jobs":[{"itemDetails":{"name":"STDIN","size":-1}'
+    assert_output --partial '"name" : "STDIN",'
 }
