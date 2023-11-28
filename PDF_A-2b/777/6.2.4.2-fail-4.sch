@@ -7,7 +7,7 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/777 -->
     <!-- File: 6.2.4.2-fail-4.pdf -->
 
-    <sch:pattern name = "Checking the validationReport: profile">
+    <sch:pattern name = "Checking the validationReport: document is compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'true')">Failed check, Expected: isCompliant=true</sch:assert>
         </sch:rule>
