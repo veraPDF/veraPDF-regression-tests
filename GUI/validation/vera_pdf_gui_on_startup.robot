@@ -96,5 +96,6 @@ Check PDF Flavour combox values on startup
     ...    PDF/A-4E
     ...    PDF/A-4F
     ...    PDF/UA-1
+    ...    PDF/UA-2
     ${values}=    getComboboxValues    1
     Lists Should Be Equal    ${expectedList}    ${values}
