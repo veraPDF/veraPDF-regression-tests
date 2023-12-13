@@ -38,12 +38,14 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Dictionary/Stream contains duplicated key /CIDToGIDMap(object key = 111 0 obj, offset = 74751)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Dictionary/Stream contains duplicated key /CIDToGIDMap(object key = 111 0 obj, offset = 74751)' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Dictionary/Stream contains duplicated key /CIDToGIDMap(object key = 111 0 obj, offset = 74751)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Problems with parsing metadata. XML parsing failure") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Dictionary/Stream contains duplicated key /CIDToGIDMap(object key = 111 0 obj, offset = 74751)' with 1 occurrences, or 
+            'WARNING: Problems with parsing metadata. XML parsing failure' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
