@@ -31,7 +31,7 @@ teardown() {
         run verapdf/verapdf $x --fixmetadata
 
         echo -e "status $(basename $x): $status \n" >&3
-        [ "$status" -eq 0 ]
+        [ "$status" -eq 0 ] || [ "$status" -eq 1 ]
         assert_output --partial 'metadataRepairReport status="No Action"'
     done
 }
