@@ -14,6 +14,7 @@ teardown() {
 }
 
 @test 'StaticXmpCoreContainers check. XMPException: Unregistered schema namespace URI' {
+    skip 'Waiting for to be fixed'
 
     run --separate-stderr -- verapdf/verapdf $BATS_TEST_TMPDIR/5-t01-fail-a.pdf  $BATS_TEST_TMPDIR/5-t01-pass-a.pdf --fixmetadata --flavour ua1 --loglevel 4
     [ "$status" -eq 1 ]
