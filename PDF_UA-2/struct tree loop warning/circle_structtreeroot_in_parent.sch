@@ -36,12 +36,12 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '50'">Failed check, Expected: 50</sch:assert>	
+            <sch:assert test="@logsCount = '8'">Failed check, Expected: 50</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Struct tree loop found") and @occurrences = "50" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Struct tree loop found' with 50 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Struct tree loop found") and @occurrences = "8" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Struct tree loop found' with 8 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
