@@ -18,7 +18,7 @@ profiles[4]=PDF/A-4
 profiles[4f]=PDF/A-4F
 profiles[4E]=PDF/A-4E
 profiles[ua1]=PDF/UA-1
-profiles[ua2]='PDF/UA-2 + Tagged PDF'
+profiles[ua2]="PDF/UA-2 + Tagged PDF"
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
