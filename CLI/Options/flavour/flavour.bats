@@ -39,7 +39,7 @@ setup() {
 
 @test "--flavour, Chooses built-in Validation Profile flavour..." {
     for item in "${!profiles[@]}"; do
-        flavour_check $item ${profiles[$item]}
+        flavour_check $item "${profiles[$item]}"
     done
 }
 
