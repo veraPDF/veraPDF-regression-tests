@@ -24,12 +24,12 @@
             (@clause = '8.2.4' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.8' and @testNumber = '1' and @failedChecks = '1') or
-            (@specification = 'ISO 32005:202X')">Failed rules, Expected: 
+            (@specification = 'ISO 32005:2023')">Failed rules, Expected: 
             8.2.2-1, 14 checks, or 
             8.2.4-1, 1 check, or 
             8.2.5.2-1, 1 check, or 
             8.8-1, 1 check, or
-            ISO 32005:202X</sch:assert>
+            ISO 32005:2023</sch:assert>
         </sch:rule>
 
     </sch:pattern>
