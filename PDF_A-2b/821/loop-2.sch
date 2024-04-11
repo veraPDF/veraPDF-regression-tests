@@ -7,28 +7,34 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/821 -->
     <!-- File: loop-2.pdf -->
 
-
-    <sch:pattern name = "Checking the validationReport: document is not compliant">
-        <sch:rule context="/report/jobs/job/validationReport">
-            <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
+    <sch:pattern name = "Checking the taskException">
+        <sch:rule context="/report/jobs/job/taskException">
+            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Loop form field tree")'>
+                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Loop form field tree
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern name = "Checking the validationReport: rules">
-        <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
+    <sch:pattern name = "Checking the batchSummary">
+        <sch:rule context="/report/batchSummary">
+            <sch:assert test="(@totalJobs = '1' and @failedToParse = '0' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '1')">
+                Failed check, Expected: totalJobs = '1' failedToParse = '0' encrypted = '0' outOfMemory = '0' veraExceptions = '1'
+            </sch:assert>
         </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.4.1' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
-            6.4.1-2, 1 check</sch:assert>
-        </sch:rule>
-
     </sch:pattern>
 
-    <sch:pattern name = "Checking for the absence of logs">
+    <sch:pattern name = "Checking the logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(., "Exception caught when validating item") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Exception caught when validating item' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
