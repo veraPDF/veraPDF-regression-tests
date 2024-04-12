@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree (unnamed script#1) caused by exception: Loop inside number tree")'>
-                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree (unnamed script#1) caused by exception: Loop inside number tree
+            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree caused by exception: Loop inside number tree")'>
+                Failed check, Expected Error: Exception: Caught unexpected runtime exception during validation caused by exception: Wrapped org.verapdf.exceptions.LoopedException: Loop inside number tree caused by exception: Loop inside number tree
             </sch:assert>
         </sch:rule>
     </sch:pattern>
