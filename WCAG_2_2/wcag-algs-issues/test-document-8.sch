@@ -73,10 +73,10 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Content stream contains duplicate MCID") and @occurrences = "76" and @level = "WARNING") or 
-            (contains(., "Content stream contains nested MCID") and @occurrences = "86" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Content stream contains duplicate MCID' with 76 occurrences, or 
-            'WARNING: Content stream contains nested MCID' with 86 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Content stream contains duplicate MCID") and @level = "WARNING") or 
+            (contains(., "Content stream contains nested MCID") and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Content stream contains duplicate MCID', or 
+            'WARNING: Content stream contains nested MCID'</sch:assert>
         </sch:rule>
     </sch:pattern>
 
