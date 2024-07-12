@@ -19,7 +19,8 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.6.2.1' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            <sch:assert test="(@clause = '6.6.2.1' and @testNumber = '1' and @failedChecks = '1' and contains(description,
+            'The metadata stream dictionary shall contain entry Type with value /Metadata and entry Subtype with value /XML'))">Failed rules, Expected:
             6.6.2.1-1, 1 check</sch:assert>
         </sch:rule>
 
