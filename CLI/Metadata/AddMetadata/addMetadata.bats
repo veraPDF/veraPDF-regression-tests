@@ -33,7 +33,14 @@ teardown() {
     for x in $(ls $BATS_TEST_TMPDIR/**/$PATTERN*.pdf); do
 
         printf "%s\n" $x >&3
-        run $BATS_TEST_TMPDIR/verapdf $x --fixmetadata
+        
+        FLAVOUR=auto
+        
+        if [[ $x == *"ua1"* ]]; then
+                FLAVOUR=ua1
+        fi
+        
+        run $BATS_TEST_TMPDIR/verapdf $x --fixmetadata --flavour $FLAVOUR
 
         echo "status $(basename $x): $status" >&3
         [ "$status" -eq 1 ]
