@@ -34,7 +34,7 @@ teardown() {
 
         printf "%s\n" $x >&3
         
-        FLAVOUR=auto
+        FLAVOUR=0
         
         if [[ $x == *"ua1"* ]]; then
                 FLAVOUR=ua1
