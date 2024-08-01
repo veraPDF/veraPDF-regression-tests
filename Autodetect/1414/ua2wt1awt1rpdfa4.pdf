@@ -1,0 +1,490 @@
+%PDF-2.0
+%öäüß
+1 0 obj
+<<
+/Lang (en)
+/MarkInfo 2 0 R
+/Metadata 3 0 R
+/Names 4 0 R
+/Pages 5 0 R
+/StructTreeRoot 6 0 R
+/Type /Catalog
+/ViewerPreferences 7 0 R
+>>
+endobj
+8 0 obj
+<<
+/CreationDate (D:20240731225554+03'00')
+/ModDate (D:20240731230231+03'00')
+>>
+endobj
+2 0 obj
+<<
+/Marked true
+>>
+endobj
+3 0 obj
+<<
+/Type /Metadata
+/Subtype /XML
+/Length 9 0 R
+>>
+stream
+<?xpacket begin="Ã¯Â»Â¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+    xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+    xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+    xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+    xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+    xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"
+    xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/"
+    xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
+    xmlns:pdfxid="http://www.npes.org/pdfx/ns/id/"
+    xmlns:prism="http://prismstandard.org/namespaces/basic/3.0/"
+    xmlns:stFnt="http://ns.adobe.com/xap/1.0/sType/Font#"
+    xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
+    xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/"
+    xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#"
+    xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#"
+    xmlns:pdfaType="http://www.aiim.org/pdfa/ns/type#"
+    xmlns:pdfaField="http://www.aiim.org/pdfa/ns/field#"
+    xmlns:pdfd="http://pdfa.org/declarations/">
+   <pdfaExtension:schemas>
+    <rdf:Bag>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>XMP Media Management Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>xmpMM</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://ns.adobe.com/xap/1.0/mm/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>OriginalDocumentID</pdfaProperty:name>
+         <pdfaProperty:valueType>URI</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>The common identifier for all versions and renditions of a document.</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF/A Identification Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfaid</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.aiim.org/pdfa/ns/id/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>year</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Year of standard</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF/UA Universal Accessibility Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfuaid</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.aiim.org/pdfua/ns/id/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>part</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Part of ISO 14289 standard</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>rev</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Revision of ISO 14289 standard</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF Declarations Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfd</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://pdfa.org/declarations/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>declarations</pdfaProperty:name>
+         <pdfaProperty:valueType>Bag declaration</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>An unordered array of PDF Declaration entries, where each PDF Declaration representing a statement of conformance with an identified external standard or profile, along with optional information identifying the nature of the claim.</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+      <pdfaSchema:valueType>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaType:type>claim</pdfaType:type>
+         <pdfaType:namespaceURI>http://pdfa.org/declarations/</pdfaType:namespaceURI>
+         <pdfaType:prefix>pdfd</pdfaType:prefix>
+         <pdfaType:description>A structure describing properties of an individualclaim.</pdfaType:description>
+         <pdfaType:field>
+          <rdf:Seq>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>claimReport</pdfaField:name>
+            <pdfaField:valueType>Text</pdfaField:valueType>
+            <pdfaField:description>A URL to a report containing details of the specific conformance claim.</pdfaField:description>
+           </rdf:li>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>claimCredentials</pdfaField:name>
+            <pdfaField:valueType>Text</pdfaField:valueType>
+            <pdfaField:description>The claimant's credentials.</pdfaField:description>
+           </rdf:li>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>claimDate</pdfaField:name>
+            <pdfaField:valueType>Text</pdfaField:valueType>
+            <pdfaField:description>A date identifying when the claim was made.</pdfaField:description>
+           </rdf:li>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>claimBy</pdfaField:name>
+            <pdfaField:valueType>Text</pdfaField:valueType>
+            <pdfaField:description>The name of the organization and/or individual and/or software making the claim.</pdfaField:description>
+           </rdf:li>
+          </rdf:Seq>
+         </pdfaType:field>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaType:type>declaration</pdfaType:type>
+         <pdfaType:namespaceURI>http://pdfa.org/declarations/</pdfaType:namespaceURI>
+         <pdfaType:prefix>pdfd</pdfaType:prefix>
+         <pdfaType:description>A structure describing a single PDF Declaration asserting conformance with an externally-identified standard or profile.</pdfaType:description>
+         <pdfaType:field>
+          <rdf:Seq>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>conformsTo</pdfaField:name>
+            <pdfaField:valueType>Text</pdfaField:valueType>
+            <pdfaField:description>A property containing a URI specifying the standard or profile by the PDF Declaration. This property is intended to mirror the Dublin Core property dc:conformsTo.</pdfaField:description>
+           </rdf:li>
+           <rdf:li rdf:parseType="Resource">
+            <pdfaField:name>claimData</pdfaField:name>
+            <pdfaField:valueType>Bag claim</pdfaField:valueType>
+            <pdfaField:description>An unordered array of claim data, where each claim identifies the nature of the claim.</pdfaField:description>
+           </rdf:li>
+          </rdf:Seq>
+         </pdfaType:field>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:valueType>
+     </rdf:li>
+    </rdf:Bag>
+   </pdfaExtension:schemas>
+   <pdf:Producer>VeraPDF Test Builder 1.0</pdf:Producer>
+   <pdf:PDFVersion>2.0</pdf:PDFVersion>
+   <pdfaid:part>4</pdfaid:part>
+   <pdfaid:rev>2020</pdfaid:rev>
+   <pdfuaid:part>2</pdfuaid:part>
+   <pdfuaid:rev>2024</pdfuaid:rev>
+   <pdfd:declarations>
+    <rdf:Bag>
+     <rdf:li rdf:parseType="Resource">
+      <pdfd:conformsTo>http://pdfa.org/declarations/wtpdf#accessibility1.0</pdfd:conformsTo>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfd:conformsTo>http://pdfa.org/declarations/wtpdf#reuse1.0</pdfd:conformsTo>
+     </rdf:li>
+    </rdf:Bag>
+   </pdfd:declarations>
+   <dc:creator>
+    <rdf:Seq>
+     <rdf:li xml:lang="x-default">VeraPDF Consortium</rdf:li>
+    </rdf:Seq>
+   </dc:creator>
+   <dc:title>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">ua2_wt1a_wt1r_pdfa4</rdf:li>
+    </rdf:Alt>
+   </dc:title>
+   <dc:type>
+    <rdf:Bag>
+     <rdf:li>Text</rdf:li>
+    </rdf:Bag>
+   </dc:type>
+   <dc:language>
+    <rdf:Bag>
+     <rdf:li>en</rdf:li>
+    </rdf:Bag>
+   </dc:language>
+   <dc:date>
+    <rdf:Seq>
+     <rdf:li>2024-06-10T11:28:35+01:00</rdf:li>
+    </rdf:Seq>
+   </dc:date>
+   <dc:format>application/pdf</dc:format>
+   <xmp:CreatorTool>VeraPDF Consortium</xmp:CreatorTool>
+   <xmp:CreateDate>2024-06-10T11:28:35+01:00</xmp:CreateDate>
+   <xmp:ModifyDate>2024-06-10T11:28:35+01:00</xmp:ModifyDate>
+   <xmp:MetadataDate>2024-06-10T11:28:35+01:00</xmp:MetadataDate>
+   <xmpMM:DocumentID>uuid:9b73c2b4-65f6-4897-89df-cb965cd08a00</xmpMM:DocumentID>
+   <xmpMM:InstanceID>uuid:961466fa-44b1-448b-86c8-f1e4c9a86009</xmpMM:InstanceID>
+   <prism:complianceProfile>three</prism:complianceProfile>
+   <prism:pageCount>1</prism:pageCount>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<?xpacket end="w"?>
+endstream
+endobj
+4 0 obj
+<<
+/EmbeddedFiles 10 0 R
+>>
+endobj
+5 0 obj
+<<
+/Count 1
+/Kids [11 0 R]
+/Type /Pages
+>>
+endobj
+6 0 obj
+<<
+/K 12 0 R
+/Namespaces [13 0 R]
+/ParentTree 14 0 R
+/ParentTreeNextKey 1
+/RoleMap <<
+>>
+/Type /StructTreeRoot
+>>
+endobj
+7 0 obj
+<<
+/DisplayDocTitle true
+>>
+endobj
+9 0 obj
+9899
+endobj
+10 0 obj
+<<
+/Names [(l3ef0003) 15 0 R]
+>>
+endobj
+11 0 obj
+<<
+/Contents 16 0 R
+/CropBox [0 0 612 792]
+/MediaBox [0 0 612 792]
+/Parent 5 0 R
+/Resources <<
+/ExtGState <<
+/GS0 17 0 R
+>>
+/Font <<
+/C0_0 18 0 R
+>>
+>>
+/Rotate 0
+/StructParents 0
+/Tabs /S
+/Type /Page
+>>
+endobj
+12 0 obj
+<<
+/K 19 0 R
+/NS 13 0 R
+/P 6 0 R
+/S /Document
+/Type /StructElem
+>>
+endobj
+13 0 obj
+<<
+/Type /Namespace
+/NS (http://iso.org/pdf2/ssn)
+>>
+endobj
+14 0 obj
+<<
+/Nums [0 [19 0 R]
+]
+>>
+endobj
+15 0 obj
+<<
+/AFRelationship /Supplement
+/Desc (mathml-3)
+/EF <<
+/F 20 0 R
+/UF 20 0 R
+>>
+/F (mathml-3.xml)
+/Type /Filespec
+/UF <FEFF006D006100740068006D006C002D0033002E0078006D006C>
+>>
+endobj
+16 0 obj
+<<
+/Filter /FlateDecode
+/Length 134
+>>
+stream
+H‰MË
+Â0¼ïWì$³[“(94iE¡'sñ¢õìÁÏw†æ3uòûó³ó8úµƒK™ZeòÇøõ&_qKr*ûFÔé!q”à†¬Üt,†"Ñ¼É.çÌVJ,	ÎÔŒÀ¢ÿ¥%1n¿¼Üú™æÕÎçN_ W	 Ş
+endstream
+endobj
+17 0 obj
+<<
+/CA 1
+/ca 1
+>>
+endobj
+18 0 obj
+<<
+/BaseFont /QJYPNX+STIXTwoText-Regular
+/DescendantFonts [21 0 R]
+/Encoding /Identity-H
+/Subtype /Type0
+/ToUnicode 22 0 R
+/Type /Font
+>>
+endobj
+19 0 obj
+<<
+/K <<
+/MCID 0
+/Pg 11 0 R
+/Type /MCR
+>>
+/P 12 0 R
+/S /P
+/Type /StructElem
+>>
+endobj
+20 0 obj
+<<
+/Filter /FlateDecode
+/Length 44
+/Params <<
+/ModDate (D:20240610)
+>>
+/Subtype /application#2Fmathml+xml
+/Type /EmbeddedFile
+>>
+stream
+H‰²ÉM,É°S°ÉÍ´«°Ñ’@f¾Zz‰5—‘¨„JèƒÕ ‘
+endstream
+endobj
+21 0 obj
+<<
+/BaseFont /QJYPNX+STIXTwoText-Regular
+/CIDSystemInfo <<
+/Ordering (Identity)
+/Registry (Adobe)
+/Supplement 0
+>>
+/FontDescriptor 23 0 R
+/Subtype /CIDFontType0
+/Type /Font
+/W [1 [235]
+ 6 [730]
+ 12 [396]
+ 15 [895]
+ 17 [737]
+21 [504 603]
+ 255 [480]
+ 258 [539 464 307]
+ 262 [577 285]
+ 267 [283 852 576 514]
+272 [521]
+ 274 [395 315 570 481]
+ 279 [479 483]
+ 1825 [245]
+ 1829 [245]
+1926 [495 495 495]
+ 1930 [495]
+]
+>>
+endobj
+22 0 obj
+<<
+/Filter /FlateDecode
+/Length 507
+>>
+stream
+H‰„“ÁÚ0†ïy
+÷€Ä²ØI t…"±¤T*Ë.QE!h$p"'QËÛ×ö¬Tu[$P><3ù<>m¶ş\Ö{òÃGÎŞ¨­{]’Ÿ~-o0XÔe&Õ­‰$ÉÛjûÄ6º.·Ô±aš-2Uu&8Så©—t‹ú{Ğ3+õbßÃ†9íü×/ß7ë¿Í³]ş³ÎéWç¿Ñ±?Úç61¯º“Iøo,3ìã æŠ}#İVµzbâ‘snşX*™Ög»ÕÖ]uÙè¶C¥¤¾:³½İ'&«²»’û-Ï¦g6y{i;:gêP{³™7Wm§/ÎıÁ½hIºRG6üXÓ„mû¦9‘UbÜK&é`ª›~­‹3±‘íC&ÍjÕ]şÑ÷´üÒh—µ¤¶)JÒ…:’73­à	›­Ì'ñHÉ?Ö9²ö 	¸=†÷¥òG¡]!a
+qğÄÑÄQRĞ´-	äE+ĞØÑ8¡ÊUVÈ›K‚ ‚Æ 4¡Êd
+ŠAŸAÏ ÏÉ´ -AKó‚;Šá"à‡ ¸Ä0p‰avİ_3—fb
+rfqpíg
+B^à\â)vrª„„*a šƒ¢§çNË´Üûh•½Öf®Üx»É±3S)ºß€¦nl–ûº«s»Ï–^VŞo ¿5’
+endstream
+endobj
+23 0 obj
+<<
+/Ascent 762
+/CapHeight 657
+/Descent -238
+/Flags 4
+/FontBBox [-948 -373 1297 1047]
+/FontFile3 24 0 R
+/FontName /QJYPNX+STIXTwoText-Regular
+/ItalicAngle 0
+/StemV 82
+/Type /FontDescriptor
+/XHeight 473
+>>
+endobj
+24 0 obj
+<<
+/Filter /FlateDecode
+/Length 3337
+/Subtype /CIDFontType0C
+>>
+stream
+H‰tTiTW®ªHÛ]6AZ«ZÀ%gFÑ(aDÄe¨D`d§ÁŞhºéV!€4ÄÌ(²ª²ï[$ÑDÆ%qI‚cÄÖÄ‰[œÄíÌ-}­N5³œ™S?Ş©wë}÷[Ş©KNNI’²ß¯}/lCÔ¯#"×DE5‘É&ıüğäTƒ2^gÿ¼šŸÅ{ZD,?ƒàg’<+"xÎ—;ˆGDN¯Bm.3¨©/Ú©™A–L±¯§Î@‘§ğ:ù–ÈÛ^Í&œ’râ}â*ñxN¼"éÿÏì»`¡¯½.Ñ¨õ™òxu’|b+œ“Çë’åz]|R²*^·-S®I‘G*’åkÔ™ú4½AŸl/+“õº´ÄxåôŸ[:-1S¬NMS''ë2#@i´Ûui©
+½Ü×Çgá|_ß…íş‹<L§Iğò½B£Ë”+ôzmæ²Ô4½Â° Q£xµ†a5¥ØÏÿG§İü_†ş§¸"I“¼&)Y-ŞNIĞ„ˆ˜BL%¤„ñšt I'’&éJŠÈÉ¤˜ü)!r)%ß İÑ,4¢"TŒJ°ğpgxq€ø;éG$9T8ÜuÜæøÒi“SåN¥S‡é ú¢ÖÙÛ9Îù–KˆËÃI¦IM“¾p¹®p­p½8ˆNˆ¯ë½0")‰‚ˆÀ±ÀŸê ô_ùñìIæ…–¿‹¤/6Øn¼Ú€F^È¤|ÖË;¶,* OZƒ€¿k0×ãé¢¡7ç„„/‹9¤og™çÚ†ºÊ6y¦íÍ*íğhkªÿâ|¿â/À)ØÍ#1/zêpˆ´»®¡½-«Y‘bĞnK?¤ïãÄx\ş–VU/?6 j•Àô»ğä£„oİ@	^aãÅã8‰ÃÍ4S«Bcõæ•œm	Z–—óË(UÊz¥FSi™‘ã/£²CU–$Ş÷ÆáØ€ÉwñZÂ?·‹ÔJBÄ]GpÍ•>¸Ôîï‚®ío°²­¸K…|ÀÙæ à|Uûá½0™&Û¤Úø©î'†[–Vş¾ Ÿò	¿ç¯PãÖŠ–ï¬|Âñs÷"0Û>¦hØÅS{mAôÊÜìß²*8ÔŠ‚²k¾áx?ômMí$á›…*¢q*o¡pœŠş®jG g›¼wå,cUH+sùûƒä‰güòg<•+…÷`2Ì‚dØ‚]a:Æ[ğd<oÅ
+a)Ds¥ƒRì½
+\ Öİ®F
+nßc'Šcƒ½°''Ë=–‘õÜ½_i”¼&æš‰×„—™Èø
+¬{MÌö¯´=Ì“NŒí”2mÄáÒŠÊªú>ÕS8ÿpœÁuŞï	9jü(¨{Ìãl_ûEöQiï¦fìàÜJ@Å44SNdæåggÚ|dLáUâáéá9}=–½sSñ–ÇòU +0Ì.‰jW ë¬¤ÒıXI‰û…€# ôCØwéá#„„ırÊïp¼áb.cE&pm4Ó“¡”íÍ\2ãPÊ^ ²®ªdçmÚgWŞ{’o|¶i”÷j“ôŞ^ı=,´.¿ÊÀÂ)Ów¾»y`˜ÛK3º­,×“1Ê‘†ºãÜÎjç®]y&YÖî}ÑÓ„˜ÄdèÆˆô#;7×T·–×mM_ÄnEÌ€Ÿg`wuƒÑaÁûg©&-5;]§n;qífÓzNœ™ÿutV}ïİ‹-ÆÏŒ’!w«ÿu¦ÂqùR¦"ğË‘ŞÎ^»˜Í!ˆÙl®§™%f˜VO5e¡”œò“ÿ“a‰‚bjÌd©-Ûß÷áî­,~£Õ¨”û¶É°Äk^Ê	ñ´ÏçÅ-]{XœùóÍ³-I	û8\‹2Úœ™x^ŞÄö€g¿¤óºÿ8èî3ÏÀ’'}rüÜÕnÎTEÅoS¦.“-]yfìáà2òÂ ï0)Ã.óı±?ö»·Dó»Ã—Ò;ê¹,»Ò±zÅÂÿµßÒÂÏ„¤ò±ÕúİZĞÛ¦ŠkŒ‚x‹ï£›Z{ª¶›*YSu¥±QV°ªe(æèÚàTm¬–ÓÇç'•ø8/¿ŠGé sîJVÄUBËçÿİ/VPZ+Jh½Ş|èÑè†é	F›bõaëÙb8­¥±‡ÔÏBN•e5MG
+¬m?ŠØ¿™Uƒ±…Öœä }Ò]Û'?²”Ã+Pt‘1ÄÎ†Û,Íüãß€’Üz®•¹ånÍ(´°úsŸš!\‚†R#Ë²ª–ê¢8·£ğâìPVƒ˜G@ñg¤]GÛZ
+…!C¥¬Ïè2é¼<Úe$"©tV	ÍëvWPZd©.«=Z»'µ• ˆ¢ì5v08áºØ(y|İß
+ñVˆµ2_ñÃèƒ—8(BÍ²á>ƒ‡#Ñ†âŒÕ‚¿,Á_qÃ9âL:°)J½1’-¢ÓºÂeÌØêØ”˜\Í|4˜®LOUÛíT”U7WíNeqz· w½ĞÈÔ‚~—Sqšc¾‚JÔÔ<ÔsRöq§a1‡· à÷w¬²k¬’š9!ñ5fŸ İfÂ
+iVæÒYAíi ¸s>,óÍú­©ÑÔ¥ãÓ¡§13Á]^VÛT/pw¢ˆâB”°½	`æ”£¦ÖîOeCÃ&,âğû‘UBÚâ-yı¼_/Ùyª„Q~ O˜wwoÃ;0oña.Ê|ßÄ³ñâ›ÿ ¹Lƒšº¢8½ïµ(y>‡&N®µcU*P°C]Çqù ¥Æ:T¶„òˆ…E6E,V@I4àB¢²4A@q\hÑ*ÖZŠ­Õ*í¸/_Üz^ç:Cïk¿¹sŞ¹wÎ»ÿßıŸX˜Škƒ||uúU˜«„Ig†~»×÷1™@æo\Ÿ¨VdC¬ÃƒUT”AÙî™XK|»Öá>ƒ¹?ÄçÙ,÷Ì GmºúáfN#óş1îå•c^ü5YÊ¬²/ G*…oùy£”½.k4M˜¸Ø¢‚|KºJA’í]:XH>4Á]ˆÚ#‚Ãcc'%äN–Z÷XŠ"í2(]ö?ŸÇHKïJÑ)â)™£ì'Êx/ÃÕØ½­h7c?ì·ªîÿŞùøzzWL?ß£?PöuxOª¹š©?t	³[0W~„ÙÑÈL?[XlBÕL£1ß©QÅ/ß˜¸¨;÷ÁÌí´?Ú°«V©ÍÙªY”ÕñÂ¤æVØ73
+Rã¸ †?¤÷öä}¾Àhµæ©2·ÆĞèA0ÍÈæ$äkµÂÛEä2ëË¹:äõŸ¨{CYzı&kk6G<.FòM®JFÏ¥Ù‡NùÏÃ{R.UÖÂp3dÀQÚ9Øõ¶½°RÈr»ddª°CîÊ4©‘¹›òŒŸ«>Ëò?ÇR™¾-ÿ¥ğRÊùjgÕ§JBq\%#SúµwÔŠÄŠ‰&1Ía…úÎÖ‘%°„„B(—
+Ë„8q:{Àå¨|d‰ÀrNoå–’
+[u%'&ÓjTÁl½˜ …¨ÂYÕØ¤t5ÕÔ>’#°=öU‡1Ìz†ó©Jçú
+Ú"vB™y§ ‹¬€DáÜˆh¢jÍ¶x‚˜L€Åˆ~S¯µÕÓN÷L¤[RjøÕo·”l·²±6•z‚Â^¤ûn›×¥lvÕQ;u¹ä	lw£CÓ_’Yˆ!ãIÊÔo³ëT$ùX½­v_ÓÓàÂ·!Õ2r/G¡=e»+Ê•Å6Ê>*Ô$bYüD¼å|6ĞS'‘B ê±ñö_„èA1âp6»ƒôl)´ÍÇ[+Íå;ì;ËqéAåŒõ4Uí,0Ğ†”¹›”îÆú>5çö½Àv:­Efë¨ÑàÉ°*…5D£æ´¥B‹NµÙlÍÇœ;Ë_Ú­Vá:@rxï\ÈÏ$’zFÛ)Ç5›¨\ÆÀ¾úİµûÔ6f—HÙe _‚°+ãƒ-G¶oñgf	:İ~c+Ríâ­vù‘§Pó,vÙyˆ‚Xø¾Œ…q„'ÓSH$µË.ĞŸ;ßJÚøÒ ½÷ÉÍÛ=ÑÔ=­û":™V¡ ³²î†ˆ)”\e{Nc±[`IÚ:¤gùæ€êP]i.~“Äjr‹£% ¥îº)Æ˜AvE…ˆK'ƒyH`ÖYMi*‚™e;Ğ"a"zı÷÷×î)_%ÿDPTêÚ¨¯Ôè×®ŞÖ+ªıëNÓ¬œ9“Ùd6ÒÑª^Ä]Ìò¦0Ş'L†¸ç×¦‹	«Y2ø&­?‰c‰Jx`Õ’KÄÈ(¤á-\Tÿ€N`²÷¥iìU„¥ùŸ¾Â¸×4exÉ;®¤V*Èòò‹‡í}8N¼Èÿ+À (×[F
+endstream
+endobj
+25 0 obj
+<<
+/ID [<212741B1B4BE27DE3241EDCEB51AF407> <E69ECA151ED17AAA51B567093AF47758>]
+/Info 8 0 R
+/Root 1 0 R
+/Type /XRef
+/Size 26
+/Filter /FlateDecode
+/Index [1 24]
+/W [1 2 0]
+/Length 79
+>>
+stream
+xœcdàgddgdÔdÔ ¢F>FM~F†åŒšVŒš~ŒšõŒZQŒZkµ>1jË0jßfÔYÃ¨sQ7ƒQ÷8£ŞFWF£nFãt –€ï
+endstream
+endobj
+startxref
+16596
+%%EOF
