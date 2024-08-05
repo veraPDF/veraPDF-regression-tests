@@ -9,13 +9,15 @@
 
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
-            <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
+            <sch:assert test="((@isCompliant = 'false' and contains(@profileName,'PDF/A-2U')) or 
+            (@isCompliant = 'true' and contains(@profileName,'PDF/UA-1')))">Failed check, 
+            Expected: PDF/A-2U, isCompliant=false or PDF/UA-1, isCompliant=true</sch:assert>
         </sch:rule>
     </sch:pattern>
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '1')">Failed check, Expected: 1</sch:assert>	
+            <sch:assert test="(@failedRules = '1' or @failedRules = '0')">Failed check, Expected: 1 or 0</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
