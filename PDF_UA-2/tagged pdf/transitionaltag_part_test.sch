@@ -13,7 +13,7 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '99')">Failed check, Expected: 99</sch:assert>	
+            <sch:assert test="(@failedRules = '111')">Failed check, Expected: 111</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
@@ -59,6 +59,18 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEArtifact' or
+            (@clause = '6.2' and @testNumber = '53' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-53, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEAside' or
+            (@clause = '6.2' and @testNumber = '10' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-10, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEBibEntry' or
             (@clause = '6.2' and @testNumber = '42' and @failedChecks = '1')">Failed rules, Expected: 
             6.2-42, 1 check</sch:assert>
@@ -86,6 +98,26 @@
             <sch:assert test="object != 'SEDiv' or
             (@clause = '6.2' and @testNumber = '6' and @failedChecks = '1')">Failed rules, Expected: 
             6.2-6, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEDocumentFragment' or
+            (@clause = '6.2' and @testNumber = '3' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-3, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEEm' or
+            (@clause = '6.2' and @testNumber = '22' and @failedChecks = '1') or 
+            (@clause = '6.2' and @testNumber = '109' and @failedChecks = '114')">Failed rules, Expected: 
+            6.2-22, 1 check, or 
+            6.2-109, 114 checks</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEFENote' or
+            (@clause = '6.2' and @testNumber = '37' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-37, 1 check</sch:assert>
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
@@ -163,12 +195,6 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SENonStandard' or
-            (@clause = '8.2.4' and @testNumber = '1' and @failedChecks = '920')">Failed rules, Expected: 
-            8.2.4-1, 920 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SENonStruct' or
             (@clause = '6.2' and @testNumber = '12' and @failedChecks = '1')">Failed rules, Expected: 
             6.2-12, 1 check</sch:assert>
@@ -194,10 +220,13 @@
             (@clause = '6.2' and @testNumber = '128' and @failedChecks = '57') or 
             (@clause = '6.2' and @testNumber = '185' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '233' and @failedChecks = '2') or 
+            (@clause = '6.2' and @testNumber = '356' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '387' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '472' and @failedChecks = '12') or 
             (@clause = '6.2' and @testNumber = '503' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '534' and @failedChecks = '2') or 
+            (@clause = '6.2' and @testNumber = '566' and @failedChecks = '2') or 
+            (@clause = '6.2' and @testNumber = '597' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '628' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '659' and @failedChecks = '2') or 
             (@clause = '6.2' and @testNumber = '708' and @failedChecks = '2') or 
@@ -221,10 +250,13 @@
             6.2-128, 57 checks, or 
             6.2-185, 2 checks, or 
             6.2-233, 2 checks, or 
+            6.2-356, 2 checks, or 
             6.2-387, 2 checks, or 
             6.2-472, 12 checks, or 
             6.2-503, 2 checks, or 
             6.2-534, 2 checks, or 
+            6.2-566, 2 checks, or 
+            6.2-597, 2 checks, or 
             6.2-628, 2 checks, or 
             6.2-659, 2 checks, or 
             6.2-708, 2 checks, or 
@@ -321,6 +353,20 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEStrong' or
+            (@clause = '6.2' and @testNumber = '23' and @failedChecks = '1') or 
+            (@clause = '6.2' and @testNumber = '110' and @failedChecks = '114')">Failed rules, Expected: 
+            6.2-23, 1 check, or 
+            6.2-110, 114 checks</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SESub' or
+            (@clause = '6.2' and @testNumber = '20' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-20, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SETBody' or
             (@clause = '6.2' and @testNumber = '48' and @failedChecks = '1') or 
             (@clause = '6.2' and @testNumber = '126' and @failedChecks = '114')">Failed rules, Expected: 
@@ -386,6 +432,12 @@
             <sch:assert test="object != 'SETable' or
             (@clause = '6.2' and @testNumber = '43' and @failedChecks = '1')">Failed rules, Expected: 
             6.2-43, 1 check</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETitle' or
+            (@clause = '6.2' and @testNumber = '19' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-19, 1 check</sch:assert>
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
