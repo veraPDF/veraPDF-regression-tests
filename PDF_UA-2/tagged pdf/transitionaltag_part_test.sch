@@ -16,11 +16,19 @@
             <sch:assert test="(@failedRules = '111')">Failed check, Expected: 111</sch:assert>	
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'CosDocument' or
             (@clause = '8.11.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
             8.11.2-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDDocument' or
@@ -28,11 +36,19 @@
             8.4.4-1, 1 check</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDFont' or
             (@clause = '8.4.5.5.1' and @testNumber = '1' and @failedChecks = '114')">Failed rules, Expected: 
             8.4.5.5.1-1, 114 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDStructElem' or
@@ -40,303 +56,451 @@
             8.2.5.27-1, 57 checks</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDStructTreeRoot' or
             (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
             8.2.5.2-1, 1 check</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEAnnot' or
-            (@clause = '6.2' and @testNumber = '28' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-28, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Annot' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Annot-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEArt' or
-            (@clause = '6.2' and @testNumber = '5' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-5, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Art' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Art-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEArtifact' or
-            (@clause = '6.2' and @testNumber = '53' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-53, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Artifact' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Artifact-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEAside' or
-            (@clause = '6.2' and @testNumber = '10' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-10, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Aside' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Aside-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEBibEntry' or
-            (@clause = '6.2' and @testNumber = '42' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-42, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-BibEntry' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-BibEntry-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEBlockQuote' or
-            (@clause = '6.2' and @testNumber = '11' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-11, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-BlockQuote' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-BlockQuote-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SECaption' or
-            (@clause = '6.2' and @testNumber = '50' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-50, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Caption' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Caption-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SECode' or
-            (@clause = '6.2' and @testNumber = '16' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-16, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Code' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Code-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEDiv' or
-            (@clause = '6.2' and @testNumber = '6' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-6, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Div' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Div-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEDocumentFragment' or
-            (@clause = '6.2' and @testNumber = '3' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-3, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-DocumentFragment' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-DocumentFragment-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEEm' or
-            (@clause = '6.2' and @testNumber = '22' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '109' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-22, 1 check, or 
-            6.2-109, 114 checks</sch:assert>
+            (@clause = 'Part-Em' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Em' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-Em-1, 114 checks, or 
+            StructTreeRoot-Em-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFENote' or
-            (@clause = '6.2' and @testNumber = '37' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-37, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-FENote' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-FENote-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFigure' or
-            (@clause = '6.2' and @testNumber = '51' and @failedChecks = '1') or 
-            (@clause = '8.2.5.28.2' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-51, 1 check, or 
-            8.2.5.28.2-1, 115 checks</sch:assert>
+            (@clause = '8.2.5.28.2' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'StructTreeRoot-Figure' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.28.2-1, 115 checks, or 
+            StructTreeRoot-Figure-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEForm' or
-            (@clause = '6.2' and @testNumber = '29' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-29, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Form' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Form-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFormula' or
-            (@clause = '6.2' and @testNumber = '52' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-52, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Formula' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Formula-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEH' or
-            (@clause = '6.2' and @testNumber = '18' and @failedChecks = '1') or 
-            (@clause = '8.2.5.12' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-18, 1 check, or 
-            8.2.5.12-1, 115 checks</sch:assert>
+            (@clause = '8.2.5.12' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'StructTreeRoot-H' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.12-1, 115 checks, or 
+            StructTreeRoot-H-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEHn' or
-            (@clause = '6.2' and @testNumber = '17' and @failedChecks = '6')">Failed rules, Expected: 
-            6.2-17, 6 checks</sch:assert>
+            (@clause = 'StructTreeRoot-Hn' and @testNumber = '1' and @failedChecks = '6')">Failed rules, Expected: 
+            StructTreeRoot-Hn-1, 6 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEIndex' or
-            (@clause = '6.2' and @testNumber = '38' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-38, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Index' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Index-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEL' or
-            (@clause = '6.2' and @testNumber = '39' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-39, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-L' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-L-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELBody' or
-            (@clause = '6.2' and @testNumber = '41' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '121' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-41, 1 check, or 
-            6.2-121, 114 checks</sch:assert>
+            (@clause = 'Part-LBody' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-LBody' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-LBody-1, 114 checks, or 
+            StructTreeRoot-LBody-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELI' or
-            (@clause = '6.2' and @testNumber = '40' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '120' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-40, 1 check, or 
-            6.2-120, 114 checks</sch:assert>
+            (@clause = 'Part-LI' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-LI' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-LI-1, 114 checks, or 
+            StructTreeRoot-LI-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELbl' or
-            (@clause = '6.2' and @testNumber = '21' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-21, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Lbl' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Lbl-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELink' or
-            (@clause = '6.2' and @testNumber = '26' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-26, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Link' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Link-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SENonStruct' or
-            (@clause = '6.2' and @testNumber = '12' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-12, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-NonStruct' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-NonStruct-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SENote' or
-            (@clause = '6.2' and @testNumber = '15' and @failedChecks = '1') or 
-            (@clause = '8.2.5.14' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-15, 1 check, or 
-            8.2.5.14-1, 115 checks</sch:assert>
+            (@clause = '8.2.5.14' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'StructTreeRoot-Note' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.14-1, 115 checks, or 
+            StructTreeRoot-Note-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEP' or
-            (@clause = '6.2' and @testNumber = '14' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-14, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-P' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-P-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEPart' or
-            (@clause = '6.2' and @testNumber = '4' and @failedChecks = '5') or 
-            (@clause = '6.2' and @testNumber = '128' and @failedChecks = '57') or 
-            (@clause = '6.2' and @testNumber = '185' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '233' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '356' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '387' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '472' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '503' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '534' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '566' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '597' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '628' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '659' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '708' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '802' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '849' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '889' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '929' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '969' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1017' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1057' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1153' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1201' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1304' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1352' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1400' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1424' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1448' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1497' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1546' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-4, 5 checks, or 
-            6.2-128, 57 checks, or 
-            6.2-185, 2 checks, or 
-            6.2-233, 2 checks, or 
-            6.2-356, 2 checks, or 
-            6.2-387, 2 checks, or 
-            6.2-472, 12 checks, or 
-            6.2-503, 2 checks, or 
-            6.2-534, 2 checks, or 
-            6.2-566, 2 checks, or 
-            6.2-597, 2 checks, or 
-            6.2-628, 2 checks, or 
-            6.2-659, 2 checks, or 
-            6.2-708, 2 checks, or 
-            6.2-802, 2 checks, or 
-            6.2-849, 2 checks, or 
-            6.2-889, 2 checks, or 
-            6.2-929, 2 checks, or 
-            6.2-969, 2 checks, or 
-            6.2-1017, 2 checks, or 
-            6.2-1057, 2 checks, or 
-            6.2-1153, 2 checks, or 
-            6.2-1201, 2 checks, or 
-            6.2-1304, 2 checks, or 
-            6.2-1352, 2 checks, or 
-            6.2-1400, 2 checks, or 
-            6.2-1424, 2 checks, or 
-            6.2-1448, 2 checks, or 
-            6.2-1497, 2 checks, or 
-            6.2-1546, 2 checks</sch:assert>
+            (@clause = 'Em-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Part' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'L-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Part-content' and @testNumber = '1' and @failedChecks = '57') or 
+            (@clause = 'Quote-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Part' and @testNumber = '1' and @failedChecks = '5') or 
+            (@clause = 'Sub-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Part' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Part' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Em-Part-1, 2 checks, or 
+            H-Part-1, 2 checks, or 
+            Hn-Part-1, 12 checks, or 
+            L-Part-1, 2 checks, or 
+            LI-Part-1, 2 checks, or 
+            Lbl-Part-1, 2 checks, or 
+            P-Part-1, 2 checks, or 
+            Part-content-1, 57 checks, or 
+            Quote-Part-1, 2 checks, or 
+            RB-Part-1, 2 checks, or 
+            RP-Part-1, 2 checks, or 
+            RT-Part-1, 2 checks, or 
+            Reference-Part-1, 2 checks, or 
+            Ruby-Part-1, 2 checks, or 
+            Span-Part-1, 2 checks, or 
+            Strong-Part-1, 2 checks, or 
+            StructTreeRoot-Part-1, 5 checks, or 
+            Sub-Part-1, 2 checks, or 
+            TBody-Part-1, 2 checks, or 
+            TD-Part-1, 2 checks, or 
+            TFoot-Part-1, 2 checks, or 
+            TH-Part-1, 2 checks, or 
+            THead-Part-1, 2 checks, or 
+            TOC-Part-1, 2 checks, or 
+            TOCI-Part-1, 2 checks, or 
+            TR-Part-1, 2 checks, or 
+            Table-Part-1, 2 checks, or 
+            WP-Part-1, 2 checks, or 
+            WT-Part-1, 2 checks, or 
+            Warichu-Part-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEPrivate' or
-            (@clause = '6.2' and @testNumber = '13' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-13, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Private' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Private-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEQuote' or
-            (@clause = '6.2' and @testNumber = '25' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '112' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-25, 1 check, or 
-            6.2-112, 114 checks</sch:assert>
+            (@clause = 'Part-Quote' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Quote' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-Quote-1, 114 checks, or 
+            StructTreeRoot-Quote-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERB' or
-            (@clause = '6.2' and @testNumber = '31' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '114' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-31, 1 check, or 
-            6.2-114, 114 checks</sch:assert>
+            (@clause = 'Part-RB' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-RB' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-RB-1, 114 checks, or 
+            StructTreeRoot-RB-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERP' or
-            (@clause = '6.2' and @testNumber = '33' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '116' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-33, 1 check, or 
-            6.2-116, 114 checks</sch:assert>
+            (@clause = 'Part-RP' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-RP' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-RP-1, 114 checks, or 
+            StructTreeRoot-RP-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERT' or
-            (@clause = '6.2' and @testNumber = '32' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '115' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-32, 1 check, or 
-            6.2-115, 114 checks</sch:assert>
+            (@clause = 'Part-RT' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-RT' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-RT-1, 114 checks, or 
+            StructTreeRoot-RT-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEReference' or
-            (@clause = '6.2' and @testNumber = '27' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-27, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Reference' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Reference-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERuby' or
-            (@clause = '6.2' and @testNumber = '30' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '113' and @failedChecks = '114') or 
-            (@clause = '8.2.5.23' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-30, 1 check, or 
-            6.2-113, 114 checks, or 
-            8.2.5.23-1, 115 checks</sch:assert>
+            (@clause = '8.2.5.23' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'Part-Ruby' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Ruby' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.23-1, 115 checks, or 
+            Part-Ruby-1, 114 checks, or 
+            StructTreeRoot-Ruby-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESect' or
-            (@clause = '6.2' and @testNumber = '7' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-7, 1 check</sch:assert>
+            (@clause = 'StructTreeRoot-Sect' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Sect-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESimpleContentItem' or
@@ -344,129 +508,194 @@
             8.2.2-1, 114 checks</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESpan' or
-            (@clause = '6.2' and @testNumber = '24' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '111' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-24, 1 check, or 
-            6.2-111, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEStrong' or
-            (@clause = '6.2' and @testNumber = '23' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '110' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-23, 1 check, or 
-            6.2-110, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SESub' or
-            (@clause = '6.2' and @testNumber = '20' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-20, 1 check</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETBody' or
-            (@clause = '6.2' and @testNumber = '48' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '126' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-48, 1 check, or 
-            6.2-126, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETD' or
-            (@clause = '6.2' and @testNumber = '46' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '124' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-46, 1 check, or 
-            6.2-124, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETFoot' or
-            (@clause = '6.2' and @testNumber = '49' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '127' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-49, 1 check, or 
-            6.2-127, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETH' or
-            (@clause = '6.2' and @testNumber = '45' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '123' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-45, 1 check, or 
-            6.2-123, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETHead' or
-            (@clause = '6.2' and @testNumber = '47' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '125' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-47, 1 check, or 
-            6.2-125, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETOC' or
-            (@clause = '6.2' and @testNumber = '8' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-8, 1 check</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETOCI' or
-            (@clause = '6.2' and @testNumber = '9' and @failedChecks = '1') or 
-            (@clause = '8.2.5.8' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-9, 1 check, or 
-            8.2.5.8-1, 115 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETR' or
-            (@clause = '6.2' and @testNumber = '44' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '122' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-44, 1 check, or 
-            6.2-122, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETable' or
-            (@clause = '6.2' and @testNumber = '43' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-43, 1 check</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETitle' or
-            (@clause = '6.2' and @testNumber = '19' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-19, 1 check</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWP' or
-            (@clause = '6.2' and @testNumber = '36' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '119' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-36, 1 check, or 
-            6.2-119, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWT' or
-            (@clause = '6.2' and @testNumber = '35' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '118' and @failedChecks = '114')">Failed rules, Expected: 
-            6.2-35, 1 check, or 
-            6.2-118, 114 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWarichu' or
-            (@clause = '6.2' and @testNumber = '34' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '117' and @failedChecks = '114') or 
-            (@clause = '8.2.5.24' and @testNumber = '1' and @failedChecks = '115')">Failed rules, Expected: 
-            6.2-34, 1 check, or 
-            6.2-117, 114 checks, or 
-            8.2.5.24-1, 115 checks</sch:assert>
+            (@clause = 'Part-Span' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Span' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-Span-1, 114 checks, or 
+            StructTreeRoot-Span-1, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEStrong' or
+            (@clause = 'Part-Strong' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Strong' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-Strong-1, 114 checks, or 
+            StructTreeRoot-Strong-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SESub' or
+            (@clause = 'StructTreeRoot-Sub' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Sub-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETBody' or
+            (@clause = 'Part-TBody' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-TBody' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-TBody-1, 114 checks, or 
+            StructTreeRoot-TBody-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETD' or
+            (@clause = 'Part-TD' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-TD' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-TD-1, 114 checks, or 
+            StructTreeRoot-TD-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETFoot' or
+            (@clause = 'Part-TFoot' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-TFoot' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-TFoot-1, 114 checks, or 
+            StructTreeRoot-TFoot-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETH' or
+            (@clause = 'Part-TH' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-TH' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-TH-1, 114 checks, or 
+            StructTreeRoot-TH-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETHead' or
+            (@clause = 'Part-THead' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-THead' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-THead-1, 114 checks, or 
+            StructTreeRoot-THead-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETOC' or
+            (@clause = 'StructTreeRoot-TOC' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-TOC-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETOCI' or
+            (@clause = '8.2.5.8' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'StructTreeRoot-TOCI' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.8-1, 115 checks, or 
+            StructTreeRoot-TOCI-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETR' or
+            (@clause = 'Part-TR' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-TR' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-TR-1, 114 checks, or 
+            StructTreeRoot-TR-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETable' or
+            (@clause = 'StructTreeRoot-Table' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Table-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETitle' or
+            (@clause = 'StructTreeRoot-Title' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            StructTreeRoot-Title-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWP' or
+            (@clause = 'Part-WP' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-WP' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-WP-1, 114 checks, or 
+            StructTreeRoot-WP-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWT' or
+            (@clause = 'Part-WT' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-WT' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            Part-WT-1, 114 checks, or 
+            StructTreeRoot-WT-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWarichu' or
+            (@clause = '8.2.5.24' and @testNumber = '1' and @failedChecks = '115') or 
+            (@clause = 'Part-Warichu' and @testNumber = '1' and @failedChecks = '114') or 
+            (@clause = 'StructTreeRoot-Warichu' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.24-1, 115 checks, or 
+            Part-Warichu-1, 114 checks, or 
+            StructTreeRoot-Warichu-1, 1 check</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
 
     <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">

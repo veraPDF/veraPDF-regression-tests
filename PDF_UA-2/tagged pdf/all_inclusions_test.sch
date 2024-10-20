@@ -16,11 +16,19 @@
             <sch:assert test="(@failedRules = '1590')">Failed check, Expected: 1590</sch:assert>	
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'CosDocument' or
             (@clause = '8.11.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
             8.11.2-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDDocument' or
@@ -28,11 +36,19 @@
             8.4.4-1, 1 check</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDFont' or
             (@clause = '8.4.5.5.1' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
             8.4.5.5.1-1, 110 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDStructElem' or
@@ -40,2031 +56,2171 @@
             8.2.5.27-1, 54 checks</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDStructTreeRoot' or
-            (@clause = '6.2' and @testNumber = '2' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '54' and @failedChecks = '1') or 
-            (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-2, 1 check, or 
-            6.2-54, 1 check, or 
-            8.2.5.2-1, 1 check</sch:assert>
+            (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'StructTreeRoot-Document' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'StructTreeRoot-content' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            8.2.5.2-1, 1 check, or 
+            StructTreeRoot-Document-1, 1 check, or 
+            StructTreeRoot-content-1, 1 check</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEAnnot' or
-            (@clause = '6.2' and @testNumber = '28' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '205' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '250' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '781' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '824' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '991' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1175' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1221' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1326' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1374' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1470' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1519' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1568' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-28, 2 checks, or 
-            6.2-205, 2 checks, or 
-            6.2-250, 2 checks, or 
-            6.2-781, 2 checks, or 
-            6.2-824, 2 checks, or 
-            6.2-991, 2 checks, or 
-            6.2-1175, 2 checks, or 
-            6.2-1221, 2 checks, or 
-            6.2-1326, 2 checks, or 
-            6.2-1374, 2 checks, or 
-            6.2-1470, 2 checks, or 
-            6.2-1519, 2 checks, or 
-            6.2-1568, 2 checks</sch:assert>
+            (@clause = 'Form-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Annot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Annot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Form-Annot-1, 2 checks, or 
+            L-Annot-1, 2 checks, or 
+            LI-Annot-1, 2 checks, or 
+            Ruby-Annot-1, 2 checks, or 
+            StructTreeRoot-Annot-1, 2 checks, or 
+            TBody-Annot-1, 2 checks, or 
+            TFoot-Annot-1, 2 checks, or 
+            THead-Annot-1, 2 checks, or 
+            TOC-Annot-1, 2 checks, or 
+            TOCI-Annot-1, 2 checks, or 
+            TR-Annot-1, 2 checks, or 
+            Table-Annot-1, 2 checks, or 
+            Warichu-Annot-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEArt' or
-            (@clause = '6.2' and @testNumber = '5' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '131' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '133' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '156' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '186' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '234' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '330' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '357' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '388' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '434' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '535' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '567' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '598' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '629' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '660' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '709' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '765' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '803' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '850' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '890' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '930' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '970' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1018' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1058' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1118' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1154' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1202' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1268' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1305' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1353' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1449' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1498' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1547' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1634' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-5, 2 checks, or 
-            6.2-131, 2 checks, or 
-            6.2-133, 1 check, or 
-            6.2-156, 1 check, or 
-            6.2-186, 2 checks, or 
-            6.2-234, 2 checks, or 
-            6.2-330, 2 checks, or 
-            6.2-357, 2 checks, or 
-            6.2-388, 2 checks, or 
-            6.2-434, 2 checks, or 
-            6.2-535, 2 checks, or 
-            6.2-567, 2 checks, or 
-            6.2-598, 2 checks, or 
-            6.2-629, 2 checks, or 
-            6.2-660, 2 checks, or 
-            6.2-709, 2 checks, or 
-            6.2-765, 2 checks, or 
-            6.2-803, 2 checks, or 
-            6.2-850, 2 checks, or 
-            6.2-890, 2 checks, or 
-            6.2-930, 2 checks, or 
-            6.2-970, 2 checks, or 
-            6.2-1018, 2 checks, or 
-            6.2-1058, 2 checks, or 
-            6.2-1118, 2 checks, or 
-            6.2-1154, 2 checks, or 
-            6.2-1202, 2 checks, or 
-            6.2-1268, 2 checks, or 
-            6.2-1305, 2 checks, or 
-            6.2-1353, 2 checks, or 
-            6.2-1449, 2 checks, or 
-            6.2-1498, 2 checks, or 
-            6.2-1547, 2 checks, or 
-            6.2-1634, 2 checks</sch:assert>
+            (@clause = 'Art-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Art-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'BibEntry-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Art' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Art' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Art-1, 2 checks, or 
+            Art-H-1, 1 check, or 
+            Art-content-1, 1 check, or 
+            BibEntry-Art-1, 2 checks, or 
+            Code-Art-1, 2 checks, or 
+            Em-Art-1, 2 checks, or 
+            Form-Art-1, 2 checks, or 
+            Formula-Art-1, 2 checks, or 
+            Index-Art-1, 2 checks, or 
+            L-Art-1, 2 checks, or 
+            LI-Art-1, 2 checks, or 
+            Lbl-Art-1, 2 checks, or 
+            P-Art-1, 2 checks, or 
+            Quote-Art-1, 2 checks, or 
+            RB-Art-1, 2 checks, or 
+            RP-Art-1, 2 checks, or 
+            RT-Art-1, 2 checks, or 
+            Reference-Art-1, 2 checks, or 
+            Ruby-Art-1, 2 checks, or 
+            Span-Art-1, 2 checks, or 
+            Strong-Art-1, 2 checks, or 
+            StructTreeRoot-Art-1, 2 checks, or 
+            Sub-Art-1, 2 checks, or 
+            TBody-Art-1, 2 checks, or 
+            TFoot-Art-1, 2 checks, or 
+            THead-Art-1, 2 checks, or 
+            TOC-Art-1, 2 checks, or 
+            TOCI-Art-1, 2 checks, or 
+            TR-Art-1, 2 checks, or 
+            Table-Art-1, 2 checks, or 
+            Title-Art-1, 2 checks, or 
+            WP-Art-1, 2 checks, or 
+            WT-Art-1, 2 checks, or 
+            Warichu-Art-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEArtifact' or
-            (@clause = '6.2' and @testNumber = '53' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '846' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1014' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1654' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1655' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-53, 2 checks, or 
-            6.2-846, 2 checks, or 
-            6.2-1014, 2 checks, or 
-            6.2-1654, 1 check, or 
-            6.2-1655, 1 check</sch:assert>
+            (@clause = 'Artifact-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Artifact-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Ruby-Artifact' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Artifact' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Artifact' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Artifact-Caption-1, 1 check, or 
+            Artifact-H-1, 1 check, or 
+            Ruby-Artifact-1, 2 checks, or 
+            StructTreeRoot-Artifact-1, 2 checks, or 
+            Warichu-Artifact-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEAside' or
-            (@clause = '6.2' and @testNumber = '10' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '189' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '237' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '277' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '278' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '301' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '303' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '362' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '393' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '438' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '478' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '509' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '540' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '572' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '603' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '634' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '665' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '714' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '769' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '808' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '855' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '895' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '935' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '975' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1023' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1063' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1121' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1159' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1206' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1272' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1310' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1358' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1403' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1427' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1454' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1503' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1552' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-10, 2 checks, or 
-            6.2-189, 2 checks, or 
-            6.2-237, 2 checks, or 
-            6.2-277, 2 checks, or 
-            6.2-278, 1 check, or 
-            6.2-301, 1 check, or 
-            6.2-303, 2 checks, or 
-            6.2-362, 2 checks, or 
-            6.2-393, 2 checks, or 
-            6.2-438, 2 checks, or 
-            6.2-478, 12 checks, or 
-            6.2-509, 2 checks, or 
-            6.2-540, 2 checks, or 
-            6.2-572, 2 checks, or 
-            6.2-603, 2 checks, or 
-            6.2-634, 2 checks, or 
-            6.2-665, 2 checks, or 
-            6.2-714, 2 checks, or 
-            6.2-769, 2 checks, or 
-            6.2-808, 2 checks, or 
-            6.2-855, 2 checks, or 
-            6.2-895, 2 checks, or 
-            6.2-935, 2 checks, or 
-            6.2-975, 2 checks, or 
-            6.2-1023, 2 checks, or 
-            6.2-1063, 2 checks, or 
-            6.2-1121, 2 checks, or 
-            6.2-1159, 2 checks, or 
-            6.2-1206, 2 checks, or 
-            6.2-1272, 2 checks, or 
-            6.2-1310, 2 checks, or 
-            6.2-1358, 2 checks, or 
-            6.2-1403, 2 checks, or 
-            6.2-1427, 2 checks, or 
-            6.2-1454, 2 checks, or 
-            6.2-1503, 2 checks, or 
-            6.2-1552, 2 checks</sch:assert>
+            (@clause = 'Aside-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Aside-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'BibEntry-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Aside' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Aside' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Aside' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Aside-Aside-1, 2 checks, or 
+            Aside-Caption-1, 1 check, or 
+            Aside-H-1, 1 check, or 
+            BibEntry-Aside-1, 2 checks, or 
+            BlockQuote-Aside-1, 2 checks, or 
+            Code-Aside-1, 2 checks, or 
+            Em-Aside-1, 2 checks, or 
+            Form-Aside-1, 2 checks, or 
+            H-Aside-1, 2 checks, or 
+            Hn-Aside-1, 12 checks, or 
+            Index-Aside-1, 2 checks, or 
+            L-Aside-1, 2 checks, or 
+            LI-Aside-1, 2 checks, or 
+            Lbl-Aside-1, 2 checks, or 
+            P-Aside-1, 2 checks, or 
+            Quote-Aside-1, 2 checks, or 
+            RB-Aside-1, 2 checks, or 
+            RP-Aside-1, 2 checks, or 
+            RT-Aside-1, 2 checks, or 
+            Reference-Aside-1, 2 checks, or 
+            Ruby-Aside-1, 2 checks, or 
+            Span-Aside-1, 2 checks, or 
+            Strong-Aside-1, 2 checks, or 
+            StructTreeRoot-Aside-1, 2 checks, or 
+            Sub-Aside-1, 2 checks, or 
+            TBody-Aside-1, 2 checks, or 
+            TD-Aside-1, 2 checks, or 
+            TFoot-Aside-1, 2 checks, or 
+            TH-Aside-1, 2 checks, or 
+            THead-Aside-1, 2 checks, or 
+            TOC-Aside-1, 2 checks, or 
+            TOCI-Aside-1, 2 checks, or 
+            TR-Aside-1, 2 checks, or 
+            Table-Aside-1, 2 checks, or 
+            WP-Aside-1, 2 checks, or 
+            WT-Aside-1, 2 checks, or 
+            Warichu-Aside-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEBibEntry' or
-            (@clause = '6.2' and @testNumber = '42' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '73' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '100' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '149' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '175' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '219' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '264' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '294' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '320' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '835' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '876' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '916' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '956' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1003' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1044' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1084' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1109' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1143' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1187' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1234' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1292' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1340' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1388' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1484' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1533' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1582' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-42, 2 checks, or 
-            6.2-73, 2 checks, or 
-            6.2-100, 2 checks, or 
-            6.2-149, 2 checks, or 
-            6.2-175, 2 checks, or 
-            6.2-219, 2 checks, or 
-            6.2-264, 2 checks, or 
-            6.2-294, 2 checks, or 
-            6.2-320, 2 checks, or 
-            6.2-835, 2 checks, or 
-            6.2-876, 2 checks, or 
-            6.2-916, 2 checks, or 
-            6.2-956, 2 checks, or 
-            6.2-1003, 2 checks, or 
-            6.2-1044, 2 checks, or 
-            6.2-1084, 2 checks, or 
-            6.2-1109, 2 checks, or 
-            6.2-1143, 2 checks, or 
-            6.2-1187, 2 checks, or 
-            6.2-1234, 2 checks, or 
-            6.2-1292, 2 checks, or 
-            6.2-1340, 2 checks, or 
-            6.2-1388, 2 checks, or 
-            6.2-1484, 2 checks, or 
-            6.2-1533, 2 checks, or 
-            6.2-1582, 2 checks</sch:assert>
+            (@clause = 'Art-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-BibEntry' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-BibEntry-1, 2 checks, or 
+            Aside-BibEntry-1, 2 checks, or 
+            BibEntry-BibEntry-1, 2 checks, or 
+            BlockQuote-BibEntry-1, 2 checks, or 
+            Document-BibEntry-1, 2 checks, or 
+            DocumentFragment-BibEntry-1, 2 checks, or 
+            FENote-BibEntry-1, 2 checks, or 
+            Index-BibEntry-1, 2 checks, or 
+            L-BibEntry-1, 2 checks, or 
+            LI-BibEntry-1, 2 checks, or 
+            RB-BibEntry-1, 2 checks, or 
+            RP-BibEntry-1, 2 checks, or 
+            RT-BibEntry-1, 2 checks, or 
+            Ruby-BibEntry-1, 2 checks, or 
+            Sect-BibEntry-1, 2 checks, or 
+            StructTreeRoot-BibEntry-1, 2 checks, or 
+            TBody-BibEntry-1, 2 checks, or 
+            TFoot-BibEntry-1, 2 checks, or 
+            THead-BibEntry-1, 2 checks, or 
+            TOC-BibEntry-1, 2 checks, or 
+            TOCI-BibEntry-1, 2 checks, or 
+            TR-BibEntry-1, 2 checks, or 
+            Table-BibEntry-1, 2 checks, or 
+            WP-BibEntry-1, 2 checks, or 
+            WT-BibEntry-1, 2 checks, or 
+            Warichu-BibEntry-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEBlockQuote' or
-            (@clause = '6.2' and @testNumber = '11' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '190' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '238' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '304' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '327' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '334' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '363' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '394' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '439' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '479' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '510' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '541' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '573' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '604' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '635' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '666' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '715' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '770' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '809' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '856' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '896' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '936' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '976' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1024' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1064' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1122' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1160' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1207' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1273' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1311' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1359' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1404' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1428' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1455' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1504' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1553' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-11, 2 checks, or 
-            6.2-190, 2 checks, or 
-            6.2-238, 2 checks, or 
-            6.2-304, 1 check, or 
-            6.2-327, 1 check, or 
-            6.2-334, 2 checks, or 
-            6.2-363, 2 checks, or 
-            6.2-394, 2 checks, or 
-            6.2-439, 2 checks, or 
-            6.2-479, 12 checks, or 
-            6.2-510, 2 checks, or 
-            6.2-541, 2 checks, or 
-            6.2-573, 2 checks, or 
-            6.2-604, 2 checks, or 
-            6.2-635, 2 checks, or 
-            6.2-666, 2 checks, or 
-            6.2-715, 2 checks, or 
-            6.2-770, 2 checks, or 
-            6.2-809, 2 checks, or 
-            6.2-856, 2 checks, or 
-            6.2-896, 2 checks, or 
-            6.2-936, 2 checks, or 
-            6.2-976, 2 checks, or 
-            6.2-1024, 2 checks, or 
-            6.2-1064, 2 checks, or 
-            6.2-1122, 2 checks, or 
-            6.2-1160, 2 checks, or 
-            6.2-1207, 2 checks, or 
-            6.2-1273, 2 checks, or 
-            6.2-1311, 2 checks, or 
-            6.2-1359, 2 checks, or 
-            6.2-1404, 2 checks, or 
-            6.2-1428, 2 checks, or 
-            6.2-1455, 2 checks, or 
-            6.2-1504, 2 checks, or 
-            6.2-1553, 2 checks</sch:assert>
+            (@clause = 'BibEntry-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'BlockQuote-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Code-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-BlockQuote' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-BlockQuote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-BlockQuote-1, 2 checks, or 
+            BlockQuote-Caption-1, 1 check, or 
+            BlockQuote-H-1, 1 check, or 
+            Code-BlockQuote-1, 2 checks, or 
+            Em-BlockQuote-1, 2 checks, or 
+            Form-BlockQuote-1, 2 checks, or 
+            H-BlockQuote-1, 2 checks, or 
+            Hn-BlockQuote-1, 12 checks, or 
+            Index-BlockQuote-1, 2 checks, or 
+            L-BlockQuote-1, 2 checks, or 
+            LI-BlockQuote-1, 2 checks, or 
+            Lbl-BlockQuote-1, 2 checks, or 
+            P-BlockQuote-1, 2 checks, or 
+            Quote-BlockQuote-1, 2 checks, or 
+            RB-BlockQuote-1, 2 checks, or 
+            RP-BlockQuote-1, 2 checks, or 
+            RT-BlockQuote-1, 2 checks, or 
+            Reference-BlockQuote-1, 2 checks, or 
+            Ruby-BlockQuote-1, 2 checks, or 
+            Span-BlockQuote-1, 2 checks, or 
+            Strong-BlockQuote-1, 2 checks, or 
+            StructTreeRoot-BlockQuote-1, 2 checks, or 
+            Sub-BlockQuote-1, 2 checks, or 
+            TBody-BlockQuote-1, 2 checks, or 
+            TD-BlockQuote-1, 2 checks, or 
+            TFoot-BlockQuote-1, 2 checks, or 
+            TH-BlockQuote-1, 2 checks, or 
+            THead-BlockQuote-1, 2 checks, or 
+            TOC-BlockQuote-1, 2 checks, or 
+            TOCI-BlockQuote-1, 2 checks, or 
+            TR-BlockQuote-1, 2 checks, or 
+            Table-BlockQuote-1, 2 checks, or 
+            Title-BlockQuote-1, 2 checks, or 
+            WP-BlockQuote-1, 2 checks, or 
+            WT-BlockQuote-1, 2 checks, or 
+            Warichu-BlockQuote-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SECaption' or
-            (@clause = '6.2' and @testNumber = '50' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '80' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '107' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '272' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '384' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '413' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '467' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '500' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '531' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '563' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '594' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '625' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '656' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '687' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '743' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '843' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '884' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '924' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '964' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1011' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1052' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1092' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1242' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1300' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1394' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1421' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1445' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1491' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1540' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1589' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1596' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1611' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-50, 2 checks, or 
-            6.2-80, 2 checks, or 
-            6.2-107, 2 checks, or 
-            6.2-272, 2 checks, or 
-            6.2-384, 2 checks, or 
-            6.2-413, 2 checks, or 
-            6.2-467, 2 checks, or 
-            6.2-500, 12 checks, or 
-            6.2-531, 2 checks, or 
-            6.2-563, 2 checks, or 
-            6.2-594, 2 checks, or 
-            6.2-625, 2 checks, or 
-            6.2-656, 2 checks, or 
-            6.2-687, 2 checks, or 
-            6.2-743, 2 checks, or 
-            6.2-843, 2 checks, or 
-            6.2-884, 2 checks, or 
-            6.2-924, 2 checks, or 
-            6.2-964, 2 checks, or 
-            6.2-1011, 2 checks, or 
-            6.2-1052, 2 checks, or 
-            6.2-1092, 2 checks, or 
-            6.2-1242, 2 checks, or 
-            6.2-1300, 2 checks, or 
-            6.2-1394, 2 checks, or 
-            6.2-1421, 2 checks, or 
-            6.2-1445, 2 checks, or 
-            6.2-1491, 2 checks, or 
-            6.2-1540, 2 checks, or 
-            6.2-1589, 2 checks, or 
-            6.2-1596, 1 check, or 
-            6.2-1611, 2 checks</sch:assert>
+            (@clause = 'BibEntry-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Code-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Caption' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'LI-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Caption' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Caption' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Caption-1, 2 checks, or 
+            Caption-Caption-1, 2 checks, or 
+            Caption-H-1, 1 check, or 
+            Code-Caption-1, 2 checks, or 
+            Document-Caption-1, 2 checks, or 
+            DocumentFragment-Caption-1, 2 checks, or 
+            Em-Caption-1, 2 checks, or 
+            H-Caption-1, 2 checks, or 
+            Hn-Caption-1, 12 checks, or 
+            LI-Caption-1, 2 checks, or 
+            Lbl-Caption-1, 2 checks, or 
+            P-Caption-1, 2 checks, or 
+            Quote-Caption-1, 2 checks, or 
+            RB-Caption-1, 2 checks, or 
+            RP-Caption-1, 2 checks, or 
+            RT-Caption-1, 2 checks, or 
+            Reference-Caption-1, 2 checks, or 
+            Ruby-Caption-1, 2 checks, or 
+            Span-Caption-1, 2 checks, or 
+            Strong-Caption-1, 2 checks, or 
+            StructTreeRoot-Caption-1, 2 checks, or 
+            Sub-Caption-1, 2 checks, or 
+            TBody-Caption-1, 2 checks, or 
+            TD-Caption-1, 2 checks, or 
+            TFoot-Caption-1, 2 checks, or 
+            TH-Caption-1, 2 checks, or 
+            THead-Caption-1, 2 checks, or 
+            TOCI-Caption-1, 2 checks, or 
+            TR-Caption-1, 2 checks, or 
+            WP-Caption-1, 2 checks, or 
+            WT-Caption-1, 2 checks, or 
+            Warichu-Caption-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SECode' or
-            (@clause = '6.2' and @testNumber = '16' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '193' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '240' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '441' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '717' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '812' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '859' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '899' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '939' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '979' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1027' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1067' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1123' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1163' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1210' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1274' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1314' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1362' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1458' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1507' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1556' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-16, 2 checks, or 
-            6.2-193, 2 checks, or 
-            6.2-240, 2 checks, or 
-            6.2-441, 2 checks, or 
-            6.2-717, 2 checks, or 
-            6.2-812, 2 checks, or 
-            6.2-859, 2 checks, or 
-            6.2-899, 2 checks, or 
-            6.2-939, 2 checks, or 
-            6.2-979, 2 checks, or 
-            6.2-1027, 2 checks, or 
-            6.2-1067, 2 checks, or 
-            6.2-1123, 2 checks, or 
-            6.2-1163, 2 checks, or 
-            6.2-1210, 2 checks, or 
-            6.2-1274, 2 checks, or 
-            6.2-1314, 2 checks, or 
-            6.2-1362, 2 checks, or 
-            6.2-1458, 2 checks, or 
-            6.2-1507, 2 checks, or 
-            6.2-1556, 2 checks</sch:assert>
+            (@clause = 'BibEntry-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Code' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Code' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Code-1, 2 checks, or 
+            Code-Code-1, 2 checks, or 
+            Index-Code-1, 2 checks, or 
+            L-Code-1, 2 checks, or 
+            LI-Code-1, 2 checks, or 
+            RB-Code-1, 2 checks, or 
+            RP-Code-1, 2 checks, or 
+            RT-Code-1, 2 checks, or 
+            Reference-Code-1, 2 checks, or 
+            Ruby-Code-1, 2 checks, or 
+            StructTreeRoot-Code-1, 2 checks, or 
+            TBody-Code-1, 2 checks, or 
+            TFoot-Code-1, 2 checks, or 
+            THead-Code-1, 2 checks, or 
+            TOC-Code-1, 2 checks, or 
+            TOCI-Code-1, 2 checks, or 
+            TR-Code-1, 2 checks, or 
+            Table-Code-1, 2 checks, or 
+            WP-Code-1, 2 checks, or 
+            WT-Code-1, 2 checks, or 
+            Warichu-Code-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEDocument' or
-            (@clause = '6.2' and @testNumber = '56' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '81' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '130' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '157' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '183' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '231' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '328' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '354' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '385' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '414' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '433' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '470' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '501' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '532' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '564' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '595' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '626' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '657' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '688' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '706' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '745' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '763' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '800' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '847' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '887' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '927' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '967' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1015' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1055' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1095' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1116' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1151' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1199' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1245' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1266' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1302' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1350' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1398' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1422' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1446' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1495' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1544' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1593' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1612' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1632' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-56, 1 check, or 
-            6.2-81, 1 check, or 
-            6.2-130, 2 checks, or 
-            6.2-157, 2 checks, or 
-            6.2-183, 2 checks, or 
-            6.2-231, 2 checks, or 
-            6.2-328, 2 checks, or 
-            6.2-354, 2 checks, or 
-            6.2-385, 2 checks, or 
-            6.2-414, 2 checks, or 
-            6.2-433, 2 checks, or 
-            6.2-470, 12 checks, or 
-            6.2-501, 2 checks, or 
-            6.2-532, 2 checks, or 
-            6.2-564, 2 checks, or 
-            6.2-595, 2 checks, or 
-            6.2-626, 2 checks, or 
-            6.2-657, 2 checks, or 
-            6.2-688, 2 checks, or 
-            6.2-706, 2 checks, or 
-            6.2-745, 2 checks, or 
-            6.2-763, 2 checks, or 
-            6.2-800, 2 checks, or 
-            6.2-847, 2 checks, or 
-            6.2-887, 2 checks, or 
-            6.2-927, 2 checks, or 
-            6.2-967, 2 checks, or 
-            6.2-1015, 2 checks, or 
-            6.2-1055, 2 checks, or 
-            6.2-1095, 2 checks, or 
-            6.2-1116, 2 checks, or 
-            6.2-1151, 2 checks, or 
-            6.2-1199, 2 checks, or 
-            6.2-1245, 2 checks, or 
-            6.2-1266, 2 checks, or 
-            6.2-1302, 2 checks, or 
-            6.2-1350, 2 checks, or 
-            6.2-1398, 2 checks, or 
-            6.2-1422, 2 checks, or 
-            6.2-1446, 2 checks, or 
-            6.2-1495, 2 checks, or 
-            6.2-1544, 2 checks, or 
-            6.2-1593, 2 checks, or 
-            6.2-1612, 2 checks, or 
-            6.2-1632, 2 checks</sch:assert>
+            (@clause = 'Annot-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Document-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Em-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Document' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Document' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Document' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-Document-1, 2 checks, or 
+            Art-Document-1, 2 checks, or 
+            BibEntry-Document-1, 2 checks, or 
+            Caption-Document-1, 2 checks, or 
+            Code-Document-1, 2 checks, or 
+            Document-H-1, 1 check, or 
+            Document-content-1, 1 check, or 
+            Em-Document-1, 2 checks, or 
+            FENote-Document-1, 2 checks, or 
+            Figure-Document-1, 2 checks, or 
+            Form-Document-1, 2 checks, or 
+            Formula-Document-1, 2 checks, or 
+            H-Document-1, 2 checks, or 
+            Hn-Document-1, 12 checks, or 
+            Index-Document-1, 2 checks, or 
+            L-Document-1, 2 checks, or 
+            LBody-Document-1, 2 checks, or 
+            LI-Document-1, 2 checks, or 
+            Lbl-Document-1, 2 checks, or 
+            Link-Document-1, 2 checks, or 
+            Note-Document-1, 2 checks, or 
+            P-Document-1, 2 checks, or 
+            Quote-Document-1, 2 checks, or 
+            RB-Document-1, 2 checks, or 
+            RP-Document-1, 2 checks, or 
+            RT-Document-1, 2 checks, or 
+            Reference-Document-1, 2 checks, or 
+            Ruby-Document-1, 2 checks, or 
+            Sect-Document-1, 2 checks, or 
+            Span-Document-1, 2 checks, or 
+            Strong-Document-1, 2 checks, or 
+            Sub-Document-1, 2 checks, or 
+            TBody-Document-1, 2 checks, or 
+            TD-Document-1, 2 checks, or 
+            TFoot-Document-1, 2 checks, or 
+            TH-Document-1, 2 checks, or 
+            THead-Document-1, 2 checks, or 
+            TOC-Document-1, 2 checks, or 
+            TOCI-Document-1, 2 checks, or 
+            TR-Document-1, 2 checks, or 
+            Table-Document-1, 2 checks, or 
+            Title-Document-1, 2 checks, or 
+            WP-Document-1, 2 checks, or 
+            WT-Document-1, 2 checks, or 
+            Warichu-Document-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEDocumentFragment' or
-            (@clause = '6.2' and @testNumber = '3' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '83' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '108' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '184' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '232' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '329' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '355' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '386' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '471' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '502' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '533' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '565' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '596' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '627' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '658' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '707' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '764' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '801' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '848' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '888' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '928' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '968' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1016' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1056' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1117' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1152' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1200' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1246' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1267' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1303' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1351' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1399' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1423' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1447' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1496' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1545' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1613' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1633' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-3, 2 checks, or 
-            6.2-83, 1 check, or 
-            6.2-108, 1 check, or 
-            6.2-184, 2 checks, or 
-            6.2-232, 2 checks, or 
-            6.2-329, 2 checks, or 
-            6.2-355, 2 checks, or 
-            6.2-386, 2 checks, or 
-            6.2-471, 12 checks, or 
-            6.2-502, 2 checks, or 
-            6.2-533, 2 checks, or 
-            6.2-565, 2 checks, or 
-            6.2-596, 2 checks, or 
-            6.2-627, 2 checks, or 
-            6.2-658, 2 checks, or 
-            6.2-707, 2 checks, or 
-            6.2-764, 2 checks, or 
-            6.2-801, 2 checks, or 
-            6.2-848, 2 checks, or 
-            6.2-888, 2 checks, or 
-            6.2-928, 2 checks, or 
-            6.2-968, 2 checks, or 
-            6.2-1016, 2 checks, or 
-            6.2-1056, 2 checks, or 
-            6.2-1117, 2 checks, or 
-            6.2-1152, 2 checks, or 
-            6.2-1200, 2 checks, or 
-            6.2-1246, 2 checks, or 
-            6.2-1267, 2 checks, or 
-            6.2-1303, 2 checks, or 
-            6.2-1351, 2 checks, or 
-            6.2-1399, 2 checks, or 
-            6.2-1423, 2 checks, or 
-            6.2-1447, 2 checks, or 
-            6.2-1496, 2 checks, or 
-            6.2-1545, 2 checks, or 
-            6.2-1613, 2 checks, or 
-            6.2-1633, 2 checks</sch:assert>
+            (@clause = 'BibEntry-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'DocumentFragment-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Em-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-DocumentFragment' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-DocumentFragment' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-DocumentFragment-1, 2 checks, or 
+            DocumentFragment-H-1, 1 check, or 
+            DocumentFragment-content-1, 1 check, or 
+            Em-DocumentFragment-1, 2 checks, or 
+            Figure-DocumentFragment-1, 2 checks, or 
+            Form-DocumentFragment-1, 2 checks, or 
+            Formula-DocumentFragment-1, 2 checks, or 
+            H-DocumentFragment-1, 2 checks, or 
+            Hn-DocumentFragment-1, 12 checks, or 
+            Index-DocumentFragment-1, 2 checks, or 
+            L-DocumentFragment-1, 2 checks, or 
+            LBody-DocumentFragment-1, 2 checks, or 
+            LI-DocumentFragment-1, 2 checks, or 
+            Lbl-DocumentFragment-1, 2 checks, or 
+            P-DocumentFragment-1, 2 checks, or 
+            Quote-DocumentFragment-1, 2 checks, or 
+            RB-DocumentFragment-1, 2 checks, or 
+            RP-DocumentFragment-1, 2 checks, or 
+            RT-DocumentFragment-1, 2 checks, or 
+            Reference-DocumentFragment-1, 2 checks, or 
+            Ruby-DocumentFragment-1, 2 checks, or 
+            Span-DocumentFragment-1, 2 checks, or 
+            Strong-DocumentFragment-1, 2 checks, or 
+            StructTreeRoot-DocumentFragment-1, 2 checks, or 
+            Sub-DocumentFragment-1, 2 checks, or 
+            TBody-DocumentFragment-1, 2 checks, or 
+            TD-DocumentFragment-1, 2 checks, or 
+            TFoot-DocumentFragment-1, 2 checks, or 
+            TH-DocumentFragment-1, 2 checks, or 
+            THead-DocumentFragment-1, 2 checks, or 
+            TOC-DocumentFragment-1, 2 checks, or 
+            TOCI-DocumentFragment-1, 2 checks, or 
+            TR-DocumentFragment-1, 2 checks, or 
+            Table-DocumentFragment-1, 2 checks, or 
+            Title-DocumentFragment-1, 2 checks, or 
+            WP-DocumentFragment-1, 2 checks, or 
+            WT-DocumentFragment-1, 2 checks, or 
+            Warichu-DocumentFragment-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEEm' or
-            (@clause = '6.2' and @testNumber = '22' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '59' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '86' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '135' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '161' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '199' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '245' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '281' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '307' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '776' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '818' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '985' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1127' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1169' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1215' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1320' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1368' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1464' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1513' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1562' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-22, 2 checks, or 
-            6.2-59, 2 checks, or 
-            6.2-86, 2 checks, or 
-            6.2-135, 2 checks, or 
-            6.2-161, 2 checks, or 
-            6.2-199, 2 checks, or 
-            6.2-245, 2 checks, or 
-            6.2-281, 2 checks, or 
-            6.2-307, 2 checks, or 
-            6.2-776, 2 checks, or 
-            6.2-818, 2 checks, or 
-            6.2-985, 2 checks, or 
-            6.2-1127, 2 checks, or 
-            6.2-1169, 2 checks, or 
-            6.2-1215, 2 checks, or 
-            6.2-1320, 2 checks, or 
-            6.2-1368, 2 checks, or 
-            6.2-1464, 2 checks, or 
-            6.2-1513, 2 checks, or 
-            6.2-1562, 2 checks</sch:assert>
+            (@clause = 'Art-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Em' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Em' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Em-1, 2 checks, or 
+            Aside-Em-1, 2 checks, or 
+            BlockQuote-Em-1, 2 checks, or 
+            Document-Em-1, 2 checks, or 
+            DocumentFragment-Em-1, 2 checks, or 
+            Form-Em-1, 2 checks, or 
+            Index-Em-1, 2 checks, or 
+            L-Em-1, 2 checks, or 
+            LI-Em-1, 2 checks, or 
+            Ruby-Em-1, 2 checks, or 
+            Sect-Em-1, 2 checks, or 
+            StructTreeRoot-Em-1, 2 checks, or 
+            TBody-Em-1, 2 checks, or 
+            TFoot-Em-1, 2 checks, or 
+            THead-Em-1, 2 checks, or 
+            TOC-Em-1, 2 checks, or 
+            TOCI-Em-1, 2 checks, or 
+            TR-Em-1, 2 checks, or 
+            Table-Em-1, 2 checks, or 
+            Warichu-Em-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFENote' or
-            (@clause = '6.2' and @testNumber = '37' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '214' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '259' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '830' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '871' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '911' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '951' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '998' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1039' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1079' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1184' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1230' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1335' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1383' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1479' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1528' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1577' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-37, 2 checks, or 
-            6.2-214, 2 checks, or 
-            6.2-259, 2 checks, or 
-            6.2-830, 2 checks, or 
-            6.2-871, 2 checks, or 
-            6.2-911, 2 checks, or 
-            6.2-951, 2 checks, or 
-            6.2-998, 2 checks, or 
-            6.2-1039, 2 checks, or 
-            6.2-1079, 2 checks, or 
-            6.2-1184, 2 checks, or 
-            6.2-1230, 2 checks, or 
-            6.2-1335, 2 checks, or 
-            6.2-1383, 2 checks, or 
-            6.2-1479, 2 checks, or 
-            6.2-1528, 2 checks, or 
-            6.2-1577, 2 checks</sch:assert>
+            (@clause = 'L-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-FENote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-FENote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            L-FENote-1, 2 checks, or 
+            LI-FENote-1, 2 checks, or 
+            RB-FENote-1, 2 checks, or 
+            RP-FENote-1, 2 checks, or 
+            RT-FENote-1, 2 checks, or 
+            Ruby-FENote-1, 2 checks, or 
+            StructTreeRoot-FENote-1, 2 checks, or 
+            TBody-FENote-1, 2 checks, or 
+            TFoot-FENote-1, 2 checks, or 
+            THead-FENote-1, 2 checks, or 
+            TOC-FENote-1, 2 checks, or 
+            TOCI-FENote-1, 2 checks, or 
+            TR-FENote-1, 2 checks, or 
+            Table-FENote-1, 2 checks, or 
+            WP-FENote-1, 2 checks, or 
+            WT-FENote-1, 2 checks, or 
+            Warichu-FENote-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFigure' or
-            (@clause = '6.2' and @testNumber = '51' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '228' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '273' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '468' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '844' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '885' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '925' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '965' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1012' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1053' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1093' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1196' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1243' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1347' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1395' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1492' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1541' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1590' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1616' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1631' and @failedChecks = '1') or 
-            (@clause = '8.2.5.28.2' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-51, 2 checks, or 
-            6.2-228, 2 checks, or 
-            6.2-273, 2 checks, or 
-            6.2-468, 2 checks, or 
-            6.2-844, 2 checks, or 
-            6.2-885, 2 checks, or 
-            6.2-925, 2 checks, or 
-            6.2-965, 2 checks, or 
-            6.2-1012, 2 checks, or 
-            6.2-1053, 2 checks, or 
-            6.2-1093, 2 checks, or 
-            6.2-1196, 2 checks, or 
-            6.2-1243, 2 checks, or 
-            6.2-1347, 2 checks, or 
-            6.2-1395, 2 checks, or 
-            6.2-1492, 2 checks, or 
-            6.2-1541, 2 checks, or 
-            6.2-1590, 2 checks, or 
-            6.2-1616, 1 check, or 
-            6.2-1631, 1 check, or 
-            8.2.5.28.2-1, 110 checks</sch:assert>
+            (@clause = '8.2.5.28.2' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'Code-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Figure-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'L-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Figure' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Figure' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.28.2-1, 110 checks, or 
+            Code-Figure-1, 2 checks, or 
+            Figure-Caption-1, 1 check, or 
+            Figure-H-1, 1 check, or 
+            L-Figure-1, 2 checks, or 
+            LI-Figure-1, 2 checks, or 
+            RB-Figure-1, 2 checks, or 
+            RP-Figure-1, 2 checks, or 
+            RT-Figure-1, 2 checks, or 
+            Ruby-Figure-1, 2 checks, or 
+            StructTreeRoot-Figure-1, 2 checks, or 
+            TBody-Figure-1, 2 checks, or 
+            TFoot-Figure-1, 2 checks, or 
+            THead-Figure-1, 2 checks, or 
+            TOC-Figure-1, 2 checks, or 
+            TOCI-Figure-1, 2 checks, or 
+            TR-Figure-1, 2 checks, or 
+            Table-Figure-1, 2 checks, or 
+            WP-Figure-1, 2 checks, or 
+            WT-Figure-1, 2 checks, or 
+            Warichu-Figure-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEForm' or
-            (@clause = '6.2' and @testNumber = '29' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '206' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '251' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '448' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '724' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '782' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '799' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '825' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '992' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1132' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1176' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1222' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1280' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1327' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1375' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1471' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1520' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1569' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-29, 2 checks, or 
-            6.2-206, 2 checks, or 
-            6.2-251, 2 checks, or 
-            6.2-448, 2 checks, or 
-            6.2-724, 2 checks, or 
-            6.2-782, 2 checks, or 
-            6.2-799, 1 check, or 
-            6.2-825, 2 checks, or 
-            6.2-992, 2 checks, or 
-            6.2-1132, 2 checks, or 
-            6.2-1176, 2 checks, or 
-            6.2-1222, 2 checks, or 
-            6.2-1280, 2 checks, or 
-            6.2-1327, 2 checks, or 
-            6.2-1375, 2 checks, or 
-            6.2-1471, 2 checks, or 
-            6.2-1520, 2 checks, or 
-            6.2-1569, 2 checks</sch:assert>
+            (@clause = 'BibEntry-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Form-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Form' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Form' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Form-1, 2 checks, or 
+            Code-Form-1, 2 checks, or 
+            Form-Caption-1, 1 check, or 
+            Form-Form-1, 2 checks, or 
+            Index-Form-1, 2 checks, or 
+            L-Form-1, 2 checks, or 
+            LI-Form-1, 2 checks, or 
+            Reference-Form-1, 2 checks, or 
+            Ruby-Form-1, 2 checks, or 
+            StructTreeRoot-Form-1, 2 checks, or 
+            TBody-Form-1, 2 checks, or 
+            TFoot-Form-1, 2 checks, or 
+            THead-Form-1, 2 checks, or 
+            TOC-Form-1, 2 checks, or 
+            TOCI-Form-1, 2 checks, or 
+            TR-Form-1, 2 checks, or 
+            Table-Form-1, 2 checks, or 
+            Warichu-Form-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFormula' or
-            (@clause = '6.2' and @testNumber = '52' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '229' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '274' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '469' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '744' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '845' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '886' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '926' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '966' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1013' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1054' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1094' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1197' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1244' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1301' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1348' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1396' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1493' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1542' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1591' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1638' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1653' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-52, 2 checks, or 
-            6.2-229, 2 checks, or 
-            6.2-274, 2 checks, or 
-            6.2-469, 2 checks, or 
-            6.2-744, 2 checks, or 
-            6.2-845, 2 checks, or 
-            6.2-886, 2 checks, or 
-            6.2-926, 2 checks, or 
-            6.2-966, 2 checks, or 
-            6.2-1013, 2 checks, or 
-            6.2-1054, 2 checks, or 
-            6.2-1094, 2 checks, or 
-            6.2-1197, 2 checks, or 
-            6.2-1244, 2 checks, or 
-            6.2-1301, 2 checks, or 
-            6.2-1348, 2 checks, or 
-            6.2-1396, 2 checks, or 
-            6.2-1493, 2 checks, or 
-            6.2-1542, 2 checks, or 
-            6.2-1591, 2 checks, or 
-            6.2-1638, 1 check, or 
-            6.2-1653, 1 check</sch:assert>
+            (@clause = 'BibEntry-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Formula-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'L-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Formula' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Formula' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Formula-1, 2 checks, or 
+            Code-Formula-1, 2 checks, or 
+            Formula-Caption-1, 1 check, or 
+            Formula-H-1, 1 check, or 
+            L-Formula-1, 2 checks, or 
+            LI-Formula-1, 2 checks, or 
+            RB-Formula-1, 2 checks, or 
+            RP-Formula-1, 2 checks, or 
+            RT-Formula-1, 2 checks, or 
+            Reference-Formula-1, 2 checks, or 
+            Ruby-Formula-1, 2 checks, or 
+            StructTreeRoot-Formula-1, 2 checks, or 
+            TBody-Formula-1, 2 checks, or 
+            TFoot-Formula-1, 2 checks, or 
+            THead-Formula-1, 2 checks, or 
+            TOC-Formula-1, 2 checks, or 
+            TOCI-Formula-1, 2 checks, or 
+            TR-Formula-1, 2 checks, or 
+            Table-Formula-1, 2 checks, or 
+            WP-Formula-1, 2 checks, or 
+            WT-Formula-1, 2 checks, or 
+            Warichu-Formula-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEH' or
-            (@clause = '6.2' and @testNumber = '18' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '195' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '242' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '336' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '366' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '397' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '418' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '443' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '482' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '504' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '506' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '513' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '544' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '576' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '607' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '638' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '669' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '719' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '773' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '814' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '861' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '901' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '941' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '981' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1029' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1069' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1099' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1165' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1212' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1276' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1316' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1364' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1460' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1509' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1558' and @failedChecks = '2') or 
-            (@clause = '8.2.5.12' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-18, 2 checks, or 
-            6.2-195, 2 checks, or 
-            6.2-242, 2 checks, or 
-            6.2-336, 2 checks, or 
-            6.2-366, 2 checks, or 
-            6.2-397, 2 checks, or 
-            6.2-418, 2 checks, or 
-            6.2-443, 2 checks, or 
-            6.2-482, 12 checks, or 
-            6.2-504, 1 check, or 
-            6.2-506, 1 check, or 
-            6.2-513, 2 checks, or 
-            6.2-544, 2 checks, or 
-            6.2-576, 2 checks, or 
-            6.2-607, 2 checks, or 
-            6.2-638, 2 checks, or 
-            6.2-669, 2 checks, or 
-            6.2-719, 2 checks, or 
-            6.2-773, 2 checks, or 
-            6.2-814, 2 checks, or 
-            6.2-861, 2 checks, or 
-            6.2-901, 2 checks, or 
-            6.2-941, 2 checks, or 
-            6.2-981, 2 checks, or 
-            6.2-1029, 2 checks, or 
-            6.2-1069, 2 checks, or 
-            6.2-1099, 2 checks, or 
-            6.2-1165, 2 checks, or 
-            6.2-1212, 2 checks, or 
-            6.2-1276, 2 checks, or 
-            6.2-1316, 2 checks, or 
-            6.2-1364, 2 checks, or 
-            6.2-1460, 2 checks, or 
-            6.2-1509, 2 checks, or 
-            6.2-1558, 2 checks, or 
-            8.2.5.12-1, 110 checks</sch:assert>
+            (@clause = '8.2.5.12' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'BibEntry-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Art' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'H-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Sect' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Hn-H' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'L-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-H' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-H' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.12-1, 110 checks, or 
+            BibEntry-H-1, 2 checks, or 
+            Code-H-1, 2 checks, or 
+            Em-H-1, 2 checks, or 
+            FENote-H-1, 2 checks, or 
+            Form-H-1, 2 checks, or 
+            H-Art-1, 1 check, or 
+            H-H-1, 2 checks, or 
+            H-Sect-1, 1 check, or 
+            Hn-H-1, 12 checks, or 
+            L-H-1, 2 checks, or 
+            LI-H-1, 2 checks, or 
+            Lbl-H-1, 2 checks, or 
+            Note-H-1, 2 checks, or 
+            P-H-1, 2 checks, or 
+            Quote-H-1, 2 checks, or 
+            RB-H-1, 2 checks, or 
+            RP-H-1, 2 checks, or 
+            RT-H-1, 2 checks, or 
+            Reference-H-1, 2 checks, or 
+            Ruby-H-1, 2 checks, or 
+            Span-H-1, 2 checks, or 
+            Strong-H-1, 2 checks, or 
+            StructTreeRoot-H-1, 2 checks, or 
+            Sub-H-1, 2 checks, or 
+            TBody-H-1, 2 checks, or 
+            TFoot-H-1, 2 checks, or 
+            THead-H-1, 2 checks, or 
+            TOC-H-1, 2 checks, or 
+            TOCI-H-1, 2 checks, or 
+            TR-H-1, 2 checks, or 
+            Table-H-1, 2 checks, or 
+            Title-H-1, 2 checks, or 
+            WP-H-1, 2 checks, or 
+            WT-H-1, 2 checks, or 
+            Warichu-H-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEHn' or
-            (@clause = '6.2' and @testNumber = '17' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '194' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '241' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '335' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '365' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '396' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '417' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '442' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '473' and @failedChecks = '6') or 
-            (@clause = '6.2' and @testNumber = '475' and @failedChecks = '6') or 
-            (@clause = '6.2' and @testNumber = '481' and @failedChecks = '72') or 
-            (@clause = '6.2' and @testNumber = '512' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '543' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '575' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '606' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '637' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '668' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '718' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '772' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '813' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '860' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '900' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '940' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '980' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1028' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1068' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1098' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1164' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1211' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1275' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1315' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1363' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1459' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1508' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '1557' and @failedChecks = '12')">Failed rules, Expected: 
-            6.2-17, 12 checks, or 
-            6.2-194, 12 checks, or 
-            6.2-241, 12 checks, or 
-            6.2-335, 12 checks, or 
-            6.2-365, 12 checks, or 
-            6.2-396, 12 checks, or 
-            6.2-417, 12 checks, or 
-            6.2-442, 12 checks, or 
-            6.2-473, 6 checks, or 
-            6.2-475, 6 checks, or 
-            6.2-481, 72 checks, or 
-            6.2-512, 12 checks, or 
-            6.2-543, 12 checks, or 
-            6.2-575, 12 checks, or 
-            6.2-606, 12 checks, or 
-            6.2-637, 12 checks, or 
-            6.2-668, 12 checks, or 
-            6.2-718, 12 checks, or 
-            6.2-772, 12 checks, or 
-            6.2-813, 12 checks, or 
-            6.2-860, 12 checks, or 
-            6.2-900, 12 checks, or 
-            6.2-940, 12 checks, or 
-            6.2-980, 12 checks, or 
-            6.2-1028, 12 checks, or 
-            6.2-1068, 12 checks, or 
-            6.2-1098, 12 checks, or 
-            6.2-1164, 12 checks, or 
-            6.2-1211, 12 checks, or 
-            6.2-1275, 12 checks, or 
-            6.2-1315, 12 checks, or 
-            6.2-1363, 12 checks, or 
-            6.2-1459, 12 checks, or 
-            6.2-1508, 12 checks, or 
-            6.2-1557, 12 checks</sch:assert>
+            (@clause = 'BibEntry-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Code-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Em-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'FENote-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Form-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'H-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Hn-Art' and @testNumber = '1' and @failedChecks = '6') or 
+            (@clause = 'Hn-Hn' and @testNumber = '1' and @failedChecks = '72') or 
+            (@clause = 'Hn-Sect' and @testNumber = '1' and @failedChecks = '6') or 
+            (@clause = 'L-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'LI-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Lbl-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Note-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'P-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Quote-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'RB-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'RP-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'RT-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Reference-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Ruby-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Span-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Strong-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'StructTreeRoot-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Sub-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'TBody-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'TFoot-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'THead-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'TOC-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'TOCI-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'TR-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Table-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Title-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'WP-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'WT-Hn' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Warichu-Hn' and @testNumber = '1' and @failedChecks = '12')">Failed rules, Expected: 
+            BibEntry-Hn-1, 12 checks, or 
+            Code-Hn-1, 12 checks, or 
+            Em-Hn-1, 12 checks, or 
+            FENote-Hn-1, 12 checks, or 
+            Form-Hn-1, 12 checks, or 
+            H-Hn-1, 12 checks, or 
+            Hn-Art-1, 6 checks, or 
+            Hn-Hn-1, 72 checks, or 
+            Hn-Sect-1, 6 checks, or 
+            L-Hn-1, 12 checks, or 
+            LI-Hn-1, 12 checks, or 
+            Lbl-Hn-1, 12 checks, or 
+            Note-Hn-1, 12 checks, or 
+            P-Hn-1, 12 checks, or 
+            Quote-Hn-1, 12 checks, or 
+            RB-Hn-1, 12 checks, or 
+            RP-Hn-1, 12 checks, or 
+            RT-Hn-1, 12 checks, or 
+            Reference-Hn-1, 12 checks, or 
+            Ruby-Hn-1, 12 checks, or 
+            Span-Hn-1, 12 checks, or 
+            Strong-Hn-1, 12 checks, or 
+            StructTreeRoot-Hn-1, 12 checks, or 
+            Sub-Hn-1, 12 checks, or 
+            TBody-Hn-1, 12 checks, or 
+            TFoot-Hn-1, 12 checks, or 
+            THead-Hn-1, 12 checks, or 
+            TOC-Hn-1, 12 checks, or 
+            TOCI-Hn-1, 12 checks, or 
+            TR-Hn-1, 12 checks, or 
+            Table-Hn-1, 12 checks, or 
+            Title-Hn-1, 12 checks, or 
+            WP-Hn-1, 12 checks, or 
+            WT-Hn-1, 12 checks, or 
+            Warichu-Hn-1, 12 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEIndex' or
-            (@clause = '6.2' and @testNumber = '38' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '215' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '260' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '344' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '374' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '404' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '456' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '489' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '520' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '552' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '583' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '614' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '645' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '676' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '697' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '732' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '754' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '790' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '831' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '872' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '912' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '952' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '999' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1040' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1080' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1106' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1140' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1150' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1185' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1231' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1288' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1336' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1384' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1480' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1529' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1578' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-38, 2 checks, or 
-            6.2-215, 2 checks, or 
-            6.2-260, 2 checks, or 
-            6.2-344, 2 checks, or 
-            6.2-374, 2 checks, or 
-            6.2-404, 2 checks, or 
-            6.2-456, 2 checks, or 
-            6.2-489, 12 checks, or 
-            6.2-520, 2 checks, or 
-            6.2-552, 2 checks, or 
-            6.2-583, 2 checks, or 
-            6.2-614, 2 checks, or 
-            6.2-645, 2 checks, or 
-            6.2-676, 2 checks, or 
-            6.2-697, 2 checks, or 
-            6.2-732, 2 checks, or 
-            6.2-754, 2 checks, or 
-            6.2-790, 2 checks, or 
-            6.2-831, 2 checks, or 
-            6.2-872, 2 checks, or 
-            6.2-912, 2 checks, or 
-            6.2-952, 2 checks, or 
-            6.2-999, 2 checks, or 
-            6.2-1040, 2 checks, or 
-            6.2-1080, 2 checks, or 
-            6.2-1106, 2 checks, or 
-            6.2-1140, 2 checks, or 
-            6.2-1150, 1 check, or 
-            6.2-1185, 2 checks, or 
-            6.2-1231, 2 checks, or 
-            6.2-1288, 2 checks, or 
-            6.2-1336, 2 checks, or 
-            6.2-1384, 2 checks, or 
-            6.2-1480, 2 checks, or 
-            6.2-1529, 2 checks, or 
-            6.2-1578, 2 checks</sch:assert>
+            (@clause = 'Annot-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Index' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'L-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Index' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-Index-1, 2 checks, or 
+            BibEntry-Index-1, 2 checks, or 
+            Code-Index-1, 2 checks, or 
+            Em-Index-1, 2 checks, or 
+            FENote-Index-1, 2 checks, or 
+            Form-Index-1, 2 checks, or 
+            H-Index-1, 2 checks, or 
+            Hn-Index-1, 12 checks, or 
+            Index-Index-1, 2 checks, or 
+            Index-content-1, 1 check, or 
+            L-Index-1, 2 checks, or 
+            LI-Index-1, 2 checks, or 
+            Lbl-Index-1, 2 checks, or 
+            Link-Index-1, 2 checks, or 
+            P-Index-1, 2 checks, or 
+            Quote-Index-1, 2 checks, or 
+            RB-Index-1, 2 checks, or 
+            RP-Index-1, 2 checks, or 
+            RT-Index-1, 2 checks, or 
+            Reference-Index-1, 2 checks, or 
+            Ruby-Index-1, 2 checks, or 
+            Span-Index-1, 2 checks, or 
+            Strong-Index-1, 2 checks, or 
+            StructTreeRoot-Index-1, 2 checks, or 
+            Sub-Index-1, 2 checks, or 
+            TBody-Index-1, 2 checks, or 
+            TFoot-Index-1, 2 checks, or 
+            THead-Index-1, 2 checks, or 
+            TOC-Index-1, 2 checks, or 
+            TOCI-Index-1, 2 checks, or 
+            TR-Index-1, 2 checks, or 
+            Table-Index-1, 2 checks, or 
+            Title-Index-1, 2 checks, or 
+            WP-Index-1, 2 checks, or 
+            WT-Index-1, 2 checks, or 
+            Warichu-Index-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEL' or
-            (@clause = '6.2' and @testNumber = '39' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '216' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '261' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '457' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '490' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '521' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '553' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '584' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '615' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '646' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '677' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '733' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '832' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '873' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '913' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '953' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1000' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1041' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1081' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1195' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1198' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1232' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1289' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1337' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1385' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1481' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1530' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1579' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-39, 2 checks, or 
-            6.2-216, 2 checks, or 
-            6.2-261, 2 checks, or 
-            6.2-457, 2 checks, or 
-            6.2-490, 12 checks, or 
-            6.2-521, 2 checks, or 
-            6.2-553, 2 checks, or 
-            6.2-584, 2 checks, or 
-            6.2-615, 2 checks, or 
-            6.2-646, 2 checks, or 
-            6.2-677, 2 checks, or 
-            6.2-733, 2 checks, or 
-            6.2-832, 2 checks, or 
-            6.2-873, 2 checks, or 
-            6.2-913, 2 checks, or 
-            6.2-953, 2 checks, or 
-            6.2-1000, 2 checks, or 
-            6.2-1041, 2 checks, or 
-            6.2-1081, 2 checks, or 
-            6.2-1195, 1 check, or 
-            6.2-1198, 1 check, or 
-            6.2-1232, 2 checks, or 
-            6.2-1289, 2 checks, or 
-            6.2-1337, 2 checks, or 
-            6.2-1385, 2 checks, or 
-            6.2-1481, 2 checks, or 
-            6.2-1530, 2 checks, or 
-            6.2-1579, 2 checks</sch:assert>
+            (@clause = 'BibEntry-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-L' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'L-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'L-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'LI-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-L' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-L' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-L-1, 2 checks, or 
+            Code-L-1, 2 checks, or 
+            Em-L-1, 2 checks, or 
+            H-L-1, 2 checks, or 
+            Hn-L-1, 12 checks, or 
+            L-Caption-1, 1 check, or 
+            L-content-1, 1 check, or 
+            LI-L-1, 2 checks, or 
+            Lbl-L-1, 2 checks, or 
+            Quote-L-1, 2 checks, or 
+            RB-L-1, 2 checks, or 
+            RP-L-1, 2 checks, or 
+            RT-L-1, 2 checks, or 
+            Reference-L-1, 2 checks, or 
+            Ruby-L-1, 2 checks, or 
+            Span-L-1, 2 checks, or 
+            Strong-L-1, 2 checks, or 
+            StructTreeRoot-L-1, 2 checks, or 
+            TBody-L-1, 2 checks, or 
+            TFoot-L-1, 2 checks, or 
+            THead-L-1, 2 checks, or 
+            TOC-L-1, 2 checks, or 
+            TOCI-L-1, 2 checks, or 
+            TR-L-1, 2 checks, or 
+            Table-L-1, 2 checks, or 
+            WP-L-1, 2 checks, or 
+            WT-L-1, 2 checks, or 
+            Warichu-L-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELBody' or
-            (@clause = '6.2' and @testNumber = '41' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '72' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '99' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '148' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '174' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '218' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '263' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '293' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '319' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '346' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '376' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '406' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '426' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '459' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '492' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '523' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '555' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '586' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '617' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '648' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '679' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '699' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '735' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '756' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '792' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '834' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '875' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '915' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '955' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1002' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1043' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1083' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1108' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1142' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1186' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1249' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1258' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1265' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1291' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1339' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1387' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1414' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1438' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1483' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1532' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1581' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1604' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1624' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1646' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-41, 2 checks, or 
-            6.2-72, 2 checks, or 
-            6.2-99, 2 checks, or 
-            6.2-148, 2 checks, or 
-            6.2-174, 2 checks, or 
-            6.2-218, 2 checks, or 
-            6.2-263, 2 checks, or 
-            6.2-293, 2 checks, or 
-            6.2-319, 2 checks, or 
-            6.2-346, 2 checks, or 
-            6.2-376, 2 checks, or 
-            6.2-406, 2 checks, or 
-            6.2-426, 2 checks, or 
-            6.2-459, 2 checks, or 
-            6.2-492, 12 checks, or 
-            6.2-523, 2 checks, or 
-            6.2-555, 2 checks, or 
-            6.2-586, 2 checks, or 
-            6.2-617, 2 checks, or 
-            6.2-648, 2 checks, or 
-            6.2-679, 2 checks, or 
-            6.2-699, 2 checks, or 
-            6.2-735, 2 checks, or 
-            6.2-756, 2 checks, or 
-            6.2-792, 2 checks, or 
-            6.2-834, 2 checks, or 
-            6.2-875, 2 checks, or 
-            6.2-915, 2 checks, or 
-            6.2-955, 2 checks, or 
-            6.2-1002, 2 checks, or 
-            6.2-1043, 2 checks, or 
-            6.2-1083, 2 checks, or 
-            6.2-1108, 2 checks, or 
-            6.2-1142, 2 checks, or 
-            6.2-1186, 2 checks, or 
-            6.2-1249, 1 check, or 
-            6.2-1258, 2 checks, or 
-            6.2-1265, 1 check, or 
-            6.2-1291, 2 checks, or 
-            6.2-1339, 2 checks, or 
-            6.2-1387, 2 checks, or 
-            6.2-1414, 2 checks, or 
-            6.2-1438, 2 checks, or 
-            6.2-1483, 2 checks, or 
-            6.2-1532, 2 checks, or 
-            6.2-1581, 2 checks, or 
-            6.2-1604, 2 checks, or 
-            6.2-1624, 2 checks, or 
-            6.2-1646, 2 checks</sch:assert>
+            (@clause = 'Annot-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-LBody' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'LBody-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'LBody-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-LBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-LBody' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-LBody-1, 2 checks, or 
+            Art-LBody-1, 2 checks, or 
+            Aside-LBody-1, 2 checks, or 
+            BibEntry-LBody-1, 2 checks, or 
+            BlockQuote-LBody-1, 2 checks, or 
+            Caption-LBody-1, 2 checks, or 
+            Code-LBody-1, 2 checks, or 
+            Document-LBody-1, 2 checks, or 
+            DocumentFragment-LBody-1, 2 checks, or 
+            Em-LBody-1, 2 checks, or 
+            FENote-LBody-1, 2 checks, or 
+            Figure-LBody-1, 2 checks, or 
+            Form-LBody-1, 2 checks, or 
+            Formula-LBody-1, 2 checks, or 
+            H-LBody-1, 2 checks, or 
+            Hn-LBody-1, 12 checks, or 
+            Index-LBody-1, 2 checks, or 
+            L-LBody-1, 2 checks, or 
+            LBody-Caption-1, 1 check, or 
+            LBody-H-1, 1 check, or 
+            LBody-LBody-1, 2 checks, or 
+            Lbl-LBody-1, 2 checks, or 
+            Link-LBody-1, 2 checks, or 
+            Note-LBody-1, 2 checks, or 
+            P-LBody-1, 2 checks, or 
+            Quote-LBody-1, 2 checks, or 
+            RB-LBody-1, 2 checks, or 
+            RP-LBody-1, 2 checks, or 
+            RT-LBody-1, 2 checks, or 
+            Reference-LBody-1, 2 checks, or 
+            Ruby-LBody-1, 2 checks, or 
+            Sect-LBody-1, 2 checks, or 
+            Span-LBody-1, 2 checks, or 
+            Strong-LBody-1, 2 checks, or 
+            StructTreeRoot-LBody-1, 2 checks, or 
+            Sub-LBody-1, 2 checks, or 
+            TBody-LBody-1, 2 checks, or 
+            TD-LBody-1, 2 checks, or 
+            TFoot-LBody-1, 2 checks, or 
+            TH-LBody-1, 2 checks, or 
+            THead-LBody-1, 2 checks, or 
+            TOC-LBody-1, 2 checks, or 
+            TOCI-LBody-1, 2 checks, or 
+            TR-LBody-1, 2 checks, or 
+            Table-LBody-1, 2 checks, or 
+            Title-LBody-1, 2 checks, or 
+            WP-LBody-1, 2 checks, or 
+            WT-LBody-1, 2 checks, or 
+            Warichu-LBody-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELI' or
-            (@clause = '6.2' and @testNumber = '40' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '71' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '98' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '147' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '173' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '217' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '262' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '292' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '318' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '345' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '375' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '405' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '425' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '458' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '491' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '522' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '554' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '585' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '616' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '647' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '678' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '698' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '734' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '755' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '791' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '833' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '874' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '914' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '954' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1001' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1042' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1082' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1107' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1141' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1233' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1257' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1290' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1338' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1386' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1413' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1437' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1482' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1531' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1580' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1603' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1623' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1645' and @failedChecks = '2') or 
-            (@clause = '8.2.5.25' and @testNumber = '2' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2-40, 2 checks, or 
-            6.2-71, 2 checks, or 
-            6.2-98, 2 checks, or 
-            6.2-147, 2 checks, or 
-            6.2-173, 2 checks, or 
-            6.2-217, 2 checks, or 
-            6.2-262, 2 checks, or 
-            6.2-292, 2 checks, or 
-            6.2-318, 2 checks, or 
-            6.2-345, 2 checks, or 
-            6.2-375, 2 checks, or 
-            6.2-405, 2 checks, or 
-            6.2-425, 2 checks, or 
-            6.2-458, 2 checks, or 
-            6.2-491, 12 checks, or 
-            6.2-522, 2 checks, or 
-            6.2-554, 2 checks, or 
-            6.2-585, 2 checks, or 
-            6.2-616, 2 checks, or 
-            6.2-647, 2 checks, or 
-            6.2-678, 2 checks, or 
-            6.2-698, 2 checks, or 
-            6.2-734, 2 checks, or 
-            6.2-755, 2 checks, or 
-            6.2-791, 2 checks, or 
-            6.2-833, 2 checks, or 
-            6.2-874, 2 checks, or 
-            6.2-914, 2 checks, or 
-            6.2-954, 2 checks, or 
-            6.2-1001, 2 checks, or 
-            6.2-1042, 2 checks, or 
-            6.2-1082, 2 checks, or 
-            6.2-1107, 2 checks, or 
-            6.2-1141, 2 checks, or 
-            6.2-1233, 2 checks, or 
-            6.2-1257, 2 checks, or 
-            6.2-1290, 2 checks, or 
-            6.2-1338, 2 checks, or 
-            6.2-1386, 2 checks, or 
-            6.2-1413, 2 checks, or 
-            6.2-1437, 2 checks, or 
-            6.2-1482, 2 checks, or 
-            6.2-1531, 2 checks, or 
-            6.2-1580, 2 checks, or 
-            6.2-1603, 2 checks, or 
-            6.2-1623, 2 checks, or 
-            6.2-1645, 2 checks, or 
-            8.2.5.25-2, 1 check</sch:assert>
+            (@clause = '8.2.5.25' and @testNumber = '2' and @failedChecks = '1') or 
+            (@clause = 'Annot-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-LI' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-LI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-LI' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.25-2, 1 check, or 
+            Annot-LI-1, 2 checks, or 
+            Art-LI-1, 2 checks, or 
+            Aside-LI-1, 2 checks, or 
+            BibEntry-LI-1, 2 checks, or 
+            BlockQuote-LI-1, 2 checks, or 
+            Caption-LI-1, 2 checks, or 
+            Code-LI-1, 2 checks, or 
+            Document-LI-1, 2 checks, or 
+            DocumentFragment-LI-1, 2 checks, or 
+            Em-LI-1, 2 checks, or 
+            FENote-LI-1, 2 checks, or 
+            Figure-LI-1, 2 checks, or 
+            Form-LI-1, 2 checks, or 
+            Formula-LI-1, 2 checks, or 
+            H-LI-1, 2 checks, or 
+            Hn-LI-1, 12 checks, or 
+            Index-LI-1, 2 checks, or 
+            LBody-LI-1, 2 checks, or 
+            LI-LI-1, 2 checks, or 
+            Lbl-LI-1, 2 checks, or 
+            Link-LI-1, 2 checks, or 
+            Note-LI-1, 2 checks, or 
+            P-LI-1, 2 checks, or 
+            Quote-LI-1, 2 checks, or 
+            RB-LI-1, 2 checks, or 
+            RP-LI-1, 2 checks, or 
+            RT-LI-1, 2 checks, or 
+            Reference-LI-1, 2 checks, or 
+            Ruby-LI-1, 2 checks, or 
+            Sect-LI-1, 2 checks, or 
+            Span-LI-1, 2 checks, or 
+            Strong-LI-1, 2 checks, or 
+            StructTreeRoot-LI-1, 2 checks, or 
+            Sub-LI-1, 2 checks, or 
+            TBody-LI-1, 2 checks, or 
+            TD-LI-1, 2 checks, or 
+            TFoot-LI-1, 2 checks, or 
+            TH-LI-1, 2 checks, or 
+            THead-LI-1, 2 checks, or 
+            TOC-LI-1, 2 checks, or 
+            TOCI-LI-1, 2 checks, or 
+            TR-LI-1, 2 checks, or 
+            Table-LI-1, 2 checks, or 
+            Title-LI-1, 2 checks, or 
+            WP-LI-1, 2 checks, or 
+            WT-LI-1, 2 checks, or 
+            Warichu-LI-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELbl' or
-            (@clause = '6.2' and @testNumber = '21' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '58' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '85' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '198' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '446' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '546' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '817' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '863' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '903' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '943' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '984' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1031' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1071' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1126' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1168' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1251' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1319' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1367' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1463' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1512' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1561' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-21, 2 checks, or 
-            6.2-58, 2 checks, or 
-            6.2-85, 2 checks, or 
-            6.2-198, 2 checks, or 
-            6.2-446, 2 checks, or 
-            6.2-546, 2 checks, or 
-            6.2-817, 2 checks, or 
-            6.2-863, 2 checks, or 
-            6.2-903, 2 checks, or 
-            6.2-943, 2 checks, or 
-            6.2-984, 2 checks, or 
-            6.2-1031, 2 checks, or 
-            6.2-1071, 2 checks, or 
-            6.2-1126, 2 checks, or 
-            6.2-1168, 2 checks, or 
-            6.2-1251, 2 checks, or 
-            6.2-1319, 2 checks, or 
-            6.2-1367, 2 checks, or 
-            6.2-1463, 2 checks, or 
-            6.2-1512, 2 checks, or 
-            6.2-1561, 2 checks</sch:assert>
+            (@clause = 'Code-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Lbl' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Code-Lbl-1, 2 checks, or 
+            Document-Lbl-1, 2 checks, or 
+            DocumentFragment-Lbl-1, 2 checks, or 
+            Index-Lbl-1, 2 checks, or 
+            L-Lbl-1, 2 checks, or 
+            LBody-Lbl-1, 2 checks, or 
+            Lbl-Lbl-1, 2 checks, or 
+            RB-Lbl-1, 2 checks, or 
+            RP-Lbl-1, 2 checks, or 
+            RT-Lbl-1, 2 checks, or 
+            Ruby-Lbl-1, 2 checks, or 
+            StructTreeRoot-Lbl-1, 2 checks, or 
+            TBody-Lbl-1, 2 checks, or 
+            TFoot-Lbl-1, 2 checks, or 
+            THead-Lbl-1, 2 checks, or 
+            TOC-Lbl-1, 2 checks, or 
+            TR-Lbl-1, 2 checks, or 
+            Table-Lbl-1, 2 checks, or 
+            WP-Lbl-1, 2 checks, or 
+            WT-Lbl-1, 2 checks, or 
+            Warichu-Lbl-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELink' or
-            (@clause = '6.2' and @testNumber = '26' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '203' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '249' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '691' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '780' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '822' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '989' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1131' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1173' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1219' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1324' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1372' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1468' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1517' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1566' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-26, 2 checks, or 
-            6.2-203, 2 checks, or 
-            6.2-249, 2 checks, or 
-            6.2-691, 2 checks, or 
-            6.2-780, 2 checks, or 
-            6.2-822, 2 checks, or 
-            6.2-989, 2 checks, or 
-            6.2-1131, 2 checks, or 
-            6.2-1173, 2 checks, or 
-            6.2-1219, 2 checks, or 
-            6.2-1324, 2 checks, or 
-            6.2-1372, 2 checks, or 
-            6.2-1468, 2 checks, or 
-            6.2-1517, 2 checks, or 
-            6.2-1566, 2 checks</sch:assert>
+            (@clause = 'Form-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Link' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Form-Link-1, 2 checks, or 
+            Index-Link-1, 2 checks, or 
+            L-Link-1, 2 checks, or 
+            LI-Link-1, 2 checks, or 
+            Link-Link-1, 2 checks, or 
+            Ruby-Link-1, 2 checks, or 
+            StructTreeRoot-Link-1, 2 checks, or 
+            TBody-Link-1, 2 checks, or 
+            TFoot-Link-1, 2 checks, or 
+            THead-Link-1, 2 checks, or 
+            TOC-Link-1, 2 checks, or 
+            TOCI-Link-1, 2 checks, or 
+            TR-Link-1, 2 checks, or 
+            Table-Link-1, 2 checks, or 
+            Warichu-Link-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SENote' or
-            (@clause = '6.2' and @testNumber = '15' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '192' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '239' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '811' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '858' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '898' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '938' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '978' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1026' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1066' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1162' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1209' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1313' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1361' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1457' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1506' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1555' and @failedChecks = '2') or 
-            (@clause = '8.2.5.14' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-15, 2 checks, or 
-            6.2-192, 2 checks, or 
-            6.2-239, 2 checks, or 
-            6.2-811, 2 checks, or 
-            6.2-858, 2 checks, or 
-            6.2-898, 2 checks, or 
-            6.2-938, 2 checks, or 
-            6.2-978, 2 checks, or 
-            6.2-1026, 2 checks, or 
-            6.2-1066, 2 checks, or 
-            6.2-1162, 2 checks, or 
-            6.2-1209, 2 checks, or 
-            6.2-1313, 2 checks, or 
-            6.2-1361, 2 checks, or 
-            6.2-1457, 2 checks, or 
-            6.2-1506, 2 checks, or 
-            6.2-1555, 2 checks, or 
-            8.2.5.14-1, 110 checks</sch:assert>
+            (@clause = '8.2.5.14' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'L-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Note' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Note' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.14-1, 110 checks, or 
+            L-Note-1, 2 checks, or 
+            LI-Note-1, 2 checks, or 
+            RB-Note-1, 2 checks, or 
+            RP-Note-1, 2 checks, or 
+            RT-Note-1, 2 checks, or 
+            Ruby-Note-1, 2 checks, or 
+            StructTreeRoot-Note-1, 2 checks, or 
+            TBody-Note-1, 2 checks, or 
+            TFoot-Note-1, 2 checks, or 
+            THead-Note-1, 2 checks, or 
+            TOC-Note-1, 2 checks, or 
+            TOCI-Note-1, 2 checks, or 
+            TR-Note-1, 2 checks, or 
+            Table-Note-1, 2 checks, or 
+            WP-Note-1, 2 checks, or 
+            WT-Note-1, 2 checks, or 
+            Warichu-Note-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEP' or
-            (@clause = '6.2' and @testNumber = '14' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '191' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '364' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '395' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '440' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '480' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '511' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '542' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '574' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '605' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '636' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '667' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '716' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '771' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '810' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '857' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '897' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '937' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '977' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1025' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1065' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1161' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1208' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1312' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1360' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1456' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1505' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1554' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-14, 2 checks, or 
-            6.2-191, 2 checks, or 
-            6.2-364, 2 checks, or 
-            6.2-395, 2 checks, or 
-            6.2-440, 2 checks, or 
-            6.2-480, 12 checks, or 
-            6.2-511, 2 checks, or 
-            6.2-542, 2 checks, or 
-            6.2-574, 2 checks, or 
-            6.2-605, 2 checks, or 
-            6.2-636, 2 checks, or 
-            6.2-667, 2 checks, or 
-            6.2-716, 2 checks, or 
-            6.2-771, 2 checks, or 
-            6.2-810, 2 checks, or 
-            6.2-857, 2 checks, or 
-            6.2-897, 2 checks, or 
-            6.2-937, 2 checks, or 
-            6.2-977, 2 checks, or 
-            6.2-1025, 2 checks, or 
-            6.2-1065, 2 checks, or 
-            6.2-1161, 2 checks, or 
-            6.2-1208, 2 checks, or 
-            6.2-1312, 2 checks, or 
-            6.2-1360, 2 checks, or 
-            6.2-1456, 2 checks, or 
-            6.2-1505, 2 checks, or 
-            6.2-1554, 2 checks</sch:assert>
+            (@clause = 'Code-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-P' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'L-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-P' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-P' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Code-P-1, 2 checks, or 
+            Em-P-1, 2 checks, or 
+            Form-P-1, 2 checks, or 
+            H-P-1, 2 checks, or 
+            Hn-P-1, 12 checks, or 
+            L-P-1, 2 checks, or 
+            LI-P-1, 2 checks, or 
+            Lbl-P-1, 2 checks, or 
+            P-P-1, 2 checks, or 
+            Quote-P-1, 2 checks, or 
+            RB-P-1, 2 checks, or 
+            RP-P-1, 2 checks, or 
+            RT-P-1, 2 checks, or 
+            Reference-P-1, 2 checks, or 
+            Ruby-P-1, 2 checks, or 
+            Span-P-1, 2 checks, or 
+            Strong-P-1, 2 checks, or 
+            StructTreeRoot-P-1, 2 checks, or 
+            Sub-P-1, 2 checks, or 
+            TBody-P-1, 2 checks, or 
+            TFoot-P-1, 2 checks, or 
+            THead-P-1, 2 checks, or 
+            TOC-P-1, 2 checks, or 
+            TR-P-1, 2 checks, or 
+            Table-P-1, 2 checks, or 
+            WP-P-1, 2 checks, or 
+            WT-P-1, 2 checks, or 
+            Warichu-P-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEPrivate' or
-            (@clause = '6.2' and @testNumber = '13' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '748' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-13, 2 checks, or 
-            6.2-748, 2 checks</sch:assert>
+            (@clause = 'Annot-Private' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Private' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-Private-1, 2 checks, or 
+            StructTreeRoot-Private-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEQuote' or
-            (@clause = '6.2' and @testNumber = '25' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '62' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '89' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '138' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '164' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '202' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '248' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '284' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '310' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '447' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '722' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '779' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '821' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '988' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1130' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1172' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1218' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1279' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1323' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1371' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1467' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1516' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1565' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-25, 2 checks, or 
-            6.2-62, 2 checks, or 
-            6.2-89, 2 checks, or 
-            6.2-138, 2 checks, or 
-            6.2-164, 2 checks, or 
-            6.2-202, 2 checks, or 
-            6.2-248, 2 checks, or 
-            6.2-284, 2 checks, or 
-            6.2-310, 2 checks, or 
-            6.2-447, 2 checks, or 
-            6.2-722, 2 checks, or 
-            6.2-779, 2 checks, or 
-            6.2-821, 2 checks, or 
-            6.2-988, 2 checks, or 
-            6.2-1130, 2 checks, or 
-            6.2-1172, 2 checks, or 
-            6.2-1218, 2 checks, or 
-            6.2-1279, 2 checks, or 
-            6.2-1323, 2 checks, or 
-            6.2-1371, 2 checks, or 
-            6.2-1467, 2 checks, or 
-            6.2-1516, 2 checks, or 
-            6.2-1565, 2 checks</sch:assert>
+            (@clause = 'Art-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Quote' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Quote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Quote-1, 2 checks, or 
+            Aside-Quote-1, 2 checks, or 
+            BibEntry-Quote-1, 2 checks, or 
+            BlockQuote-Quote-1, 2 checks, or 
+            Code-Quote-1, 2 checks, or 
+            Document-Quote-1, 2 checks, or 
+            DocumentFragment-Quote-1, 2 checks, or 
+            Form-Quote-1, 2 checks, or 
+            Index-Quote-1, 2 checks, or 
+            L-Quote-1, 2 checks, or 
+            LI-Quote-1, 2 checks, or 
+            Reference-Quote-1, 2 checks, or 
+            Ruby-Quote-1, 2 checks, or 
+            Sect-Quote-1, 2 checks, or 
+            StructTreeRoot-Quote-1, 2 checks, or 
+            TBody-Quote-1, 2 checks, or 
+            TFoot-Quote-1, 2 checks, or 
+            THead-Quote-1, 2 checks, or 
+            TOC-Quote-1, 2 checks, or 
+            TOCI-Quote-1, 2 checks, or 
+            TR-Quote-1, 2 checks, or 
+            Table-Quote-1, 2 checks, or 
+            Warichu-Quote-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERB' or
-            (@clause = '6.2' and @testNumber = '31' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '65' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '92' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '141' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '167' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '208' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '253' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '286' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '312' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '339' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '369' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '399' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '420' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '450' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '484' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '515' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '547' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '578' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '609' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '640' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '671' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '692' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '726' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '749' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '784' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '865' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '905' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '945' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '994' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1033' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1073' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1101' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1134' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1178' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1224' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1252' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1282' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1329' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1377' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1408' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1432' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1473' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1522' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1571' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1598' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1618' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1640' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-31, 2 checks, or 
-            6.2-65, 2 checks, or 
-            6.2-92, 2 checks, or 
-            6.2-141, 2 checks, or 
-            6.2-167, 2 checks, or 
-            6.2-208, 2 checks, or 
-            6.2-253, 2 checks, or 
-            6.2-286, 2 checks, or 
-            6.2-312, 2 checks, or 
-            6.2-339, 2 checks, or 
-            6.2-369, 2 checks, or 
-            6.2-399, 2 checks, or 
-            6.2-420, 2 checks, or 
-            6.2-450, 2 checks, or 
-            6.2-484, 12 checks, or 
-            6.2-515, 2 checks, or 
-            6.2-547, 2 checks, or 
-            6.2-578, 2 checks, or 
-            6.2-609, 2 checks, or 
-            6.2-640, 2 checks, or 
-            6.2-671, 2 checks, or 
-            6.2-692, 2 checks, or 
-            6.2-726, 2 checks, or 
-            6.2-749, 2 checks, or 
-            6.2-784, 2 checks, or 
-            6.2-865, 2 checks, or 
-            6.2-905, 2 checks, or 
-            6.2-945, 2 checks, or 
-            6.2-994, 2 checks, or 
-            6.2-1033, 2 checks, or 
-            6.2-1073, 2 checks, or 
-            6.2-1101, 2 checks, or 
-            6.2-1134, 2 checks, or 
-            6.2-1178, 2 checks, or 
-            6.2-1224, 2 checks, or 
-            6.2-1252, 2 checks, or 
-            6.2-1282, 2 checks, or 
-            6.2-1329, 2 checks, or 
-            6.2-1377, 2 checks, or 
-            6.2-1408, 2 checks, or 
-            6.2-1432, 2 checks, or 
-            6.2-1473, 2 checks, or 
-            6.2-1522, 2 checks, or 
-            6.2-1571, 2 checks, or 
-            6.2-1598, 2 checks, or 
-            6.2-1618, 2 checks, or 
-            6.2-1640, 2 checks</sch:assert>
+            (@clause = 'Annot-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-RB' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-RB' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-RB' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-RB-1, 2 checks, or 
+            Art-RB-1, 2 checks, or 
+            Aside-RB-1, 2 checks, or 
+            BibEntry-RB-1, 2 checks, or 
+            BlockQuote-RB-1, 2 checks, or 
+            Caption-RB-1, 2 checks, or 
+            Code-RB-1, 2 checks, or 
+            Document-RB-1, 2 checks, or 
+            DocumentFragment-RB-1, 2 checks, or 
+            Em-RB-1, 2 checks, or 
+            FENote-RB-1, 2 checks, or 
+            Figure-RB-1, 2 checks, or 
+            Form-RB-1, 2 checks, or 
+            Formula-RB-1, 2 checks, or 
+            H-RB-1, 2 checks, or 
+            Hn-RB-1, 12 checks, or 
+            Index-RB-1, 2 checks, or 
+            L-RB-1, 2 checks, or 
+            LBody-RB-1, 2 checks, or 
+            LI-RB-1, 2 checks, or 
+            Lbl-RB-1, 2 checks, or 
+            Link-RB-1, 2 checks, or 
+            Note-RB-1, 2 checks, or 
+            P-RB-1, 2 checks, or 
+            Quote-RB-1, 2 checks, or 
+            RB-RB-1, 2 checks, or 
+            RP-RB-1, 2 checks, or 
+            RT-RB-1, 2 checks, or 
+            Reference-RB-1, 2 checks, or 
+            Sect-RB-1, 2 checks, or 
+            Span-RB-1, 2 checks, or 
+            Strong-RB-1, 2 checks, or 
+            StructTreeRoot-RB-1, 2 checks, or 
+            Sub-RB-1, 2 checks, or 
+            TBody-RB-1, 2 checks, or 
+            TD-RB-1, 2 checks, or 
+            TFoot-RB-1, 2 checks, or 
+            TH-RB-1, 2 checks, or 
+            THead-RB-1, 2 checks, or 
+            TOC-RB-1, 2 checks, or 
+            TOCI-RB-1, 2 checks, or 
+            TR-RB-1, 2 checks, or 
+            Table-RB-1, 2 checks, or 
+            Title-RB-1, 2 checks, or 
+            WP-RB-1, 2 checks, or 
+            WT-RB-1, 2 checks, or 
+            Warichu-RB-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERP' or
-            (@clause = '6.2' and @testNumber = '33' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '67' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '94' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '143' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '169' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '210' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '255' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '288' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '314' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '341' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '371' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '401' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '422' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '452' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '486' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '517' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '549' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '580' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '611' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '642' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '673' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '694' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '728' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '751' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '786' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '867' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '907' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '947' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '996' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1035' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1075' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1103' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1136' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1180' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1226' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1254' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1284' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1331' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1379' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1410' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1434' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1475' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1524' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1573' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1600' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1620' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1642' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-33, 2 checks, or 
-            6.2-67, 2 checks, or 
-            6.2-94, 2 checks, or 
-            6.2-143, 2 checks, or 
-            6.2-169, 2 checks, or 
-            6.2-210, 2 checks, or 
-            6.2-255, 2 checks, or 
-            6.2-288, 2 checks, or 
-            6.2-314, 2 checks, or 
-            6.2-341, 2 checks, or 
-            6.2-371, 2 checks, or 
-            6.2-401, 2 checks, or 
-            6.2-422, 2 checks, or 
-            6.2-452, 2 checks, or 
-            6.2-486, 12 checks, or 
-            6.2-517, 2 checks, or 
-            6.2-549, 2 checks, or 
-            6.2-580, 2 checks, or 
-            6.2-611, 2 checks, or 
-            6.2-642, 2 checks, or 
-            6.2-673, 2 checks, or 
-            6.2-694, 2 checks, or 
-            6.2-728, 2 checks, or 
-            6.2-751, 2 checks, or 
-            6.2-786, 2 checks, or 
-            6.2-867, 2 checks, or 
-            6.2-907, 2 checks, or 
-            6.2-947, 2 checks, or 
-            6.2-996, 2 checks, or 
-            6.2-1035, 2 checks, or 
-            6.2-1075, 2 checks, or 
-            6.2-1103, 2 checks, or 
-            6.2-1136, 2 checks, or 
-            6.2-1180, 2 checks, or 
-            6.2-1226, 2 checks, or 
-            6.2-1254, 2 checks, or 
-            6.2-1284, 2 checks, or 
-            6.2-1331, 2 checks, or 
-            6.2-1379, 2 checks, or 
-            6.2-1410, 2 checks, or 
-            6.2-1434, 2 checks, or 
-            6.2-1475, 2 checks, or 
-            6.2-1524, 2 checks, or 
-            6.2-1573, 2 checks, or 
-            6.2-1600, 2 checks, or 
-            6.2-1620, 2 checks, or 
-            6.2-1642, 2 checks</sch:assert>
+            (@clause = 'Annot-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-RP' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-RP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-RP' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-RP-1, 2 checks, or 
+            Art-RP-1, 2 checks, or 
+            Aside-RP-1, 2 checks, or 
+            BibEntry-RP-1, 2 checks, or 
+            BlockQuote-RP-1, 2 checks, or 
+            Caption-RP-1, 2 checks, or 
+            Code-RP-1, 2 checks, or 
+            Document-RP-1, 2 checks, or 
+            DocumentFragment-RP-1, 2 checks, or 
+            Em-RP-1, 2 checks, or 
+            FENote-RP-1, 2 checks, or 
+            Figure-RP-1, 2 checks, or 
+            Form-RP-1, 2 checks, or 
+            Formula-RP-1, 2 checks, or 
+            H-RP-1, 2 checks, or 
+            Hn-RP-1, 12 checks, or 
+            Index-RP-1, 2 checks, or 
+            L-RP-1, 2 checks, or 
+            LBody-RP-1, 2 checks, or 
+            LI-RP-1, 2 checks, or 
+            Lbl-RP-1, 2 checks, or 
+            Link-RP-1, 2 checks, or 
+            Note-RP-1, 2 checks, or 
+            P-RP-1, 2 checks, or 
+            Quote-RP-1, 2 checks, or 
+            RB-RP-1, 2 checks, or 
+            RP-RP-1, 2 checks, or 
+            RT-RP-1, 2 checks, or 
+            Reference-RP-1, 2 checks, or 
+            Sect-RP-1, 2 checks, or 
+            Span-RP-1, 2 checks, or 
+            Strong-RP-1, 2 checks, or 
+            StructTreeRoot-RP-1, 2 checks, or 
+            Sub-RP-1, 2 checks, or 
+            TBody-RP-1, 2 checks, or 
+            TD-RP-1, 2 checks, or 
+            TFoot-RP-1, 2 checks, or 
+            TH-RP-1, 2 checks, or 
+            THead-RP-1, 2 checks, or 
+            TOC-RP-1, 2 checks, or 
+            TOCI-RP-1, 2 checks, or 
+            TR-RP-1, 2 checks, or 
+            Table-RP-1, 2 checks, or 
+            Title-RP-1, 2 checks, or 
+            WP-RP-1, 2 checks, or 
+            WT-RP-1, 2 checks, or 
+            Warichu-RP-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERT' or
-            (@clause = '6.2' and @testNumber = '32' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '66' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '93' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '142' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '168' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '209' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '254' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '287' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '313' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '340' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '370' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '400' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '421' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '451' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '485' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '516' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '548' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '579' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '610' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '641' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '672' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '693' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '727' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '750' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '785' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '866' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '906' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '946' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '995' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1034' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1074' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1102' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1135' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1179' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1225' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1253' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1283' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1330' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1378' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1409' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1433' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1474' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1523' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1572' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1599' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1619' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1641' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-32, 2 checks, or 
-            6.2-66, 2 checks, or 
-            6.2-93, 2 checks, or 
-            6.2-142, 2 checks, or 
-            6.2-168, 2 checks, or 
-            6.2-209, 2 checks, or 
-            6.2-254, 2 checks, or 
-            6.2-287, 2 checks, or 
-            6.2-313, 2 checks, or 
-            6.2-340, 2 checks, or 
-            6.2-370, 2 checks, or 
-            6.2-400, 2 checks, or 
-            6.2-421, 2 checks, or 
-            6.2-451, 2 checks, or 
-            6.2-485, 12 checks, or 
-            6.2-516, 2 checks, or 
-            6.2-548, 2 checks, or 
-            6.2-579, 2 checks, or 
-            6.2-610, 2 checks, or 
-            6.2-641, 2 checks, or 
-            6.2-672, 2 checks, or 
-            6.2-693, 2 checks, or 
-            6.2-727, 2 checks, or 
-            6.2-750, 2 checks, or 
-            6.2-785, 2 checks, or 
-            6.2-866, 2 checks, or 
-            6.2-906, 2 checks, or 
-            6.2-946, 2 checks, or 
-            6.2-995, 2 checks, or 
-            6.2-1034, 2 checks, or 
-            6.2-1074, 2 checks, or 
-            6.2-1102, 2 checks, or 
-            6.2-1135, 2 checks, or 
-            6.2-1179, 2 checks, or 
-            6.2-1225, 2 checks, or 
-            6.2-1253, 2 checks, or 
-            6.2-1283, 2 checks, or 
-            6.2-1330, 2 checks, or 
-            6.2-1378, 2 checks, or 
-            6.2-1409, 2 checks, or 
-            6.2-1433, 2 checks, or 
-            6.2-1474, 2 checks, or 
-            6.2-1523, 2 checks, or 
-            6.2-1572, 2 checks, or 
-            6.2-1599, 2 checks, or 
-            6.2-1619, 2 checks, or 
-            6.2-1641, 2 checks</sch:assert>
+            (@clause = 'Annot-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-RT' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-RT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-RT' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-RT-1, 2 checks, or 
+            Art-RT-1, 2 checks, or 
+            Aside-RT-1, 2 checks, or 
+            BibEntry-RT-1, 2 checks, or 
+            BlockQuote-RT-1, 2 checks, or 
+            Caption-RT-1, 2 checks, or 
+            Code-RT-1, 2 checks, or 
+            Document-RT-1, 2 checks, or 
+            DocumentFragment-RT-1, 2 checks, or 
+            Em-RT-1, 2 checks, or 
+            FENote-RT-1, 2 checks, or 
+            Figure-RT-1, 2 checks, or 
+            Form-RT-1, 2 checks, or 
+            Formula-RT-1, 2 checks, or 
+            H-RT-1, 2 checks, or 
+            Hn-RT-1, 12 checks, or 
+            Index-RT-1, 2 checks, or 
+            L-RT-1, 2 checks, or 
+            LBody-RT-1, 2 checks, or 
+            LI-RT-1, 2 checks, or 
+            Lbl-RT-1, 2 checks, or 
+            Link-RT-1, 2 checks, or 
+            Note-RT-1, 2 checks, or 
+            P-RT-1, 2 checks, or 
+            Quote-RT-1, 2 checks, or 
+            RB-RT-1, 2 checks, or 
+            RP-RT-1, 2 checks, or 
+            RT-RT-1, 2 checks, or 
+            Reference-RT-1, 2 checks, or 
+            Sect-RT-1, 2 checks, or 
+            Span-RT-1, 2 checks, or 
+            Strong-RT-1, 2 checks, or 
+            StructTreeRoot-RT-1, 2 checks, or 
+            Sub-RT-1, 2 checks, or 
+            TBody-RT-1, 2 checks, or 
+            TD-RT-1, 2 checks, or 
+            TFoot-RT-1, 2 checks, or 
+            TH-RT-1, 2 checks, or 
+            THead-RT-1, 2 checks, or 
+            TOC-RT-1, 2 checks, or 
+            TOCI-RT-1, 2 checks, or 
+            TR-RT-1, 2 checks, or 
+            Table-RT-1, 2 checks, or 
+            Title-RT-1, 2 checks, or 
+            WP-RT-1, 2 checks, or 
+            WT-RT-1, 2 checks, or 
+            Warichu-RT-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEReference' or
-            (@clause = '6.2' and @testNumber = '27' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '63' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '90' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '139' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '165' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '204' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '723' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '823' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '990' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1174' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1220' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1325' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1373' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1469' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1518' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1567' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-27, 2 checks, or 
-            6.2-63, 2 checks, or 
-            6.2-90, 2 checks, or 
-            6.2-139, 2 checks, or 
-            6.2-165, 2 checks, or 
-            6.2-204, 2 checks, or 
-            6.2-723, 2 checks, or 
-            6.2-823, 2 checks, or 
-            6.2-990, 2 checks, or 
-            6.2-1174, 2 checks, or 
-            6.2-1220, 2 checks, or 
-            6.2-1325, 2 checks, or 
-            6.2-1373, 2 checks, or 
-            6.2-1469, 2 checks, or 
-            6.2-1518, 2 checks, or 
-            6.2-1567, 2 checks</sch:assert>
+            (@clause = 'Art-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Reference' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Reference-1, 2 checks, or 
+            Document-Reference-1, 2 checks, or 
+            DocumentFragment-Reference-1, 2 checks, or 
+            L-Reference-1, 2 checks, or 
+            LI-Reference-1, 2 checks, or 
+            Reference-Reference-1, 2 checks, or 
+            Ruby-Reference-1, 2 checks, or 
+            Sect-Reference-1, 2 checks, or 
+            StructTreeRoot-Reference-1, 2 checks, or 
+            TBody-Reference-1, 2 checks, or 
+            TFoot-Reference-1, 2 checks, or 
+            THead-Reference-1, 2 checks, or 
+            TOC-Reference-1, 2 checks, or 
+            TR-Reference-1, 2 checks, or 
+            Table-Reference-1, 2 checks, or 
+            Warichu-Reference-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SERuby' or
-            (@clause = '6.2' and @testNumber = '30' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '64' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '91' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '140' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '166' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '207' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '252' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '285' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '311' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '449' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '725' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '783' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '826' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '864' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '904' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '944' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '993' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1032' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1072' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1133' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1177' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1223' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1281' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1328' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1376' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1472' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1521' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1570' and @failedChecks = '2') or 
-            (@clause = '8.2.5.23' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-30, 2 checks, or 
-            6.2-64, 2 checks, or 
-            6.2-91, 2 checks, or 
-            6.2-140, 2 checks, or 
-            6.2-166, 2 checks, or 
-            6.2-207, 2 checks, or 
-            6.2-252, 2 checks, or 
-            6.2-285, 2 checks, or 
-            6.2-311, 2 checks, or 
-            6.2-449, 2 checks, or 
-            6.2-725, 2 checks, or 
-            6.2-783, 2 checks, or 
-            6.2-826, 2 checks, or 
-            6.2-864, 2 checks, or 
-            6.2-904, 2 checks, or 
-            6.2-944, 2 checks, or 
-            6.2-993, 2 checks, or 
-            6.2-1032, 2 checks, or 
-            6.2-1072, 2 checks, or 
-            6.2-1133, 2 checks, or 
-            6.2-1177, 2 checks, or 
-            6.2-1223, 2 checks, or 
-            6.2-1281, 2 checks, or 
-            6.2-1328, 2 checks, or 
-            6.2-1376, 2 checks, or 
-            6.2-1472, 2 checks, or 
-            6.2-1521, 2 checks, or 
-            6.2-1570, 2 checks, or 
-            8.2.5.23-1, 110 checks</sch:assert>
+            (@clause = '8.2.5.23' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'Art-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Ruby' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.23-1, 110 checks, or 
+            Art-Ruby-1, 2 checks, or 
+            Aside-Ruby-1, 2 checks, or 
+            BibEntry-Ruby-1, 2 checks, or 
+            BlockQuote-Ruby-1, 2 checks, or 
+            Code-Ruby-1, 2 checks, or 
+            Document-Ruby-1, 2 checks, or 
+            DocumentFragment-Ruby-1, 2 checks, or 
+            Form-Ruby-1, 2 checks, or 
+            Index-Ruby-1, 2 checks, or 
+            L-Ruby-1, 2 checks, or 
+            LI-Ruby-1, 2 checks, or 
+            RB-Ruby-1, 2 checks, or 
+            RP-Ruby-1, 2 checks, or 
+            RT-Ruby-1, 2 checks, or 
+            Reference-Ruby-1, 2 checks, or 
+            Ruby-Ruby-1, 2 checks, or 
+            Sect-Ruby-1, 2 checks, or 
+            StructTreeRoot-Ruby-1, 2 checks, or 
+            TBody-Ruby-1, 2 checks, or 
+            TFoot-Ruby-1, 2 checks, or 
+            THead-Ruby-1, 2 checks, or 
+            TOC-Ruby-1, 2 checks, or 
+            TOCI-Ruby-1, 2 checks, or 
+            TR-Ruby-1, 2 checks, or 
+            Table-Ruby-1, 2 checks, or 
+            WP-Ruby-1, 2 checks, or 
+            WT-Ruby-1, 2 checks, or 
+            Warichu-Ruby-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESect' or
-            (@clause = '6.2' and @testNumber = '7' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '159' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '182' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '188' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '235' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '331' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '359' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '390' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '435' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '537' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '569' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '600' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '631' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '662' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '711' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '766' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '805' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '852' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '892' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '932' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '972' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1020' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1060' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1156' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1203' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1269' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1307' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1355' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1451' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1500' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1549' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1635' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-7, 2 checks, or 
-            6.2-159, 1 check, or 
-            6.2-182, 1 check, or 
-            6.2-188, 2 checks, or 
-            6.2-235, 2 checks, or 
-            6.2-331, 2 checks, or 
-            6.2-359, 2 checks, or 
-            6.2-390, 2 checks, or 
-            6.2-435, 2 checks, or 
-            6.2-537, 2 checks, or 
-            6.2-569, 2 checks, or 
-            6.2-600, 2 checks, or 
-            6.2-631, 2 checks, or 
-            6.2-662, 2 checks, or 
-            6.2-711, 2 checks, or 
-            6.2-766, 2 checks, or 
-            6.2-805, 2 checks, or 
-            6.2-852, 2 checks, or 
-            6.2-892, 2 checks, or 
-            6.2-932, 2 checks, or 
-            6.2-972, 2 checks, or 
-            6.2-1020, 2 checks, or 
-            6.2-1060, 2 checks, or 
-            6.2-1156, 2 checks, or 
-            6.2-1203, 2 checks, or 
-            6.2-1269, 2 checks, or 
-            6.2-1307, 2 checks, or 
-            6.2-1355, 2 checks, or 
-            6.2-1451, 2 checks, or 
-            6.2-1500, 2 checks, or 
-            6.2-1549, 2 checks, or 
-            6.2-1635, 2 checks</sch:assert>
+            (@clause = 'BibEntry-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Sect-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Span-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Sect' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Sect' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Sect-1, 2 checks, or 
+            Code-Sect-1, 2 checks, or 
+            Em-Sect-1, 2 checks, or 
+            Form-Sect-1, 2 checks, or 
+            Formula-Sect-1, 2 checks, or 
+            L-Sect-1, 2 checks, or 
+            LI-Sect-1, 2 checks, or 
+            Lbl-Sect-1, 2 checks, or 
+            P-Sect-1, 2 checks, or 
+            Quote-Sect-1, 2 checks, or 
+            RB-Sect-1, 2 checks, or 
+            RP-Sect-1, 2 checks, or 
+            RT-Sect-1, 2 checks, or 
+            Reference-Sect-1, 2 checks, or 
+            Ruby-Sect-1, 2 checks, or 
+            Sect-H-1, 1 check, or 
+            Sect-content-1, 1 check, or 
+            Span-Sect-1, 2 checks, or 
+            Strong-Sect-1, 2 checks, or 
+            StructTreeRoot-Sect-1, 2 checks, or 
+            Sub-Sect-1, 2 checks, or 
+            TBody-Sect-1, 2 checks, or 
+            TFoot-Sect-1, 2 checks, or 
+            THead-Sect-1, 2 checks, or 
+            TOC-Sect-1, 2 checks, or 
+            TOCI-Sect-1, 2 checks, or 
+            TR-Sect-1, 2 checks, or 
+            Table-Sect-1, 2 checks, or 
+            Title-Sect-1, 2 checks, or 
+            WP-Sect-1, 2 checks, or 
+            WT-Sect-1, 2 checks, or 
+            Warichu-Sect-1, 2 checks</sch:assert>
         </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESimpleContentItem' or
@@ -2072,1351 +2228,1416 @@
             8.2.2-1, 110 checks</sch:assert>
         </sch:rule>
 
+    </sch:pattern>
+
+    <sch:pattern>
+
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SESpan' or
-            (@clause = '6.2' and @testNumber = '24' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '61' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '88' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '137' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '163' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '201' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '247' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '283' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '309' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '778' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '820' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '987' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1129' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1171' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1217' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1322' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1370' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1466' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1515' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1564' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-24, 2 checks, or 
-            6.2-61, 2 checks, or 
-            6.2-88, 2 checks, or 
-            6.2-137, 2 checks, or 
-            6.2-163, 2 checks, or 
-            6.2-201, 2 checks, or 
-            6.2-247, 2 checks, or 
-            6.2-283, 2 checks, or 
-            6.2-309, 2 checks, or 
-            6.2-778, 2 checks, or 
-            6.2-820, 2 checks, or 
-            6.2-987, 2 checks, or 
-            6.2-1129, 2 checks, or 
-            6.2-1171, 2 checks, or 
-            6.2-1217, 2 checks, or 
-            6.2-1322, 2 checks, or 
-            6.2-1370, 2 checks, or 
-            6.2-1466, 2 checks, or 
-            6.2-1515, 2 checks, or 
-            6.2-1564, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEStrong' or
-            (@clause = '6.2' and @testNumber = '23' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '60' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '87' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '136' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '162' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '200' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '246' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '282' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '308' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '777' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '819' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '986' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1128' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1170' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1216' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1321' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1369' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1465' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1514' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1563' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-23, 2 checks, or 
-            6.2-60, 2 checks, or 
-            6.2-87, 2 checks, or 
-            6.2-136, 2 checks, or 
-            6.2-162, 2 checks, or 
-            6.2-200, 2 checks, or 
-            6.2-246, 2 checks, or 
-            6.2-282, 2 checks, or 
-            6.2-308, 2 checks, or 
-            6.2-777, 2 checks, or 
-            6.2-819, 2 checks, or 
-            6.2-986, 2 checks, or 
-            6.2-1128, 2 checks, or 
-            6.2-1170, 2 checks, or 
-            6.2-1216, 2 checks, or 
-            6.2-1321, 2 checks, or 
-            6.2-1369, 2 checks, or 
-            6.2-1465, 2 checks, or 
-            6.2-1514, 2 checks, or 
-            6.2-1563, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SESub' or
-            (@clause = '6.2' and @testNumber = '20' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '57' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '84' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '134' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '160' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '197' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '244' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '280' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '306' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '338' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '368' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '721' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '775' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '816' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '983' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1125' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1167' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1214' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1278' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1318' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1366' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1407' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1431' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1462' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1511' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1560' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-20, 2 checks, or 
-            6.2-57, 2 checks, or 
-            6.2-84, 2 checks, or 
-            6.2-134, 2 checks, or 
-            6.2-160, 2 checks, or 
-            6.2-197, 2 checks, or 
-            6.2-244, 2 checks, or 
-            6.2-280, 2 checks, or 
-            6.2-306, 2 checks, or 
-            6.2-338, 2 checks, or 
-            6.2-368, 2 checks, or 
-            6.2-721, 2 checks, or 
-            6.2-775, 2 checks, or 
-            6.2-816, 2 checks, or 
-            6.2-983, 2 checks, or 
-            6.2-1125, 2 checks, or 
-            6.2-1167, 2 checks, or 
-            6.2-1214, 2 checks, or 
-            6.2-1278, 2 checks, or 
-            6.2-1318, 2 checks, or 
-            6.2-1366, 2 checks, or 
-            6.2-1407, 2 checks, or 
-            6.2-1431, 2 checks, or 
-            6.2-1462, 2 checks, or 
-            6.2-1511, 2 checks, or 
-            6.2-1560, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETBody' or
-            (@clause = '6.2' and @testNumber = '48' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '78' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '105' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '154' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '180' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '225' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '270' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '299' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '325' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '351' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '382' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '411' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '431' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '465' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '498' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '529' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '561' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '592' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '623' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '654' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '685' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '704' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '741' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '761' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '797' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '841' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '882' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '922' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '962' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1009' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1050' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1090' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1114' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1148' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1193' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1240' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1263' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1298' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1392' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1419' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1443' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1489' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1538' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1543' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1587' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1609' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1629' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1651' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-48, 2 checks, or 
-            6.2-78, 2 checks, or 
-            6.2-105, 2 checks, or 
-            6.2-154, 2 checks, or 
-            6.2-180, 2 checks, or 
-            6.2-225, 2 checks, or 
-            6.2-270, 2 checks, or 
-            6.2-299, 2 checks, or 
-            6.2-325, 2 checks, or 
-            6.2-351, 2 checks, or 
-            6.2-382, 2 checks, or 
-            6.2-411, 2 checks, or 
-            6.2-431, 2 checks, or 
-            6.2-465, 2 checks, or 
-            6.2-498, 12 checks, or 
-            6.2-529, 2 checks, or 
-            6.2-561, 2 checks, or 
-            6.2-592, 2 checks, or 
-            6.2-623, 2 checks, or 
-            6.2-654, 2 checks, or 
-            6.2-685, 2 checks, or 
-            6.2-704, 2 checks, or 
-            6.2-741, 2 checks, or 
-            6.2-761, 2 checks, or 
-            6.2-797, 2 checks, or 
-            6.2-841, 2 checks, or 
-            6.2-882, 2 checks, or 
-            6.2-922, 2 checks, or 
-            6.2-962, 2 checks, or 
-            6.2-1009, 2 checks, or 
-            6.2-1050, 2 checks, or 
-            6.2-1090, 2 checks, or 
-            6.2-1114, 2 checks, or 
-            6.2-1148, 2 checks, or 
-            6.2-1193, 2 checks, or 
-            6.2-1240, 2 checks, or 
-            6.2-1263, 2 checks, or 
-            6.2-1298, 2 checks, or 
-            6.2-1392, 2 checks, or 
-            6.2-1419, 2 checks, or 
-            6.2-1443, 2 checks, or 
-            6.2-1489, 2 checks, or 
-            6.2-1538, 2 checks, or 
-            6.2-1543, 1 check, or 
-            6.2-1587, 2 checks, or 
-            6.2-1609, 2 checks, or 
-            6.2-1629, 2 checks, or 
-            6.2-1651, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETD' or
-            (@clause = '6.2' and @testNumber = '46' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '76' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '103' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '152' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '178' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '223' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '268' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '297' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '323' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '349' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '380' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '409' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '429' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '463' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '496' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '527' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '559' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '590' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '621' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '652' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '683' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '702' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '739' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '759' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '795' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '839' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '880' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '920' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '960' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1007' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1048' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1088' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1112' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1146' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1191' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1238' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1261' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1296' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1343' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1417' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1429' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1441' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1487' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1536' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1585' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1607' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1627' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1649' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-46, 2 checks, or 
-            6.2-76, 2 checks, or 
-            6.2-103, 2 checks, or 
-            6.2-152, 2 checks, or 
-            6.2-178, 2 checks, or 
-            6.2-223, 2 checks, or 
-            6.2-268, 2 checks, or 
-            6.2-297, 2 checks, or 
-            6.2-323, 2 checks, or 
-            6.2-349, 2 checks, or 
-            6.2-380, 2 checks, or 
-            6.2-409, 2 checks, or 
-            6.2-429, 2 checks, or 
-            6.2-463, 2 checks, or 
-            6.2-496, 12 checks, or 
-            6.2-527, 2 checks, or 
-            6.2-559, 2 checks, or 
-            6.2-590, 2 checks, or 
-            6.2-621, 2 checks, or 
-            6.2-652, 2 checks, or 
-            6.2-683, 2 checks, or 
-            6.2-702, 2 checks, or 
-            6.2-739, 2 checks, or 
-            6.2-759, 2 checks, or 
-            6.2-795, 2 checks, or 
-            6.2-839, 2 checks, or 
-            6.2-880, 2 checks, or 
-            6.2-920, 2 checks, or 
-            6.2-960, 2 checks, or 
-            6.2-1007, 2 checks, or 
-            6.2-1048, 2 checks, or 
-            6.2-1088, 2 checks, or 
-            6.2-1112, 2 checks, or 
-            6.2-1146, 2 checks, or 
-            6.2-1191, 2 checks, or 
-            6.2-1238, 2 checks, or 
-            6.2-1261, 2 checks, or 
-            6.2-1296, 2 checks, or 
-            6.2-1343, 2 checks, or 
-            6.2-1417, 2 checks, or 
-            6.2-1429, 1 check, or 
-            6.2-1441, 2 checks, or 
-            6.2-1487, 2 checks, or 
-            6.2-1536, 2 checks, or 
-            6.2-1585, 2 checks, or 
-            6.2-1607, 2 checks, or 
-            6.2-1627, 2 checks, or 
-            6.2-1649, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETFoot' or
-            (@clause = '6.2' and @testNumber = '49' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '79' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '106' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '155' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '181' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '226' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '271' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '300' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '326' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '352' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '383' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '412' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '432' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '466' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '499' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '530' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '562' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '593' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '624' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '655' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '686' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '705' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '742' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '762' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '798' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '842' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '883' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '923' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '963' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1010' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1051' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1091' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1115' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1149' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1194' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1241' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1264' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1299' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1393' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1420' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1444' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1490' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1539' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1588' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1592' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1610' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1630' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1652' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-49, 2 checks, or 
-            6.2-79, 2 checks, or 
-            6.2-106, 2 checks, or 
-            6.2-155, 2 checks, or 
-            6.2-181, 2 checks, or 
-            6.2-226, 2 checks, or 
-            6.2-271, 2 checks, or 
-            6.2-300, 2 checks, or 
-            6.2-326, 2 checks, or 
-            6.2-352, 2 checks, or 
-            6.2-383, 2 checks, or 
-            6.2-412, 2 checks, or 
-            6.2-432, 2 checks, or 
-            6.2-466, 2 checks, or 
-            6.2-499, 12 checks, or 
-            6.2-530, 2 checks, or 
-            6.2-562, 2 checks, or 
-            6.2-593, 2 checks, or 
-            6.2-624, 2 checks, or 
-            6.2-655, 2 checks, or 
-            6.2-686, 2 checks, or 
-            6.2-705, 2 checks, or 
-            6.2-742, 2 checks, or 
-            6.2-762, 2 checks, or 
-            6.2-798, 2 checks, or 
-            6.2-842, 2 checks, or 
-            6.2-883, 2 checks, or 
-            6.2-923, 2 checks, or 
-            6.2-963, 2 checks, or 
-            6.2-1010, 2 checks, or 
-            6.2-1051, 2 checks, or 
-            6.2-1091, 2 checks, or 
-            6.2-1115, 2 checks, or 
-            6.2-1149, 2 checks, or 
-            6.2-1194, 2 checks, or 
-            6.2-1241, 2 checks, or 
-            6.2-1264, 2 checks, or 
-            6.2-1299, 2 checks, or 
-            6.2-1393, 2 checks, or 
-            6.2-1420, 2 checks, or 
-            6.2-1444, 2 checks, or 
-            6.2-1490, 2 checks, or 
-            6.2-1539, 2 checks, or 
-            6.2-1588, 2 checks, or 
-            6.2-1592, 1 check, or 
-            6.2-1610, 2 checks, or 
-            6.2-1630, 2 checks, or 
-            6.2-1652, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETH' or
-            (@clause = '6.2' and @testNumber = '45' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '75' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '102' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '151' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '177' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '222' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '267' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '296' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '322' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '348' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '379' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '408' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '428' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '462' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '495' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '526' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '558' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '589' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '620' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '651' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '682' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '701' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '738' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '758' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '794' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '838' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '879' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '919' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '959' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1006' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1047' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1087' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1111' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1145' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1190' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1237' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1260' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1295' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1342' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1405' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1416' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1440' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1486' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1535' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1584' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1606' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1626' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1648' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-45, 2 checks, or 
-            6.2-75, 2 checks, or 
-            6.2-102, 2 checks, or 
-            6.2-151, 2 checks, or 
-            6.2-177, 2 checks, or 
-            6.2-222, 2 checks, or 
-            6.2-267, 2 checks, or 
-            6.2-296, 2 checks, or 
-            6.2-322, 2 checks, or 
-            6.2-348, 2 checks, or 
-            6.2-379, 2 checks, or 
-            6.2-408, 2 checks, or 
-            6.2-428, 2 checks, or 
-            6.2-462, 2 checks, or 
-            6.2-495, 12 checks, or 
-            6.2-526, 2 checks, or 
-            6.2-558, 2 checks, or 
-            6.2-589, 2 checks, or 
-            6.2-620, 2 checks, or 
-            6.2-651, 2 checks, or 
-            6.2-682, 2 checks, or 
-            6.2-701, 2 checks, or 
-            6.2-738, 2 checks, or 
-            6.2-758, 2 checks, or 
-            6.2-794, 2 checks, or 
-            6.2-838, 2 checks, or 
-            6.2-879, 2 checks, or 
-            6.2-919, 2 checks, or 
-            6.2-959, 2 checks, or 
-            6.2-1006, 2 checks, or 
-            6.2-1047, 2 checks, or 
-            6.2-1087, 2 checks, or 
-            6.2-1111, 2 checks, or 
-            6.2-1145, 2 checks, or 
-            6.2-1190, 2 checks, or 
-            6.2-1237, 2 checks, or 
-            6.2-1260, 2 checks, or 
-            6.2-1295, 2 checks, or 
-            6.2-1342, 2 checks, or 
-            6.2-1405, 1 check, or 
-            6.2-1416, 2 checks, or 
-            6.2-1440, 2 checks, or 
-            6.2-1486, 2 checks, or 
-            6.2-1535, 2 checks, or 
-            6.2-1584, 2 checks, or 
-            6.2-1606, 2 checks, or 
-            6.2-1626, 2 checks, or 
-            6.2-1648, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETHead' or
-            (@clause = '6.2' and @testNumber = '47' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '77' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '104' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '153' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '179' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '224' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '269' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '298' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '324' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '350' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '381' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '410' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '430' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '464' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '497' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '528' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '560' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '591' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '622' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '653' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '684' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '703' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '740' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '760' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '796' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '840' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '881' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '921' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '961' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1008' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1049' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1089' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1113' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1147' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1192' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1239' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1262' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1297' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1391' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1418' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1442' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1488' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1494' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1537' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1586' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1608' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1628' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1650' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-47, 2 checks, or 
-            6.2-77, 2 checks, or 
-            6.2-104, 2 checks, or 
-            6.2-153, 2 checks, or 
-            6.2-179, 2 checks, or 
-            6.2-224, 2 checks, or 
-            6.2-269, 2 checks, or 
-            6.2-298, 2 checks, or 
-            6.2-324, 2 checks, or 
-            6.2-350, 2 checks, or 
-            6.2-381, 2 checks, or 
-            6.2-410, 2 checks, or 
-            6.2-430, 2 checks, or 
-            6.2-464, 2 checks, or 
-            6.2-497, 12 checks, or 
-            6.2-528, 2 checks, or 
-            6.2-560, 2 checks, or 
-            6.2-591, 2 checks, or 
-            6.2-622, 2 checks, or 
-            6.2-653, 2 checks, or 
-            6.2-684, 2 checks, or 
-            6.2-703, 2 checks, or 
-            6.2-740, 2 checks, or 
-            6.2-760, 2 checks, or 
-            6.2-796, 2 checks, or 
-            6.2-840, 2 checks, or 
-            6.2-881, 2 checks, or 
-            6.2-921, 2 checks, or 
-            6.2-961, 2 checks, or 
-            6.2-1008, 2 checks, or 
-            6.2-1049, 2 checks, or 
-            6.2-1089, 2 checks, or 
-            6.2-1113, 2 checks, or 
-            6.2-1147, 2 checks, or 
-            6.2-1192, 2 checks, or 
-            6.2-1239, 2 checks, or 
-            6.2-1262, 2 checks, or 
-            6.2-1297, 2 checks, or 
-            6.2-1391, 2 checks, or 
-            6.2-1418, 2 checks, or 
-            6.2-1442, 2 checks, or 
-            6.2-1488, 2 checks, or 
-            6.2-1494, 1 check, or 
-            6.2-1537, 2 checks, or 
-            6.2-1586, 2 checks, or 
-            6.2-1608, 2 checks, or 
-            6.2-1628, 2 checks, or 
-            6.2-1650, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETOC' or
-            (@clause = '6.2' and @testNumber = '8' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '227' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '230' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '332' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '360' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '391' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '415' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '436' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '476' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '507' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '538' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '570' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '601' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '632' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '663' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '689' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '712' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '746' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '767' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '806' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '853' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '893' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '933' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '973' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1021' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1061' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1096' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1119' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1157' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1204' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1247' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1270' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1308' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1356' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1401' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1425' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1452' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1501' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1550' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1594' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1614' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1636' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-8, 2 checks, or 
-            6.2-227, 1 check, or 
-            6.2-230, 1 check, or 
-            6.2-332, 2 checks, or 
-            6.2-360, 2 checks, or 
-            6.2-391, 2 checks, or 
-            6.2-415, 2 checks, or 
-            6.2-436, 2 checks, or 
-            6.2-476, 12 checks, or 
-            6.2-507, 2 checks, or 
-            6.2-538, 2 checks, or 
-            6.2-570, 2 checks, or 
-            6.2-601, 2 checks, or 
-            6.2-632, 2 checks, or 
-            6.2-663, 2 checks, or 
-            6.2-689, 2 checks, or 
-            6.2-712, 2 checks, or 
-            6.2-746, 2 checks, or 
-            6.2-767, 2 checks, or 
-            6.2-806, 2 checks, or 
-            6.2-853, 2 checks, or 
-            6.2-893, 2 checks, or 
-            6.2-933, 2 checks, or 
-            6.2-973, 2 checks, or 
-            6.2-1021, 2 checks, or 
-            6.2-1061, 2 checks, or 
-            6.2-1096, 2 checks, or 
-            6.2-1119, 2 checks, or 
-            6.2-1157, 2 checks, or 
-            6.2-1204, 2 checks, or 
-            6.2-1247, 2 checks, or 
-            6.2-1270, 2 checks, or 
-            6.2-1308, 2 checks, or 
-            6.2-1356, 2 checks, or 
-            6.2-1401, 2 checks, or 
-            6.2-1425, 2 checks, or 
-            6.2-1452, 2 checks, or 
-            6.2-1501, 2 checks, or 
-            6.2-1550, 2 checks, or 
-            6.2-1594, 2 checks, or 
-            6.2-1614, 2 checks, or 
-            6.2-1636, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETOCI' or
-            (@clause = '6.2' and @testNumber = '9' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '55' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '82' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '132' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '158' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '236' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '275' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '276' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '302' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '333' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '361' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '392' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '416' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '437' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '477' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '508' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '539' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '571' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '602' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '633' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '664' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '690' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '713' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '747' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '768' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '807' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '854' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '894' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '934' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '974' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1022' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1062' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1097' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1120' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1158' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1205' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1248' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1271' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1309' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1357' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1402' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1426' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1453' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1502' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1551' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1595' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1615' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1637' and @failedChecks = '2') or 
-            (@clause = '8.2.5.8' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-9, 2 checks, or 
-            6.2-55, 2 checks, or 
-            6.2-82, 2 checks, or 
-            6.2-132, 2 checks, or 
-            6.2-158, 2 checks, or 
-            6.2-236, 2 checks, or 
-            6.2-275, 1 check, or 
-            6.2-276, 2 checks, or 
-            6.2-302, 2 checks, or 
-            6.2-333, 2 checks, or 
-            6.2-361, 2 checks, or 
-            6.2-392, 2 checks, or 
-            6.2-416, 2 checks, or 
-            6.2-437, 2 checks, or 
-            6.2-477, 12 checks, or 
-            6.2-508, 2 checks, or 
-            6.2-539, 2 checks, or 
-            6.2-571, 2 checks, or 
-            6.2-602, 2 checks, or 
-            6.2-633, 2 checks, or 
-            6.2-664, 2 checks, or 
-            6.2-690, 2 checks, or 
-            6.2-713, 2 checks, or 
-            6.2-747, 2 checks, or 
-            6.2-768, 2 checks, or 
-            6.2-807, 2 checks, or 
-            6.2-854, 2 checks, or 
-            6.2-894, 2 checks, or 
-            6.2-934, 2 checks, or 
-            6.2-974, 2 checks, or 
-            6.2-1022, 2 checks, or 
-            6.2-1062, 2 checks, or 
-            6.2-1097, 2 checks, or 
-            6.2-1120, 2 checks, or 
-            6.2-1158, 2 checks, or 
-            6.2-1205, 2 checks, or 
-            6.2-1248, 2 checks, or 
-            6.2-1271, 2 checks, or 
-            6.2-1309, 2 checks, or 
-            6.2-1357, 2 checks, or 
-            6.2-1402, 2 checks, or 
-            6.2-1426, 2 checks, or 
-            6.2-1453, 2 checks, or 
-            6.2-1502, 2 checks, or 
-            6.2-1551, 2 checks, or 
-            6.2-1595, 2 checks, or 
-            6.2-1615, 2 checks, or 
-            6.2-1637, 2 checks, or 
-            8.2.5.8-1, 110 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETR' or
-            (@clause = '6.2' and @testNumber = '44' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '74' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '101' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '150' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '176' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '221' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '266' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '295' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '321' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '347' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '378' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '407' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '427' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '461' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '494' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '525' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '557' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '588' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '619' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '650' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '681' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '700' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '737' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '757' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '793' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '837' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '878' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '918' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '958' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1005' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1046' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1086' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1110' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1144' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1189' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1236' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1259' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1294' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1390' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1397' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1415' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1439' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1605' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1625' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1647' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-44, 2 checks, or 
-            6.2-74, 2 checks, or 
-            6.2-101, 2 checks, or 
-            6.2-150, 2 checks, or 
-            6.2-176, 2 checks, or 
-            6.2-221, 2 checks, or 
-            6.2-266, 2 checks, or 
-            6.2-295, 2 checks, or 
-            6.2-321, 2 checks, or 
-            6.2-347, 2 checks, or 
-            6.2-378, 2 checks, or 
-            6.2-407, 2 checks, or 
-            6.2-427, 2 checks, or 
-            6.2-461, 2 checks, or 
-            6.2-494, 12 checks, or 
-            6.2-525, 2 checks, or 
-            6.2-557, 2 checks, or 
-            6.2-588, 2 checks, or 
-            6.2-619, 2 checks, or 
-            6.2-650, 2 checks, or 
-            6.2-681, 2 checks, or 
-            6.2-700, 2 checks, or 
-            6.2-737, 2 checks, or 
-            6.2-757, 2 checks, or 
-            6.2-793, 2 checks, or 
-            6.2-837, 2 checks, or 
-            6.2-878, 2 checks, or 
-            6.2-918, 2 checks, or 
-            6.2-958, 2 checks, or 
-            6.2-1005, 2 checks, or 
-            6.2-1046, 2 checks, or 
-            6.2-1086, 2 checks, or 
-            6.2-1110, 2 checks, or 
-            6.2-1144, 2 checks, or 
-            6.2-1189, 2 checks, or 
-            6.2-1236, 2 checks, or 
-            6.2-1259, 2 checks, or 
-            6.2-1294, 2 checks, or 
-            6.2-1390, 2 checks, or 
-            6.2-1397, 1 check, or 
-            6.2-1415, 2 checks, or 
-            6.2-1439, 2 checks, or 
-            6.2-1605, 2 checks, or 
-            6.2-1625, 2 checks, or 
-            6.2-1647, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETable' or
-            (@clause = '6.2' and @testNumber = '43' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '220' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '265' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '377' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '460' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '493' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '524' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '556' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '587' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '618' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '649' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '680' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '736' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '836' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '877' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '917' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '957' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1004' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1045' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1085' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1188' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1235' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1293' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1341' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1344' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1345' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1346' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1349' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '1389' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1485' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1534' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1583' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-43, 2 checks, or 
-            6.2-220, 2 checks, or 
-            6.2-265, 2 checks, or 
-            6.2-377, 2 checks, or 
-            6.2-460, 2 checks, or 
-            6.2-493, 12 checks, or 
-            6.2-524, 2 checks, or 
-            6.2-556, 2 checks, or 
-            6.2-587, 2 checks, or 
-            6.2-618, 2 checks, or 
-            6.2-649, 2 checks, or 
-            6.2-680, 2 checks, or 
-            6.2-736, 2 checks, or 
-            6.2-836, 2 checks, or 
-            6.2-877, 2 checks, or 
-            6.2-917, 2 checks, or 
-            6.2-957, 2 checks, or 
-            6.2-1004, 2 checks, or 
-            6.2-1045, 2 checks, or 
-            6.2-1085, 2 checks, or 
-            6.2-1188, 2 checks, or 
-            6.2-1235, 2 checks, or 
-            6.2-1293, 2 checks, or 
-            6.2-1341, 2 checks, or 
-            6.2-1344, 1 check, or 
-            6.2-1345, 1 check, or 
-            6.2-1346, 1 check, or 
-            6.2-1349, 1 check, or 
-            6.2-1389, 2 checks, or 
-            6.2-1485, 2 checks, or 
-            6.2-1534, 2 checks, or 
-            6.2-1583, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SETitle' or
-            (@clause = '6.2' and @testNumber = '19' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '196' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '243' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '279' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '305' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '337' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '353' and @failedChecks = '1') or 
-            (@clause = '6.2' and @testNumber = '367' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '398' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '419' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '444' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '483' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '514' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '545' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '577' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '608' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '639' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '670' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '720' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '774' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '815' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '862' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '902' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '942' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '982' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1030' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1070' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1100' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1124' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1166' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1213' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1250' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1277' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1317' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1365' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1406' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1430' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1461' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1510' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1559' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1597' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1617' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1639' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-19, 2 checks, or 
-            6.2-196, 2 checks, or 
-            6.2-243, 2 checks, or 
-            6.2-279, 2 checks, or 
-            6.2-305, 2 checks, or 
-            6.2-337, 2 checks, or 
-            6.2-353, 1 check, or 
-            6.2-367, 2 checks, or 
-            6.2-398, 2 checks, or 
-            6.2-419, 2 checks, or 
-            6.2-444, 2 checks, or 
-            6.2-483, 12 checks, or 
-            6.2-514, 2 checks, or 
-            6.2-545, 2 checks, or 
-            6.2-577, 2 checks, or 
-            6.2-608, 2 checks, or 
-            6.2-639, 2 checks, or 
-            6.2-670, 2 checks, or 
-            6.2-720, 2 checks, or 
-            6.2-774, 2 checks, or 
-            6.2-815, 2 checks, or 
-            6.2-862, 2 checks, or 
-            6.2-902, 2 checks, or 
-            6.2-942, 2 checks, or 
-            6.2-982, 2 checks, or 
-            6.2-1030, 2 checks, or 
-            6.2-1070, 2 checks, or 
-            6.2-1100, 2 checks, or 
-            6.2-1124, 2 checks, or 
-            6.2-1166, 2 checks, or 
-            6.2-1213, 2 checks, or 
-            6.2-1250, 2 checks, or 
-            6.2-1277, 2 checks, or 
-            6.2-1317, 2 checks, or 
-            6.2-1365, 2 checks, or 
-            6.2-1406, 2 checks, or 
-            6.2-1430, 2 checks, or 
-            6.2-1461, 2 checks, or 
-            6.2-1510, 2 checks, or 
-            6.2-1559, 2 checks, or 
-            6.2-1597, 2 checks, or 
-            6.2-1617, 2 checks, or 
-            6.2-1639, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWP' or
-            (@clause = '6.2' and @testNumber = '36' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '70' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '97' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '146' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '172' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '213' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '258' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '291' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '317' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '343' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '373' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '403' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '424' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '455' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '488' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '519' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '551' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '582' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '613' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '644' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '675' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '696' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '731' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '753' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '789' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '829' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '870' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '910' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '950' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1038' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1078' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1105' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1139' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1183' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1229' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1256' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1287' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1334' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1382' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1412' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1436' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1478' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1527' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1576' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1602' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1622' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1644' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-36, 2 checks, or 
-            6.2-70, 2 checks, or 
-            6.2-97, 2 checks, or 
-            6.2-146, 2 checks, or 
-            6.2-172, 2 checks, or 
-            6.2-213, 2 checks, or 
-            6.2-258, 2 checks, or 
-            6.2-291, 2 checks, or 
-            6.2-317, 2 checks, or 
-            6.2-343, 2 checks, or 
-            6.2-373, 2 checks, or 
-            6.2-403, 2 checks, or 
-            6.2-424, 2 checks, or 
-            6.2-455, 2 checks, or 
-            6.2-488, 12 checks, or 
-            6.2-519, 2 checks, or 
-            6.2-551, 2 checks, or 
-            6.2-582, 2 checks, or 
-            6.2-613, 2 checks, or 
-            6.2-644, 2 checks, or 
-            6.2-675, 2 checks, or 
-            6.2-696, 2 checks, or 
-            6.2-731, 2 checks, or 
-            6.2-753, 2 checks, or 
-            6.2-789, 2 checks, or 
-            6.2-829, 2 checks, or 
-            6.2-870, 2 checks, or 
-            6.2-910, 2 checks, or 
-            6.2-950, 2 checks, or 
-            6.2-1038, 2 checks, or 
-            6.2-1078, 2 checks, or 
-            6.2-1105, 2 checks, or 
-            6.2-1139, 2 checks, or 
-            6.2-1183, 2 checks, or 
-            6.2-1229, 2 checks, or 
-            6.2-1256, 2 checks, or 
-            6.2-1287, 2 checks, or 
-            6.2-1334, 2 checks, or 
-            6.2-1382, 2 checks, or 
-            6.2-1412, 2 checks, or 
-            6.2-1436, 2 checks, or 
-            6.2-1478, 2 checks, or 
-            6.2-1527, 2 checks, or 
-            6.2-1576, 2 checks, or 
-            6.2-1602, 2 checks, or 
-            6.2-1622, 2 checks, or 
-            6.2-1644, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWT' or
-            (@clause = '6.2' and @testNumber = '35' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '69' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '96' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '145' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '171' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '212' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '257' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '290' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '316' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '342' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '372' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '402' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '423' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '454' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '487' and @failedChecks = '12') or 
-            (@clause = '6.2' and @testNumber = '518' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '550' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '581' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '612' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '643' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '674' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '695' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '730' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '752' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '788' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '828' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '869' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '909' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '949' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1037' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1077' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1104' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1138' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1182' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1228' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1255' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1286' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1333' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1381' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1411' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1435' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1477' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1526' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1575' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1601' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1621' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1643' and @failedChecks = '2')">Failed rules, Expected: 
-            6.2-35, 2 checks, or 
-            6.2-69, 2 checks, or 
-            6.2-96, 2 checks, or 
-            6.2-145, 2 checks, or 
-            6.2-171, 2 checks, or 
-            6.2-212, 2 checks, or 
-            6.2-257, 2 checks, or 
-            6.2-290, 2 checks, or 
-            6.2-316, 2 checks, or 
-            6.2-342, 2 checks, or 
-            6.2-372, 2 checks, or 
-            6.2-402, 2 checks, or 
-            6.2-423, 2 checks, or 
-            6.2-454, 2 checks, or 
-            6.2-487, 12 checks, or 
-            6.2-518, 2 checks, or 
-            6.2-550, 2 checks, or 
-            6.2-581, 2 checks, or 
-            6.2-612, 2 checks, or 
-            6.2-643, 2 checks, or 
-            6.2-674, 2 checks, or 
-            6.2-695, 2 checks, or 
-            6.2-730, 2 checks, or 
-            6.2-752, 2 checks, or 
-            6.2-788, 2 checks, or 
-            6.2-828, 2 checks, or 
-            6.2-869, 2 checks, or 
-            6.2-909, 2 checks, or 
-            6.2-949, 2 checks, or 
-            6.2-1037, 2 checks, or 
-            6.2-1077, 2 checks, or 
-            6.2-1104, 2 checks, or 
-            6.2-1138, 2 checks, or 
-            6.2-1182, 2 checks, or 
-            6.2-1228, 2 checks, or 
-            6.2-1255, 2 checks, or 
-            6.2-1286, 2 checks, or 
-            6.2-1333, 2 checks, or 
-            6.2-1381, 2 checks, or 
-            6.2-1411, 2 checks, or 
-            6.2-1435, 2 checks, or 
-            6.2-1477, 2 checks, or 
-            6.2-1526, 2 checks, or 
-            6.2-1575, 2 checks, or 
-            6.2-1601, 2 checks, or 
-            6.2-1621, 2 checks, or 
-            6.2-1643, 2 checks</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="object != 'SEWarichu' or
-            (@clause = '6.2' and @testNumber = '34' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '68' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '95' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '144' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '170' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '211' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '256' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '289' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '315' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '453' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '729' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '787' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '827' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '868' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '908' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '948' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '997' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1036' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1076' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1137' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1181' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1227' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1285' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1332' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1380' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1476' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1525' and @failedChecks = '2') or 
-            (@clause = '6.2' and @testNumber = '1574' and @failedChecks = '2') or 
-            (@clause = '8.2.5.24' and @testNumber = '1' and @failedChecks = '110')">Failed rules, Expected: 
-            6.2-34, 2 checks, or 
-            6.2-68, 2 checks, or 
-            6.2-95, 2 checks, or 
-            6.2-144, 2 checks, or 
-            6.2-170, 2 checks, or 
-            6.2-211, 2 checks, or 
-            6.2-256, 2 checks, or 
-            6.2-289, 2 checks, or 
-            6.2-315, 2 checks, or 
-            6.2-453, 2 checks, or 
-            6.2-729, 2 checks, or 
-            6.2-787, 2 checks, or 
-            6.2-827, 2 checks, or 
-            6.2-868, 2 checks, or 
-            6.2-908, 2 checks, or 
-            6.2-948, 2 checks, or 
-            6.2-997, 2 checks, or 
-            6.2-1036, 2 checks, or 
-            6.2-1076, 2 checks, or 
-            6.2-1137, 2 checks, or 
-            6.2-1181, 2 checks, or 
-            6.2-1227, 2 checks, or 
-            6.2-1285, 2 checks, or 
-            6.2-1332, 2 checks, or 
-            6.2-1380, 2 checks, or 
-            6.2-1476, 2 checks, or 
-            6.2-1525, 2 checks, or 
-            6.2-1574, 2 checks, or 
-            8.2.5.24-1, 110 checks</sch:assert>
+            (@clause = 'Art-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Span' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Span' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Span-1, 2 checks, or 
+            Aside-Span-1, 2 checks, or 
+            BlockQuote-Span-1, 2 checks, or 
+            Document-Span-1, 2 checks, or 
+            DocumentFragment-Span-1, 2 checks, or 
+            Form-Span-1, 2 checks, or 
+            Index-Span-1, 2 checks, or 
+            L-Span-1, 2 checks, or 
+            LI-Span-1, 2 checks, or 
+            Ruby-Span-1, 2 checks, or 
+            Sect-Span-1, 2 checks, or 
+            StructTreeRoot-Span-1, 2 checks, or 
+            TBody-Span-1, 2 checks, or 
+            TFoot-Span-1, 2 checks, or 
+            THead-Span-1, 2 checks, or 
+            TOC-Span-1, 2 checks, or 
+            TOCI-Span-1, 2 checks, or 
+            TR-Span-1, 2 checks, or 
+            Table-Span-1, 2 checks, or 
+            Warichu-Span-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEStrong' or
+            (@clause = 'Art-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Strong' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Strong' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Strong-1, 2 checks, or 
+            Aside-Strong-1, 2 checks, or 
+            BlockQuote-Strong-1, 2 checks, or 
+            Document-Strong-1, 2 checks, or 
+            DocumentFragment-Strong-1, 2 checks, or 
+            Form-Strong-1, 2 checks, or 
+            Index-Strong-1, 2 checks, or 
+            L-Strong-1, 2 checks, or 
+            LI-Strong-1, 2 checks, or 
+            Ruby-Strong-1, 2 checks, or 
+            Sect-Strong-1, 2 checks, or 
+            StructTreeRoot-Strong-1, 2 checks, or 
+            TBody-Strong-1, 2 checks, or 
+            TFoot-Strong-1, 2 checks, or 
+            THead-Strong-1, 2 checks, or 
+            TOC-Strong-1, 2 checks, or 
+            TOCI-Strong-1, 2 checks, or 
+            TR-Strong-1, 2 checks, or 
+            Table-Strong-1, 2 checks, or 
+            Warichu-Strong-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SESub' or
+            (@clause = 'Art-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Sub' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Sub' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Art-Sub-1, 2 checks, or 
+            Aside-Sub-1, 2 checks, or 
+            BibEntry-Sub-1, 2 checks, or 
+            BlockQuote-Sub-1, 2 checks, or 
+            Document-Sub-1, 2 checks, or 
+            DocumentFragment-Sub-1, 2 checks, or 
+            Form-Sub-1, 2 checks, or 
+            Index-Sub-1, 2 checks, or 
+            L-Sub-1, 2 checks, or 
+            LI-Sub-1, 2 checks, or 
+            Reference-Sub-1, 2 checks, or 
+            Ruby-Sub-1, 2 checks, or 
+            Sect-Sub-1, 2 checks, or 
+            StructTreeRoot-Sub-1, 2 checks, or 
+            Sub-Sub-1, 2 checks, or 
+            TBody-Sub-1, 2 checks, or 
+            TD-Sub-1, 2 checks, or 
+            TFoot-Sub-1, 2 checks, or 
+            TH-Sub-1, 2 checks, or 
+            THead-Sub-1, 2 checks, or 
+            TOC-Sub-1, 2 checks, or 
+            TOCI-Sub-1, 2 checks, or 
+            TR-Sub-1, 2 checks, or 
+            Table-Sub-1, 2 checks, or 
+            Title-Sub-1, 2 checks, or 
+            Warichu-Sub-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETBody' or
+            (@clause = 'Annot-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TBody' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TD-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TBody' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TBody-1, 2 checks, or 
+            Art-TBody-1, 2 checks, or 
+            Aside-TBody-1, 2 checks, or 
+            BibEntry-TBody-1, 2 checks, or 
+            BlockQuote-TBody-1, 2 checks, or 
+            Caption-TBody-1, 2 checks, or 
+            Code-TBody-1, 2 checks, or 
+            Document-TBody-1, 2 checks, or 
+            DocumentFragment-TBody-1, 2 checks, or 
+            Em-TBody-1, 2 checks, or 
+            FENote-TBody-1, 2 checks, or 
+            Figure-TBody-1, 2 checks, or 
+            Form-TBody-1, 2 checks, or 
+            Formula-TBody-1, 2 checks, or 
+            H-TBody-1, 2 checks, or 
+            Hn-TBody-1, 12 checks, or 
+            Index-TBody-1, 2 checks, or 
+            L-TBody-1, 2 checks, or 
+            LBody-TBody-1, 2 checks, or 
+            LI-TBody-1, 2 checks, or 
+            Lbl-TBody-1, 2 checks, or 
+            Link-TBody-1, 2 checks, or 
+            Note-TBody-1, 2 checks, or 
+            P-TBody-1, 2 checks, or 
+            Quote-TBody-1, 2 checks, or 
+            RB-TBody-1, 2 checks, or 
+            RP-TBody-1, 2 checks, or 
+            RT-TBody-1, 2 checks, or 
+            Reference-TBody-1, 2 checks, or 
+            Ruby-TBody-1, 2 checks, or 
+            Sect-TBody-1, 2 checks, or 
+            Span-TBody-1, 2 checks, or 
+            Strong-TBody-1, 2 checks, or 
+            StructTreeRoot-TBody-1, 2 checks, or 
+            Sub-TBody-1, 2 checks, or 
+            TBody-TBody-1, 2 checks, or 
+            TBody-content-1, 1 check, or 
+            TD-TBody-1, 2 checks, or 
+            TFoot-TBody-1, 2 checks, or 
+            TH-TBody-1, 2 checks, or 
+            THead-TBody-1, 2 checks, or 
+            TOC-TBody-1, 2 checks, or 
+            TOCI-TBody-1, 2 checks, or 
+            TR-TBody-1, 2 checks, or 
+            Title-TBody-1, 2 checks, or 
+            WP-TBody-1, 2 checks, or 
+            WT-TBody-1, 2 checks, or 
+            Warichu-TBody-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETD' or
+            (@clause = 'Annot-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TD' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TD-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TD' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TD' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TD-1, 2 checks, or 
+            Art-TD-1, 2 checks, or 
+            Aside-TD-1, 2 checks, or 
+            BibEntry-TD-1, 2 checks, or 
+            BlockQuote-TD-1, 2 checks, or 
+            Caption-TD-1, 2 checks, or 
+            Code-TD-1, 2 checks, or 
+            Document-TD-1, 2 checks, or 
+            DocumentFragment-TD-1, 2 checks, or 
+            Em-TD-1, 2 checks, or 
+            FENote-TD-1, 2 checks, or 
+            Figure-TD-1, 2 checks, or 
+            Form-TD-1, 2 checks, or 
+            Formula-TD-1, 2 checks, or 
+            H-TD-1, 2 checks, or 
+            Hn-TD-1, 12 checks, or 
+            Index-TD-1, 2 checks, or 
+            L-TD-1, 2 checks, or 
+            LBody-TD-1, 2 checks, or 
+            LI-TD-1, 2 checks, or 
+            Lbl-TD-1, 2 checks, or 
+            Link-TD-1, 2 checks, or 
+            Note-TD-1, 2 checks, or 
+            P-TD-1, 2 checks, or 
+            Quote-TD-1, 2 checks, or 
+            RB-TD-1, 2 checks, or 
+            RP-TD-1, 2 checks, or 
+            RT-TD-1, 2 checks, or 
+            Reference-TD-1, 2 checks, or 
+            Ruby-TD-1, 2 checks, or 
+            Sect-TD-1, 2 checks, or 
+            Span-TD-1, 2 checks, or 
+            Strong-TD-1, 2 checks, or 
+            StructTreeRoot-TD-1, 2 checks, or 
+            Sub-TD-1, 2 checks, or 
+            TBody-TD-1, 2 checks, or 
+            TD-H-1, 1 check, or 
+            TD-TD-1, 2 checks, or 
+            TFoot-TD-1, 2 checks, or 
+            TH-TD-1, 2 checks, or 
+            THead-TD-1, 2 checks, or 
+            TOC-TD-1, 2 checks, or 
+            TOCI-TD-1, 2 checks, or 
+            Table-TD-1, 2 checks, or 
+            Title-TD-1, 2 checks, or 
+            WP-TD-1, 2 checks, or 
+            WT-TD-1, 2 checks, or 
+            Warichu-TD-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETFoot' or
+            (@clause = 'Annot-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TFoot' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TH-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TFoot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TFoot-1, 2 checks, or 
+            Art-TFoot-1, 2 checks, or 
+            Aside-TFoot-1, 2 checks, or 
+            BibEntry-TFoot-1, 2 checks, or 
+            BlockQuote-TFoot-1, 2 checks, or 
+            Caption-TFoot-1, 2 checks, or 
+            Code-TFoot-1, 2 checks, or 
+            Document-TFoot-1, 2 checks, or 
+            DocumentFragment-TFoot-1, 2 checks, or 
+            Em-TFoot-1, 2 checks, or 
+            FENote-TFoot-1, 2 checks, or 
+            Figure-TFoot-1, 2 checks, or 
+            Form-TFoot-1, 2 checks, or 
+            Formula-TFoot-1, 2 checks, or 
+            H-TFoot-1, 2 checks, or 
+            Hn-TFoot-1, 12 checks, or 
+            Index-TFoot-1, 2 checks, or 
+            L-TFoot-1, 2 checks, or 
+            LBody-TFoot-1, 2 checks, or 
+            LI-TFoot-1, 2 checks, or 
+            Lbl-TFoot-1, 2 checks, or 
+            Link-TFoot-1, 2 checks, or 
+            Note-TFoot-1, 2 checks, or 
+            P-TFoot-1, 2 checks, or 
+            Quote-TFoot-1, 2 checks, or 
+            RB-TFoot-1, 2 checks, or 
+            RP-TFoot-1, 2 checks, or 
+            RT-TFoot-1, 2 checks, or 
+            Reference-TFoot-1, 2 checks, or 
+            Ruby-TFoot-1, 2 checks, or 
+            Sect-TFoot-1, 2 checks, or 
+            Span-TFoot-1, 2 checks, or 
+            Strong-TFoot-1, 2 checks, or 
+            StructTreeRoot-TFoot-1, 2 checks, or 
+            Sub-TFoot-1, 2 checks, or 
+            TBody-TFoot-1, 2 checks, or 
+            TD-TFoot-1, 2 checks, or 
+            TFoot-TFoot-1, 2 checks, or 
+            TFoot-content-1, 1 check, or 
+            TH-TFoot-1, 2 checks, or 
+            THead-TFoot-1, 2 checks, or 
+            TOC-TFoot-1, 2 checks, or 
+            TOCI-TFoot-1, 2 checks, or 
+            TR-TFoot-1, 2 checks, or 
+            Title-TFoot-1, 2 checks, or 
+            WP-TFoot-1, 2 checks, or 
+            WT-TFoot-1, 2 checks, or 
+            Warichu-TFoot-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETH' or
+            (@clause = 'Annot-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TH' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TH-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TH' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TH' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TH-1, 2 checks, or 
+            Art-TH-1, 2 checks, or 
+            Aside-TH-1, 2 checks, or 
+            BibEntry-TH-1, 2 checks, or 
+            BlockQuote-TH-1, 2 checks, or 
+            Caption-TH-1, 2 checks, or 
+            Code-TH-1, 2 checks, or 
+            Document-TH-1, 2 checks, or 
+            DocumentFragment-TH-1, 2 checks, or 
+            Em-TH-1, 2 checks, or 
+            FENote-TH-1, 2 checks, or 
+            Figure-TH-1, 2 checks, or 
+            Form-TH-1, 2 checks, or 
+            Formula-TH-1, 2 checks, or 
+            H-TH-1, 2 checks, or 
+            Hn-TH-1, 12 checks, or 
+            Index-TH-1, 2 checks, or 
+            L-TH-1, 2 checks, or 
+            LBody-TH-1, 2 checks, or 
+            LI-TH-1, 2 checks, or 
+            Lbl-TH-1, 2 checks, or 
+            Link-TH-1, 2 checks, or 
+            Note-TH-1, 2 checks, or 
+            P-TH-1, 2 checks, or 
+            Quote-TH-1, 2 checks, or 
+            RB-TH-1, 2 checks, or 
+            RP-TH-1, 2 checks, or 
+            RT-TH-1, 2 checks, or 
+            Reference-TH-1, 2 checks, or 
+            Ruby-TH-1, 2 checks, or 
+            Sect-TH-1, 2 checks, or 
+            Span-TH-1, 2 checks, or 
+            Strong-TH-1, 2 checks, or 
+            StructTreeRoot-TH-1, 2 checks, or 
+            Sub-TH-1, 2 checks, or 
+            TBody-TH-1, 2 checks, or 
+            TD-TH-1, 2 checks, or 
+            TFoot-TH-1, 2 checks, or 
+            TH-H-1, 1 check, or 
+            TH-TH-1, 2 checks, or 
+            THead-TH-1, 2 checks, or 
+            TOC-TH-1, 2 checks, or 
+            TOCI-TH-1, 2 checks, or 
+            Table-TH-1, 2 checks, or 
+            Title-TH-1, 2 checks, or 
+            WP-TH-1, 2 checks, or 
+            WT-TH-1, 2 checks, or 
+            Warichu-TH-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETHead' or
+            (@clause = 'Annot-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-THead' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TOC-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-THead' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-THead-1, 2 checks, or 
+            Art-THead-1, 2 checks, or 
+            Aside-THead-1, 2 checks, or 
+            BibEntry-THead-1, 2 checks, or 
+            BlockQuote-THead-1, 2 checks, or 
+            Caption-THead-1, 2 checks, or 
+            Code-THead-1, 2 checks, or 
+            Document-THead-1, 2 checks, or 
+            DocumentFragment-THead-1, 2 checks, or 
+            Em-THead-1, 2 checks, or 
+            FENote-THead-1, 2 checks, or 
+            Figure-THead-1, 2 checks, or 
+            Form-THead-1, 2 checks, or 
+            Formula-THead-1, 2 checks, or 
+            H-THead-1, 2 checks, or 
+            Hn-THead-1, 12 checks, or 
+            Index-THead-1, 2 checks, or 
+            L-THead-1, 2 checks, or 
+            LBody-THead-1, 2 checks, or 
+            LI-THead-1, 2 checks, or 
+            Lbl-THead-1, 2 checks, or 
+            Link-THead-1, 2 checks, or 
+            Note-THead-1, 2 checks, or 
+            P-THead-1, 2 checks, or 
+            Quote-THead-1, 2 checks, or 
+            RB-THead-1, 2 checks, or 
+            RP-THead-1, 2 checks, or 
+            RT-THead-1, 2 checks, or 
+            Reference-THead-1, 2 checks, or 
+            Ruby-THead-1, 2 checks, or 
+            Sect-THead-1, 2 checks, or 
+            Span-THead-1, 2 checks, or 
+            Strong-THead-1, 2 checks, or 
+            StructTreeRoot-THead-1, 2 checks, or 
+            Sub-THead-1, 2 checks, or 
+            TBody-THead-1, 2 checks, or 
+            TD-THead-1, 2 checks, or 
+            TFoot-THead-1, 2 checks, or 
+            TH-THead-1, 2 checks, or 
+            THead-THead-1, 2 checks, or 
+            THead-content-1, 1 check, or 
+            TOC-THead-1, 2 checks, or 
+            TOCI-THead-1, 2 checks, or 
+            TR-THead-1, 2 checks, or 
+            Title-THead-1, 2 checks, or 
+            WP-THead-1, 2 checks, or 
+            WT-THead-1, 2 checks, or 
+            Warichu-THead-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETOC' or
+            (@clause = 'Annot-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TOC' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TOC-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TR-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TOC' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TOC' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TOC-1, 2 checks, or 
+            BibEntry-TOC-1, 2 checks, or 
+            Caption-TOC-1, 2 checks, or 
+            Code-TOC-1, 2 checks, or 
+            Em-TOC-1, 2 checks, or 
+            FENote-TOC-1, 2 checks, or 
+            Figure-TOC-1, 2 checks, or 
+            Form-TOC-1, 2 checks, or 
+            Formula-TOC-1, 2 checks, or 
+            H-TOC-1, 2 checks, or 
+            Hn-TOC-1, 12 checks, or 
+            Index-TOC-1, 2 checks, or 
+            L-TOC-1, 2 checks, or 
+            LBody-TOC-1, 2 checks, or 
+            LI-TOC-1, 2 checks, or 
+            Lbl-TOC-1, 2 checks, or 
+            Link-TOC-1, 2 checks, or 
+            Note-TOC-1, 2 checks, or 
+            P-TOC-1, 2 checks, or 
+            Quote-TOC-1, 2 checks, or 
+            RB-TOC-1, 2 checks, or 
+            RP-TOC-1, 2 checks, or 
+            RT-TOC-1, 2 checks, or 
+            Reference-TOC-1, 2 checks, or 
+            Ruby-TOC-1, 2 checks, or 
+            Span-TOC-1, 2 checks, or 
+            Strong-TOC-1, 2 checks, or 
+            StructTreeRoot-TOC-1, 2 checks, or 
+            Sub-TOC-1, 2 checks, or 
+            TBody-TOC-1, 2 checks, or 
+            TD-TOC-1, 2 checks, or 
+            TFoot-TOC-1, 2 checks, or 
+            TH-TOC-1, 2 checks, or 
+            THead-TOC-1, 2 checks, or 
+            TOC-Caption-1, 1 check, or 
+            TOC-content-1, 1 check, or 
+            TR-TOC-1, 2 checks, or 
+            Table-TOC-1, 2 checks, or 
+            Title-TOC-1, 2 checks, or 
+            WP-TOC-1, 2 checks, or 
+            WT-TOC-1, 2 checks, or 
+            Warichu-TOC-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETOCI' or
+            (@clause = '8.2.5.8' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'Annot-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TOCI' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'TR-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TOCI' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.8-1, 110 checks, or 
+            Annot-TOCI-1, 2 checks, or 
+            Art-TOCI-1, 2 checks, or 
+            Aside-TOCI-1, 2 checks, or 
+            BibEntry-TOCI-1, 2 checks, or 
+            BlockQuote-TOCI-1, 2 checks, or 
+            Caption-TOCI-1, 2 checks, or 
+            Code-TOCI-1, 2 checks, or 
+            Document-TOCI-1, 2 checks, or 
+            DocumentFragment-TOCI-1, 2 checks, or 
+            Em-TOCI-1, 2 checks, or 
+            FENote-TOCI-1, 2 checks, or 
+            Figure-TOCI-1, 2 checks, or 
+            Form-TOCI-1, 2 checks, or 
+            Formula-TOCI-1, 2 checks, or 
+            H-TOCI-1, 2 checks, or 
+            Hn-TOCI-1, 12 checks, or 
+            Index-TOCI-1, 2 checks, or 
+            L-TOCI-1, 2 checks, or 
+            LBody-TOCI-1, 2 checks, or 
+            LI-TOCI-1, 2 checks, or 
+            Lbl-TOCI-1, 2 checks, or 
+            Link-TOCI-1, 2 checks, or 
+            Note-TOCI-1, 2 checks, or 
+            P-TOCI-1, 2 checks, or 
+            Quote-TOCI-1, 2 checks, or 
+            RB-TOCI-1, 2 checks, or 
+            RP-TOCI-1, 2 checks, or 
+            RT-TOCI-1, 2 checks, or 
+            Reference-TOCI-1, 2 checks, or 
+            Ruby-TOCI-1, 2 checks, or 
+            Sect-TOCI-1, 2 checks, or 
+            Span-TOCI-1, 2 checks, or 
+            Strong-TOCI-1, 2 checks, or 
+            StructTreeRoot-TOCI-1, 2 checks, or 
+            Sub-TOCI-1, 2 checks, or 
+            TBody-TOCI-1, 2 checks, or 
+            TD-TOCI-1, 2 checks, or 
+            TFoot-TOCI-1, 2 checks, or 
+            TH-TOCI-1, 2 checks, or 
+            THead-TOCI-1, 2 checks, or 
+            TOCI-TOCI-1, 2 checks, or 
+            TOCI-content-1, 1 check, or 
+            TR-TOCI-1, 2 checks, or 
+            Table-TOCI-1, 2 checks, or 
+            Title-TOCI-1, 2 checks, or 
+            WP-TOCI-1, 2 checks, or 
+            WT-TOCI-1, 2 checks, or 
+            Warichu-TOCI-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETR' or
+            (@clause = 'Annot-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-TR' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Title-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-TR' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-TR-1, 2 checks, or 
+            Art-TR-1, 2 checks, or 
+            Aside-TR-1, 2 checks, or 
+            BibEntry-TR-1, 2 checks, or 
+            BlockQuote-TR-1, 2 checks, or 
+            Caption-TR-1, 2 checks, or 
+            Code-TR-1, 2 checks, or 
+            Document-TR-1, 2 checks, or 
+            DocumentFragment-TR-1, 2 checks, or 
+            Em-TR-1, 2 checks, or 
+            FENote-TR-1, 2 checks, or 
+            Figure-TR-1, 2 checks, or 
+            Form-TR-1, 2 checks, or 
+            Formula-TR-1, 2 checks, or 
+            H-TR-1, 2 checks, or 
+            Hn-TR-1, 12 checks, or 
+            Index-TR-1, 2 checks, or 
+            L-TR-1, 2 checks, or 
+            LBody-TR-1, 2 checks, or 
+            LI-TR-1, 2 checks, or 
+            Lbl-TR-1, 2 checks, or 
+            Link-TR-1, 2 checks, or 
+            Note-TR-1, 2 checks, or 
+            P-TR-1, 2 checks, or 
+            Quote-TR-1, 2 checks, or 
+            RB-TR-1, 2 checks, or 
+            RP-TR-1, 2 checks, or 
+            RT-TR-1, 2 checks, or 
+            Reference-TR-1, 2 checks, or 
+            Ruby-TR-1, 2 checks, or 
+            Sect-TR-1, 2 checks, or 
+            Span-TR-1, 2 checks, or 
+            Strong-TR-1, 2 checks, or 
+            StructTreeRoot-TR-1, 2 checks, or 
+            Sub-TR-1, 2 checks, or 
+            TD-TR-1, 2 checks, or 
+            TH-TR-1, 2 checks, or 
+            TOC-TR-1, 2 checks, or 
+            TOCI-TR-1, 2 checks, or 
+            TR-TR-1, 2 checks, or 
+            TR-content-1, 1 check, or 
+            Title-TR-1, 2 checks, or 
+            WP-TR-1, 2 checks, or 
+            WT-TR-1, 2 checks, or 
+            Warichu-TR-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETable' or
+            (@clause = 'BibEntry-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Table' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'L-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table-TFoot' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table-THead' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-content' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'WP-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Table' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            BibEntry-Table-1, 2 checks, or 
+            Code-Table-1, 2 checks, or 
+            Em-Table-1, 2 checks, or 
+            H-Table-1, 2 checks, or 
+            Hn-Table-1, 12 checks, or 
+            L-Table-1, 2 checks, or 
+            LI-Table-1, 2 checks, or 
+            Lbl-Table-1, 2 checks, or 
+            Quote-Table-1, 2 checks, or 
+            RB-Table-1, 2 checks, or 
+            RP-Table-1, 2 checks, or 
+            RT-Table-1, 2 checks, or 
+            Reference-Table-1, 2 checks, or 
+            Ruby-Table-1, 2 checks, or 
+            Span-Table-1, 2 checks, or 
+            Strong-Table-1, 2 checks, or 
+            StructTreeRoot-Table-1, 2 checks, or 
+            Sub-Table-1, 2 checks, or 
+            TBody-Table-1, 2 checks, or 
+            TFoot-Table-1, 2 checks, or 
+            THead-Table-1, 2 checks, or 
+            TOC-Table-1, 2 checks, or 
+            TOCI-Table-1, 2 checks, or 
+            TR-Table-1, 2 checks, or 
+            Table-Caption-1, 1 check, or 
+            Table-TFoot-1, 1 check, or 
+            Table-THead-1, 1 check, or 
+            Table-Table-1, 2 checks, or 
+            Table-content-1, 1 check, or 
+            WP-Table-1, 2 checks, or 
+            WT-Table-1, 2 checks, or 
+            Warichu-Table-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SETitle' or
+            (@clause = 'Aside-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-Title' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Title-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Title' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Title' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Aside-Title-1, 2 checks, or 
+            BibEntry-Title-1, 2 checks, or 
+            BlockQuote-Title-1, 2 checks, or 
+            Caption-Title-1, 2 checks, or 
+            Code-Title-1, 2 checks, or 
+            Em-Title-1, 2 checks, or 
+            FENote-Title-1, 2 checks, or 
+            Figure-Title-1, 2 checks, or 
+            Form-Title-1, 2 checks, or 
+            Formula-Title-1, 2 checks, or 
+            H-Title-1, 2 checks, or 
+            Hn-Title-1, 12 checks, or 
+            Index-Title-1, 2 checks, or 
+            L-Title-1, 2 checks, or 
+            LBody-Title-1, 2 checks, or 
+            LI-Title-1, 2 checks, or 
+            Lbl-Title-1, 2 checks, or 
+            Note-Title-1, 2 checks, or 
+            P-Title-1, 2 checks, or 
+            Quote-Title-1, 2 checks, or 
+            RB-Title-1, 2 checks, or 
+            RP-Title-1, 2 checks, or 
+            RT-Title-1, 2 checks, or 
+            Reference-Title-1, 2 checks, or 
+            Ruby-Title-1, 2 checks, or 
+            Span-Title-1, 2 checks, or 
+            Strong-Title-1, 2 checks, or 
+            StructTreeRoot-Title-1, 2 checks, or 
+            Sub-Title-1, 2 checks, or 
+            TBody-Title-1, 2 checks, or 
+            TD-Title-1, 2 checks, or 
+            TFoot-Title-1, 2 checks, or 
+            TH-Title-1, 2 checks, or 
+            THead-Title-1, 2 checks, or 
+            TOC-Title-1, 2 checks, or 
+            TOCI-Title-1, 2 checks, or 
+            TR-Title-1, 2 checks, or 
+            Table-Title-1, 2 checks, or 
+            Title-Caption-1, 1 check, or 
+            Title-Title-1, 2 checks, or 
+            WP-Title-1, 2 checks, or 
+            WT-Title-1, 2 checks, or 
+            Warichu-Title-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWP' or
+            (@clause = 'Annot-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-WP' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-WP' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-WP' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-WP-1, 2 checks, or 
+            Art-WP-1, 2 checks, or 
+            Aside-WP-1, 2 checks, or 
+            BibEntry-WP-1, 2 checks, or 
+            BlockQuote-WP-1, 2 checks, or 
+            Caption-WP-1, 2 checks, or 
+            Code-WP-1, 2 checks, or 
+            Document-WP-1, 2 checks, or 
+            DocumentFragment-WP-1, 2 checks, or 
+            Em-WP-1, 2 checks, or 
+            FENote-WP-1, 2 checks, or 
+            Figure-WP-1, 2 checks, or 
+            Form-WP-1, 2 checks, or 
+            Formula-WP-1, 2 checks, or 
+            H-WP-1, 2 checks, or 
+            Hn-WP-1, 12 checks, or 
+            Index-WP-1, 2 checks, or 
+            L-WP-1, 2 checks, or 
+            LBody-WP-1, 2 checks, or 
+            LI-WP-1, 2 checks, or 
+            Lbl-WP-1, 2 checks, or 
+            Link-WP-1, 2 checks, or 
+            Note-WP-1, 2 checks, or 
+            P-WP-1, 2 checks, or 
+            Quote-WP-1, 2 checks, or 
+            RB-WP-1, 2 checks, or 
+            RP-WP-1, 2 checks, or 
+            RT-WP-1, 2 checks, or 
+            Reference-WP-1, 2 checks, or 
+            Ruby-WP-1, 2 checks, or 
+            Sect-WP-1, 2 checks, or 
+            Span-WP-1, 2 checks, or 
+            Strong-WP-1, 2 checks, or 
+            StructTreeRoot-WP-1, 2 checks, or 
+            Sub-WP-1, 2 checks, or 
+            TBody-WP-1, 2 checks, or 
+            TD-WP-1, 2 checks, or 
+            TFoot-WP-1, 2 checks, or 
+            TH-WP-1, 2 checks, or 
+            THead-WP-1, 2 checks, or 
+            TOC-WP-1, 2 checks, or 
+            TOCI-WP-1, 2 checks, or 
+            TR-WP-1, 2 checks, or 
+            Table-WP-1, 2 checks, or 
+            Title-WP-1, 2 checks, or 
+            WP-WP-1, 2 checks, or 
+            WT-WP-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWT' or
+            (@clause = 'Annot-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Art-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Caption-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Em-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'FENote-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Figure-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Formula-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'H-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Hn-WT' and @testNumber = '1' and @failedChecks = '12') or 
+            (@clause = 'Index-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LBody-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Lbl-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Link-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Note-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'P-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Quote-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Span-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Strong-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sub-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TD-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TH-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Title-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-WT' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-WT' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Annot-WT-1, 2 checks, or 
+            Art-WT-1, 2 checks, or 
+            Aside-WT-1, 2 checks, or 
+            BibEntry-WT-1, 2 checks, or 
+            BlockQuote-WT-1, 2 checks, or 
+            Caption-WT-1, 2 checks, or 
+            Code-WT-1, 2 checks, or 
+            Document-WT-1, 2 checks, or 
+            DocumentFragment-WT-1, 2 checks, or 
+            Em-WT-1, 2 checks, or 
+            FENote-WT-1, 2 checks, or 
+            Figure-WT-1, 2 checks, or 
+            Form-WT-1, 2 checks, or 
+            Formula-WT-1, 2 checks, or 
+            H-WT-1, 2 checks, or 
+            Hn-WT-1, 12 checks, or 
+            Index-WT-1, 2 checks, or 
+            L-WT-1, 2 checks, or 
+            LBody-WT-1, 2 checks, or 
+            LI-WT-1, 2 checks, or 
+            Lbl-WT-1, 2 checks, or 
+            Link-WT-1, 2 checks, or 
+            Note-WT-1, 2 checks, or 
+            P-WT-1, 2 checks, or 
+            Quote-WT-1, 2 checks, or 
+            RB-WT-1, 2 checks, or 
+            RP-WT-1, 2 checks, or 
+            RT-WT-1, 2 checks, or 
+            Reference-WT-1, 2 checks, or 
+            Ruby-WT-1, 2 checks, or 
+            Sect-WT-1, 2 checks, or 
+            Span-WT-1, 2 checks, or 
+            Strong-WT-1, 2 checks, or 
+            StructTreeRoot-WT-1, 2 checks, or 
+            Sub-WT-1, 2 checks, or 
+            TBody-WT-1, 2 checks, or 
+            TD-WT-1, 2 checks, or 
+            TFoot-WT-1, 2 checks, or 
+            TH-WT-1, 2 checks, or 
+            THead-WT-1, 2 checks, or 
+            TOC-WT-1, 2 checks, or 
+            TOCI-WT-1, 2 checks, or 
+            TR-WT-1, 2 checks, or 
+            Table-WT-1, 2 checks, or 
+            Title-WT-1, 2 checks, or 
+            WP-WT-1, 2 checks, or 
+            WT-WT-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="object != 'SEWarichu' or
+            (@clause = '8.2.5.24' and @testNumber = '1' and @failedChecks = '110') or 
+            (@clause = 'Art-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Aside-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BibEntry-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'BlockQuote-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Code-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Document-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'DocumentFragment-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Form-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Index-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'L-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'LI-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RB-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RP-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'RT-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Reference-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Ruby-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Sect-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'StructTreeRoot-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TBody-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TFoot-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'THead-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOC-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TOCI-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'TR-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WP-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'WT-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Warichu-Warichu' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            8.2.5.24-1, 110 checks, or 
+            Art-Warichu-1, 2 checks, or 
+            Aside-Warichu-1, 2 checks, or 
+            BibEntry-Warichu-1, 2 checks, or 
+            BlockQuote-Warichu-1, 2 checks, or 
+            Code-Warichu-1, 2 checks, or 
+            Document-Warichu-1, 2 checks, or 
+            DocumentFragment-Warichu-1, 2 checks, or 
+            Form-Warichu-1, 2 checks, or 
+            Index-Warichu-1, 2 checks, or 
+            L-Warichu-1, 2 checks, or 
+            LI-Warichu-1, 2 checks, or 
+            RB-Warichu-1, 2 checks, or 
+            RP-Warichu-1, 2 checks, or 
+            RT-Warichu-1, 2 checks, or 
+            Reference-Warichu-1, 2 checks, or 
+            Ruby-Warichu-1, 2 checks, or 
+            Sect-Warichu-1, 2 checks, or 
+            StructTreeRoot-Warichu-1, 2 checks, or 
+            TBody-Warichu-1, 2 checks, or 
+            TFoot-Warichu-1, 2 checks, or 
+            THead-Warichu-1, 2 checks, or 
+            TOC-Warichu-1, 2 checks, or 
+            TOCI-Warichu-1, 2 checks, or 
+            TR-Warichu-1, 2 checks, or 
+            Table-Warichu-1, 2 checks, or 
+            WP-Warichu-1, 2 checks, or 
+            WT-Warichu-1, 2 checks, or 
+            Warichu-Warichu-1, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
 
     <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
