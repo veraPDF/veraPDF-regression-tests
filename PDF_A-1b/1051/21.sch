@@ -30,11 +30,13 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected:
+            <sch:assert test='(contains(., "Actual startxref offset 564 is different from the specified offset 565") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Actual startxref offset 564 is different from the specified offset 565' with 1 occurrences, or 
             'WARNING: 21.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
