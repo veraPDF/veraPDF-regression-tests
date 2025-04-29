@@ -13,18 +13,9 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Entry Tabs in page dictionary 4 0 obj does not have type name") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Entry Tabs in page dictionary 4 0 obj does not have type name' with 1 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 

@@ -26,7 +26,7 @@
             (@clause = '4.1.2' and @testNumber = '22' and @failedChecks = '2') or 
             (@clause = '1.3.1' and @testNumber = '4' and @failedChecks = '22')">Failed rules, Expected: 
             4.1.2-20, 6 checks, or 
-            7.3-1, 11 checks, or 
+            7.3-1, 11 checks, or
             1.4.3-1, 4 checks, or 
             7.2-20, 3 checks, or 
             4.1.2-22, 2 checks, or 

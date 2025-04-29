@@ -97,5 +97,7 @@ Check PDF Flavour combox values on startup
     ...    PDF/A-4F
     ...    PDF/UA-1
     ...    PDF/UA-2
+    ...    WTPDF 1.0 Accessibility
+    ...    WTPDF 1.0 Reuse
     ${values}=    getComboboxValues    1
     Lists Should Be Equal    ${expectedList}    ${values}

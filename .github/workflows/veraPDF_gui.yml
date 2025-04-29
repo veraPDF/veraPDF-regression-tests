@@ -44,7 +44,7 @@ jobs:
           sudo apt install unzip -y 
 
           echo "Performing veraPDF installation ... "
-          echo "#Downloading veraPDF, latest rc version ... unziping to $PWD" 
+          echo "#Downloading veraPDF, latest rel version ... unziping to $PWD" 
           curl -LO https://software.verapdf.org/releases/verapdf-installer.zip
           unzip verapdf-installer.zip
 
@@ -56,7 +56,7 @@ jobs:
           echo "veraPATH: $veraPATH" 
 
           echo "#Downloading auto-install.xml ..." 
-          curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/rel/1.26/tools/auto-install.xml
+          curl -LO  https://raw.githubusercontent.com/veraPDF/veraPDF-regression-tests/rel/1.28/tools/auto-install.xml
 
           #Definition of the 'PATH' to install veraPDF using the auto-install.xml file
           sed -i '5 c\        <installpath>'$(echo $veraPATH)'</installpath>' ./auto-install.xml
@@ -96,7 +96,7 @@ jobs:
           robot  $GITHUB_WORKSPACE/GUI/
 
       - name: Generating report
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
           name: Results

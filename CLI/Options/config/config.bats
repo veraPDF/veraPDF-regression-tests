@@ -18,7 +18,7 @@ setup() {
     cp -r verapdf/* $BATS_TEST_TMPDIR
 
     cd $BATS_TEST_TMPDIR
-    VERAPDF_FOLDER=1.26
+    VERAPDF_FOLDER=1.28
     assert [ ${#FILES_TO_CHECK[@]} != 0 ]
     assert [ ${#PLUGIN_FILES_TO_CHECK[@]} != 0 ]
 }

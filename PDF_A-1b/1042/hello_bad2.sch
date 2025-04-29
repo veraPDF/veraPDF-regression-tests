@@ -34,18 +34,9 @@
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected:
-            'WARNING: Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.' with 2 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 
