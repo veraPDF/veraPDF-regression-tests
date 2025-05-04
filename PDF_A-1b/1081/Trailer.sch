@@ -10,8 +10,8 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: startxref validation failed")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: startxref validation failed
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Document doesn't contain startxref keyword in the last 1024 bytes")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Document doesn't contain startxref keyword in the last 1024 bytes
             </sch:assert>
         </sch:rule>
     </sch:pattern>

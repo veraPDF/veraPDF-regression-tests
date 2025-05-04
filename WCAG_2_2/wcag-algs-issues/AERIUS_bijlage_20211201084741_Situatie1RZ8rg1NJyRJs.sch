@@ -21,6 +21,7 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="(@clause = '1.4.8' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '7.1' and @testNumber = '3' and @failedChecks = '5759') or 
             (@clause = '7.1' and @testNumber = '8' and @failedChecks = '1') or 
             (@clause = '2.4.9' and @testNumber = '1' and @failedChecks = '6') or 
@@ -32,6 +33,7 @@
             (@clause = '7.18.3' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = '7.2' and @testNumber = '34' and @failedChecks = '3146')">Failed rules, Expected: 
             1.4.8-1, 1 check, or 
+            6.2-1, 1 check, or 
             7.1-3, 5759 checks, or 
             7.1-8, 1 check, or 
             2.4.9-1, 6 checks, or 
