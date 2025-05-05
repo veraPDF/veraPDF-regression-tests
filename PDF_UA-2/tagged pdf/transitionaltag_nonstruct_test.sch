@@ -13,7 +13,7 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '1630')">Failed check, Expected: 1630</sch:assert>	
+            <sch:assert test="(@failedRules = '1646')">Failed check, Expected: 1646</sch:assert>	
         </sch:rule>
 
     </sch:pattern>
@@ -22,7 +22,9 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'CosDocument' or
+            (@clause = '6.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.11.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            6.2-1, 1 check, or 
             8.11.2-1, 1 check</sch:assert>
         </sch:rule>
 
@@ -63,9 +65,11 @@
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'PDStructTreeRoot' or
             (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = 'Table 5. StructTreeRoot-Document' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            (@clause = 'Table 5. StructTreeRoot-Document' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. StructTreeRoot-content' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
             8.2.5.2-1, 1 check, or 
-            StructTreeRoot-Document-1, 1 check</sch:assert>
+            Table 5. StructTreeRoot-Document-1, 1 check, or 
+            Table 5. StructTreeRoot-content-1, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -87,19 +91,19 @@
             (@clause = 'Table 5. TR-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Annot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Form-Annot-1, 2 checks, or 
-            L-Annot-1, 2 checks, or 
-            LI-Annot-1, 2 checks, or 
-            Ruby-Annot-1, 2 checks, or 
-            StructTreeRoot-Annot-1, 7 checks, or 
-            TBody-Annot-1, 2 checks, or 
-            TFoot-Annot-1, 2 checks, or 
-            THead-Annot-1, 2 checks, or 
-            TOC-Annot-1, 2 checks, or 
-            TOCI-Annot-1, 2 checks, or 
-            TR-Annot-1, 2 checks, or 
-            Table-Annot-1, 2 checks, or 
-            Warichu-Annot-1, 2 checks</sch:assert>
+            Table 5. Form-Annot-1, 2 checks, or 
+            Table 5. L-Annot-1, 2 checks, or 
+            Table 5. LI-Annot-1, 2 checks, or 
+            Table 5. Ruby-Annot-1, 2 checks, or 
+            Table 5. StructTreeRoot-Annot-1, 7 checks, or 
+            Table 5. TBody-Annot-1, 2 checks, or 
+            Table 5. TFoot-Annot-1, 2 checks, or 
+            Table 5. THead-Annot-1, 2 checks, or 
+            Table 5. TOC-Annot-1, 2 checks, or 
+            Table 5. TOCI-Annot-1, 2 checks, or 
+            Table 5. TR-Annot-1, 2 checks, or 
+            Table 5. Table-Annot-1, 2 checks, or 
+            Table 5. Warichu-Annot-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -110,6 +114,7 @@
             <sch:assert test="object != 'SEArt' or
             (@clause = 'Table 5. Art-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Art-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. Art-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. BibEntry-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Code-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Em-Art' and @testNumber = '1' and @failedChecks = '2') or 
@@ -141,39 +146,40 @@
             (@clause = 'Table 5. WP-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Art' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Art-1, 2 checks, or 
-            Art-H-1, 1 check, or 
-            BibEntry-Art-1, 2 checks, or 
-            Code-Art-1, 2 checks, or 
-            Em-Art-1, 2 checks, or 
-            Form-Art-1, 2 checks, or 
-            Formula-Art-1, 2 checks, or 
-            Index-Art-1, 2 checks, or 
-            L-Art-1, 2 checks, or 
-            LI-Art-1, 2 checks, or 
-            Lbl-Art-1, 2 checks, or 
-            P-Art-1, 2 checks, or 
-            Quote-Art-1, 2 checks, or 
-            RB-Art-1, 2 checks, or 
-            RP-Art-1, 2 checks, or 
-            RT-Art-1, 2 checks, or 
-            Reference-Art-1, 2 checks, or 
-            Ruby-Art-1, 2 checks, or 
-            Span-Art-1, 2 checks, or 
-            Strong-Art-1, 2 checks, or 
-            StructTreeRoot-Art-1, 7 checks, or 
-            Sub-Art-1, 2 checks, or 
-            TBody-Art-1, 2 checks, or 
-            TFoot-Art-1, 2 checks, or 
-            THead-Art-1, 2 checks, or 
-            TOC-Art-1, 2 checks, or 
-            TOCI-Art-1, 2 checks, or 
-            TR-Art-1, 2 checks, or 
-            Table-Art-1, 2 checks, or 
-            Title-Art-1, 2 checks, or 
-            WP-Art-1, 2 checks, or 
-            WT-Art-1, 2 checks, or 
-            Warichu-Art-1, 2 checks</sch:assert>
+            Table 5. Art-Art-1, 2 checks, or 
+            Table 5. Art-H-1, 1 check, or 
+            Table 5. Art-content-1, 1 check, or 
+            Table 5. BibEntry-Art-1, 2 checks, or 
+            Table 5. Code-Art-1, 2 checks, or 
+            Table 5. Em-Art-1, 2 checks, or 
+            Table 5. Form-Art-1, 2 checks, or 
+            Table 5. Formula-Art-1, 2 checks, or 
+            Table 5. Index-Art-1, 2 checks, or 
+            Table 5. L-Art-1, 2 checks, or 
+            Table 5. LI-Art-1, 2 checks, or 
+            Table 5. Lbl-Art-1, 2 checks, or 
+            Table 5. P-Art-1, 2 checks, or 
+            Table 5. Quote-Art-1, 2 checks, or 
+            Table 5. RB-Art-1, 2 checks, or 
+            Table 5. RP-Art-1, 2 checks, or 
+            Table 5. RT-Art-1, 2 checks, or 
+            Table 5. Reference-Art-1, 2 checks, or 
+            Table 5. Ruby-Art-1, 2 checks, or 
+            Table 5. Span-Art-1, 2 checks, or 
+            Table 5. Strong-Art-1, 2 checks, or 
+            Table 5. StructTreeRoot-Art-1, 7 checks, or 
+            Table 5. Sub-Art-1, 2 checks, or 
+            Table 5. TBody-Art-1, 2 checks, or 
+            Table 5. TFoot-Art-1, 2 checks, or 
+            Table 5. THead-Art-1, 2 checks, or 
+            Table 5. TOC-Art-1, 2 checks, or 
+            Table 5. TOCI-Art-1, 2 checks, or 
+            Table 5. TR-Art-1, 2 checks, or 
+            Table 5. Table-Art-1, 2 checks, or 
+            Table 5. Title-Art-1, 2 checks, or 
+            Table 5. WP-Art-1, 2 checks, or 
+            Table 5. WT-Art-1, 2 checks, or 
+            Table 5. Warichu-Art-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -187,11 +193,11 @@
             (@clause = 'Table 5. Ruby-Artifact' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Artifact' and @testNumber = '1' and @failedChecks = '7') or 
             (@clause = 'Table 5. Warichu-Artifact' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Artifact-Caption-1, 1 check, or 
-            Artifact-H-1, 1 check, or 
-            Ruby-Artifact-1, 2 checks, or 
-            StructTreeRoot-Artifact-1, 7 checks, or 
-            Warichu-Artifact-1, 2 checks</sch:assert>
+            Table 5. Artifact-Caption-1, 1 check, or 
+            Table 5. Artifact-H-1, 1 check, or 
+            Table 5. Ruby-Artifact-1, 2 checks, or 
+            Table 5. StructTreeRoot-Artifact-1, 7 checks, or 
+            Table 5. Warichu-Artifact-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -237,43 +243,43 @@
             (@clause = 'Table 5. WP-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Aside' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Aside-Aside-1, 2 checks, or 
-            Aside-Caption-1, 1 check, or 
-            Aside-H-1, 1 check, or 
-            BibEntry-Aside-1, 2 checks, or 
-            BlockQuote-Aside-1, 2 checks, or 
-            Code-Aside-1, 2 checks, or 
-            Em-Aside-1, 2 checks, or 
-            Form-Aside-1, 2 checks, or 
-            H-Aside-1, 2 checks, or 
-            Hn-Aside-1, 12 checks, or 
-            Index-Aside-1, 2 checks, or 
-            L-Aside-1, 2 checks, or 
-            LI-Aside-1, 2 checks, or 
-            Lbl-Aside-1, 2 checks, or 
-            P-Aside-1, 2 checks, or 
-            Quote-Aside-1, 2 checks, or 
-            RB-Aside-1, 2 checks, or 
-            RP-Aside-1, 2 checks, or 
-            RT-Aside-1, 2 checks, or 
-            Reference-Aside-1, 2 checks, or 
-            Ruby-Aside-1, 2 checks, or 
-            Span-Aside-1, 2 checks, or 
-            Strong-Aside-1, 2 checks, or 
-            StructTreeRoot-Aside-1, 7 checks, or 
-            Sub-Aside-1, 2 checks, or 
-            TBody-Aside-1, 2 checks, or 
-            TD-Aside-1, 2 checks, or 
-            TFoot-Aside-1, 2 checks, or 
-            TH-Aside-1, 2 checks, or 
-            THead-Aside-1, 2 checks, or 
-            TOC-Aside-1, 2 checks, or 
-            TOCI-Aside-1, 2 checks, or 
-            TR-Aside-1, 2 checks, or 
-            Table-Aside-1, 2 checks, or 
-            WP-Aside-1, 2 checks, or 
-            WT-Aside-1, 2 checks, or 
-            Warichu-Aside-1, 2 checks</sch:assert>
+            Table 5. Aside-Aside-1, 2 checks, or 
+            Table 5. Aside-Caption-1, 1 check, or 
+            Table 5. Aside-H-1, 1 check, or 
+            Table 5. BibEntry-Aside-1, 2 checks, or 
+            Table 5. BlockQuote-Aside-1, 2 checks, or 
+            Table 5. Code-Aside-1, 2 checks, or 
+            Table 5. Em-Aside-1, 2 checks, or 
+            Table 5. Form-Aside-1, 2 checks, or 
+            Table 5. H-Aside-1, 2 checks, or 
+            Table 5. Hn-Aside-1, 12 checks, or 
+            Table 5. Index-Aside-1, 2 checks, or 
+            Table 5. L-Aside-1, 2 checks, or 
+            Table 5. LI-Aside-1, 2 checks, or 
+            Table 5. Lbl-Aside-1, 2 checks, or 
+            Table 5. P-Aside-1, 2 checks, or 
+            Table 5. Quote-Aside-1, 2 checks, or 
+            Table 5. RB-Aside-1, 2 checks, or 
+            Table 5. RP-Aside-1, 2 checks, or 
+            Table 5. RT-Aside-1, 2 checks, or 
+            Table 5. Reference-Aside-1, 2 checks, or 
+            Table 5. Ruby-Aside-1, 2 checks, or 
+            Table 5. Span-Aside-1, 2 checks, or 
+            Table 5. Strong-Aside-1, 2 checks, or 
+            Table 5. StructTreeRoot-Aside-1, 7 checks, or 
+            Table 5. Sub-Aside-1, 2 checks, or 
+            Table 5. TBody-Aside-1, 2 checks, or 
+            Table 5. TD-Aside-1, 2 checks, or 
+            Table 5. TFoot-Aside-1, 2 checks, or 
+            Table 5. TH-Aside-1, 2 checks, or 
+            Table 5. THead-Aside-1, 2 checks, or 
+            Table 5. TOC-Aside-1, 2 checks, or 
+            Table 5. TOCI-Aside-1, 2 checks, or 
+            Table 5. TR-Aside-1, 2 checks, or 
+            Table 5. Table-Aside-1, 2 checks, or 
+            Table 5. WP-Aside-1, 2 checks, or 
+            Table 5. WT-Aside-1, 2 checks, or 
+            Table 5. Warichu-Aside-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -308,32 +314,32 @@
             (@clause = 'Table 5. WP-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-BibEntry' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-BibEntry-1, 2 checks, or 
-            Aside-BibEntry-1, 2 checks, or 
-            BibEntry-BibEntry-1, 2 checks, or 
-            BlockQuote-BibEntry-1, 2 checks, or 
-            Document-BibEntry-1, 2 checks, or 
-            DocumentFragment-BibEntry-1, 2 checks, or 
-            FENote-BibEntry-1, 2 checks, or 
-            Index-BibEntry-1, 2 checks, or 
-            L-BibEntry-1, 2 checks, or 
-            LI-BibEntry-1, 2 checks, or 
-            RB-BibEntry-1, 2 checks, or 
-            RP-BibEntry-1, 2 checks, or 
-            RT-BibEntry-1, 2 checks, or 
-            Ruby-BibEntry-1, 2 checks, or 
-            Sect-BibEntry-1, 2 checks, or 
-            StructTreeRoot-BibEntry-1, 7 checks, or 
-            TBody-BibEntry-1, 2 checks, or 
-            TFoot-BibEntry-1, 2 checks, or 
-            THead-BibEntry-1, 2 checks, or 
-            TOC-BibEntry-1, 2 checks, or 
-            TOCI-BibEntry-1, 2 checks, or 
-            TR-BibEntry-1, 2 checks, or 
-            Table-BibEntry-1, 2 checks, or 
-            WP-BibEntry-1, 2 checks, or 
-            WT-BibEntry-1, 2 checks, or 
-            Warichu-BibEntry-1, 2 checks</sch:assert>
+            Table 5. Art-BibEntry-1, 2 checks, or 
+            Table 5. Aside-BibEntry-1, 2 checks, or 
+            Table 5. BibEntry-BibEntry-1, 2 checks, or 
+            Table 5. BlockQuote-BibEntry-1, 2 checks, or 
+            Table 5. Document-BibEntry-1, 2 checks, or 
+            Table 5. DocumentFragment-BibEntry-1, 2 checks, or 
+            Table 5. FENote-BibEntry-1, 2 checks, or 
+            Table 5. Index-BibEntry-1, 2 checks, or 
+            Table 5. L-BibEntry-1, 2 checks, or 
+            Table 5. LI-BibEntry-1, 2 checks, or 
+            Table 5. RB-BibEntry-1, 2 checks, or 
+            Table 5. RP-BibEntry-1, 2 checks, or 
+            Table 5. RT-BibEntry-1, 2 checks, or 
+            Table 5. Ruby-BibEntry-1, 2 checks, or 
+            Table 5. Sect-BibEntry-1, 2 checks, or 
+            Table 5. StructTreeRoot-BibEntry-1, 7 checks, or 
+            Table 5. TBody-BibEntry-1, 2 checks, or 
+            Table 5. TFoot-BibEntry-1, 2 checks, or 
+            Table 5. THead-BibEntry-1, 2 checks, or 
+            Table 5. TOC-BibEntry-1, 2 checks, or 
+            Table 5. TOCI-BibEntry-1, 2 checks, or 
+            Table 5. TR-BibEntry-1, 2 checks, or 
+            Table 5. Table-BibEntry-1, 2 checks, or 
+            Table 5. WP-BibEntry-1, 2 checks, or 
+            Table 5. WT-BibEntry-1, 2 checks, or 
+            Table 5. Warichu-BibEntry-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -378,42 +384,42 @@
             (@clause = 'Table 5. WP-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-BlockQuote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-BlockQuote-1, 2 checks, or 
-            BlockQuote-Caption-1, 1 check, or 
-            BlockQuote-H-1, 1 check, or 
-            Code-BlockQuote-1, 2 checks, or 
-            Em-BlockQuote-1, 2 checks, or 
-            Form-BlockQuote-1, 2 checks, or 
-            H-BlockQuote-1, 2 checks, or 
-            Hn-BlockQuote-1, 12 checks, or 
-            Index-BlockQuote-1, 2 checks, or 
-            L-BlockQuote-1, 2 checks, or 
-            LI-BlockQuote-1, 2 checks, or 
-            Lbl-BlockQuote-1, 2 checks, or 
-            P-BlockQuote-1, 2 checks, or 
-            Quote-BlockQuote-1, 2 checks, or 
-            RB-BlockQuote-1, 2 checks, or 
-            RP-BlockQuote-1, 2 checks, or 
-            RT-BlockQuote-1, 2 checks, or 
-            Reference-BlockQuote-1, 2 checks, or 
-            Ruby-BlockQuote-1, 2 checks, or 
-            Span-BlockQuote-1, 2 checks, or 
-            Strong-BlockQuote-1, 2 checks, or 
-            StructTreeRoot-BlockQuote-1, 7 checks, or 
-            Sub-BlockQuote-1, 2 checks, or 
-            TBody-BlockQuote-1, 2 checks, or 
-            TD-BlockQuote-1, 2 checks, or 
-            TFoot-BlockQuote-1, 2 checks, or 
-            TH-BlockQuote-1, 2 checks, or 
-            THead-BlockQuote-1, 2 checks, or 
-            TOC-BlockQuote-1, 2 checks, or 
-            TOCI-BlockQuote-1, 2 checks, or 
-            TR-BlockQuote-1, 2 checks, or 
-            Table-BlockQuote-1, 2 checks, or 
-            Title-BlockQuote-1, 2 checks, or 
-            WP-BlockQuote-1, 2 checks, or 
-            WT-BlockQuote-1, 2 checks, or 
-            Warichu-BlockQuote-1, 2 checks</sch:assert>
+            Table 5. BibEntry-BlockQuote-1, 2 checks, or 
+            Table 5. BlockQuote-Caption-1, 1 check, or 
+            Table 5. BlockQuote-H-1, 1 check, or 
+            Table 5. Code-BlockQuote-1, 2 checks, or 
+            Table 5. Em-BlockQuote-1, 2 checks, or 
+            Table 5. Form-BlockQuote-1, 2 checks, or 
+            Table 5. H-BlockQuote-1, 2 checks, or 
+            Table 5. Hn-BlockQuote-1, 12 checks, or 
+            Table 5. Index-BlockQuote-1, 2 checks, or 
+            Table 5. L-BlockQuote-1, 2 checks, or 
+            Table 5. LI-BlockQuote-1, 2 checks, or 
+            Table 5. Lbl-BlockQuote-1, 2 checks, or 
+            Table 5. P-BlockQuote-1, 2 checks, or 
+            Table 5. Quote-BlockQuote-1, 2 checks, or 
+            Table 5. RB-BlockQuote-1, 2 checks, or 
+            Table 5. RP-BlockQuote-1, 2 checks, or 
+            Table 5. RT-BlockQuote-1, 2 checks, or 
+            Table 5. Reference-BlockQuote-1, 2 checks, or 
+            Table 5. Ruby-BlockQuote-1, 2 checks, or 
+            Table 5. Span-BlockQuote-1, 2 checks, or 
+            Table 5. Strong-BlockQuote-1, 2 checks, or 
+            Table 5. StructTreeRoot-BlockQuote-1, 7 checks, or 
+            Table 5. Sub-BlockQuote-1, 2 checks, or 
+            Table 5. TBody-BlockQuote-1, 2 checks, or 
+            Table 5. TD-BlockQuote-1, 2 checks, or 
+            Table 5. TFoot-BlockQuote-1, 2 checks, or 
+            Table 5. TH-BlockQuote-1, 2 checks, or 
+            Table 5. THead-BlockQuote-1, 2 checks, or 
+            Table 5. TOC-BlockQuote-1, 2 checks, or 
+            Table 5. TOCI-BlockQuote-1, 2 checks, or 
+            Table 5. TR-BlockQuote-1, 2 checks, or 
+            Table 5. Table-BlockQuote-1, 2 checks, or 
+            Table 5. Title-BlockQuote-1, 2 checks, or 
+            Table 5. WP-BlockQuote-1, 2 checks, or 
+            Table 5. WT-BlockQuote-1, 2 checks, or 
+            Table 5. Warichu-BlockQuote-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -454,38 +460,38 @@
             (@clause = 'Table 5. WP-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Caption' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Caption-1, 2 checks, or 
-            Caption-Caption-1, 2 checks, or 
-            Caption-H-1, 1 check, or 
-            Code-Caption-1, 2 checks, or 
-            Document-Caption-1, 2 checks, or 
-            DocumentFragment-Caption-1, 2 checks, or 
-            Em-Caption-1, 2 checks, or 
-            H-Caption-1, 2 checks, or 
-            Hn-Caption-1, 12 checks, or 
-            LI-Caption-1, 2 checks, or 
-            Lbl-Caption-1, 2 checks, or 
-            P-Caption-1, 2 checks, or 
-            Quote-Caption-1, 2 checks, or 
-            RB-Caption-1, 2 checks, or 
-            RP-Caption-1, 2 checks, or 
-            RT-Caption-1, 2 checks, or 
-            Reference-Caption-1, 2 checks, or 
-            Ruby-Caption-1, 2 checks, or 
-            Span-Caption-1, 2 checks, or 
-            Strong-Caption-1, 2 checks, or 
-            StructTreeRoot-Caption-1, 7 checks, or 
-            Sub-Caption-1, 2 checks, or 
-            TBody-Caption-1, 2 checks, or 
-            TD-Caption-1, 2 checks, or 
-            TFoot-Caption-1, 2 checks, or 
-            TH-Caption-1, 2 checks, or 
-            THead-Caption-1, 2 checks, or 
-            TOCI-Caption-1, 2 checks, or 
-            TR-Caption-1, 2 checks, or 
-            WP-Caption-1, 2 checks, or 
-            WT-Caption-1, 2 checks, or 
-            Warichu-Caption-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Caption-1, 2 checks, or 
+            Table 5. Caption-Caption-1, 2 checks, or 
+            Table 5. Caption-H-1, 1 check, or 
+            Table 5. Code-Caption-1, 2 checks, or 
+            Table 5. Document-Caption-1, 2 checks, or 
+            Table 5. DocumentFragment-Caption-1, 2 checks, or 
+            Table 5. Em-Caption-1, 2 checks, or 
+            Table 5. H-Caption-1, 2 checks, or 
+            Table 5. Hn-Caption-1, 12 checks, or 
+            Table 5. LI-Caption-1, 2 checks, or 
+            Table 5. Lbl-Caption-1, 2 checks, or 
+            Table 5. P-Caption-1, 2 checks, or 
+            Table 5. Quote-Caption-1, 2 checks, or 
+            Table 5. RB-Caption-1, 2 checks, or 
+            Table 5. RP-Caption-1, 2 checks, or 
+            Table 5. RT-Caption-1, 2 checks, or 
+            Table 5. Reference-Caption-1, 2 checks, or 
+            Table 5. Ruby-Caption-1, 2 checks, or 
+            Table 5. Span-Caption-1, 2 checks, or 
+            Table 5. Strong-Caption-1, 2 checks, or 
+            Table 5. StructTreeRoot-Caption-1, 7 checks, or 
+            Table 5. Sub-Caption-1, 2 checks, or 
+            Table 5. TBody-Caption-1, 2 checks, or 
+            Table 5. TD-Caption-1, 2 checks, or 
+            Table 5. TFoot-Caption-1, 2 checks, or 
+            Table 5. TH-Caption-1, 2 checks, or 
+            Table 5. THead-Caption-1, 2 checks, or 
+            Table 5. TOCI-Caption-1, 2 checks, or 
+            Table 5. TR-Caption-1, 2 checks, or 
+            Table 5. WP-Caption-1, 2 checks, or 
+            Table 5. WT-Caption-1, 2 checks, or 
+            Table 5. Warichu-Caption-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -515,27 +521,27 @@
             (@clause = 'Table 5. WP-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Code' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Code-1, 2 checks, or 
-            Code-Code-1, 2 checks, or 
-            Index-Code-1, 2 checks, or 
-            L-Code-1, 2 checks, or 
-            LI-Code-1, 2 checks, or 
-            RB-Code-1, 2 checks, or 
-            RP-Code-1, 2 checks, or 
-            RT-Code-1, 2 checks, or 
-            Reference-Code-1, 2 checks, or 
-            Ruby-Code-1, 2 checks, or 
-            StructTreeRoot-Code-1, 7 checks, or 
-            TBody-Code-1, 2 checks, or 
-            TFoot-Code-1, 2 checks, or 
-            THead-Code-1, 2 checks, or 
-            TOC-Code-1, 2 checks, or 
-            TOCI-Code-1, 2 checks, or 
-            TR-Code-1, 2 checks, or 
-            Table-Code-1, 2 checks, or 
-            WP-Code-1, 2 checks, or 
-            WT-Code-1, 2 checks, or 
-            Warichu-Code-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Code-1, 2 checks, or 
+            Table 5. Code-Code-1, 2 checks, or 
+            Table 5. Index-Code-1, 2 checks, or 
+            Table 5. L-Code-1, 2 checks, or 
+            Table 5. LI-Code-1, 2 checks, or 
+            Table 5. RB-Code-1, 2 checks, or 
+            Table 5. RP-Code-1, 2 checks, or 
+            Table 5. RT-Code-1, 2 checks, or 
+            Table 5. Reference-Code-1, 2 checks, or 
+            Table 5. Ruby-Code-1, 2 checks, or 
+            Table 5. StructTreeRoot-Code-1, 7 checks, or 
+            Table 5. TBody-Code-1, 2 checks, or 
+            Table 5. TFoot-Code-1, 2 checks, or 
+            Table 5. THead-Code-1, 2 checks, or 
+            Table 5. TOC-Code-1, 2 checks, or 
+            Table 5. TOCI-Code-1, 2 checks, or 
+            Table 5. TR-Code-1, 2 checks, or 
+            Table 5. Table-Code-1, 2 checks, or 
+            Table 5. WP-Code-1, 2 checks, or 
+            Table 5. WT-Code-1, 2 checks, or 
+            Table 5. Warichu-Code-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -569,31 +575,31 @@
             (@clause = 'Table 5. WP-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Div' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Em-Div-1, 2 checks, or 
-            H-Div-1, 2 checks, or 
-            Hn-Div-1, 12 checks, or 
-            L-Div-1, 2 checks, or 
-            Lbl-Div-1, 2 checks, or 
-            P-Div-1, 2 checks, or 
-            Quote-Div-1, 2 checks, or 
-            RB-Div-1, 2 checks, or 
-            RP-Div-1, 2 checks, or 
-            RT-Div-1, 2 checks, or 
-            Reference-Div-1, 2 checks, or 
-            Ruby-Div-1, 2 checks, or 
-            Span-Div-1, 2 checks, or 
-            Strong-Div-1, 2 checks, or 
-            StructTreeRoot-Div-1, 7 checks, or 
-            Sub-Div-1, 2 checks, or 
-            TBody-Div-1, 2 checks, or 
-            TFoot-Div-1, 2 checks, or 
-            THead-Div-1, 2 checks, or 
-            TOC-Div-1, 2 checks, or 
-            TR-Div-1, 2 checks, or 
-            Table-Div-1, 2 checks, or 
-            WP-Div-1, 2 checks, or 
-            WT-Div-1, 2 checks, or 
-            Warichu-Div-1, 2 checks</sch:assert>
+            Table 5. Em-Div-1, 2 checks, or 
+            Table 5. H-Div-1, 2 checks, or 
+            Table 5. Hn-Div-1, 12 checks, or 
+            Table 5. L-Div-1, 2 checks, or 
+            Table 5. Lbl-Div-1, 2 checks, or 
+            Table 5. P-Div-1, 2 checks, or 
+            Table 5. Quote-Div-1, 2 checks, or 
+            Table 5. RB-Div-1, 2 checks, or 
+            Table 5. RP-Div-1, 2 checks, or 
+            Table 5. RT-Div-1, 2 checks, or 
+            Table 5. Reference-Div-1, 2 checks, or 
+            Table 5. Ruby-Div-1, 2 checks, or 
+            Table 5. Span-Div-1, 2 checks, or 
+            Table 5. Strong-Div-1, 2 checks, or 
+            Table 5. StructTreeRoot-Div-1, 7 checks, or 
+            Table 5. Sub-Div-1, 2 checks, or 
+            Table 5. TBody-Div-1, 2 checks, or 
+            Table 5. TFoot-Div-1, 2 checks, or 
+            Table 5. THead-Div-1, 2 checks, or 
+            Table 5. TOC-Div-1, 2 checks, or 
+            Table 5. TR-Div-1, 2 checks, or 
+            Table 5. Table-Div-1, 2 checks, or 
+            Table 5. WP-Div-1, 2 checks, or 
+            Table 5. WT-Div-1, 2 checks, or 
+            Table 5. Warichu-Div-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -608,6 +614,7 @@
             (@clause = 'Table 5. Caption-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Code-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. Document-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Em-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. FENote-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Figure-Document' and @testNumber = '1' and @failedChecks = '2') or 
@@ -646,50 +653,51 @@
             (@clause = 'Table 5. WP-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Document' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Document' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-Document-1, 2 checks, or 
-            Art-Document-1, 2 checks, or 
-            BibEntry-Document-1, 2 checks, or 
-            Caption-Document-1, 2 checks, or 
-            Code-Document-1, 2 checks, or 
-            Document-H-1, 1 check, or 
-            Em-Document-1, 2 checks, or 
-            FENote-Document-1, 2 checks, or 
-            Figure-Document-1, 2 checks, or 
-            Form-Document-1, 2 checks, or 
-            Formula-Document-1, 2 checks, or 
-            H-Document-1, 2 checks, or 
-            Hn-Document-1, 12 checks, or 
-            Index-Document-1, 2 checks, or 
-            L-Document-1, 2 checks, or 
-            LBody-Document-1, 2 checks, or 
-            LI-Document-1, 2 checks, or 
-            Lbl-Document-1, 2 checks, or 
-            Link-Document-1, 2 checks, or 
-            Note-Document-1, 2 checks, or 
-            P-Document-1, 2 checks, or 
-            Quote-Document-1, 2 checks, or 
-            RB-Document-1, 2 checks, or 
-            RP-Document-1, 2 checks, or 
-            RT-Document-1, 2 checks, or 
-            Reference-Document-1, 2 checks, or 
-            Ruby-Document-1, 2 checks, or 
-            Sect-Document-1, 2 checks, or 
-            Span-Document-1, 2 checks, or 
-            Strong-Document-1, 2 checks, or 
-            Sub-Document-1, 2 checks, or 
-            TBody-Document-1, 2 checks, or 
-            TD-Document-1, 2 checks, or 
-            TFoot-Document-1, 2 checks, or 
-            TH-Document-1, 2 checks, or 
-            THead-Document-1, 2 checks, or 
-            TOC-Document-1, 2 checks, or 
-            TOCI-Document-1, 2 checks, or 
-            TR-Document-1, 2 checks, or 
-            Table-Document-1, 2 checks, or 
-            Title-Document-1, 2 checks, or 
-            WP-Document-1, 2 checks, or 
-            WT-Document-1, 2 checks, or 
-            Warichu-Document-1, 2 checks</sch:assert>
+            Table 5. Annot-Document-1, 2 checks, or 
+            Table 5. Art-Document-1, 2 checks, or 
+            Table 5. BibEntry-Document-1, 2 checks, or 
+            Table 5. Caption-Document-1, 2 checks, or 
+            Table 5. Code-Document-1, 2 checks, or 
+            Table 5. Document-H-1, 1 check, or 
+            Table 5. Document-content-1, 1 check, or 
+            Table 5. Em-Document-1, 2 checks, or 
+            Table 5. FENote-Document-1, 2 checks, or 
+            Table 5. Figure-Document-1, 2 checks, or 
+            Table 5. Form-Document-1, 2 checks, or 
+            Table 5. Formula-Document-1, 2 checks, or 
+            Table 5. H-Document-1, 2 checks, or 
+            Table 5. Hn-Document-1, 12 checks, or 
+            Table 5. Index-Document-1, 2 checks, or 
+            Table 5. L-Document-1, 2 checks, or 
+            Table 5. LBody-Document-1, 2 checks, or 
+            Table 5. LI-Document-1, 2 checks, or 
+            Table 5. Lbl-Document-1, 2 checks, or 
+            Table 5. Link-Document-1, 2 checks, or 
+            Table 5. Note-Document-1, 2 checks, or 
+            Table 5. P-Document-1, 2 checks, or 
+            Table 5. Quote-Document-1, 2 checks, or 
+            Table 5. RB-Document-1, 2 checks, or 
+            Table 5. RP-Document-1, 2 checks, or 
+            Table 5. RT-Document-1, 2 checks, or 
+            Table 5. Reference-Document-1, 2 checks, or 
+            Table 5. Ruby-Document-1, 2 checks, or 
+            Table 5. Sect-Document-1, 2 checks, or 
+            Table 5. Span-Document-1, 2 checks, or 
+            Table 5. Strong-Document-1, 2 checks, or 
+            Table 5. Sub-Document-1, 2 checks, or 
+            Table 5. TBody-Document-1, 2 checks, or 
+            Table 5. TD-Document-1, 2 checks, or 
+            Table 5. TFoot-Document-1, 2 checks, or 
+            Table 5. TH-Document-1, 2 checks, or 
+            Table 5. THead-Document-1, 2 checks, or 
+            Table 5. TOC-Document-1, 2 checks, or 
+            Table 5. TOCI-Document-1, 2 checks, or 
+            Table 5. TR-Document-1, 2 checks, or 
+            Table 5. Table-Document-1, 2 checks, or 
+            Table 5. Title-Document-1, 2 checks, or 
+            Table 5. WP-Document-1, 2 checks, or 
+            Table 5. WT-Document-1, 2 checks, or 
+            Table 5. Warichu-Document-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -700,6 +708,7 @@
             <sch:assert test="object != 'SEDocumentFragment' or
             (@clause = 'Table 5. BibEntry-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. DocumentFragment-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Em-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Figure-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Form-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
@@ -735,43 +744,44 @@
             (@clause = 'Table 5. WP-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-DocumentFragment' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-DocumentFragment-1, 2 checks, or 
-            DocumentFragment-H-1, 1 check, or 
-            Em-DocumentFragment-1, 2 checks, or 
-            Figure-DocumentFragment-1, 2 checks, or 
-            Form-DocumentFragment-1, 2 checks, or 
-            Formula-DocumentFragment-1, 2 checks, or 
-            H-DocumentFragment-1, 2 checks, or 
-            Hn-DocumentFragment-1, 12 checks, or 
-            Index-DocumentFragment-1, 2 checks, or 
-            L-DocumentFragment-1, 2 checks, or 
-            LBody-DocumentFragment-1, 2 checks, or 
-            LI-DocumentFragment-1, 2 checks, or 
-            Lbl-DocumentFragment-1, 2 checks, or 
-            P-DocumentFragment-1, 2 checks, or 
-            Quote-DocumentFragment-1, 2 checks, or 
-            RB-DocumentFragment-1, 2 checks, or 
-            RP-DocumentFragment-1, 2 checks, or 
-            RT-DocumentFragment-1, 2 checks, or 
-            Reference-DocumentFragment-1, 2 checks, or 
-            Ruby-DocumentFragment-1, 2 checks, or 
-            Span-DocumentFragment-1, 2 checks, or 
-            Strong-DocumentFragment-1, 2 checks, or 
-            StructTreeRoot-DocumentFragment-1, 7 checks, or 
-            Sub-DocumentFragment-1, 2 checks, or 
-            TBody-DocumentFragment-1, 2 checks, or 
-            TD-DocumentFragment-1, 2 checks, or 
-            TFoot-DocumentFragment-1, 2 checks, or 
-            TH-DocumentFragment-1, 2 checks, or 
-            THead-DocumentFragment-1, 2 checks, or 
-            TOC-DocumentFragment-1, 2 checks, or 
-            TOCI-DocumentFragment-1, 2 checks, or 
-            TR-DocumentFragment-1, 2 checks, or 
-            Table-DocumentFragment-1, 2 checks, or 
-            Title-DocumentFragment-1, 2 checks, or 
-            WP-DocumentFragment-1, 2 checks, or 
-            WT-DocumentFragment-1, 2 checks, or 
-            Warichu-DocumentFragment-1, 2 checks</sch:assert>
+            Table 5. BibEntry-DocumentFragment-1, 2 checks, or 
+            Table 5. DocumentFragment-H-1, 1 check, or 
+            Table 5. DocumentFragment-content-1, 1 check, or 
+            Table 5. Em-DocumentFragment-1, 2 checks, or 
+            Table 5. Figure-DocumentFragment-1, 2 checks, or 
+            Table 5. Form-DocumentFragment-1, 2 checks, or 
+            Table 5. Formula-DocumentFragment-1, 2 checks, or 
+            Table 5. H-DocumentFragment-1, 2 checks, or 
+            Table 5. Hn-DocumentFragment-1, 12 checks, or 
+            Table 5. Index-DocumentFragment-1, 2 checks, or 
+            Table 5. L-DocumentFragment-1, 2 checks, or 
+            Table 5. LBody-DocumentFragment-1, 2 checks, or 
+            Table 5. LI-DocumentFragment-1, 2 checks, or 
+            Table 5. Lbl-DocumentFragment-1, 2 checks, or 
+            Table 5. P-DocumentFragment-1, 2 checks, or 
+            Table 5. Quote-DocumentFragment-1, 2 checks, or 
+            Table 5. RB-DocumentFragment-1, 2 checks, or 
+            Table 5. RP-DocumentFragment-1, 2 checks, or 
+            Table 5. RT-DocumentFragment-1, 2 checks, or 
+            Table 5. Reference-DocumentFragment-1, 2 checks, or 
+            Table 5. Ruby-DocumentFragment-1, 2 checks, or 
+            Table 5. Span-DocumentFragment-1, 2 checks, or 
+            Table 5. Strong-DocumentFragment-1, 2 checks, or 
+            Table 5. StructTreeRoot-DocumentFragment-1, 7 checks, or 
+            Table 5. Sub-DocumentFragment-1, 2 checks, or 
+            Table 5. TBody-DocumentFragment-1, 2 checks, or 
+            Table 5. TD-DocumentFragment-1, 2 checks, or 
+            Table 5. TFoot-DocumentFragment-1, 2 checks, or 
+            Table 5. TH-DocumentFragment-1, 2 checks, or 
+            Table 5. THead-DocumentFragment-1, 2 checks, or 
+            Table 5. TOC-DocumentFragment-1, 2 checks, or 
+            Table 5. TOCI-DocumentFragment-1, 2 checks, or 
+            Table 5. TR-DocumentFragment-1, 2 checks, or 
+            Table 5. Table-DocumentFragment-1, 2 checks, or 
+            Table 5. Title-DocumentFragment-1, 2 checks, or 
+            Table 5. WP-DocumentFragment-1, 2 checks, or 
+            Table 5. WT-DocumentFragment-1, 2 checks, or 
+            Table 5. Warichu-DocumentFragment-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -800,26 +810,26 @@
             (@clause = 'Table 5. TR-Em' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Em' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Em' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Em-1, 2 checks, or 
-            Aside-Em-1, 2 checks, or 
-            BlockQuote-Em-1, 2 checks, or 
-            Document-Em-1, 2 checks, or 
-            DocumentFragment-Em-1, 2 checks, or 
-            Form-Em-1, 2 checks, or 
-            Index-Em-1, 2 checks, or 
-            L-Em-1, 2 checks, or 
-            LI-Em-1, 2 checks, or 
-            Ruby-Em-1, 2 checks, or 
-            Sect-Em-1, 2 checks, or 
-            StructTreeRoot-Em-1, 7 checks, or 
-            TBody-Em-1, 2 checks, or 
-            TFoot-Em-1, 2 checks, or 
-            THead-Em-1, 2 checks, or 
-            TOC-Em-1, 2 checks, or 
-            TOCI-Em-1, 2 checks, or 
-            TR-Em-1, 2 checks, or 
-            Table-Em-1, 2 checks, or 
-            Warichu-Em-1, 2 checks</sch:assert>
+            Table 5. Art-Em-1, 2 checks, or 
+            Table 5. Aside-Em-1, 2 checks, or 
+            Table 5. BlockQuote-Em-1, 2 checks, or 
+            Table 5. Document-Em-1, 2 checks, or 
+            Table 5. DocumentFragment-Em-1, 2 checks, or 
+            Table 5. Form-Em-1, 2 checks, or 
+            Table 5. Index-Em-1, 2 checks, or 
+            Table 5. L-Em-1, 2 checks, or 
+            Table 5. LI-Em-1, 2 checks, or 
+            Table 5. Ruby-Em-1, 2 checks, or 
+            Table 5. Sect-Em-1, 2 checks, or 
+            Table 5. StructTreeRoot-Em-1, 7 checks, or 
+            Table 5. TBody-Em-1, 2 checks, or 
+            Table 5. TFoot-Em-1, 2 checks, or 
+            Table 5. THead-Em-1, 2 checks, or 
+            Table 5. TOC-Em-1, 2 checks, or 
+            Table 5. TOCI-Em-1, 2 checks, or 
+            Table 5. TR-Em-1, 2 checks, or 
+            Table 5. Table-Em-1, 2 checks, or 
+            Table 5. Warichu-Em-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -845,23 +855,23 @@
             (@clause = 'Table 5. WP-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-FENote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            L-FENote-1, 2 checks, or 
-            LI-FENote-1, 2 checks, or 
-            RB-FENote-1, 2 checks, or 
-            RP-FENote-1, 2 checks, or 
-            RT-FENote-1, 2 checks, or 
-            Ruby-FENote-1, 2 checks, or 
-            StructTreeRoot-FENote-1, 7 checks, or 
-            TBody-FENote-1, 2 checks, or 
-            TFoot-FENote-1, 2 checks, or 
-            THead-FENote-1, 2 checks, or 
-            TOC-FENote-1, 2 checks, or 
-            TOCI-FENote-1, 2 checks, or 
-            TR-FENote-1, 2 checks, or 
-            Table-FENote-1, 2 checks, or 
-            WP-FENote-1, 2 checks, or 
-            WT-FENote-1, 2 checks, or 
-            Warichu-FENote-1, 2 checks</sch:assert>
+            Table 5. L-FENote-1, 2 checks, or 
+            Table 5. LI-FENote-1, 2 checks, or 
+            Table 5. RB-FENote-1, 2 checks, or 
+            Table 5. RP-FENote-1, 2 checks, or 
+            Table 5. RT-FENote-1, 2 checks, or 
+            Table 5. Ruby-FENote-1, 2 checks, or 
+            Table 5. StructTreeRoot-FENote-1, 7 checks, or 
+            Table 5. TBody-FENote-1, 2 checks, or 
+            Table 5. TFoot-FENote-1, 2 checks, or 
+            Table 5. THead-FENote-1, 2 checks, or 
+            Table 5. TOC-FENote-1, 2 checks, or 
+            Table 5. TOCI-FENote-1, 2 checks, or 
+            Table 5. TR-FENote-1, 2 checks, or 
+            Table 5. Table-FENote-1, 2 checks, or 
+            Table 5. WP-FENote-1, 2 checks, or 
+            Table 5. WT-FENote-1, 2 checks, or 
+            Table 5. Warichu-FENote-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -892,26 +902,26 @@
             (@clause = 'Table 5. WT-Figure' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Figure' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.28.2-1, 115 checks, or 
-            Code-Figure-1, 2 checks, or 
-            Figure-Caption-1, 1 check, or 
-            Figure-H-1, 1 check, or 
-            L-Figure-1, 2 checks, or 
-            LI-Figure-1, 2 checks, or 
-            RB-Figure-1, 2 checks, or 
-            RP-Figure-1, 2 checks, or 
-            RT-Figure-1, 2 checks, or 
-            Ruby-Figure-1, 2 checks, or 
-            StructTreeRoot-Figure-1, 7 checks, or 
-            TBody-Figure-1, 2 checks, or 
-            TFoot-Figure-1, 2 checks, or 
-            THead-Figure-1, 2 checks, or 
-            TOC-Figure-1, 2 checks, or 
-            TOCI-Figure-1, 2 checks, or 
-            TR-Figure-1, 2 checks, or 
-            Table-Figure-1, 2 checks, or 
-            WP-Figure-1, 2 checks, or 
-            WT-Figure-1, 2 checks, or 
-            Warichu-Figure-1, 2 checks</sch:assert>
+            Table 5. Code-Figure-1, 2 checks, or 
+            Table 5. Figure-Caption-1, 1 check, or 
+            Table 5. Figure-H-1, 1 check, or 
+            Table 5. L-Figure-1, 2 checks, or 
+            Table 5. LI-Figure-1, 2 checks, or 
+            Table 5. RB-Figure-1, 2 checks, or 
+            Table 5. RP-Figure-1, 2 checks, or 
+            Table 5. RT-Figure-1, 2 checks, or 
+            Table 5. Ruby-Figure-1, 2 checks, or 
+            Table 5. StructTreeRoot-Figure-1, 7 checks, or 
+            Table 5. TBody-Figure-1, 2 checks, or 
+            Table 5. TFoot-Figure-1, 2 checks, or 
+            Table 5. THead-Figure-1, 2 checks, or 
+            Table 5. TOC-Figure-1, 2 checks, or 
+            Table 5. TOCI-Figure-1, 2 checks, or 
+            Table 5. TR-Figure-1, 2 checks, or 
+            Table 5. Table-Figure-1, 2 checks, or 
+            Table 5. WP-Figure-1, 2 checks, or 
+            Table 5. WT-Figure-1, 2 checks, or 
+            Table 5. Warichu-Figure-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -938,24 +948,24 @@
             (@clause = 'Table 5. TR-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Form' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Form-1, 2 checks, or 
-            Code-Form-1, 2 checks, or 
-            Form-Caption-1, 1 check, or 
-            Form-Form-1, 2 checks, or 
-            Index-Form-1, 2 checks, or 
-            L-Form-1, 2 checks, or 
-            LI-Form-1, 2 checks, or 
-            Reference-Form-1, 2 checks, or 
-            Ruby-Form-1, 2 checks, or 
-            StructTreeRoot-Form-1, 7 checks, or 
-            TBody-Form-1, 2 checks, or 
-            TFoot-Form-1, 2 checks, or 
-            THead-Form-1, 2 checks, or 
-            TOC-Form-1, 2 checks, or 
-            TOCI-Form-1, 2 checks, or 
-            TR-Form-1, 2 checks, or 
-            Table-Form-1, 2 checks, or 
-            Warichu-Form-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Form-1, 2 checks, or 
+            Table 5. Code-Form-1, 2 checks, or 
+            Table 5. Form-Caption-1, 1 check, or 
+            Table 5. Form-Form-1, 2 checks, or 
+            Table 5. Index-Form-1, 2 checks, or 
+            Table 5. L-Form-1, 2 checks, or 
+            Table 5. LI-Form-1, 2 checks, or 
+            Table 5. Reference-Form-1, 2 checks, or 
+            Table 5. Ruby-Form-1, 2 checks, or 
+            Table 5. StructTreeRoot-Form-1, 7 checks, or 
+            Table 5. TBody-Form-1, 2 checks, or 
+            Table 5. TFoot-Form-1, 2 checks, or 
+            Table 5. THead-Form-1, 2 checks, or 
+            Table 5. TOC-Form-1, 2 checks, or 
+            Table 5. TOCI-Form-1, 2 checks, or 
+            Table 5. TR-Form-1, 2 checks, or 
+            Table 5. Table-Form-1, 2 checks, or 
+            Table 5. Warichu-Form-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -986,28 +996,28 @@
             (@clause = 'Table 5. WP-Formula' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Formula' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Formula' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Formula-1, 2 checks, or 
-            Code-Formula-1, 2 checks, or 
-            Formula-Caption-1, 1 check, or 
-            Formula-H-1, 1 check, or 
-            L-Formula-1, 2 checks, or 
-            LI-Formula-1, 2 checks, or 
-            RB-Formula-1, 2 checks, or 
-            RP-Formula-1, 2 checks, or 
-            RT-Formula-1, 2 checks, or 
-            Reference-Formula-1, 2 checks, or 
-            Ruby-Formula-1, 2 checks, or 
-            StructTreeRoot-Formula-1, 7 checks, or 
-            TBody-Formula-1, 2 checks, or 
-            TFoot-Formula-1, 2 checks, or 
-            THead-Formula-1, 2 checks, or 
-            TOC-Formula-1, 2 checks, or 
-            TOCI-Formula-1, 2 checks, or 
-            TR-Formula-1, 2 checks, or 
-            Table-Formula-1, 2 checks, or 
-            WP-Formula-1, 2 checks, or 
-            WT-Formula-1, 2 checks, or 
-            Warichu-Formula-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Formula-1, 2 checks, or 
+            Table 5. Code-Formula-1, 2 checks, or 
+            Table 5. Formula-Caption-1, 1 check, or 
+            Table 5. Formula-H-1, 1 check, or 
+            Table 5. L-Formula-1, 2 checks, or 
+            Table 5. LI-Formula-1, 2 checks, or 
+            Table 5. RB-Formula-1, 2 checks, or 
+            Table 5. RP-Formula-1, 2 checks, or 
+            Table 5. RT-Formula-1, 2 checks, or 
+            Table 5. Reference-Formula-1, 2 checks, or 
+            Table 5. Ruby-Formula-1, 2 checks, or 
+            Table 5. StructTreeRoot-Formula-1, 7 checks, or 
+            Table 5. TBody-Formula-1, 2 checks, or 
+            Table 5. TFoot-Formula-1, 2 checks, or 
+            Table 5. THead-Formula-1, 2 checks, or 
+            Table 5. TOC-Formula-1, 2 checks, or 
+            Table 5. TOCI-Formula-1, 2 checks, or 
+            Table 5. TR-Formula-1, 2 checks, or 
+            Table 5. Table-Formula-1, 2 checks, or 
+            Table 5. WP-Formula-1, 2 checks, or 
+            Table 5. WT-Formula-1, 2 checks, or 
+            Table 5. Warichu-Formula-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1053,41 +1063,41 @@
             (@clause = 'Table 5. WT-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-H' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.12-1, 115 checks, or 
-            BibEntry-H-1, 2 checks, or 
-            Code-H-1, 2 checks, or 
-            Em-H-1, 2 checks, or 
-            FENote-H-1, 2 checks, or 
-            Form-H-1, 2 checks, or 
-            H-Art-1, 1 check, or 
-            H-H-1, 2 checks, or 
-            H-Sect-1, 1 check, or 
-            Hn-H-1, 12 checks, or 
-            L-H-1, 2 checks, or 
-            LI-H-1, 2 checks, or 
-            Lbl-H-1, 2 checks, or 
-            Note-H-1, 2 checks, or 
-            P-H-1, 2 checks, or 
-            Quote-H-1, 2 checks, or 
-            RB-H-1, 2 checks, or 
-            RP-H-1, 2 checks, or 
-            RT-H-1, 2 checks, or 
-            Reference-H-1, 2 checks, or 
-            Ruby-H-1, 2 checks, or 
-            Span-H-1, 2 checks, or 
-            Strong-H-1, 2 checks, or 
-            StructTreeRoot-H-1, 7 checks, or 
-            Sub-H-1, 2 checks, or 
-            TBody-H-1, 2 checks, or 
-            TFoot-H-1, 2 checks, or 
-            THead-H-1, 2 checks, or 
-            TOC-H-1, 2 checks, or 
-            TOCI-H-1, 2 checks, or 
-            TR-H-1, 2 checks, or 
-            Table-H-1, 2 checks, or 
-            Title-H-1, 2 checks, or 
-            WP-H-1, 2 checks, or 
-            WT-H-1, 2 checks, or 
-            Warichu-H-1, 2 checks</sch:assert>
+            Table 5. BibEntry-H-1, 2 checks, or 
+            Table 5. Code-H-1, 2 checks, or 
+            Table 5. Em-H-1, 2 checks, or 
+            Table 5. FENote-H-1, 2 checks, or 
+            Table 5. Form-H-1, 2 checks, or 
+            Table 5. H-Art-1, 1 check, or 
+            Table 5. H-H-1, 2 checks, or 
+            Table 5. H-Sect-1, 1 check, or 
+            Table 5. Hn-H-1, 12 checks, or 
+            Table 5. L-H-1, 2 checks, or 
+            Table 5. LI-H-1, 2 checks, or 
+            Table 5. Lbl-H-1, 2 checks, or 
+            Table 5. Note-H-1, 2 checks, or 
+            Table 5. P-H-1, 2 checks, or 
+            Table 5. Quote-H-1, 2 checks, or 
+            Table 5. RB-H-1, 2 checks, or 
+            Table 5. RP-H-1, 2 checks, or 
+            Table 5. RT-H-1, 2 checks, or 
+            Table 5. Reference-H-1, 2 checks, or 
+            Table 5. Ruby-H-1, 2 checks, or 
+            Table 5. Span-H-1, 2 checks, or 
+            Table 5. Strong-H-1, 2 checks, or 
+            Table 5. StructTreeRoot-H-1, 7 checks, or 
+            Table 5. Sub-H-1, 2 checks, or 
+            Table 5. TBody-H-1, 2 checks, or 
+            Table 5. TFoot-H-1, 2 checks, or 
+            Table 5. THead-H-1, 2 checks, or 
+            Table 5. TOC-H-1, 2 checks, or 
+            Table 5. TOCI-H-1, 2 checks, or 
+            Table 5. TR-H-1, 2 checks, or 
+            Table 5. Table-H-1, 2 checks, or 
+            Table 5. Title-H-1, 2 checks, or 
+            Table 5. WP-H-1, 2 checks, or 
+            Table 5. WT-H-1, 2 checks, or 
+            Table 5. Warichu-H-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1131,41 +1141,41 @@
             (@clause = 'Table 5. WP-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. WT-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. Warichu-Hn' and @testNumber = '1' and @failedChecks = '12')">Failed rules, Expected: 
-            BibEntry-Hn-1, 12 checks, or 
-            Code-Hn-1, 12 checks, or 
-            Em-Hn-1, 12 checks, or 
-            FENote-Hn-1, 12 checks, or 
-            Form-Hn-1, 12 checks, or 
-            H-Hn-1, 12 checks, or 
-            Hn-Art-1, 6 checks, or 
-            Hn-Hn-1, 72 checks, or 
-            Hn-Sect-1, 6 checks, or 
-            L-Hn-1, 12 checks, or 
-            LI-Hn-1, 12 checks, or 
-            Lbl-Hn-1, 12 checks, or 
-            Note-Hn-1, 12 checks, or 
-            P-Hn-1, 12 checks, or 
-            Quote-Hn-1, 12 checks, or 
-            RB-Hn-1, 12 checks, or 
-            RP-Hn-1, 12 checks, or 
-            RT-Hn-1, 12 checks, or 
-            Reference-Hn-1, 12 checks, or 
-            Ruby-Hn-1, 12 checks, or 
-            Span-Hn-1, 12 checks, or 
-            Strong-Hn-1, 12 checks, or 
-            StructTreeRoot-Hn-1, 42 checks, or 
-            Sub-Hn-1, 12 checks, or 
-            TBody-Hn-1, 12 checks, or 
-            TFoot-Hn-1, 12 checks, or 
-            THead-Hn-1, 12 checks, or 
-            TOC-Hn-1, 12 checks, or 
-            TOCI-Hn-1, 12 checks, or 
-            TR-Hn-1, 12 checks, or 
-            Table-Hn-1, 12 checks, or 
-            Title-Hn-1, 12 checks, or 
-            WP-Hn-1, 12 checks, or 
-            WT-Hn-1, 12 checks, or 
-            Warichu-Hn-1, 12 checks</sch:assert>
+            Table 5. BibEntry-Hn-1, 12 checks, or 
+            Table 5. Code-Hn-1, 12 checks, or 
+            Table 5. Em-Hn-1, 12 checks, or 
+            Table 5. FENote-Hn-1, 12 checks, or 
+            Table 5. Form-Hn-1, 12 checks, or 
+            Table 5. H-Hn-1, 12 checks, or 
+            Table 5. Hn-Art-1, 6 checks, or 
+            Table 5. Hn-Hn-1, 72 checks, or 
+            Table 5. Hn-Sect-1, 6 checks, or 
+            Table 5. L-Hn-1, 12 checks, or 
+            Table 5. LI-Hn-1, 12 checks, or 
+            Table 5. Lbl-Hn-1, 12 checks, or 
+            Table 5. Note-Hn-1, 12 checks, or 
+            Table 5. P-Hn-1, 12 checks, or 
+            Table 5. Quote-Hn-1, 12 checks, or 
+            Table 5. RB-Hn-1, 12 checks, or 
+            Table 5. RP-Hn-1, 12 checks, or 
+            Table 5. RT-Hn-1, 12 checks, or 
+            Table 5. Reference-Hn-1, 12 checks, or 
+            Table 5. Ruby-Hn-1, 12 checks, or 
+            Table 5. Span-Hn-1, 12 checks, or 
+            Table 5. Strong-Hn-1, 12 checks, or 
+            Table 5. StructTreeRoot-Hn-1, 42 checks, or 
+            Table 5. Sub-Hn-1, 12 checks, or 
+            Table 5. TBody-Hn-1, 12 checks, or 
+            Table 5. TFoot-Hn-1, 12 checks, or 
+            Table 5. THead-Hn-1, 12 checks, or 
+            Table 5. TOC-Hn-1, 12 checks, or 
+            Table 5. TOCI-Hn-1, 12 checks, or 
+            Table 5. TR-Hn-1, 12 checks, or 
+            Table 5. Table-Hn-1, 12 checks, or 
+            Table 5. Title-Hn-1, 12 checks, or 
+            Table 5. WP-Hn-1, 12 checks, or 
+            Table 5. WT-Hn-1, 12 checks, or 
+            Table 5. Warichu-Hn-1, 12 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1183,6 +1193,7 @@
             (@clause = 'Table 5. H-Index' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Hn-Index' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. Index-Index' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. Index-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. L-Index' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Index' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Lbl-Index' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1209,41 +1220,42 @@
             (@clause = 'Table 5. WP-Index' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Index' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Index' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-Index-1, 2 checks, or 
-            BibEntry-Index-1, 2 checks, or 
-            Code-Index-1, 2 checks, or 
-            Em-Index-1, 2 checks, or 
-            FENote-Index-1, 2 checks, or 
-            Form-Index-1, 2 checks, or 
-            H-Index-1, 2 checks, or 
-            Hn-Index-1, 12 checks, or 
-            Index-Index-1, 2 checks, or 
-            L-Index-1, 2 checks, or 
-            LI-Index-1, 2 checks, or 
-            Lbl-Index-1, 2 checks, or 
-            Link-Index-1, 2 checks, or 
-            P-Index-1, 2 checks, or 
-            Quote-Index-1, 2 checks, or 
-            RB-Index-1, 2 checks, or 
-            RP-Index-1, 2 checks, or 
-            RT-Index-1, 2 checks, or 
-            Reference-Index-1, 2 checks, or 
-            Ruby-Index-1, 2 checks, or 
-            Span-Index-1, 2 checks, or 
-            Strong-Index-1, 2 checks, or 
-            StructTreeRoot-Index-1, 7 checks, or 
-            Sub-Index-1, 2 checks, or 
-            TBody-Index-1, 2 checks, or 
-            TFoot-Index-1, 2 checks, or 
-            THead-Index-1, 2 checks, or 
-            TOC-Index-1, 2 checks, or 
-            TOCI-Index-1, 2 checks, or 
-            TR-Index-1, 2 checks, or 
-            Table-Index-1, 2 checks, or 
-            Title-Index-1, 2 checks, or 
-            WP-Index-1, 2 checks, or 
-            WT-Index-1, 2 checks, or 
-            Warichu-Index-1, 2 checks</sch:assert>
+            Table 5. Annot-Index-1, 2 checks, or 
+            Table 5. BibEntry-Index-1, 2 checks, or 
+            Table 5. Code-Index-1, 2 checks, or 
+            Table 5. Em-Index-1, 2 checks, or 
+            Table 5. FENote-Index-1, 2 checks, or 
+            Table 5. Form-Index-1, 2 checks, or 
+            Table 5. H-Index-1, 2 checks, or 
+            Table 5. Hn-Index-1, 12 checks, or 
+            Table 5. Index-Index-1, 2 checks, or 
+            Table 5. Index-content-1, 1 check, or 
+            Table 5. L-Index-1, 2 checks, or 
+            Table 5. LI-Index-1, 2 checks, or 
+            Table 5. Lbl-Index-1, 2 checks, or 
+            Table 5. Link-Index-1, 2 checks, or 
+            Table 5. P-Index-1, 2 checks, or 
+            Table 5. Quote-Index-1, 2 checks, or 
+            Table 5. RB-Index-1, 2 checks, or 
+            Table 5. RP-Index-1, 2 checks, or 
+            Table 5. RT-Index-1, 2 checks, or 
+            Table 5. Reference-Index-1, 2 checks, or 
+            Table 5. Ruby-Index-1, 2 checks, or 
+            Table 5. Span-Index-1, 2 checks, or 
+            Table 5. Strong-Index-1, 2 checks, or 
+            Table 5. StructTreeRoot-Index-1, 7 checks, or 
+            Table 5. Sub-Index-1, 2 checks, or 
+            Table 5. TBody-Index-1, 2 checks, or 
+            Table 5. TFoot-Index-1, 2 checks, or 
+            Table 5. THead-Index-1, 2 checks, or 
+            Table 5. TOC-Index-1, 2 checks, or 
+            Table 5. TOCI-Index-1, 2 checks, or 
+            Table 5. TR-Index-1, 2 checks, or 
+            Table 5. Table-Index-1, 2 checks, or 
+            Table 5. Title-Index-1, 2 checks, or 
+            Table 5. WP-Index-1, 2 checks, or 
+            Table 5. WT-Index-1, 2 checks, or 
+            Table 5. Warichu-Index-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1258,6 +1270,7 @@
             (@clause = 'Table 5. H-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Hn-L' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. L-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. L-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. LI-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Lbl-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Quote-L' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1279,33 +1292,34 @@
             (@clause = 'Table 5. WP-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-L' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-L-1, 2 checks, or 
-            Code-L-1, 2 checks, or 
-            Em-L-1, 2 checks, or 
-            H-L-1, 2 checks, or 
-            Hn-L-1, 12 checks, or 
-            L-Caption-1, 1 check, or 
-            LI-L-1, 2 checks, or 
-            Lbl-L-1, 2 checks, or 
-            Quote-L-1, 2 checks, or 
-            RB-L-1, 2 checks, or 
-            RP-L-1, 2 checks, or 
-            RT-L-1, 2 checks, or 
-            Reference-L-1, 2 checks, or 
-            Ruby-L-1, 2 checks, or 
-            Span-L-1, 2 checks, or 
-            Strong-L-1, 2 checks, or 
-            StructTreeRoot-L-1, 7 checks, or 
-            TBody-L-1, 2 checks, or 
-            TFoot-L-1, 2 checks, or 
-            THead-L-1, 2 checks, or 
-            TOC-L-1, 2 checks, or 
-            TOCI-L-1, 2 checks, or 
-            TR-L-1, 2 checks, or 
-            Table-L-1, 2 checks, or 
-            WP-L-1, 2 checks, or 
-            WT-L-1, 2 checks, or 
-            Warichu-L-1, 2 checks</sch:assert>
+            Table 5. BibEntry-L-1, 2 checks, or 
+            Table 5. Code-L-1, 2 checks, or 
+            Table 5. Em-L-1, 2 checks, or 
+            Table 5. H-L-1, 2 checks, or 
+            Table 5. Hn-L-1, 12 checks, or 
+            Table 5. L-Caption-1, 1 check, or 
+            Table 5. L-content-1, 1 check, or 
+            Table 5. LI-L-1, 2 checks, or 
+            Table 5. Lbl-L-1, 2 checks, or 
+            Table 5. Quote-L-1, 2 checks, or 
+            Table 5. RB-L-1, 2 checks, or 
+            Table 5. RP-L-1, 2 checks, or 
+            Table 5. RT-L-1, 2 checks, or 
+            Table 5. Reference-L-1, 2 checks, or 
+            Table 5. Ruby-L-1, 2 checks, or 
+            Table 5. Span-L-1, 2 checks, or 
+            Table 5. Strong-L-1, 2 checks, or 
+            Table 5. StructTreeRoot-L-1, 7 checks, or 
+            Table 5. TBody-L-1, 2 checks, or 
+            Table 5. TFoot-L-1, 2 checks, or 
+            Table 5. THead-L-1, 2 checks, or 
+            Table 5. TOC-L-1, 2 checks, or 
+            Table 5. TOCI-L-1, 2 checks, or 
+            Table 5. TR-L-1, 2 checks, or 
+            Table 5. Table-L-1, 2 checks, or 
+            Table 5. WP-L-1, 2 checks, or 
+            Table 5. WT-L-1, 2 checks, or 
+            Table 5. Warichu-L-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1363,55 +1377,55 @@
             (@clause = 'Table 5. WP-LBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-LBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-LBody' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-LBody-1, 2 checks, or 
-            Art-LBody-1, 2 checks, or 
-            Aside-LBody-1, 2 checks, or 
-            BibEntry-LBody-1, 2 checks, or 
-            BlockQuote-LBody-1, 2 checks, or 
-            Caption-LBody-1, 2 checks, or 
-            Code-LBody-1, 2 checks, or 
-            Document-LBody-1, 2 checks, or 
-            DocumentFragment-LBody-1, 2 checks, or 
-            Em-LBody-1, 2 checks, or 
-            FENote-LBody-1, 2 checks, or 
-            Figure-LBody-1, 2 checks, or 
-            Form-LBody-1, 2 checks, or 
-            Formula-LBody-1, 2 checks, or 
-            H-LBody-1, 2 checks, or 
-            Hn-LBody-1, 12 checks, or 
-            Index-LBody-1, 2 checks, or 
-            L-LBody-1, 2 checks, or 
-            LBody-Caption-1, 1 check, or 
-            LBody-H-1, 1 check, or 
-            LBody-LBody-1, 2 checks, or 
-            Lbl-LBody-1, 2 checks, or 
-            Link-LBody-1, 2 checks, or 
-            Note-LBody-1, 2 checks, or 
-            P-LBody-1, 2 checks, or 
-            Quote-LBody-1, 2 checks, or 
-            RB-LBody-1, 2 checks, or 
-            RP-LBody-1, 2 checks, or 
-            RT-LBody-1, 2 checks, or 
-            Reference-LBody-1, 2 checks, or 
-            Ruby-LBody-1, 2 checks, or 
-            Sect-LBody-1, 2 checks, or 
-            Span-LBody-1, 2 checks, or 
-            Strong-LBody-1, 2 checks, or 
-            StructTreeRoot-LBody-1, 7 checks, or 
-            Sub-LBody-1, 2 checks, or 
-            TBody-LBody-1, 2 checks, or 
-            TD-LBody-1, 2 checks, or 
-            TFoot-LBody-1, 2 checks, or 
-            TH-LBody-1, 2 checks, or 
-            THead-LBody-1, 2 checks, or 
-            TOC-LBody-1, 2 checks, or 
-            TOCI-LBody-1, 2 checks, or 
-            TR-LBody-1, 2 checks, or 
-            Table-LBody-1, 2 checks, or 
-            Title-LBody-1, 2 checks, or 
-            WP-LBody-1, 2 checks, or 
-            WT-LBody-1, 2 checks, or 
-            Warichu-LBody-1, 2 checks</sch:assert>
+            Table 5. Annot-LBody-1, 2 checks, or 
+            Table 5. Art-LBody-1, 2 checks, or 
+            Table 5. Aside-LBody-1, 2 checks, or 
+            Table 5. BibEntry-LBody-1, 2 checks, or 
+            Table 5. BlockQuote-LBody-1, 2 checks, or 
+            Table 5. Caption-LBody-1, 2 checks, or 
+            Table 5. Code-LBody-1, 2 checks, or 
+            Table 5. Document-LBody-1, 2 checks, or 
+            Table 5. DocumentFragment-LBody-1, 2 checks, or 
+            Table 5. Em-LBody-1, 2 checks, or 
+            Table 5. FENote-LBody-1, 2 checks, or 
+            Table 5. Figure-LBody-1, 2 checks, or 
+            Table 5. Form-LBody-1, 2 checks, or 
+            Table 5. Formula-LBody-1, 2 checks, or 
+            Table 5. H-LBody-1, 2 checks, or 
+            Table 5. Hn-LBody-1, 12 checks, or 
+            Table 5. Index-LBody-1, 2 checks, or 
+            Table 5. L-LBody-1, 2 checks, or 
+            Table 5. LBody-Caption-1, 1 check, or 
+            Table 5. LBody-H-1, 1 check, or 
+            Table 5. LBody-LBody-1, 2 checks, or 
+            Table 5. Lbl-LBody-1, 2 checks, or 
+            Table 5. Link-LBody-1, 2 checks, or 
+            Table 5. Note-LBody-1, 2 checks, or 
+            Table 5. P-LBody-1, 2 checks, or 
+            Table 5. Quote-LBody-1, 2 checks, or 
+            Table 5. RB-LBody-1, 2 checks, or 
+            Table 5. RP-LBody-1, 2 checks, or 
+            Table 5. RT-LBody-1, 2 checks, or 
+            Table 5. Reference-LBody-1, 2 checks, or 
+            Table 5. Ruby-LBody-1, 2 checks, or 
+            Table 5. Sect-LBody-1, 2 checks, or 
+            Table 5. Span-LBody-1, 2 checks, or 
+            Table 5. Strong-LBody-1, 2 checks, or 
+            Table 5. StructTreeRoot-LBody-1, 7 checks, or 
+            Table 5. Sub-LBody-1, 2 checks, or 
+            Table 5. TBody-LBody-1, 2 checks, or 
+            Table 5. TD-LBody-1, 2 checks, or 
+            Table 5. TFoot-LBody-1, 2 checks, or 
+            Table 5. TH-LBody-1, 2 checks, or 
+            Table 5. THead-LBody-1, 2 checks, or 
+            Table 5. TOC-LBody-1, 2 checks, or 
+            Table 5. TOCI-LBody-1, 2 checks, or 
+            Table 5. TR-LBody-1, 2 checks, or 
+            Table 5. Table-LBody-1, 2 checks, or 
+            Table 5. Title-LBody-1, 2 checks, or 
+            Table 5. WP-LBody-1, 2 checks, or 
+            Table 5. WT-LBody-1, 2 checks, or 
+            Table 5. Warichu-LBody-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1420,6 +1434,7 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SELI' or
+            (@clause = '8.2.5.25' and @testNumber = '2' and @failedChecks = '1') or 
             (@clause = 'Table 5. Annot-LI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Art-LI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-LI' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1467,53 +1482,54 @@
             (@clause = 'Table 5. WP-LI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-LI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-LI' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-LI-1, 2 checks, or 
-            Art-LI-1, 2 checks, or 
-            Aside-LI-1, 2 checks, or 
-            BibEntry-LI-1, 2 checks, or 
-            BlockQuote-LI-1, 2 checks, or 
-            Caption-LI-1, 2 checks, or 
-            Code-LI-1, 2 checks, or 
-            Document-LI-1, 2 checks, or 
-            DocumentFragment-LI-1, 2 checks, or 
-            Em-LI-1, 2 checks, or 
-            FENote-LI-1, 2 checks, or 
-            Figure-LI-1, 2 checks, or 
-            Form-LI-1, 2 checks, or 
-            Formula-LI-1, 2 checks, or 
-            H-LI-1, 2 checks, or 
-            Hn-LI-1, 12 checks, or 
-            Index-LI-1, 2 checks, or 
-            LBody-LI-1, 2 checks, or 
-            LI-LI-1, 2 checks, or 
-            Lbl-LI-1, 2 checks, or 
-            Link-LI-1, 2 checks, or 
-            Note-LI-1, 2 checks, or 
-            P-LI-1, 2 checks, or 
-            Quote-LI-1, 2 checks, or 
-            RB-LI-1, 2 checks, or 
-            RP-LI-1, 2 checks, or 
-            RT-LI-1, 2 checks, or 
-            Reference-LI-1, 2 checks, or 
-            Ruby-LI-1, 2 checks, or 
-            Sect-LI-1, 2 checks, or 
-            Span-LI-1, 2 checks, or 
-            Strong-LI-1, 2 checks, or 
-            StructTreeRoot-LI-1, 7 checks, or 
-            Sub-LI-1, 2 checks, or 
-            TBody-LI-1, 2 checks, or 
-            TD-LI-1, 2 checks, or 
-            TFoot-LI-1, 2 checks, or 
-            TH-LI-1, 2 checks, or 
-            THead-LI-1, 2 checks, or 
-            TOC-LI-1, 2 checks, or 
-            TOCI-LI-1, 2 checks, or 
-            TR-LI-1, 2 checks, or 
-            Table-LI-1, 2 checks, or 
-            Title-LI-1, 2 checks, or 
-            WP-LI-1, 2 checks, or 
-            WT-LI-1, 2 checks, or 
-            Warichu-LI-1, 2 checks</sch:assert>
+            8.2.5.25-2, 1 check, or 
+            Table 5. Annot-LI-1, 2 checks, or 
+            Table 5. Art-LI-1, 2 checks, or 
+            Table 5. Aside-LI-1, 2 checks, or 
+            Table 5. BibEntry-LI-1, 2 checks, or 
+            Table 5. BlockQuote-LI-1, 2 checks, or 
+            Table 5. Caption-LI-1, 2 checks, or 
+            Table 5. Code-LI-1, 2 checks, or 
+            Table 5. Document-LI-1, 2 checks, or 
+            Table 5. DocumentFragment-LI-1, 2 checks, or 
+            Table 5. Em-LI-1, 2 checks, or 
+            Table 5. FENote-LI-1, 2 checks, or 
+            Table 5. Figure-LI-1, 2 checks, or 
+            Table 5. Form-LI-1, 2 checks, or 
+            Table 5. Formula-LI-1, 2 checks, or 
+            Table 5. H-LI-1, 2 checks, or 
+            Table 5. Hn-LI-1, 12 checks, or 
+            Table 5. Index-LI-1, 2 checks, or 
+            Table 5. LBody-LI-1, 2 checks, or 
+            Table 5. LI-LI-1, 2 checks, or 
+            Table 5. Lbl-LI-1, 2 checks, or 
+            Table 5. Link-LI-1, 2 checks, or 
+            Table 5. Note-LI-1, 2 checks, or 
+            Table 5. P-LI-1, 2 checks, or 
+            Table 5. Quote-LI-1, 2 checks, or 
+            Table 5. RB-LI-1, 2 checks, or 
+            Table 5. RP-LI-1, 2 checks, or 
+            Table 5. RT-LI-1, 2 checks, or 
+            Table 5. Reference-LI-1, 2 checks, or 
+            Table 5. Ruby-LI-1, 2 checks, or 
+            Table 5. Sect-LI-1, 2 checks, or 
+            Table 5. Span-LI-1, 2 checks, or 
+            Table 5. Strong-LI-1, 2 checks, or 
+            Table 5. StructTreeRoot-LI-1, 7 checks, or 
+            Table 5. Sub-LI-1, 2 checks, or 
+            Table 5. TBody-LI-1, 2 checks, or 
+            Table 5. TD-LI-1, 2 checks, or 
+            Table 5. TFoot-LI-1, 2 checks, or 
+            Table 5. TH-LI-1, 2 checks, or 
+            Table 5. THead-LI-1, 2 checks, or 
+            Table 5. TOC-LI-1, 2 checks, or 
+            Table 5. TOCI-LI-1, 2 checks, or 
+            Table 5. TR-LI-1, 2 checks, or 
+            Table 5. Table-LI-1, 2 checks, or 
+            Table 5. Title-LI-1, 2 checks, or 
+            Table 5. WP-LI-1, 2 checks, or 
+            Table 5. WT-LI-1, 2 checks, or 
+            Table 5. Warichu-LI-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1543,27 +1559,27 @@
             (@clause = 'Table 5. WP-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Lbl' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Lbl' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Code-Lbl-1, 2 checks, or 
-            Document-Lbl-1, 2 checks, or 
-            DocumentFragment-Lbl-1, 2 checks, or 
-            Index-Lbl-1, 2 checks, or 
-            L-Lbl-1, 2 checks, or 
-            LBody-Lbl-1, 2 checks, or 
-            Lbl-Lbl-1, 2 checks, or 
-            RB-Lbl-1, 2 checks, or 
-            RP-Lbl-1, 2 checks, or 
-            RT-Lbl-1, 2 checks, or 
-            Ruby-Lbl-1, 2 checks, or 
-            StructTreeRoot-Lbl-1, 7 checks, or 
-            TBody-Lbl-1, 2 checks, or 
-            TFoot-Lbl-1, 2 checks, or 
-            THead-Lbl-1, 2 checks, or 
-            TOC-Lbl-1, 2 checks, or 
-            TR-Lbl-1, 2 checks, or 
-            Table-Lbl-1, 2 checks, or 
-            WP-Lbl-1, 2 checks, or 
-            WT-Lbl-1, 2 checks, or 
-            Warichu-Lbl-1, 2 checks</sch:assert>
+            Table 5. Code-Lbl-1, 2 checks, or 
+            Table 5. Document-Lbl-1, 2 checks, or 
+            Table 5. DocumentFragment-Lbl-1, 2 checks, or 
+            Table 5. Index-Lbl-1, 2 checks, or 
+            Table 5. L-Lbl-1, 2 checks, or 
+            Table 5. LBody-Lbl-1, 2 checks, or 
+            Table 5. Lbl-Lbl-1, 2 checks, or 
+            Table 5. RB-Lbl-1, 2 checks, or 
+            Table 5. RP-Lbl-1, 2 checks, or 
+            Table 5. RT-Lbl-1, 2 checks, or 
+            Table 5. Ruby-Lbl-1, 2 checks, or 
+            Table 5. StructTreeRoot-Lbl-1, 7 checks, or 
+            Table 5. TBody-Lbl-1, 2 checks, or 
+            Table 5. TFoot-Lbl-1, 2 checks, or 
+            Table 5. THead-Lbl-1, 2 checks, or 
+            Table 5. TOC-Lbl-1, 2 checks, or 
+            Table 5. TR-Lbl-1, 2 checks, or 
+            Table 5. Table-Lbl-1, 2 checks, or 
+            Table 5. WP-Lbl-1, 2 checks, or 
+            Table 5. WT-Lbl-1, 2 checks, or 
+            Table 5. Warichu-Lbl-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1587,21 +1603,21 @@
             (@clause = 'Table 5. TR-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Link' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Form-Link-1, 2 checks, or 
-            Index-Link-1, 2 checks, or 
-            L-Link-1, 2 checks, or 
-            LI-Link-1, 2 checks, or 
-            Link-Link-1, 2 checks, or 
-            Ruby-Link-1, 2 checks, or 
-            StructTreeRoot-Link-1, 7 checks, or 
-            TBody-Link-1, 2 checks, or 
-            TFoot-Link-1, 2 checks, or 
-            THead-Link-1, 2 checks, or 
-            TOC-Link-1, 2 checks, or 
-            TOCI-Link-1, 2 checks, or 
-            TR-Link-1, 2 checks, or 
-            Table-Link-1, 2 checks, or 
-            Warichu-Link-1, 2 checks</sch:assert>
+            Table 5. Form-Link-1, 2 checks, or 
+            Table 5. Index-Link-1, 2 checks, or 
+            Table 5. L-Link-1, 2 checks, or 
+            Table 5. LI-Link-1, 2 checks, or 
+            Table 5. Link-Link-1, 2 checks, or 
+            Table 5. Ruby-Link-1, 2 checks, or 
+            Table 5. StructTreeRoot-Link-1, 7 checks, or 
+            Table 5. TBody-Link-1, 2 checks, or 
+            Table 5. TFoot-Link-1, 2 checks, or 
+            Table 5. THead-Link-1, 2 checks, or 
+            Table 5. TOC-Link-1, 2 checks, or 
+            Table 5. TOCI-Link-1, 2 checks, or 
+            Table 5. TR-Link-1, 2 checks, or 
+            Table 5. Table-Link-1, 2 checks, or 
+            Table 5. Warichu-Link-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1611,7 +1627,7 @@
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SENonStruct' or
             (@clause = 'Table 5. StructTreeRoot-NonStruct' and @testNumber = '1' and @failedChecks = '13')">Failed rules, Expected: 
-            StructTreeRoot-NonStruct-1, 13 checks</sch:assert>
+            Table 5. StructTreeRoot-NonStruct-1, 13 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1639,23 +1655,23 @@
             (@clause = 'Table 5. WT-Note' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Note' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.14-1, 115 checks, or 
-            L-Note-1, 2 checks, or 
-            LI-Note-1, 2 checks, or 
-            RB-Note-1, 2 checks, or 
-            RP-Note-1, 2 checks, or 
-            RT-Note-1, 2 checks, or 
-            Ruby-Note-1, 2 checks, or 
-            StructTreeRoot-Note-1, 7 checks, or 
-            TBody-Note-1, 2 checks, or 
-            TFoot-Note-1, 2 checks, or 
-            THead-Note-1, 2 checks, or 
-            TOC-Note-1, 2 checks, or 
-            TOCI-Note-1, 2 checks, or 
-            TR-Note-1, 2 checks, or 
-            Table-Note-1, 2 checks, or 
-            WP-Note-1, 2 checks, or 
-            WT-Note-1, 2 checks, or 
-            Warichu-Note-1, 2 checks</sch:assert>
+            Table 5. L-Note-1, 2 checks, or 
+            Table 5. LI-Note-1, 2 checks, or 
+            Table 5. RB-Note-1, 2 checks, or 
+            Table 5. RP-Note-1, 2 checks, or 
+            Table 5. RT-Note-1, 2 checks, or 
+            Table 5. Ruby-Note-1, 2 checks, or 
+            Table 5. StructTreeRoot-Note-1, 7 checks, or 
+            Table 5. TBody-Note-1, 2 checks, or 
+            Table 5. TFoot-Note-1, 2 checks, or 
+            Table 5. THead-Note-1, 2 checks, or 
+            Table 5. TOC-Note-1, 2 checks, or 
+            Table 5. TOCI-Note-1, 2 checks, or 
+            Table 5. TR-Note-1, 2 checks, or 
+            Table 5. Table-Note-1, 2 checks, or 
+            Table 5. WP-Note-1, 2 checks, or 
+            Table 5. WT-Note-1, 2 checks, or 
+            Table 5. Warichu-Note-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1692,34 +1708,34 @@
             (@clause = 'Table 5. WP-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-P' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Code-P-1, 2 checks, or 
-            Em-P-1, 2 checks, or 
-            Form-P-1, 2 checks, or 
-            H-P-1, 2 checks, or 
-            Hn-P-1, 12 checks, or 
-            L-P-1, 2 checks, or 
-            LI-P-1, 2 checks, or 
-            Lbl-P-1, 2 checks, or 
-            P-P-1, 2 checks, or 
-            Quote-P-1, 2 checks, or 
-            RB-P-1, 2 checks, or 
-            RP-P-1, 2 checks, or 
-            RT-P-1, 2 checks, or 
-            Reference-P-1, 2 checks, or 
-            Ruby-P-1, 2 checks, or 
-            Span-P-1, 2 checks, or 
-            Strong-P-1, 2 checks, or 
-            StructTreeRoot-P-1, 7 checks, or 
-            Sub-P-1, 2 checks, or 
-            TBody-P-1, 2 checks, or 
-            TFoot-P-1, 2 checks, or 
-            THead-P-1, 2 checks, or 
-            TOC-P-1, 2 checks, or 
-            TR-P-1, 2 checks, or 
-            Table-P-1, 2 checks, or 
-            WP-P-1, 2 checks, or 
-            WT-P-1, 2 checks, or 
-            Warichu-P-1, 2 checks</sch:assert>
+            Table 5. Code-P-1, 2 checks, or 
+            Table 5. Em-P-1, 2 checks, or 
+            Table 5. Form-P-1, 2 checks, or 
+            Table 5. H-P-1, 2 checks, or 
+            Table 5. Hn-P-1, 12 checks, or 
+            Table 5. L-P-1, 2 checks, or 
+            Table 5. LI-P-1, 2 checks, or 
+            Table 5. Lbl-P-1, 2 checks, or 
+            Table 5. P-P-1, 2 checks, or 
+            Table 5. Quote-P-1, 2 checks, or 
+            Table 5. RB-P-1, 2 checks, or 
+            Table 5. RP-P-1, 2 checks, or 
+            Table 5. RT-P-1, 2 checks, or 
+            Table 5. Reference-P-1, 2 checks, or 
+            Table 5. Ruby-P-1, 2 checks, or 
+            Table 5. Span-P-1, 2 checks, or 
+            Table 5. Strong-P-1, 2 checks, or 
+            Table 5. StructTreeRoot-P-1, 7 checks, or 
+            Table 5. Sub-P-1, 2 checks, or 
+            Table 5. TBody-P-1, 2 checks, or 
+            Table 5. TFoot-P-1, 2 checks, or 
+            Table 5. THead-P-1, 2 checks, or 
+            Table 5. TOC-P-1, 2 checks, or 
+            Table 5. TR-P-1, 2 checks, or 
+            Table 5. Table-P-1, 2 checks, or 
+            Table 5. WP-P-1, 2 checks, or 
+            Table 5. WT-P-1, 2 checks, or 
+            Table 5. Warichu-P-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1757,35 +1773,35 @@
             (@clause = 'Table 5. WP-Part' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Part' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Part' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Em-Part-1, 2 checks, or 
-            H-Part-1, 2 checks, or 
-            Hn-Part-1, 12 checks, or 
-            L-Part-1, 2 checks, or 
-            LI-Part-1, 2 checks, or 
-            Lbl-Part-1, 2 checks, or 
-            P-Part-1, 2 checks, or 
-            Quote-Part-1, 2 checks, or 
-            RB-Part-1, 2 checks, or 
-            RP-Part-1, 2 checks, or 
-            RT-Part-1, 2 checks, or 
-            Reference-Part-1, 2 checks, or 
-            Ruby-Part-1, 2 checks, or 
-            Span-Part-1, 2 checks, or 
-            Strong-Part-1, 2 checks, or 
-            StructTreeRoot-Part-1, 7 checks, or 
-            Sub-Part-1, 2 checks, or 
-            TBody-Part-1, 2 checks, or 
-            TD-Part-1, 2 checks, or 
-            TFoot-Part-1, 2 checks, or 
-            TH-Part-1, 2 checks, or 
-            THead-Part-1, 2 checks, or 
-            TOC-Part-1, 2 checks, or 
-            TOCI-Part-1, 2 checks, or 
-            TR-Part-1, 2 checks, or 
-            Table-Part-1, 2 checks, or 
-            WP-Part-1, 2 checks, or 
-            WT-Part-1, 2 checks, or 
-            Warichu-Part-1, 2 checks</sch:assert>
+            Table 5. Em-Part-1, 2 checks, or 
+            Table 5. H-Part-1, 2 checks, or 
+            Table 5. Hn-Part-1, 12 checks, or 
+            Table 5. L-Part-1, 2 checks, or 
+            Table 5. LI-Part-1, 2 checks, or 
+            Table 5. Lbl-Part-1, 2 checks, or 
+            Table 5. P-Part-1, 2 checks, or 
+            Table 5. Quote-Part-1, 2 checks, or 
+            Table 5. RB-Part-1, 2 checks, or 
+            Table 5. RP-Part-1, 2 checks, or 
+            Table 5. RT-Part-1, 2 checks, or 
+            Table 5. Reference-Part-1, 2 checks, or 
+            Table 5. Ruby-Part-1, 2 checks, or 
+            Table 5. Span-Part-1, 2 checks, or 
+            Table 5. Strong-Part-1, 2 checks, or 
+            Table 5. StructTreeRoot-Part-1, 7 checks, or 
+            Table 5. Sub-Part-1, 2 checks, or 
+            Table 5. TBody-Part-1, 2 checks, or 
+            Table 5. TD-Part-1, 2 checks, or 
+            Table 5. TFoot-Part-1, 2 checks, or 
+            Table 5. TH-Part-1, 2 checks, or 
+            Table 5. THead-Part-1, 2 checks, or 
+            Table 5. TOC-Part-1, 2 checks, or 
+            Table 5. TOCI-Part-1, 2 checks, or 
+            Table 5. TR-Part-1, 2 checks, or 
+            Table 5. Table-Part-1, 2 checks, or 
+            Table 5. WP-Part-1, 2 checks, or 
+            Table 5. WT-Part-1, 2 checks, or 
+            Table 5. Warichu-Part-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1796,8 +1812,8 @@
             <sch:assert test="object != 'SEPrivate' or
             (@clause = 'Table 5. Annot-Private' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Private' and @testNumber = '1' and @failedChecks = '7')">Failed rules, Expected: 
-            Annot-Private-1, 2 checks, or 
-            StructTreeRoot-Private-1, 7 checks</sch:assert>
+            Table 5. Annot-Private-1, 2 checks, or 
+            Table 5. StructTreeRoot-Private-1, 7 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1829,29 +1845,29 @@
             (@clause = 'Table 5. TR-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Quote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Quote-1, 2 checks, or 
-            Aside-Quote-1, 2 checks, or 
-            BibEntry-Quote-1, 2 checks, or 
-            BlockQuote-Quote-1, 2 checks, or 
-            Code-Quote-1, 2 checks, or 
-            Document-Quote-1, 2 checks, or 
-            DocumentFragment-Quote-1, 2 checks, or 
-            Form-Quote-1, 2 checks, or 
-            Index-Quote-1, 2 checks, or 
-            L-Quote-1, 2 checks, or 
-            LI-Quote-1, 2 checks, or 
-            Reference-Quote-1, 2 checks, or 
-            Ruby-Quote-1, 2 checks, or 
-            Sect-Quote-1, 2 checks, or 
-            StructTreeRoot-Quote-1, 7 checks, or 
-            TBody-Quote-1, 2 checks, or 
-            TFoot-Quote-1, 2 checks, or 
-            THead-Quote-1, 2 checks, or 
-            TOC-Quote-1, 2 checks, or 
-            TOCI-Quote-1, 2 checks, or 
-            TR-Quote-1, 2 checks, or 
-            Table-Quote-1, 2 checks, or 
-            Warichu-Quote-1, 2 checks</sch:assert>
+            Table 5. Art-Quote-1, 2 checks, or 
+            Table 5. Aside-Quote-1, 2 checks, or 
+            Table 5. BibEntry-Quote-1, 2 checks, or 
+            Table 5. BlockQuote-Quote-1, 2 checks, or 
+            Table 5. Code-Quote-1, 2 checks, or 
+            Table 5. Document-Quote-1, 2 checks, or 
+            Table 5. DocumentFragment-Quote-1, 2 checks, or 
+            Table 5. Form-Quote-1, 2 checks, or 
+            Table 5. Index-Quote-1, 2 checks, or 
+            Table 5. L-Quote-1, 2 checks, or 
+            Table 5. LI-Quote-1, 2 checks, or 
+            Table 5. Reference-Quote-1, 2 checks, or 
+            Table 5. Ruby-Quote-1, 2 checks, or 
+            Table 5. Sect-Quote-1, 2 checks, or 
+            Table 5. StructTreeRoot-Quote-1, 7 checks, or 
+            Table 5. TBody-Quote-1, 2 checks, or 
+            Table 5. TFoot-Quote-1, 2 checks, or 
+            Table 5. THead-Quote-1, 2 checks, or 
+            Table 5. TOC-Quote-1, 2 checks, or 
+            Table 5. TOCI-Quote-1, 2 checks, or 
+            Table 5. TR-Quote-1, 2 checks, or 
+            Table 5. Table-Quote-1, 2 checks, or 
+            Table 5. Warichu-Quote-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1907,53 +1923,53 @@
             (@clause = 'Table 5. WP-RB' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-RB' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-RB' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-RB-1, 2 checks, or 
-            Art-RB-1, 2 checks, or 
-            Aside-RB-1, 2 checks, or 
-            BibEntry-RB-1, 2 checks, or 
-            BlockQuote-RB-1, 2 checks, or 
-            Caption-RB-1, 2 checks, or 
-            Code-RB-1, 2 checks, or 
-            Document-RB-1, 2 checks, or 
-            DocumentFragment-RB-1, 2 checks, or 
-            Em-RB-1, 2 checks, or 
-            FENote-RB-1, 2 checks, or 
-            Figure-RB-1, 2 checks, or 
-            Form-RB-1, 2 checks, or 
-            Formula-RB-1, 2 checks, or 
-            H-RB-1, 2 checks, or 
-            Hn-RB-1, 12 checks, or 
-            Index-RB-1, 2 checks, or 
-            L-RB-1, 2 checks, or 
-            LBody-RB-1, 2 checks, or 
-            LI-RB-1, 2 checks, or 
-            Lbl-RB-1, 2 checks, or 
-            Link-RB-1, 2 checks, or 
-            Note-RB-1, 2 checks, or 
-            P-RB-1, 2 checks, or 
-            Quote-RB-1, 2 checks, or 
-            RB-RB-1, 2 checks, or 
-            RP-RB-1, 2 checks, or 
-            RT-RB-1, 2 checks, or 
-            Reference-RB-1, 2 checks, or 
-            Sect-RB-1, 2 checks, or 
-            Span-RB-1, 2 checks, or 
-            Strong-RB-1, 2 checks, or 
-            StructTreeRoot-RB-1, 7 checks, or 
-            Sub-RB-1, 2 checks, or 
-            TBody-RB-1, 2 checks, or 
-            TD-RB-1, 2 checks, or 
-            TFoot-RB-1, 2 checks, or 
-            TH-RB-1, 2 checks, or 
-            THead-RB-1, 2 checks, or 
-            TOC-RB-1, 2 checks, or 
-            TOCI-RB-1, 2 checks, or 
-            TR-RB-1, 2 checks, or 
-            Table-RB-1, 2 checks, or 
-            Title-RB-1, 2 checks, or 
-            WP-RB-1, 2 checks, or 
-            WT-RB-1, 2 checks, or 
-            Warichu-RB-1, 2 checks</sch:assert>
+            Table 5. Annot-RB-1, 2 checks, or 
+            Table 5. Art-RB-1, 2 checks, or 
+            Table 5. Aside-RB-1, 2 checks, or 
+            Table 5. BibEntry-RB-1, 2 checks, or 
+            Table 5. BlockQuote-RB-1, 2 checks, or 
+            Table 5. Caption-RB-1, 2 checks, or 
+            Table 5. Code-RB-1, 2 checks, or 
+            Table 5. Document-RB-1, 2 checks, or 
+            Table 5. DocumentFragment-RB-1, 2 checks, or 
+            Table 5. Em-RB-1, 2 checks, or 
+            Table 5. FENote-RB-1, 2 checks, or 
+            Table 5. Figure-RB-1, 2 checks, or 
+            Table 5. Form-RB-1, 2 checks, or 
+            Table 5. Formula-RB-1, 2 checks, or 
+            Table 5. H-RB-1, 2 checks, or 
+            Table 5. Hn-RB-1, 12 checks, or 
+            Table 5. Index-RB-1, 2 checks, or 
+            Table 5. L-RB-1, 2 checks, or 
+            Table 5. LBody-RB-1, 2 checks, or 
+            Table 5. LI-RB-1, 2 checks, or 
+            Table 5. Lbl-RB-1, 2 checks, or 
+            Table 5. Link-RB-1, 2 checks, or 
+            Table 5. Note-RB-1, 2 checks, or 
+            Table 5. P-RB-1, 2 checks, or 
+            Table 5. Quote-RB-1, 2 checks, or 
+            Table 5. RB-RB-1, 2 checks, or 
+            Table 5. RP-RB-1, 2 checks, or 
+            Table 5. RT-RB-1, 2 checks, or 
+            Table 5. Reference-RB-1, 2 checks, or 
+            Table 5. Sect-RB-1, 2 checks, or 
+            Table 5. Span-RB-1, 2 checks, or 
+            Table 5. Strong-RB-1, 2 checks, or 
+            Table 5. StructTreeRoot-RB-1, 7 checks, or 
+            Table 5. Sub-RB-1, 2 checks, or 
+            Table 5. TBody-RB-1, 2 checks, or 
+            Table 5. TD-RB-1, 2 checks, or 
+            Table 5. TFoot-RB-1, 2 checks, or 
+            Table 5. TH-RB-1, 2 checks, or 
+            Table 5. THead-RB-1, 2 checks, or 
+            Table 5. TOC-RB-1, 2 checks, or 
+            Table 5. TOCI-RB-1, 2 checks, or 
+            Table 5. TR-RB-1, 2 checks, or 
+            Table 5. Table-RB-1, 2 checks, or 
+            Table 5. Title-RB-1, 2 checks, or 
+            Table 5. WP-RB-1, 2 checks, or 
+            Table 5. WT-RB-1, 2 checks, or 
+            Table 5. Warichu-RB-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2009,53 +2025,53 @@
             (@clause = 'Table 5. WP-RP' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-RP' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-RP' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-RP-1, 2 checks, or 
-            Art-RP-1, 2 checks, or 
-            Aside-RP-1, 2 checks, or 
-            BibEntry-RP-1, 2 checks, or 
-            BlockQuote-RP-1, 2 checks, or 
-            Caption-RP-1, 2 checks, or 
-            Code-RP-1, 2 checks, or 
-            Document-RP-1, 2 checks, or 
-            DocumentFragment-RP-1, 2 checks, or 
-            Em-RP-1, 2 checks, or 
-            FENote-RP-1, 2 checks, or 
-            Figure-RP-1, 2 checks, or 
-            Form-RP-1, 2 checks, or 
-            Formula-RP-1, 2 checks, or 
-            H-RP-1, 2 checks, or 
-            Hn-RP-1, 12 checks, or 
-            Index-RP-1, 2 checks, or 
-            L-RP-1, 2 checks, or 
-            LBody-RP-1, 2 checks, or 
-            LI-RP-1, 2 checks, or 
-            Lbl-RP-1, 2 checks, or 
-            Link-RP-1, 2 checks, or 
-            Note-RP-1, 2 checks, or 
-            P-RP-1, 2 checks, or 
-            Quote-RP-1, 2 checks, or 
-            RB-RP-1, 2 checks, or 
-            RP-RP-1, 2 checks, or 
-            RT-RP-1, 2 checks, or 
-            Reference-RP-1, 2 checks, or 
-            Sect-RP-1, 2 checks, or 
-            Span-RP-1, 2 checks, or 
-            Strong-RP-1, 2 checks, or 
-            StructTreeRoot-RP-1, 7 checks, or 
-            Sub-RP-1, 2 checks, or 
-            TBody-RP-1, 2 checks, or 
-            TD-RP-1, 2 checks, or 
-            TFoot-RP-1, 2 checks, or 
-            TH-RP-1, 2 checks, or 
-            THead-RP-1, 2 checks, or 
-            TOC-RP-1, 2 checks, or 
-            TOCI-RP-1, 2 checks, or 
-            TR-RP-1, 2 checks, or 
-            Table-RP-1, 2 checks, or 
-            Title-RP-1, 2 checks, or 
-            WP-RP-1, 2 checks, or 
-            WT-RP-1, 2 checks, or 
-            Warichu-RP-1, 2 checks</sch:assert>
+            Table 5. Annot-RP-1, 2 checks, or 
+            Table 5. Art-RP-1, 2 checks, or 
+            Table 5. Aside-RP-1, 2 checks, or 
+            Table 5. BibEntry-RP-1, 2 checks, or 
+            Table 5. BlockQuote-RP-1, 2 checks, or 
+            Table 5. Caption-RP-1, 2 checks, or 
+            Table 5. Code-RP-1, 2 checks, or 
+            Table 5. Document-RP-1, 2 checks, or 
+            Table 5. DocumentFragment-RP-1, 2 checks, or 
+            Table 5. Em-RP-1, 2 checks, or 
+            Table 5. FENote-RP-1, 2 checks, or 
+            Table 5. Figure-RP-1, 2 checks, or 
+            Table 5. Form-RP-1, 2 checks, or 
+            Table 5. Formula-RP-1, 2 checks, or 
+            Table 5. H-RP-1, 2 checks, or 
+            Table 5. Hn-RP-1, 12 checks, or 
+            Table 5. Index-RP-1, 2 checks, or 
+            Table 5. L-RP-1, 2 checks, or 
+            Table 5. LBody-RP-1, 2 checks, or 
+            Table 5. LI-RP-1, 2 checks, or 
+            Table 5. Lbl-RP-1, 2 checks, or 
+            Table 5. Link-RP-1, 2 checks, or 
+            Table 5. Note-RP-1, 2 checks, or 
+            Table 5. P-RP-1, 2 checks, or 
+            Table 5. Quote-RP-1, 2 checks, or 
+            Table 5. RB-RP-1, 2 checks, or 
+            Table 5. RP-RP-1, 2 checks, or 
+            Table 5. RT-RP-1, 2 checks, or 
+            Table 5. Reference-RP-1, 2 checks, or 
+            Table 5. Sect-RP-1, 2 checks, or 
+            Table 5. Span-RP-1, 2 checks, or 
+            Table 5. Strong-RP-1, 2 checks, or 
+            Table 5. StructTreeRoot-RP-1, 7 checks, or 
+            Table 5. Sub-RP-1, 2 checks, or 
+            Table 5. TBody-RP-1, 2 checks, or 
+            Table 5. TD-RP-1, 2 checks, or 
+            Table 5. TFoot-RP-1, 2 checks, or 
+            Table 5. TH-RP-1, 2 checks, or 
+            Table 5. THead-RP-1, 2 checks, or 
+            Table 5. TOC-RP-1, 2 checks, or 
+            Table 5. TOCI-RP-1, 2 checks, or 
+            Table 5. TR-RP-1, 2 checks, or 
+            Table 5. Table-RP-1, 2 checks, or 
+            Table 5. Title-RP-1, 2 checks, or 
+            Table 5. WP-RP-1, 2 checks, or 
+            Table 5. WT-RP-1, 2 checks, or 
+            Table 5. Warichu-RP-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2111,53 +2127,53 @@
             (@clause = 'Table 5. WP-RT' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-RT' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-RT' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-RT-1, 2 checks, or 
-            Art-RT-1, 2 checks, or 
-            Aside-RT-1, 2 checks, or 
-            BibEntry-RT-1, 2 checks, or 
-            BlockQuote-RT-1, 2 checks, or 
-            Caption-RT-1, 2 checks, or 
-            Code-RT-1, 2 checks, or 
-            Document-RT-1, 2 checks, or 
-            DocumentFragment-RT-1, 2 checks, or 
-            Em-RT-1, 2 checks, or 
-            FENote-RT-1, 2 checks, or 
-            Figure-RT-1, 2 checks, or 
-            Form-RT-1, 2 checks, or 
-            Formula-RT-1, 2 checks, or 
-            H-RT-1, 2 checks, or 
-            Hn-RT-1, 12 checks, or 
-            Index-RT-1, 2 checks, or 
-            L-RT-1, 2 checks, or 
-            LBody-RT-1, 2 checks, or 
-            LI-RT-1, 2 checks, or 
-            Lbl-RT-1, 2 checks, or 
-            Link-RT-1, 2 checks, or 
-            Note-RT-1, 2 checks, or 
-            P-RT-1, 2 checks, or 
-            Quote-RT-1, 2 checks, or 
-            RB-RT-1, 2 checks, or 
-            RP-RT-1, 2 checks, or 
-            RT-RT-1, 2 checks, or 
-            Reference-RT-1, 2 checks, or 
-            Sect-RT-1, 2 checks, or 
-            Span-RT-1, 2 checks, or 
-            Strong-RT-1, 2 checks, or 
-            StructTreeRoot-RT-1, 7 checks, or 
-            Sub-RT-1, 2 checks, or 
-            TBody-RT-1, 2 checks, or 
-            TD-RT-1, 2 checks, or 
-            TFoot-RT-1, 2 checks, or 
-            TH-RT-1, 2 checks, or 
-            THead-RT-1, 2 checks, or 
-            TOC-RT-1, 2 checks, or 
-            TOCI-RT-1, 2 checks, or 
-            TR-RT-1, 2 checks, or 
-            Table-RT-1, 2 checks, or 
-            Title-RT-1, 2 checks, or 
-            WP-RT-1, 2 checks, or 
-            WT-RT-1, 2 checks, or 
-            Warichu-RT-1, 2 checks</sch:assert>
+            Table 5. Annot-RT-1, 2 checks, or 
+            Table 5. Art-RT-1, 2 checks, or 
+            Table 5. Aside-RT-1, 2 checks, or 
+            Table 5. BibEntry-RT-1, 2 checks, or 
+            Table 5. BlockQuote-RT-1, 2 checks, or 
+            Table 5. Caption-RT-1, 2 checks, or 
+            Table 5. Code-RT-1, 2 checks, or 
+            Table 5. Document-RT-1, 2 checks, or 
+            Table 5. DocumentFragment-RT-1, 2 checks, or 
+            Table 5. Em-RT-1, 2 checks, or 
+            Table 5. FENote-RT-1, 2 checks, or 
+            Table 5. Figure-RT-1, 2 checks, or 
+            Table 5. Form-RT-1, 2 checks, or 
+            Table 5. Formula-RT-1, 2 checks, or 
+            Table 5. H-RT-1, 2 checks, or 
+            Table 5. Hn-RT-1, 12 checks, or 
+            Table 5. Index-RT-1, 2 checks, or 
+            Table 5. L-RT-1, 2 checks, or 
+            Table 5. LBody-RT-1, 2 checks, or 
+            Table 5. LI-RT-1, 2 checks, or 
+            Table 5. Lbl-RT-1, 2 checks, or 
+            Table 5. Link-RT-1, 2 checks, or 
+            Table 5. Note-RT-1, 2 checks, or 
+            Table 5. P-RT-1, 2 checks, or 
+            Table 5. Quote-RT-1, 2 checks, or 
+            Table 5. RB-RT-1, 2 checks, or 
+            Table 5. RP-RT-1, 2 checks, or 
+            Table 5. RT-RT-1, 2 checks, or 
+            Table 5. Reference-RT-1, 2 checks, or 
+            Table 5. Sect-RT-1, 2 checks, or 
+            Table 5. Span-RT-1, 2 checks, or 
+            Table 5. Strong-RT-1, 2 checks, or 
+            Table 5. StructTreeRoot-RT-1, 7 checks, or 
+            Table 5. Sub-RT-1, 2 checks, or 
+            Table 5. TBody-RT-1, 2 checks, or 
+            Table 5. TD-RT-1, 2 checks, or 
+            Table 5. TFoot-RT-1, 2 checks, or 
+            Table 5. TH-RT-1, 2 checks, or 
+            Table 5. THead-RT-1, 2 checks, or 
+            Table 5. TOC-RT-1, 2 checks, or 
+            Table 5. TOCI-RT-1, 2 checks, or 
+            Table 5. TR-RT-1, 2 checks, or 
+            Table 5. Table-RT-1, 2 checks, or 
+            Table 5. Title-RT-1, 2 checks, or 
+            Table 5. WP-RT-1, 2 checks, or 
+            Table 5. WT-RT-1, 2 checks, or 
+            Table 5. Warichu-RT-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2182,22 +2198,22 @@
             (@clause = 'Table 5. TR-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Reference' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Reference-1, 2 checks, or 
-            Document-Reference-1, 2 checks, or 
-            DocumentFragment-Reference-1, 2 checks, or 
-            L-Reference-1, 2 checks, or 
-            LI-Reference-1, 2 checks, or 
-            Reference-Reference-1, 2 checks, or 
-            Ruby-Reference-1, 2 checks, or 
-            Sect-Reference-1, 2 checks, or 
-            StructTreeRoot-Reference-1, 7 checks, or 
-            TBody-Reference-1, 2 checks, or 
-            TFoot-Reference-1, 2 checks, or 
-            THead-Reference-1, 2 checks, or 
-            TOC-Reference-1, 2 checks, or 
-            TR-Reference-1, 2 checks, or 
-            Table-Reference-1, 2 checks, or 
-            Warichu-Reference-1, 2 checks</sch:assert>
+            Table 5. Art-Reference-1, 2 checks, or 
+            Table 5. Document-Reference-1, 2 checks, or 
+            Table 5. DocumentFragment-Reference-1, 2 checks, or 
+            Table 5. L-Reference-1, 2 checks, or 
+            Table 5. LI-Reference-1, 2 checks, or 
+            Table 5. Reference-Reference-1, 2 checks, or 
+            Table 5. Ruby-Reference-1, 2 checks, or 
+            Table 5. Sect-Reference-1, 2 checks, or 
+            Table 5. StructTreeRoot-Reference-1, 7 checks, or 
+            Table 5. TBody-Reference-1, 2 checks, or 
+            Table 5. TFoot-Reference-1, 2 checks, or 
+            Table 5. THead-Reference-1, 2 checks, or 
+            Table 5. TOC-Reference-1, 2 checks, or 
+            Table 5. TR-Reference-1, 2 checks, or 
+            Table 5. Table-Reference-1, 2 checks, or 
+            Table 5. Warichu-Reference-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2236,34 +2252,34 @@
             (@clause = 'Table 5. WT-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Ruby' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.23-1, 115 checks, or 
-            Art-Ruby-1, 2 checks, or 
-            Aside-Ruby-1, 2 checks, or 
-            BibEntry-Ruby-1, 2 checks, or 
-            BlockQuote-Ruby-1, 2 checks, or 
-            Code-Ruby-1, 2 checks, or 
-            Document-Ruby-1, 2 checks, or 
-            DocumentFragment-Ruby-1, 2 checks, or 
-            Form-Ruby-1, 2 checks, or 
-            Index-Ruby-1, 2 checks, or 
-            L-Ruby-1, 2 checks, or 
-            LI-Ruby-1, 2 checks, or 
-            RB-Ruby-1, 2 checks, or 
-            RP-Ruby-1, 2 checks, or 
-            RT-Ruby-1, 2 checks, or 
-            Reference-Ruby-1, 2 checks, or 
-            Ruby-Ruby-1, 2 checks, or 
-            Sect-Ruby-1, 2 checks, or 
-            StructTreeRoot-Ruby-1, 7 checks, or 
-            TBody-Ruby-1, 2 checks, or 
-            TFoot-Ruby-1, 2 checks, or 
-            THead-Ruby-1, 2 checks, or 
-            TOC-Ruby-1, 2 checks, or 
-            TOCI-Ruby-1, 2 checks, or 
-            TR-Ruby-1, 2 checks, or 
-            Table-Ruby-1, 2 checks, or 
-            WP-Ruby-1, 2 checks, or 
-            WT-Ruby-1, 2 checks, or 
-            Warichu-Ruby-1, 2 checks</sch:assert>
+            Table 5. Art-Ruby-1, 2 checks, or 
+            Table 5. Aside-Ruby-1, 2 checks, or 
+            Table 5. BibEntry-Ruby-1, 2 checks, or 
+            Table 5. BlockQuote-Ruby-1, 2 checks, or 
+            Table 5. Code-Ruby-1, 2 checks, or 
+            Table 5. Document-Ruby-1, 2 checks, or 
+            Table 5. DocumentFragment-Ruby-1, 2 checks, or 
+            Table 5. Form-Ruby-1, 2 checks, or 
+            Table 5. Index-Ruby-1, 2 checks, or 
+            Table 5. L-Ruby-1, 2 checks, or 
+            Table 5. LI-Ruby-1, 2 checks, or 
+            Table 5. RB-Ruby-1, 2 checks, or 
+            Table 5. RP-Ruby-1, 2 checks, or 
+            Table 5. RT-Ruby-1, 2 checks, or 
+            Table 5. Reference-Ruby-1, 2 checks, or 
+            Table 5. Ruby-Ruby-1, 2 checks, or 
+            Table 5. Sect-Ruby-1, 2 checks, or 
+            Table 5. StructTreeRoot-Ruby-1, 7 checks, or 
+            Table 5. TBody-Ruby-1, 2 checks, or 
+            Table 5. TFoot-Ruby-1, 2 checks, or 
+            Table 5. THead-Ruby-1, 2 checks, or 
+            Table 5. TOC-Ruby-1, 2 checks, or 
+            Table 5. TOCI-Ruby-1, 2 checks, or 
+            Table 5. TR-Ruby-1, 2 checks, or 
+            Table 5. Table-Ruby-1, 2 checks, or 
+            Table 5. WP-Ruby-1, 2 checks, or 
+            Table 5. WT-Ruby-1, 2 checks, or 
+            Table 5. Warichu-Ruby-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2288,6 +2304,7 @@
             (@clause = 'Table 5. Reference-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-H' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. Sect-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Span-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Sect' and @testNumber = '1' and @failedChecks = '7') or 
@@ -2303,37 +2320,38 @@
             (@clause = 'Table 5. WP-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Sect' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Sect-1, 2 checks, or 
-            Code-Sect-1, 2 checks, or 
-            Em-Sect-1, 2 checks, or 
-            Form-Sect-1, 2 checks, or 
-            Formula-Sect-1, 2 checks, or 
-            L-Sect-1, 2 checks, or 
-            LI-Sect-1, 2 checks, or 
-            Lbl-Sect-1, 2 checks, or 
-            P-Sect-1, 2 checks, or 
-            Quote-Sect-1, 2 checks, or 
-            RB-Sect-1, 2 checks, or 
-            RP-Sect-1, 2 checks, or 
-            RT-Sect-1, 2 checks, or 
-            Reference-Sect-1, 2 checks, or 
-            Ruby-Sect-1, 2 checks, or 
-            Sect-H-1, 1 check, or 
-            Span-Sect-1, 2 checks, or 
-            Strong-Sect-1, 2 checks, or 
-            StructTreeRoot-Sect-1, 7 checks, or 
-            Sub-Sect-1, 2 checks, or 
-            TBody-Sect-1, 2 checks, or 
-            TFoot-Sect-1, 2 checks, or 
-            THead-Sect-1, 2 checks, or 
-            TOC-Sect-1, 2 checks, or 
-            TOCI-Sect-1, 2 checks, or 
-            TR-Sect-1, 2 checks, or 
-            Table-Sect-1, 2 checks, or 
-            Title-Sect-1, 2 checks, or 
-            WP-Sect-1, 2 checks, or 
-            WT-Sect-1, 2 checks, or 
-            Warichu-Sect-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Sect-1, 2 checks, or 
+            Table 5. Code-Sect-1, 2 checks, or 
+            Table 5. Em-Sect-1, 2 checks, or 
+            Table 5. Form-Sect-1, 2 checks, or 
+            Table 5. Formula-Sect-1, 2 checks, or 
+            Table 5. L-Sect-1, 2 checks, or 
+            Table 5. LI-Sect-1, 2 checks, or 
+            Table 5. Lbl-Sect-1, 2 checks, or 
+            Table 5. P-Sect-1, 2 checks, or 
+            Table 5. Quote-Sect-1, 2 checks, or 
+            Table 5. RB-Sect-1, 2 checks, or 
+            Table 5. RP-Sect-1, 2 checks, or 
+            Table 5. RT-Sect-1, 2 checks, or 
+            Table 5. Reference-Sect-1, 2 checks, or 
+            Table 5. Ruby-Sect-1, 2 checks, or 
+            Table 5. Sect-H-1, 1 check, or 
+            Table 5. Sect-content-1, 1 check, or 
+            Table 5. Span-Sect-1, 2 checks, or 
+            Table 5. Strong-Sect-1, 2 checks, or 
+            Table 5. StructTreeRoot-Sect-1, 7 checks, or 
+            Table 5. Sub-Sect-1, 2 checks, or 
+            Table 5. TBody-Sect-1, 2 checks, or 
+            Table 5. TFoot-Sect-1, 2 checks, or 
+            Table 5. THead-Sect-1, 2 checks, or 
+            Table 5. TOC-Sect-1, 2 checks, or 
+            Table 5. TOCI-Sect-1, 2 checks, or 
+            Table 5. TR-Sect-1, 2 checks, or 
+            Table 5. Table-Sect-1, 2 checks, or 
+            Table 5. Title-Sect-1, 2 checks, or 
+            Table 5. WP-Sect-1, 2 checks, or 
+            Table 5. WT-Sect-1, 2 checks, or 
+            Table 5. Warichu-Sect-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2372,26 +2390,26 @@
             (@clause = 'Table 5. TR-Span' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Span' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Span' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Span-1, 2 checks, or 
-            Aside-Span-1, 2 checks, or 
-            BlockQuote-Span-1, 2 checks, or 
-            Document-Span-1, 2 checks, or 
-            DocumentFragment-Span-1, 2 checks, or 
-            Form-Span-1, 2 checks, or 
-            Index-Span-1, 2 checks, or 
-            L-Span-1, 2 checks, or 
-            LI-Span-1, 2 checks, or 
-            Ruby-Span-1, 2 checks, or 
-            Sect-Span-1, 2 checks, or 
-            StructTreeRoot-Span-1, 7 checks, or 
-            TBody-Span-1, 2 checks, or 
-            TFoot-Span-1, 2 checks, or 
-            THead-Span-1, 2 checks, or 
-            TOC-Span-1, 2 checks, or 
-            TOCI-Span-1, 2 checks, or 
-            TR-Span-1, 2 checks, or 
-            Table-Span-1, 2 checks, or 
-            Warichu-Span-1, 2 checks</sch:assert>
+            Table 5. Art-Span-1, 2 checks, or 
+            Table 5. Aside-Span-1, 2 checks, or 
+            Table 5. BlockQuote-Span-1, 2 checks, or 
+            Table 5. Document-Span-1, 2 checks, or 
+            Table 5. DocumentFragment-Span-1, 2 checks, or 
+            Table 5. Form-Span-1, 2 checks, or 
+            Table 5. Index-Span-1, 2 checks, or 
+            Table 5. L-Span-1, 2 checks, or 
+            Table 5. LI-Span-1, 2 checks, or 
+            Table 5. Ruby-Span-1, 2 checks, or 
+            Table 5. Sect-Span-1, 2 checks, or 
+            Table 5. StructTreeRoot-Span-1, 7 checks, or 
+            Table 5. TBody-Span-1, 2 checks, or 
+            Table 5. TFoot-Span-1, 2 checks, or 
+            Table 5. THead-Span-1, 2 checks, or 
+            Table 5. TOC-Span-1, 2 checks, or 
+            Table 5. TOCI-Span-1, 2 checks, or 
+            Table 5. TR-Span-1, 2 checks, or 
+            Table 5. Table-Span-1, 2 checks, or 
+            Table 5. Warichu-Span-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2420,26 +2438,26 @@
             (@clause = 'Table 5. TR-Strong' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Strong' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Strong' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Strong-1, 2 checks, or 
-            Aside-Strong-1, 2 checks, or 
-            BlockQuote-Strong-1, 2 checks, or 
-            Document-Strong-1, 2 checks, or 
-            DocumentFragment-Strong-1, 2 checks, or 
-            Form-Strong-1, 2 checks, or 
-            Index-Strong-1, 2 checks, or 
-            L-Strong-1, 2 checks, or 
-            LI-Strong-1, 2 checks, or 
-            Ruby-Strong-1, 2 checks, or 
-            Sect-Strong-1, 2 checks, or 
-            StructTreeRoot-Strong-1, 7 checks, or 
-            TBody-Strong-1, 2 checks, or 
-            TFoot-Strong-1, 2 checks, or 
-            THead-Strong-1, 2 checks, or 
-            TOC-Strong-1, 2 checks, or 
-            TOCI-Strong-1, 2 checks, or 
-            TR-Strong-1, 2 checks, or 
-            Table-Strong-1, 2 checks, or 
-            Warichu-Strong-1, 2 checks</sch:assert>
+            Table 5. Art-Strong-1, 2 checks, or 
+            Table 5. Aside-Strong-1, 2 checks, or 
+            Table 5. BlockQuote-Strong-1, 2 checks, or 
+            Table 5. Document-Strong-1, 2 checks, or 
+            Table 5. DocumentFragment-Strong-1, 2 checks, or 
+            Table 5. Form-Strong-1, 2 checks, or 
+            Table 5. Index-Strong-1, 2 checks, or 
+            Table 5. L-Strong-1, 2 checks, or 
+            Table 5. LI-Strong-1, 2 checks, or 
+            Table 5. Ruby-Strong-1, 2 checks, or 
+            Table 5. Sect-Strong-1, 2 checks, or 
+            Table 5. StructTreeRoot-Strong-1, 7 checks, or 
+            Table 5. TBody-Strong-1, 2 checks, or 
+            Table 5. TFoot-Strong-1, 2 checks, or 
+            Table 5. THead-Strong-1, 2 checks, or 
+            Table 5. TOC-Strong-1, 2 checks, or 
+            Table 5. TOCI-Strong-1, 2 checks, or 
+            Table 5. TR-Strong-1, 2 checks, or 
+            Table 5. Table-Strong-1, 2 checks, or 
+            Table 5. Warichu-Strong-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2474,32 +2492,32 @@
             (@clause = 'Table 5. Table-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Title-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Sub' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Art-Sub-1, 2 checks, or 
-            Aside-Sub-1, 2 checks, or 
-            BibEntry-Sub-1, 2 checks, or 
-            BlockQuote-Sub-1, 2 checks, or 
-            Document-Sub-1, 2 checks, or 
-            DocumentFragment-Sub-1, 2 checks, or 
-            Form-Sub-1, 2 checks, or 
-            Index-Sub-1, 2 checks, or 
-            L-Sub-1, 2 checks, or 
-            LI-Sub-1, 2 checks, or 
-            Reference-Sub-1, 2 checks, or 
-            Ruby-Sub-1, 2 checks, or 
-            Sect-Sub-1, 2 checks, or 
-            StructTreeRoot-Sub-1, 7 checks, or 
-            Sub-Sub-1, 2 checks, or 
-            TBody-Sub-1, 2 checks, or 
-            TD-Sub-1, 2 checks, or 
-            TFoot-Sub-1, 2 checks, or 
-            TH-Sub-1, 2 checks, or 
-            THead-Sub-1, 2 checks, or 
-            TOC-Sub-1, 2 checks, or 
-            TOCI-Sub-1, 2 checks, or 
-            TR-Sub-1, 2 checks, or 
-            Table-Sub-1, 2 checks, or 
-            Title-Sub-1, 2 checks, or 
-            Warichu-Sub-1, 2 checks</sch:assert>
+            Table 5. Art-Sub-1, 2 checks, or 
+            Table 5. Aside-Sub-1, 2 checks, or 
+            Table 5. BibEntry-Sub-1, 2 checks, or 
+            Table 5. BlockQuote-Sub-1, 2 checks, or 
+            Table 5. Document-Sub-1, 2 checks, or 
+            Table 5. DocumentFragment-Sub-1, 2 checks, or 
+            Table 5. Form-Sub-1, 2 checks, or 
+            Table 5. Index-Sub-1, 2 checks, or 
+            Table 5. L-Sub-1, 2 checks, or 
+            Table 5. LI-Sub-1, 2 checks, or 
+            Table 5. Reference-Sub-1, 2 checks, or 
+            Table 5. Ruby-Sub-1, 2 checks, or 
+            Table 5. Sect-Sub-1, 2 checks, or 
+            Table 5. StructTreeRoot-Sub-1, 7 checks, or 
+            Table 5. Sub-Sub-1, 2 checks, or 
+            Table 5. TBody-Sub-1, 2 checks, or 
+            Table 5. TD-Sub-1, 2 checks, or 
+            Table 5. TFoot-Sub-1, 2 checks, or 
+            Table 5. TH-Sub-1, 2 checks, or 
+            Table 5. THead-Sub-1, 2 checks, or 
+            Table 5. TOC-Sub-1, 2 checks, or 
+            Table 5. TOCI-Sub-1, 2 checks, or 
+            Table 5. TR-Sub-1, 2 checks, or 
+            Table 5. Table-Sub-1, 2 checks, or 
+            Table 5. Title-Sub-1, 2 checks, or 
+            Table 5. Warichu-Sub-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2544,6 +2562,7 @@
             (@clause = 'Table 5. StructTreeRoot-TBody' and @testNumber = '1' and @failedChecks = '7') or 
             (@clause = 'Table 5. Sub-TBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TBody-TBody' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. TBody-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. TD-TBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TFoot-TBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TH-TBody' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2555,53 +2574,54 @@
             (@clause = 'Table 5. WP-TBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TBody' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TBody' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TBody-1, 2 checks, or 
-            Art-TBody-1, 2 checks, or 
-            Aside-TBody-1, 2 checks, or 
-            BibEntry-TBody-1, 2 checks, or 
-            BlockQuote-TBody-1, 2 checks, or 
-            Caption-TBody-1, 2 checks, or 
-            Code-TBody-1, 2 checks, or 
-            Document-TBody-1, 2 checks, or 
-            DocumentFragment-TBody-1, 2 checks, or 
-            Em-TBody-1, 2 checks, or 
-            FENote-TBody-1, 2 checks, or 
-            Figure-TBody-1, 2 checks, or 
-            Form-TBody-1, 2 checks, or 
-            Formula-TBody-1, 2 checks, or 
-            H-TBody-1, 2 checks, or 
-            Hn-TBody-1, 12 checks, or 
-            Index-TBody-1, 2 checks, or 
-            L-TBody-1, 2 checks, or 
-            LBody-TBody-1, 2 checks, or 
-            LI-TBody-1, 2 checks, or 
-            Lbl-TBody-1, 2 checks, or 
-            Link-TBody-1, 2 checks, or 
-            Note-TBody-1, 2 checks, or 
-            P-TBody-1, 2 checks, or 
-            Quote-TBody-1, 2 checks, or 
-            RB-TBody-1, 2 checks, or 
-            RP-TBody-1, 2 checks, or 
-            RT-TBody-1, 2 checks, or 
-            Reference-TBody-1, 2 checks, or 
-            Ruby-TBody-1, 2 checks, or 
-            Sect-TBody-1, 2 checks, or 
-            Span-TBody-1, 2 checks, or 
-            Strong-TBody-1, 2 checks, or 
-            StructTreeRoot-TBody-1, 7 checks, or 
-            Sub-TBody-1, 2 checks, or 
-            TBody-TBody-1, 2 checks, or 
-            TD-TBody-1, 2 checks, or 
-            TFoot-TBody-1, 2 checks, or 
-            TH-TBody-1, 2 checks, or 
-            THead-TBody-1, 2 checks, or 
-            TOC-TBody-1, 2 checks, or 
-            TOCI-TBody-1, 2 checks, or 
-            TR-TBody-1, 2 checks, or 
-            Title-TBody-1, 2 checks, or 
-            WP-TBody-1, 2 checks, or 
-            WT-TBody-1, 2 checks, or 
-            Warichu-TBody-1, 2 checks</sch:assert>
+            Table 5. Annot-TBody-1, 2 checks, or 
+            Table 5. Art-TBody-1, 2 checks, or 
+            Table 5. Aside-TBody-1, 2 checks, or 
+            Table 5. BibEntry-TBody-1, 2 checks, or 
+            Table 5. BlockQuote-TBody-1, 2 checks, or 
+            Table 5. Caption-TBody-1, 2 checks, or 
+            Table 5. Code-TBody-1, 2 checks, or 
+            Table 5. Document-TBody-1, 2 checks, or 
+            Table 5. DocumentFragment-TBody-1, 2 checks, or 
+            Table 5. Em-TBody-1, 2 checks, or 
+            Table 5. FENote-TBody-1, 2 checks, or 
+            Table 5. Figure-TBody-1, 2 checks, or 
+            Table 5. Form-TBody-1, 2 checks, or 
+            Table 5. Formula-TBody-1, 2 checks, or 
+            Table 5. H-TBody-1, 2 checks, or 
+            Table 5. Hn-TBody-1, 12 checks, or 
+            Table 5. Index-TBody-1, 2 checks, or 
+            Table 5. L-TBody-1, 2 checks, or 
+            Table 5. LBody-TBody-1, 2 checks, or 
+            Table 5. LI-TBody-1, 2 checks, or 
+            Table 5. Lbl-TBody-1, 2 checks, or 
+            Table 5. Link-TBody-1, 2 checks, or 
+            Table 5. Note-TBody-1, 2 checks, or 
+            Table 5. P-TBody-1, 2 checks, or 
+            Table 5. Quote-TBody-1, 2 checks, or 
+            Table 5. RB-TBody-1, 2 checks, or 
+            Table 5. RP-TBody-1, 2 checks, or 
+            Table 5. RT-TBody-1, 2 checks, or 
+            Table 5. Reference-TBody-1, 2 checks, or 
+            Table 5. Ruby-TBody-1, 2 checks, or 
+            Table 5. Sect-TBody-1, 2 checks, or 
+            Table 5. Span-TBody-1, 2 checks, or 
+            Table 5. Strong-TBody-1, 2 checks, or 
+            Table 5. StructTreeRoot-TBody-1, 7 checks, or 
+            Table 5. Sub-TBody-1, 2 checks, or 
+            Table 5. TBody-TBody-1, 2 checks, or 
+            Table 5. TBody-content-1, 1 check, or 
+            Table 5. TD-TBody-1, 2 checks, or 
+            Table 5. TFoot-TBody-1, 2 checks, or 
+            Table 5. TH-TBody-1, 2 checks, or 
+            Table 5. THead-TBody-1, 2 checks, or 
+            Table 5. TOC-TBody-1, 2 checks, or 
+            Table 5. TOCI-TBody-1, 2 checks, or 
+            Table 5. TR-TBody-1, 2 checks, or 
+            Table 5. Title-TBody-1, 2 checks, or 
+            Table 5. WP-TBody-1, 2 checks, or 
+            Table 5. WT-TBody-1, 2 checks, or 
+            Table 5. Warichu-TBody-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2658,54 +2678,54 @@
             (@clause = 'Table 5. WP-TD' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TD' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TD' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TD-1, 2 checks, or 
-            Art-TD-1, 2 checks, or 
-            Aside-TD-1, 2 checks, or 
-            BibEntry-TD-1, 2 checks, or 
-            BlockQuote-TD-1, 2 checks, or 
-            Caption-TD-1, 2 checks, or 
-            Code-TD-1, 2 checks, or 
-            Document-TD-1, 2 checks, or 
-            DocumentFragment-TD-1, 2 checks, or 
-            Em-TD-1, 2 checks, or 
-            FENote-TD-1, 2 checks, or 
-            Figure-TD-1, 2 checks, or 
-            Form-TD-1, 2 checks, or 
-            Formula-TD-1, 2 checks, or 
-            H-TD-1, 2 checks, or 
-            Hn-TD-1, 12 checks, or 
-            Index-TD-1, 2 checks, or 
-            L-TD-1, 2 checks, or 
-            LBody-TD-1, 2 checks, or 
-            LI-TD-1, 2 checks, or 
-            Lbl-TD-1, 2 checks, or 
-            Link-TD-1, 2 checks, or 
-            Note-TD-1, 2 checks, or 
-            P-TD-1, 2 checks, or 
-            Quote-TD-1, 2 checks, or 
-            RB-TD-1, 2 checks, or 
-            RP-TD-1, 2 checks, or 
-            RT-TD-1, 2 checks, or 
-            Reference-TD-1, 2 checks, or 
-            Ruby-TD-1, 2 checks, or 
-            Sect-TD-1, 2 checks, or 
-            Span-TD-1, 2 checks, or 
-            Strong-TD-1, 2 checks, or 
-            StructTreeRoot-TD-1, 7 checks, or 
-            Sub-TD-1, 2 checks, or 
-            TBody-TD-1, 2 checks, or 
-            TD-H-1, 1 check, or 
-            TD-TD-1, 2 checks, or 
-            TFoot-TD-1, 2 checks, or 
-            TH-TD-1, 2 checks, or 
-            THead-TD-1, 2 checks, or 
-            TOC-TD-1, 2 checks, or 
-            TOCI-TD-1, 2 checks, or 
-            Table-TD-1, 2 checks, or 
-            Title-TD-1, 2 checks, or 
-            WP-TD-1, 2 checks, or 
-            WT-TD-1, 2 checks, or 
-            Warichu-TD-1, 2 checks</sch:assert>
+            Table 5. Annot-TD-1, 2 checks, or 
+            Table 5. Art-TD-1, 2 checks, or 
+            Table 5. Aside-TD-1, 2 checks, or 
+            Table 5. BibEntry-TD-1, 2 checks, or 
+            Table 5. BlockQuote-TD-1, 2 checks, or 
+            Table 5. Caption-TD-1, 2 checks, or 
+            Table 5. Code-TD-1, 2 checks, or 
+            Table 5. Document-TD-1, 2 checks, or 
+            Table 5. DocumentFragment-TD-1, 2 checks, or 
+            Table 5. Em-TD-1, 2 checks, or 
+            Table 5. FENote-TD-1, 2 checks, or 
+            Table 5. Figure-TD-1, 2 checks, or 
+            Table 5. Form-TD-1, 2 checks, or 
+            Table 5. Formula-TD-1, 2 checks, or 
+            Table 5. H-TD-1, 2 checks, or 
+            Table 5. Hn-TD-1, 12 checks, or 
+            Table 5. Index-TD-1, 2 checks, or 
+            Table 5. L-TD-1, 2 checks, or 
+            Table 5. LBody-TD-1, 2 checks, or 
+            Table 5. LI-TD-1, 2 checks, or 
+            Table 5. Lbl-TD-1, 2 checks, or 
+            Table 5. Link-TD-1, 2 checks, or 
+            Table 5. Note-TD-1, 2 checks, or 
+            Table 5. P-TD-1, 2 checks, or 
+            Table 5. Quote-TD-1, 2 checks, or 
+            Table 5. RB-TD-1, 2 checks, or 
+            Table 5. RP-TD-1, 2 checks, or 
+            Table 5. RT-TD-1, 2 checks, or 
+            Table 5. Reference-TD-1, 2 checks, or 
+            Table 5. Ruby-TD-1, 2 checks, or 
+            Table 5. Sect-TD-1, 2 checks, or 
+            Table 5. Span-TD-1, 2 checks, or 
+            Table 5. Strong-TD-1, 2 checks, or 
+            Table 5. StructTreeRoot-TD-1, 7 checks, or 
+            Table 5. Sub-TD-1, 2 checks, or 
+            Table 5. TBody-TD-1, 2 checks, or 
+            Table 5. TD-H-1, 1 check, or 
+            Table 5. TD-TD-1, 2 checks, or 
+            Table 5. TFoot-TD-1, 2 checks, or 
+            Table 5. TH-TD-1, 2 checks, or 
+            Table 5. THead-TD-1, 2 checks, or 
+            Table 5. TOC-TD-1, 2 checks, or 
+            Table 5. TOCI-TD-1, 2 checks, or 
+            Table 5. Table-TD-1, 2 checks, or 
+            Table 5. Title-TD-1, 2 checks, or 
+            Table 5. WP-TD-1, 2 checks, or 
+            Table 5. WT-TD-1, 2 checks, or 
+            Table 5. Warichu-TD-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2752,6 +2772,7 @@
             (@clause = 'Table 5. TBody-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TD-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TFoot-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. TFoot-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. TH-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. THead-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOC-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2761,53 +2782,54 @@
             (@clause = 'Table 5. WP-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TFoot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TFoot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TFoot-1, 2 checks, or 
-            Art-TFoot-1, 2 checks, or 
-            Aside-TFoot-1, 2 checks, or 
-            BibEntry-TFoot-1, 2 checks, or 
-            BlockQuote-TFoot-1, 2 checks, or 
-            Caption-TFoot-1, 2 checks, or 
-            Code-TFoot-1, 2 checks, or 
-            Document-TFoot-1, 2 checks, or 
-            DocumentFragment-TFoot-1, 2 checks, or 
-            Em-TFoot-1, 2 checks, or 
-            FENote-TFoot-1, 2 checks, or 
-            Figure-TFoot-1, 2 checks, or 
-            Form-TFoot-1, 2 checks, or 
-            Formula-TFoot-1, 2 checks, or 
-            H-TFoot-1, 2 checks, or 
-            Hn-TFoot-1, 12 checks, or 
-            Index-TFoot-1, 2 checks, or 
-            L-TFoot-1, 2 checks, or 
-            LBody-TFoot-1, 2 checks, or 
-            LI-TFoot-1, 2 checks, or 
-            Lbl-TFoot-1, 2 checks, or 
-            Link-TFoot-1, 2 checks, or 
-            Note-TFoot-1, 2 checks, or 
-            P-TFoot-1, 2 checks, or 
-            Quote-TFoot-1, 2 checks, or 
-            RB-TFoot-1, 2 checks, or 
-            RP-TFoot-1, 2 checks, or 
-            RT-TFoot-1, 2 checks, or 
-            Reference-TFoot-1, 2 checks, or 
-            Ruby-TFoot-1, 2 checks, or 
-            Sect-TFoot-1, 2 checks, or 
-            Span-TFoot-1, 2 checks, or 
-            Strong-TFoot-1, 2 checks, or 
-            StructTreeRoot-TFoot-1, 7 checks, or 
-            Sub-TFoot-1, 2 checks, or 
-            TBody-TFoot-1, 2 checks, or 
-            TD-TFoot-1, 2 checks, or 
-            TFoot-TFoot-1, 2 checks, or 
-            TH-TFoot-1, 2 checks, or 
-            THead-TFoot-1, 2 checks, or 
-            TOC-TFoot-1, 2 checks, or 
-            TOCI-TFoot-1, 2 checks, or 
-            TR-TFoot-1, 2 checks, or 
-            Title-TFoot-1, 2 checks, or 
-            WP-TFoot-1, 2 checks, or 
-            WT-TFoot-1, 2 checks, or 
-            Warichu-TFoot-1, 2 checks</sch:assert>
+            Table 5. Annot-TFoot-1, 2 checks, or 
+            Table 5. Art-TFoot-1, 2 checks, or 
+            Table 5. Aside-TFoot-1, 2 checks, or 
+            Table 5. BibEntry-TFoot-1, 2 checks, or 
+            Table 5. BlockQuote-TFoot-1, 2 checks, or 
+            Table 5. Caption-TFoot-1, 2 checks, or 
+            Table 5. Code-TFoot-1, 2 checks, or 
+            Table 5. Document-TFoot-1, 2 checks, or 
+            Table 5. DocumentFragment-TFoot-1, 2 checks, or 
+            Table 5. Em-TFoot-1, 2 checks, or 
+            Table 5. FENote-TFoot-1, 2 checks, or 
+            Table 5. Figure-TFoot-1, 2 checks, or 
+            Table 5. Form-TFoot-1, 2 checks, or 
+            Table 5. Formula-TFoot-1, 2 checks, or 
+            Table 5. H-TFoot-1, 2 checks, or 
+            Table 5. Hn-TFoot-1, 12 checks, or 
+            Table 5. Index-TFoot-1, 2 checks, or 
+            Table 5. L-TFoot-1, 2 checks, or 
+            Table 5. LBody-TFoot-1, 2 checks, or 
+            Table 5. LI-TFoot-1, 2 checks, or 
+            Table 5. Lbl-TFoot-1, 2 checks, or 
+            Table 5. Link-TFoot-1, 2 checks, or 
+            Table 5. Note-TFoot-1, 2 checks, or 
+            Table 5. P-TFoot-1, 2 checks, or 
+            Table 5. Quote-TFoot-1, 2 checks, or 
+            Table 5. RB-TFoot-1, 2 checks, or 
+            Table 5. RP-TFoot-1, 2 checks, or 
+            Table 5. RT-TFoot-1, 2 checks, or 
+            Table 5. Reference-TFoot-1, 2 checks, or 
+            Table 5. Ruby-TFoot-1, 2 checks, or 
+            Table 5. Sect-TFoot-1, 2 checks, or 
+            Table 5. Span-TFoot-1, 2 checks, or 
+            Table 5. Strong-TFoot-1, 2 checks, or 
+            Table 5. StructTreeRoot-TFoot-1, 7 checks, or 
+            Table 5. Sub-TFoot-1, 2 checks, or 
+            Table 5. TBody-TFoot-1, 2 checks, or 
+            Table 5. TD-TFoot-1, 2 checks, or 
+            Table 5. TFoot-TFoot-1, 2 checks, or 
+            Table 5. TFoot-content-1, 1 check, or 
+            Table 5. TH-TFoot-1, 2 checks, or 
+            Table 5. THead-TFoot-1, 2 checks, or 
+            Table 5. TOC-TFoot-1, 2 checks, or 
+            Table 5. TOCI-TFoot-1, 2 checks, or 
+            Table 5. TR-TFoot-1, 2 checks, or 
+            Table 5. Title-TFoot-1, 2 checks, or 
+            Table 5. WP-TFoot-1, 2 checks, or 
+            Table 5. WT-TFoot-1, 2 checks, or 
+            Table 5. Warichu-TFoot-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2864,54 +2886,54 @@
             (@clause = 'Table 5. WP-TH' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TH' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TH' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TH-1, 2 checks, or 
-            Art-TH-1, 2 checks, or 
-            Aside-TH-1, 2 checks, or 
-            BibEntry-TH-1, 2 checks, or 
-            BlockQuote-TH-1, 2 checks, or 
-            Caption-TH-1, 2 checks, or 
-            Code-TH-1, 2 checks, or 
-            Document-TH-1, 2 checks, or 
-            DocumentFragment-TH-1, 2 checks, or 
-            Em-TH-1, 2 checks, or 
-            FENote-TH-1, 2 checks, or 
-            Figure-TH-1, 2 checks, or 
-            Form-TH-1, 2 checks, or 
-            Formula-TH-1, 2 checks, or 
-            H-TH-1, 2 checks, or 
-            Hn-TH-1, 12 checks, or 
-            Index-TH-1, 2 checks, or 
-            L-TH-1, 2 checks, or 
-            LBody-TH-1, 2 checks, or 
-            LI-TH-1, 2 checks, or 
-            Lbl-TH-1, 2 checks, or 
-            Link-TH-1, 2 checks, or 
-            Note-TH-1, 2 checks, or 
-            P-TH-1, 2 checks, or 
-            Quote-TH-1, 2 checks, or 
-            RB-TH-1, 2 checks, or 
-            RP-TH-1, 2 checks, or 
-            RT-TH-1, 2 checks, or 
-            Reference-TH-1, 2 checks, or 
-            Ruby-TH-1, 2 checks, or 
-            Sect-TH-1, 2 checks, or 
-            Span-TH-1, 2 checks, or 
-            Strong-TH-1, 2 checks, or 
-            StructTreeRoot-TH-1, 7 checks, or 
-            Sub-TH-1, 2 checks, or 
-            TBody-TH-1, 2 checks, or 
-            TD-TH-1, 2 checks, or 
-            TFoot-TH-1, 2 checks, or 
-            TH-H-1, 1 check, or 
-            TH-TH-1, 2 checks, or 
-            THead-TH-1, 2 checks, or 
-            TOC-TH-1, 2 checks, or 
-            TOCI-TH-1, 2 checks, or 
-            Table-TH-1, 2 checks, or 
-            Title-TH-1, 2 checks, or 
-            WP-TH-1, 2 checks, or 
-            WT-TH-1, 2 checks, or 
-            Warichu-TH-1, 2 checks</sch:assert>
+            Table 5. Annot-TH-1, 2 checks, or 
+            Table 5. Art-TH-1, 2 checks, or 
+            Table 5. Aside-TH-1, 2 checks, or 
+            Table 5. BibEntry-TH-1, 2 checks, or 
+            Table 5. BlockQuote-TH-1, 2 checks, or 
+            Table 5. Caption-TH-1, 2 checks, or 
+            Table 5. Code-TH-1, 2 checks, or 
+            Table 5. Document-TH-1, 2 checks, or 
+            Table 5. DocumentFragment-TH-1, 2 checks, or 
+            Table 5. Em-TH-1, 2 checks, or 
+            Table 5. FENote-TH-1, 2 checks, or 
+            Table 5. Figure-TH-1, 2 checks, or 
+            Table 5. Form-TH-1, 2 checks, or 
+            Table 5. Formula-TH-1, 2 checks, or 
+            Table 5. H-TH-1, 2 checks, or 
+            Table 5. Hn-TH-1, 12 checks, or 
+            Table 5. Index-TH-1, 2 checks, or 
+            Table 5. L-TH-1, 2 checks, or 
+            Table 5. LBody-TH-1, 2 checks, or 
+            Table 5. LI-TH-1, 2 checks, or 
+            Table 5. Lbl-TH-1, 2 checks, or 
+            Table 5. Link-TH-1, 2 checks, or 
+            Table 5. Note-TH-1, 2 checks, or 
+            Table 5. P-TH-1, 2 checks, or 
+            Table 5. Quote-TH-1, 2 checks, or 
+            Table 5. RB-TH-1, 2 checks, or 
+            Table 5. RP-TH-1, 2 checks, or 
+            Table 5. RT-TH-1, 2 checks, or 
+            Table 5. Reference-TH-1, 2 checks, or 
+            Table 5. Ruby-TH-1, 2 checks, or 
+            Table 5. Sect-TH-1, 2 checks, or 
+            Table 5. Span-TH-1, 2 checks, or 
+            Table 5. Strong-TH-1, 2 checks, or 
+            Table 5. StructTreeRoot-TH-1, 7 checks, or 
+            Table 5. Sub-TH-1, 2 checks, or 
+            Table 5. TBody-TH-1, 2 checks, or 
+            Table 5. TD-TH-1, 2 checks, or 
+            Table 5. TFoot-TH-1, 2 checks, or 
+            Table 5. TH-H-1, 1 check, or 
+            Table 5. TH-TH-1, 2 checks, or 
+            Table 5. THead-TH-1, 2 checks, or 
+            Table 5. TOC-TH-1, 2 checks, or 
+            Table 5. TOCI-TH-1, 2 checks, or 
+            Table 5. Table-TH-1, 2 checks, or 
+            Table 5. Title-TH-1, 2 checks, or 
+            Table 5. WP-TH-1, 2 checks, or 
+            Table 5. WT-TH-1, 2 checks, or 
+            Table 5. Warichu-TH-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -2960,6 +2982,7 @@
             (@clause = 'Table 5. TFoot-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TH-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. THead-THead' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. THead-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. TOC-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOCI-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TR-THead' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2967,53 +2990,54 @@
             (@clause = 'Table 5. WP-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-THead' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-THead' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-THead-1, 2 checks, or 
-            Art-THead-1, 2 checks, or 
-            Aside-THead-1, 2 checks, or 
-            BibEntry-THead-1, 2 checks, or 
-            BlockQuote-THead-1, 2 checks, or 
-            Caption-THead-1, 2 checks, or 
-            Code-THead-1, 2 checks, or 
-            Document-THead-1, 2 checks, or 
-            DocumentFragment-THead-1, 2 checks, or 
-            Em-THead-1, 2 checks, or 
-            FENote-THead-1, 2 checks, or 
-            Figure-THead-1, 2 checks, or 
-            Form-THead-1, 2 checks, or 
-            Formula-THead-1, 2 checks, or 
-            H-THead-1, 2 checks, or 
-            Hn-THead-1, 12 checks, or 
-            Index-THead-1, 2 checks, or 
-            L-THead-1, 2 checks, or 
-            LBody-THead-1, 2 checks, or 
-            LI-THead-1, 2 checks, or 
-            Lbl-THead-1, 2 checks, or 
-            Link-THead-1, 2 checks, or 
-            Note-THead-1, 2 checks, or 
-            P-THead-1, 2 checks, or 
-            Quote-THead-1, 2 checks, or 
-            RB-THead-1, 2 checks, or 
-            RP-THead-1, 2 checks, or 
-            RT-THead-1, 2 checks, or 
-            Reference-THead-1, 2 checks, or 
-            Ruby-THead-1, 2 checks, or 
-            Sect-THead-1, 2 checks, or 
-            Span-THead-1, 2 checks, or 
-            Strong-THead-1, 2 checks, or 
-            StructTreeRoot-THead-1, 7 checks, or 
-            Sub-THead-1, 2 checks, or 
-            TBody-THead-1, 2 checks, or 
-            TD-THead-1, 2 checks, or 
-            TFoot-THead-1, 2 checks, or 
-            TH-THead-1, 2 checks, or 
-            THead-THead-1, 2 checks, or 
-            TOC-THead-1, 2 checks, or 
-            TOCI-THead-1, 2 checks, or 
-            TR-THead-1, 2 checks, or 
-            Title-THead-1, 2 checks, or 
-            WP-THead-1, 2 checks, or 
-            WT-THead-1, 2 checks, or 
-            Warichu-THead-1, 2 checks</sch:assert>
+            Table 5. Annot-THead-1, 2 checks, or 
+            Table 5. Art-THead-1, 2 checks, or 
+            Table 5. Aside-THead-1, 2 checks, or 
+            Table 5. BibEntry-THead-1, 2 checks, or 
+            Table 5. BlockQuote-THead-1, 2 checks, or 
+            Table 5. Caption-THead-1, 2 checks, or 
+            Table 5. Code-THead-1, 2 checks, or 
+            Table 5. Document-THead-1, 2 checks, or 
+            Table 5. DocumentFragment-THead-1, 2 checks, or 
+            Table 5. Em-THead-1, 2 checks, or 
+            Table 5. FENote-THead-1, 2 checks, or 
+            Table 5. Figure-THead-1, 2 checks, or 
+            Table 5. Form-THead-1, 2 checks, or 
+            Table 5. Formula-THead-1, 2 checks, or 
+            Table 5. H-THead-1, 2 checks, or 
+            Table 5. Hn-THead-1, 12 checks, or 
+            Table 5. Index-THead-1, 2 checks, or 
+            Table 5. L-THead-1, 2 checks, or 
+            Table 5. LBody-THead-1, 2 checks, or 
+            Table 5. LI-THead-1, 2 checks, or 
+            Table 5. Lbl-THead-1, 2 checks, or 
+            Table 5. Link-THead-1, 2 checks, or 
+            Table 5. Note-THead-1, 2 checks, or 
+            Table 5. P-THead-1, 2 checks, or 
+            Table 5. Quote-THead-1, 2 checks, or 
+            Table 5. RB-THead-1, 2 checks, or 
+            Table 5. RP-THead-1, 2 checks, or 
+            Table 5. RT-THead-1, 2 checks, or 
+            Table 5. Reference-THead-1, 2 checks, or 
+            Table 5. Ruby-THead-1, 2 checks, or 
+            Table 5. Sect-THead-1, 2 checks, or 
+            Table 5. Span-THead-1, 2 checks, or 
+            Table 5. Strong-THead-1, 2 checks, or 
+            Table 5. StructTreeRoot-THead-1, 7 checks, or 
+            Table 5. Sub-THead-1, 2 checks, or 
+            Table 5. TBody-THead-1, 2 checks, or 
+            Table 5. TD-THead-1, 2 checks, or 
+            Table 5. TFoot-THead-1, 2 checks, or 
+            Table 5. TH-THead-1, 2 checks, or 
+            Table 5. THead-THead-1, 2 checks, or 
+            Table 5. THead-content-1, 1 check, or 
+            Table 5. TOC-THead-1, 2 checks, or 
+            Table 5. TOCI-THead-1, 2 checks, or 
+            Table 5. TR-THead-1, 2 checks, or 
+            Table 5. Title-THead-1, 2 checks, or 
+            Table 5. WP-THead-1, 2 checks, or 
+            Table 5. WT-THead-1, 2 checks, or 
+            Table 5. Warichu-THead-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3057,53 +3081,55 @@
             (@clause = 'Table 5. TH-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. THead-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOC-Caption' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = 'Table 5. TOC-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. TR-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Title-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WP-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TOC' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TOC' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TOC-1, 2 checks, or 
-            BibEntry-TOC-1, 2 checks, or 
-            Caption-TOC-1, 2 checks, or 
-            Code-TOC-1, 2 checks, or 
-            Em-TOC-1, 2 checks, or 
-            FENote-TOC-1, 2 checks, or 
-            Figure-TOC-1, 2 checks, or 
-            Form-TOC-1, 2 checks, or 
-            Formula-TOC-1, 2 checks, or 
-            H-TOC-1, 2 checks, or 
-            Hn-TOC-1, 12 checks, or 
-            Index-TOC-1, 2 checks, or 
-            L-TOC-1, 2 checks, or 
-            LBody-TOC-1, 2 checks, or 
-            LI-TOC-1, 2 checks, or 
-            Lbl-TOC-1, 2 checks, or 
-            Link-TOC-1, 2 checks, or 
-            Note-TOC-1, 2 checks, or 
-            P-TOC-1, 2 checks, or 
-            Quote-TOC-1, 2 checks, or 
-            RB-TOC-1, 2 checks, or 
-            RP-TOC-1, 2 checks, or 
-            RT-TOC-1, 2 checks, or 
-            Reference-TOC-1, 2 checks, or 
-            Ruby-TOC-1, 2 checks, or 
-            Span-TOC-1, 2 checks, or 
-            Strong-TOC-1, 2 checks, or 
-            StructTreeRoot-TOC-1, 7 checks, or 
-            Sub-TOC-1, 2 checks, or 
-            TBody-TOC-1, 2 checks, or 
-            TD-TOC-1, 2 checks, or 
-            TFoot-TOC-1, 2 checks, or 
-            TH-TOC-1, 2 checks, or 
-            THead-TOC-1, 2 checks, or 
-            TOC-Caption-1, 1 check, or 
-            TR-TOC-1, 2 checks, or 
-            Table-TOC-1, 2 checks, or 
-            Title-TOC-1, 2 checks, or 
-            WP-TOC-1, 2 checks, or 
-            WT-TOC-1, 2 checks, or 
-            Warichu-TOC-1, 2 checks</sch:assert>
+            Table 5. Annot-TOC-1, 2 checks, or 
+            Table 5. BibEntry-TOC-1, 2 checks, or 
+            Table 5. Caption-TOC-1, 2 checks, or 
+            Table 5. Code-TOC-1, 2 checks, or 
+            Table 5. Em-TOC-1, 2 checks, or 
+            Table 5. FENote-TOC-1, 2 checks, or 
+            Table 5. Figure-TOC-1, 2 checks, or 
+            Table 5. Form-TOC-1, 2 checks, or 
+            Table 5. Formula-TOC-1, 2 checks, or 
+            Table 5. H-TOC-1, 2 checks, or 
+            Table 5. Hn-TOC-1, 12 checks, or 
+            Table 5. Index-TOC-1, 2 checks, or 
+            Table 5. L-TOC-1, 2 checks, or 
+            Table 5. LBody-TOC-1, 2 checks, or 
+            Table 5. LI-TOC-1, 2 checks, or 
+            Table 5. Lbl-TOC-1, 2 checks, or 
+            Table 5. Link-TOC-1, 2 checks, or 
+            Table 5. Note-TOC-1, 2 checks, or 
+            Table 5. P-TOC-1, 2 checks, or 
+            Table 5. Quote-TOC-1, 2 checks, or 
+            Table 5. RB-TOC-1, 2 checks, or 
+            Table 5. RP-TOC-1, 2 checks, or 
+            Table 5. RT-TOC-1, 2 checks, or 
+            Table 5. Reference-TOC-1, 2 checks, or 
+            Table 5. Ruby-TOC-1, 2 checks, or 
+            Table 5. Span-TOC-1, 2 checks, or 
+            Table 5. Strong-TOC-1, 2 checks, or 
+            Table 5. StructTreeRoot-TOC-1, 7 checks, or 
+            Table 5. Sub-TOC-1, 2 checks, or 
+            Table 5. TBody-TOC-1, 2 checks, or 
+            Table 5. TD-TOC-1, 2 checks, or 
+            Table 5. TFoot-TOC-1, 2 checks, or 
+            Table 5. TH-TOC-1, 2 checks, or 
+            Table 5. THead-TOC-1, 2 checks, or 
+            Table 5. TOC-Caption-1, 1 check, or 
+            Table 5. TOC-content-1, 1 check, or 
+            Table 5. TR-TOC-1, 2 checks, or 
+            Table 5. Table-TOC-1, 2 checks, or 
+            Table 5. Title-TOC-1, 2 checks, or 
+            Table 5. WP-TOC-1, 2 checks, or 
+            Table 5. WT-TOC-1, 2 checks, or 
+            Table 5. Warichu-TOC-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3154,6 +3180,7 @@
             (@clause = 'Table 5. TH-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. THead-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOCI-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. TOCI-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. TR-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Title-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
@@ -3161,53 +3188,54 @@
             (@clause = 'Table 5. WT-TOCI' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TOCI' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.8-1, 115 checks, or 
-            Annot-TOCI-1, 2 checks, or 
-            Art-TOCI-1, 2 checks, or 
-            Aside-TOCI-1, 2 checks, or 
-            BibEntry-TOCI-1, 2 checks, or 
-            BlockQuote-TOCI-1, 2 checks, or 
-            Caption-TOCI-1, 2 checks, or 
-            Code-TOCI-1, 2 checks, or 
-            Document-TOCI-1, 2 checks, or 
-            DocumentFragment-TOCI-1, 2 checks, or 
-            Em-TOCI-1, 2 checks, or 
-            FENote-TOCI-1, 2 checks, or 
-            Figure-TOCI-1, 2 checks, or 
-            Form-TOCI-1, 2 checks, or 
-            Formula-TOCI-1, 2 checks, or 
-            H-TOCI-1, 2 checks, or 
-            Hn-TOCI-1, 12 checks, or 
-            Index-TOCI-1, 2 checks, or 
-            L-TOCI-1, 2 checks, or 
-            LBody-TOCI-1, 2 checks, or 
-            LI-TOCI-1, 2 checks, or 
-            Lbl-TOCI-1, 2 checks, or 
-            Link-TOCI-1, 2 checks, or 
-            Note-TOCI-1, 2 checks, or 
-            P-TOCI-1, 2 checks, or 
-            Quote-TOCI-1, 2 checks, or 
-            RB-TOCI-1, 2 checks, or 
-            RP-TOCI-1, 2 checks, or 
-            RT-TOCI-1, 2 checks, or 
-            Reference-TOCI-1, 2 checks, or 
-            Ruby-TOCI-1, 2 checks, or 
-            Sect-TOCI-1, 2 checks, or 
-            Span-TOCI-1, 2 checks, or 
-            Strong-TOCI-1, 2 checks, or 
-            StructTreeRoot-TOCI-1, 7 checks, or 
-            Sub-TOCI-1, 2 checks, or 
-            TBody-TOCI-1, 2 checks, or 
-            TD-TOCI-1, 2 checks, or 
-            TFoot-TOCI-1, 2 checks, or 
-            TH-TOCI-1, 2 checks, or 
-            THead-TOCI-1, 2 checks, or 
-            TOCI-TOCI-1, 2 checks, or 
-            TR-TOCI-1, 2 checks, or 
-            Table-TOCI-1, 2 checks, or 
-            Title-TOCI-1, 2 checks, or 
-            WP-TOCI-1, 2 checks, or 
-            WT-TOCI-1, 2 checks, or 
-            Warichu-TOCI-1, 2 checks</sch:assert>
+            Table 5. Annot-TOCI-1, 2 checks, or 
+            Table 5. Art-TOCI-1, 2 checks, or 
+            Table 5. Aside-TOCI-1, 2 checks, or 
+            Table 5. BibEntry-TOCI-1, 2 checks, or 
+            Table 5. BlockQuote-TOCI-1, 2 checks, or 
+            Table 5. Caption-TOCI-1, 2 checks, or 
+            Table 5. Code-TOCI-1, 2 checks, or 
+            Table 5. Document-TOCI-1, 2 checks, or 
+            Table 5. DocumentFragment-TOCI-1, 2 checks, or 
+            Table 5. Em-TOCI-1, 2 checks, or 
+            Table 5. FENote-TOCI-1, 2 checks, or 
+            Table 5. Figure-TOCI-1, 2 checks, or 
+            Table 5. Form-TOCI-1, 2 checks, or 
+            Table 5. Formula-TOCI-1, 2 checks, or 
+            Table 5. H-TOCI-1, 2 checks, or 
+            Table 5. Hn-TOCI-1, 12 checks, or 
+            Table 5. Index-TOCI-1, 2 checks, or 
+            Table 5. L-TOCI-1, 2 checks, or 
+            Table 5. LBody-TOCI-1, 2 checks, or 
+            Table 5. LI-TOCI-1, 2 checks, or 
+            Table 5. Lbl-TOCI-1, 2 checks, or 
+            Table 5. Link-TOCI-1, 2 checks, or 
+            Table 5. Note-TOCI-1, 2 checks, or 
+            Table 5. P-TOCI-1, 2 checks, or 
+            Table 5. Quote-TOCI-1, 2 checks, or 
+            Table 5. RB-TOCI-1, 2 checks, or 
+            Table 5. RP-TOCI-1, 2 checks, or 
+            Table 5. RT-TOCI-1, 2 checks, or 
+            Table 5. Reference-TOCI-1, 2 checks, or 
+            Table 5. Ruby-TOCI-1, 2 checks, or 
+            Table 5. Sect-TOCI-1, 2 checks, or 
+            Table 5. Span-TOCI-1, 2 checks, or 
+            Table 5. Strong-TOCI-1, 2 checks, or 
+            Table 5. StructTreeRoot-TOCI-1, 7 checks, or 
+            Table 5. Sub-TOCI-1, 2 checks, or 
+            Table 5. TBody-TOCI-1, 2 checks, or 
+            Table 5. TD-TOCI-1, 2 checks, or 
+            Table 5. TFoot-TOCI-1, 2 checks, or 
+            Table 5. TH-TOCI-1, 2 checks, or 
+            Table 5. THead-TOCI-1, 2 checks, or 
+            Table 5. TOCI-TOCI-1, 2 checks, or 
+            Table 5. TOCI-content-1, 1 check, or 
+            Table 5. TR-TOCI-1, 2 checks, or 
+            Table 5. Table-TOCI-1, 2 checks, or 
+            Table 5. Title-TOCI-1, 2 checks, or 
+            Table 5. WP-TOCI-1, 2 checks, or 
+            Table 5. WT-TOCI-1, 2 checks, or 
+            Table 5. Warichu-TOCI-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3256,54 +3284,56 @@
             (@clause = 'Table 5. TOC-TR' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOCI-TR' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TR-TR' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. TR-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Title-TR' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WP-TR' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-TR' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-TR' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-TR-1, 2 checks, or 
-            Art-TR-1, 2 checks, or 
-            Aside-TR-1, 2 checks, or 
-            BibEntry-TR-1, 2 checks, or 
-            BlockQuote-TR-1, 2 checks, or 
-            Caption-TR-1, 2 checks, or 
-            Code-TR-1, 2 checks, or 
-            Document-TR-1, 2 checks, or 
-            DocumentFragment-TR-1, 2 checks, or 
-            Em-TR-1, 2 checks, or 
-            FENote-TR-1, 2 checks, or 
-            Figure-TR-1, 2 checks, or 
-            Form-TR-1, 2 checks, or 
-            Formula-TR-1, 2 checks, or 
-            H-TR-1, 2 checks, or 
-            Hn-TR-1, 12 checks, or 
-            Index-TR-1, 2 checks, or 
-            L-TR-1, 2 checks, or 
-            LBody-TR-1, 2 checks, or 
-            LI-TR-1, 2 checks, or 
-            Lbl-TR-1, 2 checks, or 
-            Link-TR-1, 2 checks, or 
-            Note-TR-1, 2 checks, or 
-            P-TR-1, 2 checks, or 
-            Quote-TR-1, 2 checks, or 
-            RB-TR-1, 2 checks, or 
-            RP-TR-1, 2 checks, or 
-            RT-TR-1, 2 checks, or 
-            Reference-TR-1, 2 checks, or 
-            Ruby-TR-1, 2 checks, or 
-            Sect-TR-1, 2 checks, or 
-            Span-TR-1, 2 checks, or 
-            Strong-TR-1, 2 checks, or 
-            StructTreeRoot-TR-1, 7 checks, or 
-            Sub-TR-1, 2 checks, or 
-            TD-TR-1, 2 checks, or 
-            TH-TR-1, 2 checks, or 
-            TOC-TR-1, 2 checks, or 
-            TOCI-TR-1, 2 checks, or 
-            TR-TR-1, 2 checks, or 
-            Title-TR-1, 2 checks, or 
-            WP-TR-1, 2 checks, or 
-            WT-TR-1, 2 checks, or 
-            Warichu-TR-1, 2 checks</sch:assert>
+            Table 5. Annot-TR-1, 2 checks, or 
+            Table 5. Art-TR-1, 2 checks, or 
+            Table 5. Aside-TR-1, 2 checks, or 
+            Table 5. BibEntry-TR-1, 2 checks, or 
+            Table 5. BlockQuote-TR-1, 2 checks, or 
+            Table 5. Caption-TR-1, 2 checks, or 
+            Table 5. Code-TR-1, 2 checks, or 
+            Table 5. Document-TR-1, 2 checks, or 
+            Table 5. DocumentFragment-TR-1, 2 checks, or 
+            Table 5. Em-TR-1, 2 checks, or 
+            Table 5. FENote-TR-1, 2 checks, or 
+            Table 5. Figure-TR-1, 2 checks, or 
+            Table 5. Form-TR-1, 2 checks, or 
+            Table 5. Formula-TR-1, 2 checks, or 
+            Table 5. H-TR-1, 2 checks, or 
+            Table 5. Hn-TR-1, 12 checks, or 
+            Table 5. Index-TR-1, 2 checks, or 
+            Table 5. L-TR-1, 2 checks, or 
+            Table 5. LBody-TR-1, 2 checks, or 
+            Table 5. LI-TR-1, 2 checks, or 
+            Table 5. Lbl-TR-1, 2 checks, or 
+            Table 5. Link-TR-1, 2 checks, or 
+            Table 5. Note-TR-1, 2 checks, or 
+            Table 5. P-TR-1, 2 checks, or 
+            Table 5. Quote-TR-1, 2 checks, or 
+            Table 5. RB-TR-1, 2 checks, or 
+            Table 5. RP-TR-1, 2 checks, or 
+            Table 5. RT-TR-1, 2 checks, or 
+            Table 5. Reference-TR-1, 2 checks, or 
+            Table 5. Ruby-TR-1, 2 checks, or 
+            Table 5. Sect-TR-1, 2 checks, or 
+            Table 5. Span-TR-1, 2 checks, or 
+            Table 5. Strong-TR-1, 2 checks, or 
+            Table 5. StructTreeRoot-TR-1, 7 checks, or 
+            Table 5. Sub-TR-1, 2 checks, or 
+            Table 5. TD-TR-1, 2 checks, or 
+            Table 5. TH-TR-1, 2 checks, or 
+            Table 5. TOC-TR-1, 2 checks, or 
+            Table 5. TOCI-TR-1, 2 checks, or 
+            Table 5. TR-TR-1, 2 checks, or 
+            Table 5. TR-content-1, 1 check, or 
+            Table 5. Title-TR-1, 2 checks, or 
+            Table 5. WP-TR-1, 2 checks, or 
+            Table 5. WT-TR-1, 2 checks, or 
+            Table 5. Warichu-TR-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3340,40 +3370,42 @@
             (@clause = 'Table 5. Table-TFoot' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Table-THead' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Table-Table' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. Table-content' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. WP-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Table' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            BibEntry-Table-1, 2 checks, or 
-            Code-Table-1, 2 checks, or 
-            Em-Table-1, 2 checks, or 
-            H-Table-1, 2 checks, or 
-            Hn-Table-1, 12 checks, or 
-            L-Table-1, 2 checks, or 
-            LI-Table-1, 2 checks, or 
-            Lbl-Table-1, 2 checks, or 
-            Quote-Table-1, 2 checks, or 
-            RB-Table-1, 2 checks, or 
-            RP-Table-1, 2 checks, or 
-            RT-Table-1, 2 checks, or 
-            Reference-Table-1, 2 checks, or 
-            Ruby-Table-1, 2 checks, or 
-            Span-Table-1, 2 checks, or 
-            Strong-Table-1, 2 checks, or 
-            StructTreeRoot-Table-1, 7 checks, or 
-            Sub-Table-1, 2 checks, or 
-            TBody-Table-1, 2 checks, or 
-            TFoot-Table-1, 2 checks, or 
-            THead-Table-1, 2 checks, or 
-            TOC-Table-1, 2 checks, or 
-            TOCI-Table-1, 2 checks, or 
-            TR-Table-1, 2 checks, or 
-            Table-Caption-1, 1 check, or 
-            Table-TFoot-1, 1 check, or 
-            Table-THead-1, 1 check, or 
-            Table-Table-1, 2 checks, or 
-            WP-Table-1, 2 checks, or 
-            WT-Table-1, 2 checks, or 
-            Warichu-Table-1, 2 checks</sch:assert>
+            Table 5. BibEntry-Table-1, 2 checks, or 
+            Table 5. Code-Table-1, 2 checks, or 
+            Table 5. Em-Table-1, 2 checks, or 
+            Table 5. H-Table-1, 2 checks, or 
+            Table 5. Hn-Table-1, 12 checks, or 
+            Table 5. L-Table-1, 2 checks, or 
+            Table 5. LI-Table-1, 2 checks, or 
+            Table 5. Lbl-Table-1, 2 checks, or 
+            Table 5. Quote-Table-1, 2 checks, or 
+            Table 5. RB-Table-1, 2 checks, or 
+            Table 5. RP-Table-1, 2 checks, or 
+            Table 5. RT-Table-1, 2 checks, or 
+            Table 5. Reference-Table-1, 2 checks, or 
+            Table 5. Ruby-Table-1, 2 checks, or 
+            Table 5. Span-Table-1, 2 checks, or 
+            Table 5. Strong-Table-1, 2 checks, or 
+            Table 5. StructTreeRoot-Table-1, 7 checks, or 
+            Table 5. Sub-Table-1, 2 checks, or 
+            Table 5. TBody-Table-1, 2 checks, or 
+            Table 5. TFoot-Table-1, 2 checks, or 
+            Table 5. THead-Table-1, 2 checks, or 
+            Table 5. TOC-Table-1, 2 checks, or 
+            Table 5. TOCI-Table-1, 2 checks, or 
+            Table 5. TR-Table-1, 2 checks, or 
+            Table 5. Table-Caption-1, 1 check, or 
+            Table 5. Table-TFoot-1, 1 check, or 
+            Table 5. Table-THead-1, 1 check, or 
+            Table 5. Table-Table-1, 2 checks, or 
+            Table 5. Table-content-1, 1 check, or 
+            Table 5. WP-Table-1, 2 checks, or 
+            Table 5. WT-Table-1, 2 checks, or 
+            Table 5. Warichu-Table-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3425,49 +3457,49 @@
             (@clause = 'Table 5. WP-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Title' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Aside-Title-1, 2 checks, or 
-            BibEntry-Title-1, 2 checks, or 
-            BlockQuote-Title-1, 2 checks, or 
-            Caption-Title-1, 2 checks, or 
-            Code-Title-1, 2 checks, or 
-            Em-Title-1, 2 checks, or 
-            FENote-Title-1, 2 checks, or 
-            Figure-Title-1, 2 checks, or 
-            Form-Title-1, 2 checks, or 
-            Formula-Title-1, 2 checks, or 
-            H-Title-1, 2 checks, or 
-            Hn-Title-1, 12 checks, or 
-            Index-Title-1, 2 checks, or 
-            L-Title-1, 2 checks, or 
-            LBody-Title-1, 2 checks, or 
-            LI-Title-1, 2 checks, or 
-            Lbl-Title-1, 2 checks, or 
-            Note-Title-1, 2 checks, or 
-            P-Title-1, 2 checks, or 
-            Quote-Title-1, 2 checks, or 
-            RB-Title-1, 2 checks, or 
-            RP-Title-1, 2 checks, or 
-            RT-Title-1, 2 checks, or 
-            Reference-Title-1, 2 checks, or 
-            Ruby-Title-1, 2 checks, or 
-            Span-Title-1, 2 checks, or 
-            Strong-Title-1, 2 checks, or 
-            StructTreeRoot-Title-1, 7 checks, or 
-            Sub-Title-1, 2 checks, or 
-            TBody-Title-1, 2 checks, or 
-            TD-Title-1, 2 checks, or 
-            TFoot-Title-1, 2 checks, or 
-            TH-Title-1, 2 checks, or 
-            THead-Title-1, 2 checks, or 
-            TOC-Title-1, 2 checks, or 
-            TOCI-Title-1, 2 checks, or 
-            TR-Title-1, 2 checks, or 
-            Table-Title-1, 2 checks, or 
-            Title-Caption-1, 1 check, or 
-            Title-Title-1, 2 checks, or 
-            WP-Title-1, 2 checks, or 
-            WT-Title-1, 2 checks, or 
-            Warichu-Title-1, 2 checks</sch:assert>
+            Table 5. Aside-Title-1, 2 checks, or 
+            Table 5. BibEntry-Title-1, 2 checks, or 
+            Table 5. BlockQuote-Title-1, 2 checks, or 
+            Table 5. Caption-Title-1, 2 checks, or 
+            Table 5. Code-Title-1, 2 checks, or 
+            Table 5. Em-Title-1, 2 checks, or 
+            Table 5. FENote-Title-1, 2 checks, or 
+            Table 5. Figure-Title-1, 2 checks, or 
+            Table 5. Form-Title-1, 2 checks, or 
+            Table 5. Formula-Title-1, 2 checks, or 
+            Table 5. H-Title-1, 2 checks, or 
+            Table 5. Hn-Title-1, 12 checks, or 
+            Table 5. Index-Title-1, 2 checks, or 
+            Table 5. L-Title-1, 2 checks, or 
+            Table 5. LBody-Title-1, 2 checks, or 
+            Table 5. LI-Title-1, 2 checks, or 
+            Table 5. Lbl-Title-1, 2 checks, or 
+            Table 5. Note-Title-1, 2 checks, or 
+            Table 5. P-Title-1, 2 checks, or 
+            Table 5. Quote-Title-1, 2 checks, or 
+            Table 5. RB-Title-1, 2 checks, or 
+            Table 5. RP-Title-1, 2 checks, or 
+            Table 5. RT-Title-1, 2 checks, or 
+            Table 5. Reference-Title-1, 2 checks, or 
+            Table 5. Ruby-Title-1, 2 checks, or 
+            Table 5. Span-Title-1, 2 checks, or 
+            Table 5. Strong-Title-1, 2 checks, or 
+            Table 5. StructTreeRoot-Title-1, 7 checks, or 
+            Table 5. Sub-Title-1, 2 checks, or 
+            Table 5. TBody-Title-1, 2 checks, or 
+            Table 5. TD-Title-1, 2 checks, or 
+            Table 5. TFoot-Title-1, 2 checks, or 
+            Table 5. TH-Title-1, 2 checks, or 
+            Table 5. THead-Title-1, 2 checks, or 
+            Table 5. TOC-Title-1, 2 checks, or 
+            Table 5. TOCI-Title-1, 2 checks, or 
+            Table 5. TR-Title-1, 2 checks, or 
+            Table 5. Table-Title-1, 2 checks, or 
+            Table 5. Title-Caption-1, 1 check, or 
+            Table 5. Title-Title-1, 2 checks, or 
+            Table 5. WP-Title-1, 2 checks, or 
+            Table 5. WT-Title-1, 2 checks, or 
+            Table 5. Warichu-Title-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3523,53 +3555,53 @@
             (@clause = 'Table 5. Title-WP' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WP-WP' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-WP' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-WP-1, 2 checks, or 
-            Art-WP-1, 2 checks, or 
-            Aside-WP-1, 2 checks, or 
-            BibEntry-WP-1, 2 checks, or 
-            BlockQuote-WP-1, 2 checks, or 
-            Caption-WP-1, 2 checks, or 
-            Code-WP-1, 2 checks, or 
-            Document-WP-1, 2 checks, or 
-            DocumentFragment-WP-1, 2 checks, or 
-            Em-WP-1, 2 checks, or 
-            FENote-WP-1, 2 checks, or 
-            Figure-WP-1, 2 checks, or 
-            Form-WP-1, 2 checks, or 
-            Formula-WP-1, 2 checks, or 
-            H-WP-1, 2 checks, or 
-            Hn-WP-1, 12 checks, or 
-            Index-WP-1, 2 checks, or 
-            L-WP-1, 2 checks, or 
-            LBody-WP-1, 2 checks, or 
-            LI-WP-1, 2 checks, or 
-            Lbl-WP-1, 2 checks, or 
-            Link-WP-1, 2 checks, or 
-            Note-WP-1, 2 checks, or 
-            P-WP-1, 2 checks, or 
-            Quote-WP-1, 2 checks, or 
-            RB-WP-1, 2 checks, or 
-            RP-WP-1, 2 checks, or 
-            RT-WP-1, 2 checks, or 
-            Reference-WP-1, 2 checks, or 
-            Ruby-WP-1, 2 checks, or 
-            Sect-WP-1, 2 checks, or 
-            Span-WP-1, 2 checks, or 
-            Strong-WP-1, 2 checks, or 
-            StructTreeRoot-WP-1, 7 checks, or 
-            Sub-WP-1, 2 checks, or 
-            TBody-WP-1, 2 checks, or 
-            TD-WP-1, 2 checks, or 
-            TFoot-WP-1, 2 checks, or 
-            TH-WP-1, 2 checks, or 
-            THead-WP-1, 2 checks, or 
-            TOC-WP-1, 2 checks, or 
-            TOCI-WP-1, 2 checks, or 
-            TR-WP-1, 2 checks, or 
-            Table-WP-1, 2 checks, or 
-            Title-WP-1, 2 checks, or 
-            WP-WP-1, 2 checks, or 
-            WT-WP-1, 2 checks</sch:assert>
+            Table 5. Annot-WP-1, 2 checks, or 
+            Table 5. Art-WP-1, 2 checks, or 
+            Table 5. Aside-WP-1, 2 checks, or 
+            Table 5. BibEntry-WP-1, 2 checks, or 
+            Table 5. BlockQuote-WP-1, 2 checks, or 
+            Table 5. Caption-WP-1, 2 checks, or 
+            Table 5. Code-WP-1, 2 checks, or 
+            Table 5. Document-WP-1, 2 checks, or 
+            Table 5. DocumentFragment-WP-1, 2 checks, or 
+            Table 5. Em-WP-1, 2 checks, or 
+            Table 5. FENote-WP-1, 2 checks, or 
+            Table 5. Figure-WP-1, 2 checks, or 
+            Table 5. Form-WP-1, 2 checks, or 
+            Table 5. Formula-WP-1, 2 checks, or 
+            Table 5. H-WP-1, 2 checks, or 
+            Table 5. Hn-WP-1, 12 checks, or 
+            Table 5. Index-WP-1, 2 checks, or 
+            Table 5. L-WP-1, 2 checks, or 
+            Table 5. LBody-WP-1, 2 checks, or 
+            Table 5. LI-WP-1, 2 checks, or 
+            Table 5. Lbl-WP-1, 2 checks, or 
+            Table 5. Link-WP-1, 2 checks, or 
+            Table 5. Note-WP-1, 2 checks, or 
+            Table 5. P-WP-1, 2 checks, or 
+            Table 5. Quote-WP-1, 2 checks, or 
+            Table 5. RB-WP-1, 2 checks, or 
+            Table 5. RP-WP-1, 2 checks, or 
+            Table 5. RT-WP-1, 2 checks, or 
+            Table 5. Reference-WP-1, 2 checks, or 
+            Table 5. Ruby-WP-1, 2 checks, or 
+            Table 5. Sect-WP-1, 2 checks, or 
+            Table 5. Span-WP-1, 2 checks, or 
+            Table 5. Strong-WP-1, 2 checks, or 
+            Table 5. StructTreeRoot-WP-1, 7 checks, or 
+            Table 5. Sub-WP-1, 2 checks, or 
+            Table 5. TBody-WP-1, 2 checks, or 
+            Table 5. TD-WP-1, 2 checks, or 
+            Table 5. TFoot-WP-1, 2 checks, or 
+            Table 5. TH-WP-1, 2 checks, or 
+            Table 5. THead-WP-1, 2 checks, or 
+            Table 5. TOC-WP-1, 2 checks, or 
+            Table 5. TOCI-WP-1, 2 checks, or 
+            Table 5. TR-WP-1, 2 checks, or 
+            Table 5. Table-WP-1, 2 checks, or 
+            Table 5. Title-WP-1, 2 checks, or 
+            Table 5. WP-WP-1, 2 checks, or 
+            Table 5. WT-WP-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3625,53 +3657,53 @@
             (@clause = 'Table 5. Title-WT' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WP-WT' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-WT' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Annot-WT-1, 2 checks, or 
-            Art-WT-1, 2 checks, or 
-            Aside-WT-1, 2 checks, or 
-            BibEntry-WT-1, 2 checks, or 
-            BlockQuote-WT-1, 2 checks, or 
-            Caption-WT-1, 2 checks, or 
-            Code-WT-1, 2 checks, or 
-            Document-WT-1, 2 checks, or 
-            DocumentFragment-WT-1, 2 checks, or 
-            Em-WT-1, 2 checks, or 
-            FENote-WT-1, 2 checks, or 
-            Figure-WT-1, 2 checks, or 
-            Form-WT-1, 2 checks, or 
-            Formula-WT-1, 2 checks, or 
-            H-WT-1, 2 checks, or 
-            Hn-WT-1, 12 checks, or 
-            Index-WT-1, 2 checks, or 
-            L-WT-1, 2 checks, or 
-            LBody-WT-1, 2 checks, or 
-            LI-WT-1, 2 checks, or 
-            Lbl-WT-1, 2 checks, or 
-            Link-WT-1, 2 checks, or 
-            Note-WT-1, 2 checks, or 
-            P-WT-1, 2 checks, or 
-            Quote-WT-1, 2 checks, or 
-            RB-WT-1, 2 checks, or 
-            RP-WT-1, 2 checks, or 
-            RT-WT-1, 2 checks, or 
-            Reference-WT-1, 2 checks, or 
-            Ruby-WT-1, 2 checks, or 
-            Sect-WT-1, 2 checks, or 
-            Span-WT-1, 2 checks, or 
-            Strong-WT-1, 2 checks, or 
-            StructTreeRoot-WT-1, 7 checks, or 
-            Sub-WT-1, 2 checks, or 
-            TBody-WT-1, 2 checks, or 
-            TD-WT-1, 2 checks, or 
-            TFoot-WT-1, 2 checks, or 
-            TH-WT-1, 2 checks, or 
-            THead-WT-1, 2 checks, or 
-            TOC-WT-1, 2 checks, or 
-            TOCI-WT-1, 2 checks, or 
-            TR-WT-1, 2 checks, or 
-            Table-WT-1, 2 checks, or 
-            Title-WT-1, 2 checks, or 
-            WP-WT-1, 2 checks, or 
-            WT-WT-1, 2 checks</sch:assert>
+            Table 5. Annot-WT-1, 2 checks, or 
+            Table 5. Art-WT-1, 2 checks, or 
+            Table 5. Aside-WT-1, 2 checks, or 
+            Table 5. BibEntry-WT-1, 2 checks, or 
+            Table 5. BlockQuote-WT-1, 2 checks, or 
+            Table 5. Caption-WT-1, 2 checks, or 
+            Table 5. Code-WT-1, 2 checks, or 
+            Table 5. Document-WT-1, 2 checks, or 
+            Table 5. DocumentFragment-WT-1, 2 checks, or 
+            Table 5. Em-WT-1, 2 checks, or 
+            Table 5. FENote-WT-1, 2 checks, or 
+            Table 5. Figure-WT-1, 2 checks, or 
+            Table 5. Form-WT-1, 2 checks, or 
+            Table 5. Formula-WT-1, 2 checks, or 
+            Table 5. H-WT-1, 2 checks, or 
+            Table 5. Hn-WT-1, 12 checks, or 
+            Table 5. Index-WT-1, 2 checks, or 
+            Table 5. L-WT-1, 2 checks, or 
+            Table 5. LBody-WT-1, 2 checks, or 
+            Table 5. LI-WT-1, 2 checks, or 
+            Table 5. Lbl-WT-1, 2 checks, or 
+            Table 5. Link-WT-1, 2 checks, or 
+            Table 5. Note-WT-1, 2 checks, or 
+            Table 5. P-WT-1, 2 checks, or 
+            Table 5. Quote-WT-1, 2 checks, or 
+            Table 5. RB-WT-1, 2 checks, or 
+            Table 5. RP-WT-1, 2 checks, or 
+            Table 5. RT-WT-1, 2 checks, or 
+            Table 5. Reference-WT-1, 2 checks, or 
+            Table 5. Ruby-WT-1, 2 checks, or 
+            Table 5. Sect-WT-1, 2 checks, or 
+            Table 5. Span-WT-1, 2 checks, or 
+            Table 5. Strong-WT-1, 2 checks, or 
+            Table 5. StructTreeRoot-WT-1, 7 checks, or 
+            Table 5. Sub-WT-1, 2 checks, or 
+            Table 5. TBody-WT-1, 2 checks, or 
+            Table 5. TD-WT-1, 2 checks, or 
+            Table 5. TFoot-WT-1, 2 checks, or 
+            Table 5. TH-WT-1, 2 checks, or 
+            Table 5. THead-WT-1, 2 checks, or 
+            Table 5. TOC-WT-1, 2 checks, or 
+            Table 5. TOCI-WT-1, 2 checks, or 
+            Table 5. TR-WT-1, 2 checks, or 
+            Table 5. Table-WT-1, 2 checks, or 
+            Table 5. Title-WT-1, 2 checks, or 
+            Table 5. WP-WT-1, 2 checks, or 
+            Table 5. WT-WT-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -3710,34 +3742,34 @@
             (@clause = 'Table 5. WT-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Warichu' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             8.2.5.24-1, 115 checks, or 
-            Art-Warichu-1, 2 checks, or 
-            Aside-Warichu-1, 2 checks, or 
-            BibEntry-Warichu-1, 2 checks, or 
-            BlockQuote-Warichu-1, 2 checks, or 
-            Code-Warichu-1, 2 checks, or 
-            Document-Warichu-1, 2 checks, or 
-            DocumentFragment-Warichu-1, 2 checks, or 
-            Form-Warichu-1, 2 checks, or 
-            Index-Warichu-1, 2 checks, or 
-            L-Warichu-1, 2 checks, or 
-            LI-Warichu-1, 2 checks, or 
-            RB-Warichu-1, 2 checks, or 
-            RP-Warichu-1, 2 checks, or 
-            RT-Warichu-1, 2 checks, or 
-            Reference-Warichu-1, 2 checks, or 
-            Ruby-Warichu-1, 2 checks, or 
-            Sect-Warichu-1, 2 checks, or 
-            StructTreeRoot-Warichu-1, 7 checks, or 
-            TBody-Warichu-1, 2 checks, or 
-            TFoot-Warichu-1, 2 checks, or 
-            THead-Warichu-1, 2 checks, or 
-            TOC-Warichu-1, 2 checks, or 
-            TOCI-Warichu-1, 2 checks, or 
-            TR-Warichu-1, 2 checks, or 
-            Table-Warichu-1, 2 checks, or 
-            WP-Warichu-1, 2 checks, or 
-            WT-Warichu-1, 2 checks, or 
-            Warichu-Warichu-1, 2 checks</sch:assert>
+            Table 5. Art-Warichu-1, 2 checks, or 
+            Table 5. Aside-Warichu-1, 2 checks, or 
+            Table 5. BibEntry-Warichu-1, 2 checks, or 
+            Table 5. BlockQuote-Warichu-1, 2 checks, or 
+            Table 5. Code-Warichu-1, 2 checks, or 
+            Table 5. Document-Warichu-1, 2 checks, or 
+            Table 5. DocumentFragment-Warichu-1, 2 checks, or 
+            Table 5. Form-Warichu-1, 2 checks, or 
+            Table 5. Index-Warichu-1, 2 checks, or 
+            Table 5. L-Warichu-1, 2 checks, or 
+            Table 5. LI-Warichu-1, 2 checks, or 
+            Table 5. RB-Warichu-1, 2 checks, or 
+            Table 5. RP-Warichu-1, 2 checks, or 
+            Table 5. RT-Warichu-1, 2 checks, or 
+            Table 5. Reference-Warichu-1, 2 checks, or 
+            Table 5. Ruby-Warichu-1, 2 checks, or 
+            Table 5. Sect-Warichu-1, 2 checks, or 
+            Table 5. StructTreeRoot-Warichu-1, 7 checks, or 
+            Table 5. TBody-Warichu-1, 2 checks, or 
+            Table 5. TFoot-Warichu-1, 2 checks, or 
+            Table 5. THead-Warichu-1, 2 checks, or 
+            Table 5. TOC-Warichu-1, 2 checks, or 
+            Table 5. TOCI-Warichu-1, 2 checks, or 
+            Table 5. TR-Warichu-1, 2 checks, or 
+            Table 5. Table-Warichu-1, 2 checks, or 
+            Table 5. WP-Warichu-1, 2 checks, or 
+            Table 5. WT-Warichu-1, 2 checks, or 
+            Table 5. Warichu-Warichu-1, 2 checks</sch:assert>
         </sch:rule>
 
     </sch:pattern>

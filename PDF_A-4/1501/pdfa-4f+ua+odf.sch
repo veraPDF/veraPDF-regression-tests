@@ -7,24 +7,29 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1501 -->
     <!-- File: pdfa-4f+ua+odf.pdf -->
 
-    <sch:pattern name = "Checking the validationReport: document is compliant">
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
-            <sch:assert test="(@isCompliant = 'true')">Failed check, Expected: isCompliant=true</sch:assert>
+            <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking the validationReport: rules">
+        <sch:rule context="/report/jobs/job/validationReport/details">
+            <sch:assert test="(@failedRules = '2')">Failed check, Expected: 2</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="(@clause = '6.7.3' and @testNumber = '3' and @failedChecks = '1') or 
+            (@clause = '6.9' and @testNumber = '3' and @failedChecks = '2')">Failed rules, Expected: 
+            6.7.3-3, 1 check, or 
+            6.9-3, 2 checks</sch:assert>
+        </sch:rule>
+
+    </sch:pattern>
+
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "PDF version ISO_32000_1_7 of detected flavour ua1 is incompatible with the PDF version ISO_32000_2_0 of other detected flavour 4f. The validation of flavour ua1 is skipped") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: PDF version ISO_32000_1_7 of detected flavour ua1 is incompatible with the PDF version ISO_32000_2_0 of other detected flavour 4f. The validation of flavour ua1 is skipped' with 1 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 
