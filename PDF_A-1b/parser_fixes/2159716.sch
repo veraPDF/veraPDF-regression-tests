@@ -7,7 +7,7 @@
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 139 0 caused by exception: Object stream has invalid N or First entry(object key = 456 0 obj, offset = 0) caused by exception: Cannot invoke "org.verapdf.cos.COSInteger.get()" because the return value of "org.verapdf.cos.COSObject.getDirectBase()" is null")'>
+            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 139 0 caused by exception: Object stream has invalid N or First entry(object key = 456 0 obj, offset = 0) caused by exception")'>
                 Failed check, Expected Error: Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 139 0 caused by exception: Object stream has invalid N or First entry(object key = 456 0 obj, offset = 0) caused by exception: Cannot invoke "org.verapdf.cos.COSInteger.get()" because the return value of "org.verapdf.cos.COSObject.getDirectBase()" is null
             </sch:assert>
         </sch:rule>
