@@ -5,34 +5,47 @@
 
     <!-- File: 2159716.pdf -->
 
-    <sch:pattern name = "Checking the taskException">
-        <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 139 0 caused by exception: Object stream has invalid N or First entry(object key = 456 0 obj, offset = 0) caused by exception")'>
-                Failed check, Expected Error: Exception: Caught unexpected exception during parsing caused by exception: Error while parsing object : 139 0 caused by exception: Object stream has invalid N or First entry(object key = 456 0 obj, offset = 0) caused by exception: Cannot invoke "org.verapdf.cos.COSInteger.get()" because the return value of "org.verapdf.cos.COSObject.getDirectBase()" is null
-            </sch:assert>
+    <sch:pattern name = "Checking the validationReport: document is not compliant">
+        <sch:rule context="/report/jobs/job/validationReport">
+            <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern name = "Checking the batchSummary">
-        <sch:rule context="/report/batchSummary">
-            <sch:assert test="(@totalJobs = '1' and @failedToParse = '0' and @encrypted = '0' and @outOfMemory = '0' and @veraExceptions = '1')">
-                Failed check, Expected: totalJobs = '1' failedToParse = '0' encrypted = '0' outOfMemory = '0' veraExceptions = '1'
-            </sch:assert>
+    <sch:pattern name = "Checking the validationReport: rules">
+        <sch:rule context="/report/jobs/job/validationReport/details">
+            <sch:assert test="(@failedRules = '11')">Failed check, Expected: 11</sch:assert>	
         </sch:rule>
+
+        <sch:rule context="/report/jobs/job/validationReport/details/rule">
+            <sch:assert test="(@clause = '6.1.4' and @testNumber = '3' and @failedChecks = '1') or 
+            (@clause = '6.2.3.3' and @testNumber = '1' and @failedChecks = '6') or 
+            (@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '268') or 
+            (@clause = '6.3.3.2' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.3.4' and @testNumber = '1' and @failedChecks = '6') or 
+            (@clause = '6.3.5' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.3.5' and @testNumber = '3' and @failedChecks = '1') or 
+            (@clause = '6.5.3' and @testNumber = '3' and @failedChecks = '3') or 
+            (@clause = '6.7.3' and @testNumber = '7' and @failedChecks = '1') or 
+            (@clause = '6.7.3' and @testNumber = '8' and @failedChecks = '1') or 
+            (@clause = '6.7.11' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
+            6.1.4-3, 1 check, or 
+            6.2.3.3-1, 6 checks, or 
+            6.2.3.3-3, 268 checks, or 
+            6.3.3.2-1, 1 check, or 
+            6.3.4-1, 6 checks, or 
+            6.3.5-1, 1 check, or 
+            6.3.5-3, 1 check, or 
+            6.5.3-3, 3 checks, or 
+            6.7.3-7, 1 check, or 
+            6.7.3-8, 1 check, or 
+            6.7.11-1, 1 check</sch:assert>
+        </sch:rule>
+
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: 2159716.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 
