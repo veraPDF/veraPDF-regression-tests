@@ -41,6 +41,13 @@ read -r -a array <<< "$veradir"
 VERSION="${array[2]}"
 IFS=$currentIFS
 
+echo "Downloading validation profiles to $PWD"
+curl -LO https://github.com/veraPDF/veraPDF-validation-profiles/archive/integration.zip
+
+profiles="$veraPATH/profiles"
+echo "Unpacking validation profiles to $profiles"
+unzip -q integration.zip -d "$profiles"
+
 echo "veraPDF version: $VERSION"
 echo "veraPATH: $veraPATH" 
 echo "CurrentgDIR: $PWD"
