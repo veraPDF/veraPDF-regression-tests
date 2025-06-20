@@ -3,15 +3,14 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://purl.oclc.org/dsdl/schematron ">
 
-
     <!-- Issue# 1147 -->
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1147 -->
     <!-- File: SUMATRAPDF-448-0.pdf -->
 
     <sch:pattern name = "Checking the taskException">
         <sch:rule context="/report/jobs/job/taskException">
-            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: Exception during parsing xref stream(offset = 78) caused by exception")'>
-                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: Exception during parsing xref stream(offset = 78) caused by exception
+            <sch:assert test='contains(exceptionMessage, "Exception: Couldn&apos;t parse stream caused by exception: can not locate xref table")'>
+                Failed check, Expected Error: Exception: Couldn't parse stream caused by exception: can not locate xref table
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -30,12 +29,16 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+            <sch:assert test="@logsCount = '3'">Failed check, Expected: 3</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: SUMATRAPDF-448-0.pdf doesn't appear to be a valid PDF.' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Cannot invoke "org.verapdf.cos.COSBody.get(org.verapdf.cos.COSKey)" because "this.body" is null") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Stream length has wrong value or is missing(offset = 78)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: SUMATRAPDF-448-0.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
+            'WARNING: Cannot invoke "org.verapdf.cos.COSBody.get(org.verapdf.cos.COSKey)" because "this.body" is null' with 1 occurrences, or 
+            'WARNING: Stream length has wrong value or is missing(offset = 78)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

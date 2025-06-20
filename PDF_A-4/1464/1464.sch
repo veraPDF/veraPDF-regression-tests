@@ -35,8 +35,8 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Stream length is missing(object key = 2 0 obj, offset = 207)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Stream length is missing(object key = 2 0 obj, offset = 207)' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Stream length has wrong value or is missing(object key = 2 0 obj, offset = 207)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Stream length has wrong value or is missing(object key = 2 0 obj, offset = 207)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
