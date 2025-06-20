@@ -40,12 +40,22 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '6'">Failed check, Expected: 42</sch:assert>	
+            <sch:assert test="@logsCount = '11'">Failed check, Expected: 42</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Struct tree loop found") and @occurrences = "6" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Struct tree loop found' with 6 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Struct tree loop found") and @occurrences = "6" and @level = "WARNING") or 
+            (contains(., "The value of P key of struct element 14 0 obj is different from the actual parent struct element 6 0 obj") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "The value of P key of struct element 23 0 obj is different from the actual parent struct element 14 0 obj") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "The value of P key of struct element 42 0 obj is different from the actual parent struct element 40 0 obj") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "The value of P key of struct element 42 0 obj is different from the actual parent struct element 41 0 obj") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Struct tree loop found' with 6 occurrences, or 
+            'WARNING: The value of P key of struct element 14 0 obj is different from the actual parent struct element 6 0 obj' with 1 occurrences, or 
+            'WARNING: The value of P key of struct element 23 0 obj is different from the actual parent struct element 14 0 obj' with 1 occurrences, or 
+            'WARNING: The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj' with 1 occurrences, or 
+            'WARNING: The value of P key of struct element 42 0 obj is different from the actual parent struct element 40 0 obj' with 1 occurrences, or 
+            'WARNING: The value of P key of struct element 42 0 obj is different from the actual parent struct element 41 0 obj' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
