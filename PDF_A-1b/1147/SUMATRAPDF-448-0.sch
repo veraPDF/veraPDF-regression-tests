@@ -34,10 +34,10 @@
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., ".pdf doesn&apos;t appear to be a valid PDF.") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Cannot invoke "org.verapdf.cos.COSBody.get(org.verapdf.cos.COSKey)" because "this.body" is null") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Exception during parsing Length entry of stream: ") and @occurrences = "1" and @level = "WARNING") or 
             (contains(., "Stream length has wrong value or is missing(offset = 78)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: SUMATRAPDF-448-0.pdf doesn't appear to be a valid PDF.' with 1 occurrences, or 
-            'WARNING: Cannot invoke "org.verapdf.cos.COSBody.get(org.verapdf.cos.COSKey)" because "this.body" is null' with 1 occurrences, or 
+            'WARNING: Exception during parsing Length entry of stream: Cannot invoke "org.verapdf.cos.COSBody.get(org.verapdf.cos.COSKey)" because "this.body" is null' with 1 occurrences, or 
             'WARNING: Stream length has wrong value or is missing(offset = 78)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
