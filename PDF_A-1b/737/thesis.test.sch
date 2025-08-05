@@ -63,24 +63,9 @@
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '130'">Failed check, Expected: 130</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Incorrect type of Length value in stream dictionary(object key = 1339 0 obj, offset = 444184)") and @occurrences = "21" and @level = "WARNING") or 
-            (contains(., "Incorrect type of Length value in stream dictionary(object key = 3716 0 obj, offset = 2454358)") and @occurrences = "16" and @level = "WARNING") or 
-            (contains(., "Incorrect type of Length value in stream dictionary(object key = 4072 0 obj, offset = 2578501)") and @occurrences = "28" and @level = "WARNING") or 
-            (contains(., "Stream length has wrong value or is missing") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Incorrect type of Length value in stream dictionary(object key = 1339 0 obj, offset = 444184)' with 21 occurrences, or 
-            'WARNING: Incorrect type of Length value in stream dictionary(object key = 3716 0 obj, offset = 2454358)' with 16 occurrences, or 
-            'WARNING: Incorrect type of Length value in stream dictionary(object key = 4072 0 obj, offset = 2578501)' with 28 occurrences, or 
-            'WARNING: Stream length has wrong value or is missing' with 1 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 
