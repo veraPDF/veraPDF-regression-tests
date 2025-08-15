@@ -13,7 +13,7 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '1574')">Failed check, Expected: 1574</sch:assert>	
+            <sch:assert test="(@failedRules = '1560')">Failed check, Expected: 1560</sch:assert>	
         </sch:rule>
 
     </sch:pattern>
@@ -78,6 +78,7 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEAnnot' or
+            (@clause = 'Table 5. Annot-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Form-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Annot' and @testNumber = '1' and @failedChecks = '2') or 
@@ -91,6 +92,7 @@
             (@clause = 'Table 5. TR-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Annot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Table 5. Annot-Caption-1, 1 check, or 
             Table 5. Form-Annot-1, 2 checks, or 
             Table 5. L-Annot-1, 2 checks, or 
             Table 5. LI-Annot-1, 2 checks, or 
@@ -131,7 +133,6 @@
             (@clause = 'Table 5. RB-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Art' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-Art' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Art' and @testNumber = '1' and @failedChecks = '2') or 
@@ -167,7 +168,6 @@
             Table 5. RB-Art-1, 2 checks, or 
             Table 5. RP-Art-1, 2 checks, or 
             Table 5. RT-Art-1, 2 checks, or 
-            Table 5. Reference-Art-1, 2 checks, or 
             Table 5. Ruby-Art-1, 2 checks, or 
             Table 5. Span-Art-1, 2 checks, or 
             Table 5. Strong-Art-1, 2 checks, or 
@@ -228,7 +228,6 @@
             (@clause = 'Table 5. RB-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Aside' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-Aside' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Aside' and @testNumber = '1' and @failedChecks = '2') or 
@@ -264,7 +263,6 @@
             Table 5. RB-Aside-1, 2 checks, or 
             Table 5. RP-Aside-1, 2 checks, or 
             Table 5. RT-Aside-1, 2 checks, or 
-            Table 5. Reference-Aside-1, 2 checks, or 
             Table 5. Ruby-Aside-1, 2 checks, or 
             Table 5. Span-Aside-1, 2 checks, or 
             Table 5. Strong-Aside-1, 2 checks, or 
@@ -364,7 +362,6 @@
             (@clause = 'Table 5. RB-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-BlockQuote' and @testNumber = '1' and @failedChecks = '2') or 
@@ -399,7 +396,6 @@
             Table 5. RB-BlockQuote-1, 2 checks, or 
             Table 5. RP-BlockQuote-1, 2 checks, or 
             Table 5. RT-BlockQuote-1, 2 checks, or 
-            Table 5. Reference-BlockQuote-1, 2 checks, or 
             Table 5. Ruby-BlockQuote-1, 2 checks, or 
             Table 5. Span-BlockQuote-1, 2 checks, or 
             Table 5. Strong-BlockQuote-1, 2 checks, or 
@@ -441,7 +437,6 @@
             (@clause = 'Table 5. RB-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Caption' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-Caption' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Caption' and @testNumber = '1' and @failedChecks = '2') or 
@@ -472,7 +467,6 @@
             Table 5. RB-Caption-1, 2 checks, or 
             Table 5. RP-Caption-1, 2 checks, or 
             Table 5. RT-Caption-1, 2 checks, or 
-            Table 5. Reference-Caption-1, 2 checks, or 
             Table 5. Ruby-Caption-1, 2 checks, or 
             Table 5. Span-Caption-1, 2 checks, or 
             Table 5. Strong-Caption-1, 2 checks, or 
@@ -504,7 +498,6 @@
             (@clause = 'Table 5. RB-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Code' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Code' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TBody-Code' and @testNumber = '1' and @failedChecks = '2') or 
@@ -525,7 +518,6 @@
             Table 5. RB-Code-1, 2 checks, or 
             Table 5. RP-Code-1, 2 checks, or 
             Table 5. RT-Code-1, 2 checks, or 
-            Table 5. Reference-Code-1, 2 checks, or 
             Table 5. Ruby-Code-1, 2 checks, or 
             Table 5. StructTreeRoot-Code-1, 2 checks, or 
             Table 5. TBody-Code-1, 2 checks, or 
@@ -663,7 +655,6 @@
             (@clause = 'Table 5. RB-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-DocumentFragment' and @testNumber = '1' and @failedChecks = '2') or 
@@ -701,7 +692,6 @@
             Table 5. RB-DocumentFragment-1, 2 checks, or 
             Table 5. RP-DocumentFragment-1, 2 checks, or 
             Table 5. RT-DocumentFragment-1, 2 checks, or 
-            Table 5. Reference-DocumentFragment-1, 2 checks, or 
             Table 5. Ruby-DocumentFragment-1, 2 checks, or 
             Table 5. Span-DocumentFragment-1, 2 checks, or 
             Table 5. Strong-DocumentFragment-1, 2 checks, or 
@@ -776,6 +766,7 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFENote' or
+            (@clause = 'Table 5. FENote-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. L-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RB-FENote' and @testNumber = '1' and @failedChecks = '2') or 
@@ -793,6 +784,7 @@
             (@clause = 'Table 5. WP-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-FENote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-FENote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
+            Table 5. FENote-Caption-1, 1 check, or 
             Table 5. L-FENote-1, 2 checks, or 
             Table 5. LI-FENote-1, 2 checks, or 
             Table 5. RB-FENote-1, 2 checks, or 
@@ -872,7 +864,6 @@
             (@clause = 'Table 5. Index-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Form' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TBody-Form' and @testNumber = '1' and @failedChecks = '2') or 
@@ -889,7 +880,6 @@
             Table 5. Index-Form-1, 2 checks, or 
             Table 5. L-Form-1, 2 checks, or 
             Table 5. LI-Form-1, 2 checks, or 
-            Table 5. Reference-Form-1, 2 checks, or 
             Table 5. Ruby-Form-1, 2 checks, or 
             Table 5. StructTreeRoot-Form-1, 2 checks, or 
             Table 5. TBody-Form-1, 2 checks, or 
@@ -974,7 +964,6 @@
             (@clause = 'Table 5. RB-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-H' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-H' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-H' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1009,7 +998,6 @@
             Table 5. RB-H-1, 2 checks, or 
             Table 5. RP-H-1, 2 checks, or 
             Table 5. RT-H-1, 2 checks, or 
-            Table 5. Reference-H-1, 2 checks, or 
             Table 5. Ruby-H-1, 2 checks, or 
             Table 5. Span-H-1, 2 checks, or 
             Table 5. Strong-H-1, 2 checks, or 
@@ -1051,7 +1039,6 @@
             (@clause = 'Table 5. RB-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. RP-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. RT-Hn' and @testNumber = '1' and @failedChecks = '12') or 
-            (@clause = 'Table 5. Reference-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. Ruby-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. Span-Hn' and @testNumber = '1' and @failedChecks = '12') or 
             (@clause = 'Table 5. Strong-Hn' and @testNumber = '1' and @failedChecks = '12') or 
@@ -1085,7 +1072,6 @@
             Table 5. RB-Hn-1, 12 checks, or 
             Table 5. RP-Hn-1, 12 checks, or 
             Table 5. RT-Hn-1, 12 checks, or 
-            Table 5. Reference-Hn-1, 12 checks, or 
             Table 5. Ruby-Hn-1, 12 checks, or 
             Table 5. Span-Hn-1, 12 checks, or 
             Table 5. Strong-Hn-1, 12 checks, or 
@@ -1200,7 +1186,6 @@
             (@clause = 'Table 5. RB-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-L' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-L' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-L' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1227,7 +1212,6 @@
             Table 5. RB-L-1, 2 checks, or 
             Table 5. RP-L-1, 2 checks, or 
             Table 5. RT-L-1, 2 checks, or 
-            Table 5. Reference-L-1, 2 checks, or 
             Table 5. Ruby-L-1, 2 checks, or 
             Table 5. Span-L-1, 2 checks, or 
             Table 5. Strong-L-1, 2 checks, or 
@@ -1512,7 +1496,9 @@
             (@clause = 'Table 5. Index-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. Link-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Link-Link' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. Reference-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TBody-Link' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1527,7 +1513,9 @@
             Table 5. Index-Link-1, 2 checks, or 
             Table 5. L-Link-1, 2 checks, or 
             Table 5. LI-Link-1, 2 checks, or 
+            Table 5. Link-Caption-1, 1 check, or 
             Table 5. Link-Link-1, 2 checks, or 
+            Table 5. Reference-Link-1, 2 checks, or 
             Table 5. Ruby-Link-1, 2 checks, or 
             Table 5. StructTreeRoot-Link-1, 2 checks, or 
             Table 5. TBody-Link-1, 2 checks, or 
@@ -1604,7 +1592,6 @@
             (@clause = 'Table 5. RB-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-P' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-P' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-P' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1631,7 +1618,6 @@
             Table 5. RB-P-1, 2 checks, or 
             Table 5. RP-P-1, 2 checks, or 
             Table 5. RT-P-1, 2 checks, or 
-            Table 5. Reference-P-1, 2 checks, or 
             Table 5. Ruby-P-1, 2 checks, or 
             Table 5. Span-P-1, 2 checks, or 
             Table 5. Strong-P-1, 2 checks, or 
@@ -1674,7 +1660,6 @@
             (@clause = 'Table 5. Index-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Quote' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Quote' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1696,7 +1681,6 @@
             Table 5. Index-Quote-1, 2 checks, or 
             Table 5. L-Quote-1, 2 checks, or 
             Table 5. LI-Quote-1, 2 checks, or 
-            Table 5. Reference-Quote-1, 2 checks, or 
             Table 5. Ruby-Quote-1, 2 checks, or 
             Table 5. Sect-Quote-1, 2 checks, or 
             Table 5. StructTreeRoot-Quote-1, 2 checks, or 
@@ -2027,7 +2011,7 @@
             (@clause = 'Table 5. DocumentFragment-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Reference' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Reference' and @testNumber = '1' and @failedChecks = '2') or 
+            (@clause = 'Table 5. Reference-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Ruby-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Reference' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2043,7 +2027,7 @@
             Table 5. DocumentFragment-Reference-1, 2 checks, or 
             Table 5. L-Reference-1, 2 checks, or 
             Table 5. LI-Reference-1, 2 checks, or 
-            Table 5. Reference-Reference-1, 2 checks, or 
+            Table 5. Reference-Caption-1, 1 check, or 
             Table 5. Ruby-Reference-1, 2 checks, or 
             Table 5. Sect-Reference-1, 2 checks, or 
             Table 5. StructTreeRoot-Reference-1, 2 checks, or 
@@ -2076,7 +2060,6 @@
             (@clause = 'Table 5. RB-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2104,7 +2087,6 @@
             Table 5. RB-Ruby-1, 2 checks, or 
             Table 5. RP-Ruby-1, 2 checks, or 
             Table 5. RT-Ruby-1, 2 checks, or 
-            Table 5. Reference-Ruby-1, 2 checks, or 
             Table 5. Ruby-Ruby-1, 2 checks, or 
             Table 5. Sect-Ruby-1, 2 checks, or 
             Table 5. StructTreeRoot-Ruby-1, 2 checks, or 
@@ -2138,7 +2120,6 @@
             (@clause = 'Table 5. RB-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Sect' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Sect' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-H' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Sect-content' and @testNumber = '1' and @failedChecks = '1') or 
@@ -2169,7 +2150,6 @@
             Table 5. RB-Sect-1, 2 checks, or 
             Table 5. RP-Sect-1, 2 checks, or 
             Table 5. RT-Sect-1, 2 checks, or 
-            Table 5. Reference-Sect-1, 2 checks, or 
             Table 5. Ruby-Sect-1, 2 checks, or 
             Table 5. Sect-H-1, 1 check, or 
             Table 5. Sect-content-1, 1 check, or 
@@ -2312,7 +2292,6 @@
             (@clause = 'Table 5. Index-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. LI-Sub' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Sub' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2338,7 +2317,6 @@
             Table 5. Index-Sub-1, 2 checks, or 
             Table 5. L-Sub-1, 2 checks, or 
             Table 5. LI-Sub-1, 2 checks, or 
-            Table 5. Reference-Sub-1, 2 checks, or 
             Table 5. Ruby-Sub-1, 2 checks, or 
             Table 5. Sect-Sub-1, 2 checks, or 
             Table 5. StructTreeRoot-Sub-1, 2 checks, or 
@@ -3189,7 +3167,6 @@
             (@clause = 'Table 5. RB-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Table' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-Table' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Table' and @testNumber = '1' and @failedChecks = '2') or 
@@ -3220,7 +3197,6 @@
             Table 5. RB-Table-1, 2 checks, or 
             Table 5. RP-Table-1, 2 checks, or 
             Table 5. RT-Table-1, 2 checks, or 
-            Table 5. Reference-Table-1, 2 checks, or 
             Table 5. Ruby-Table-1, 2 checks, or 
             Table 5. Span-Table-1, 2 checks, or 
             Table 5. Strong-Table-1, 2 checks, or 
@@ -3271,7 +3247,6 @@
             (@clause = 'Table 5. RB-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Title' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Span-Title' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Strong-Title' and @testNumber = '1' and @failedChecks = '2') or 
@@ -3314,7 +3289,6 @@
             Table 5. RB-Title-1, 2 checks, or 
             Table 5. RP-Title-1, 2 checks, or 
             Table 5. RT-Title-1, 2 checks, or 
-            Table 5. Reference-Title-1, 2 checks, or 
             Table 5. Ruby-Title-1, 2 checks, or 
             Table 5. Span-Title-1, 2 checks, or 
             Table 5. Strong-Title-1, 2 checks, or 
@@ -3560,7 +3534,6 @@
             (@clause = 'Table 5. RB-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Reference-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Sect-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
@@ -3588,7 +3561,6 @@
             Table 5. RB-Warichu-1, 2 checks, or 
             Table 5. RP-Warichu-1, 2 checks, or 
             Table 5. RT-Warichu-1, 2 checks, or 
-            Table 5. Reference-Warichu-1, 2 checks, or 
             Table 5. Ruby-Warichu-1, 2 checks, or 
             Table 5. Sect-Warichu-1, 2 checks, or 
             Table 5. StructTreeRoot-Warichu-1, 2 checks, or 
