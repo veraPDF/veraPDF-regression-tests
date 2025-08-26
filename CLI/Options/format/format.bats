@@ -96,7 +96,7 @@ format_text() {
 format_html() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --format html
-    assert_output --partial '<b>Validation Profile:</b></td><td>PDF/A-2B validation profile</td>'
+    assert_output --partial '<td>PDF/A-2B validation profile</td>'
     [ "$status" -eq 0 ]
 }
 

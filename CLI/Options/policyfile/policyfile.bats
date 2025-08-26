@@ -21,6 +21,7 @@ setup() {
 policy_check() {
   echo "Running: $1" >&3
   run verapdf/verapdf $FILE_PATH/$1 --policyfile $FILE_PATH/FormVPF_pdfa.sch
-  assert_output --partial 'policyReport passedChecks="0" failedChecks="0"'
+  assert_output --partial 'passedChecks="0"'
+  assert_output --partial 'failedChecks="0"'
   assert [ "$status" == 0 ]
 }

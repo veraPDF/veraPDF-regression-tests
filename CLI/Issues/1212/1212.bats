@@ -15,8 +15,8 @@ setup() {
     run verapdf/verapdf $FILE_PATH/FormVPF_pdfa.pdf --policyfile $FILE_PATH/FormVPF_pdfa.sch --format text
 
     [ "$status" -eq 0 ]
-    assert_output --partial 'policyReport passedChecks="0" failedChecks="0"'
+
+    assert_output --partial 'passedChecks="0"'
+    assert_output --partial 'failedChecks="0"'
 
 }
-
-

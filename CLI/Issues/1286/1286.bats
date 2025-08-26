@@ -11,6 +11,7 @@ setup() {
 
     [ "$status" -eq 0 ]
 
-    assert_output --partial 'WARNING</b></font></b></td><td width="650" style="word-break: break-all">Value of ID is not an array of two byte strings'
-    assert_output --partial 'SEVERE</b></font></b></td><td width="650" style="word-break: break-all">Value of ID key is not a string. Ignoring ID'
+    output=$(echo $output)
+    assert_output --partial '<td width="100" style="word-break: break-all"><b><font color="orange"><b>WARNING</b></font></b></td> <td width="650" style="word-break: break-all">Value of ID is not an array of two byte strings</td>'
+    assert_output --partial '<td width="100" style="word-break: break-all"><b><font color="red"><b>SEVERE</b></font></b></td> <td width="650" style="word-break: break-all">Value of ID key is not a string. Ignoring ID</td>'
 }

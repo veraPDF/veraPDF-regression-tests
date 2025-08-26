@@ -42,10 +42,11 @@ maxfailuresdisplayed_ignored_maxFails_defined_config() {
     echo "Running: $1" >&3
     cp -r $BATS_TEST_DIRNAME/config_maxNumberOfDisplayedFailedChecks/validator* $BATS_TEST_TMPDIR/config/
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --config
-
-    assert_output --partial '<b>Failed Checks:</b></td><td>1</td>'
-    assert_output --partial '1 occurrences'
     [ "$status" -eq 1 ]
+
+    output=$(echo $output)
+    assert_output --partial '<td width="250"><b>Failed Checks:</b></td> <td>1</td>'
+    assert_output --partial '1 occurrences'
 }
 
 maxfailuresdisplayed_ignored_maxfailures_1() {
@@ -53,7 +54,7 @@ maxfailuresdisplayed_ignored_maxfailures_1() {
     echo "Running: $1" >&3
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 1 --maxfailuresdisplayed 2
 
-    assert_output --partial '<b>Validation Profile:</b></td><td>PDF/A-3A validation profile</td>'
+    assert_output --partial '<td>PDF/A-3A validation profile</td>'
     assert_output --partial '1 occurrences'
     refute_output --partial "2 occurrences"
     [ "$status" -eq 1 ]
@@ -70,7 +71,7 @@ maxfailuresdisplayed_ignored_maxfailures_2() {
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 2 --maxfailuresdisplayed 1
 
     [ "$status" -eq 1 ]
-    assert_output --partial '<b>Validation Profile:</b></td><td>PDF/A-3A validation profile</td>'
+    assert_output --partial '<td>PDF/A-3A validation profile</td>'
     assert_output --partial "2 occurrences"
 
     # Checking maxfailuresdisplayed ...

@@ -60,6 +60,8 @@ logs_json_check() {
 logs_html_check() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --addlogs --format html
-    assert_output --partial '<b>WARNING</b></font></b></td><td width="650" style="word-break: break-all">Value of ID is not an array of two byte strings</td>'
     [ "$status" -eq 0 ]
+
+    output=$(echo $output)
+    assert_output --partial '<td width="100" style="word-break: break-all"><b><font color="orange"><b>WARNING</b></font></b></td> <td width="650" style="word-break: break-all">Value of ID is not an array of two byte strings</td>'
 }

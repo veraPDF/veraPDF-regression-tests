@@ -34,17 +34,19 @@ setup() {
     run verapdf/verapdf $BATS_TEST_DIRNAME/inputs/. --debug --format html 
 
     [ "$status" -eq 0 ]
+
+    output=$(echo $output)
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Japanese-日本.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Chinese-中國人.pdf</td>"
-    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Česk&aacute; republika.pdf</td>"
+    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Česká republika.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Русский.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Deutschland.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Arabic-عربي.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Hebrew-עִברִית.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./čeština.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Hindi-हिन्दी.pdf</td>"
-    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Rom&acirc;nă.pdf</td>"
-    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Magyarorsz&aacute;g.pdf</td>"
+    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Română.pdf</td>"
+    assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Magyarország.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Greek_Ελληνικά.pdf</td>"
     assert_output --partial "<td class=\"lefted\">$BATS_TEST_DIRNAME/inputs/./file-Slovensko.pdf</td>"
 }
