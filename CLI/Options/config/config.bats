@@ -67,7 +67,8 @@ config_app_xml_check() {
     sed -i "5 c\    <policyFile>$BATS_TEST_DIRNAME/TestList.sch</policyFile>" $BATS_TEST_TMPDIR/config/app.xml
 
     run $BATS_TEST_TMPDIR/verapdf $FILE_PATH/$1 --config
-    assert_output --partial '<policyReport passedChecks="0" failedChecks="0" xmlns:vera="http://www.verapdf.org/MachineReadableReport">'
+    assert_output --partial 'passedChecks="0"'
+    assert_output --partial 'failedChecks="0"'
     [ "$status" -eq 0 ]
 }
 
