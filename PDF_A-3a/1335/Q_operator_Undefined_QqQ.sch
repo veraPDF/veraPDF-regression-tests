@@ -7,7 +7,6 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1335 -->
     <!-- File: Q_operator_Undefined_QqQ.pdf -->
 
-
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
@@ -34,14 +33,16 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
+            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "End of inline image not found") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Inline image content contains EI inside") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(., "Inline image content contains EI inside") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "MarkedInfo must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: End of inline image not found' with 1 occurrences, or 
-            'WARNING: Inline image content contains EI inside' with 1 occurrences</sch:assert>
+            'WARNING: Inline image content contains EI inside' with 1 occurrences, or 
+            'WARNING: MarkedInfo must be a 'COSDictionary' but got: COS_UNDEFINED' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

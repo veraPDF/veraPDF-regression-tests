@@ -7,7 +7,6 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1323 -->
     <!-- File: test.pdf -->
 
-
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
@@ -20,23 +19,32 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
-            <sch:assert test="(@clause = '6.2.11.4.2' and @testNumber = '2' and @failedChecks = '1') or 
-            (@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '1') or 
-            (@clause = '6.7.3.3' and @testNumber = '1' and @failedChecks = '1') or 
+            <sch:assert test="(@clause = '6.2.4.3' and @testNumber = '4' and @failedChecks = '1') or 
+            (@clause = '6.2.11.4.2' and @testNumber = '2' and @failedChecks = '1') or 
             (@clause = '6.6.2.1' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = '6.7.2.2' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
-            6.2.11.4.2-2, 1 check, or 
+            (@clause = '6.7.2.2' and @testNumber = '1' and @failedChecks = '1') or 
+            (@clause = '6.7.3.3' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
             6.2.4.3-4, 1 check, or 
-            6.7.3.3-1, 1 check, or 
+            6.2.11.4.2-2, 1 check, or 
             6.6.2.1-1, 1 check, or 
-            6.7.2.2-1, 2 checks</sch:assert>
+            6.7.2.2-1, 1 check, or 
+            6.7.3.3-1, 1 check</sch:assert>
         </sch:rule>
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking for the absence of logs">
+    <sch:pattern name = "Checking the logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(., "MarkedInfo must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: MarkedInfo must be a 'COSDictionary' but got: COS_UNDEFINED' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
