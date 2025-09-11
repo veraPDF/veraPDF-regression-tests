@@ -45,7 +45,7 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '124'">Failed check, Expected: 124</sch:assert>	
+            <sch:assert test="@logsCount = '122'">Failed check, Expected: 122</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
@@ -62,8 +62,7 @@
             (contains(., "Content stream (object 7 0 obj): Duplicate MCID - 352801760") and @occurrences = "14" and @level = "WARNING") or 
             (contains(., "Content stream (object 7 0 obj): Special graphics state operator (cm) inside Text object") and @occurrences = "1" and @level = "WARNING") or 
             (contains(., "Content stream (object 9 0 obj): Special graphics state operator (cm) inside Text object") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.") and @occurrences = "24" and @level = "WARNING") or 
-            (contains(., "viewerPref must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(., "Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.") and @occurrences = "24" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Content stream (object 1 0 obj): Duplicate MCID - 1585899264' with 14 occurrences, or 
             'WARNING: Content stream (object 1 0 obj): Special graphics state operator (cm) inside Text object' with 1 occurrences, or 
             'WARNING: Content stream (object 11 0 obj): Duplicate MCID - 2025276672' with 16 occurrences, or 
@@ -77,8 +76,7 @@
             'WARNING: Content stream (object 7 0 obj): Duplicate MCID - 352801760' with 14 occurrences, or 
             'WARNING: Content stream (object 7 0 obj): Special graphics state operator (cm) inside Text object' with 1 occurrences, or 
             'WARNING: Content stream (object 9 0 obj): Special graphics state operator (cm) inside Text object' with 1 occurrences, or 
-            'WARNING: Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.' with 24 occurrences, or 
-            'WARNING: viewerPref must be a 'COSDictionary' but got: COS_UNDEFINED' with 2 occurrences</sch:assert>
+            'WARNING: Incorrect bfrange in toUnicode CMap: the last byte of the string incremented past 255.' with 24 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

@@ -47,13 +47,11 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "MarkedInfo must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(., "Problems with parsing metadata. XML parsing failure") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: MarkedInfo must be a 'COSDictionary' but got: COS_UNDEFINED' with 3 occurrences, or 
+            <sch:assert test='(contains(., "Problems with parsing metadata. XML parsing failure") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Problems with parsing metadata. XML parsing failure' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>

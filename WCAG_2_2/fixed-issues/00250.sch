@@ -47,18 +47,14 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '7'">Failed check, Expected: 7</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "Content stream (object 3 0 obj): EMC operator does not have a balancing BMC/BDC operator") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "MarkedInfo must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "3" and @level = "WARNING") or 
-            (contains(., "viewerPref must be a &apos;COSDictionary&apos; but got: COS_UNDEFINED") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(., "Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Content stream (object 3 0 obj): EMC operator does not have a balancing BMC/BDC operator' with 1 occurrences, or 
-            'WARNING: Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.' with 1 occurrences, or 
-            'WARNING: MarkedInfo must be a 'COSDictionary' but got: COS_UNDEFINED' with 3 occurrences, or 
-            'WARNING: viewerPref must be a 'COSDictionary' but got: COS_UNDEFINED' with 2 occurrences</sch:assert>
+            'WARNING: Incorrect bfrange in toUnicode CMap: bfrange contains more than 256 code.' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
