@@ -53,12 +53,14 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '83'">Failed check, Expected: 83</sch:assert>	
+            <sch:assert test="@logsCount = '85'">Failed check, Expected: 85</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "Undefined font /21 in a content stream") and @occurrences = "22" and @level = "SEVERE") or 
             (contains(., "Undefined font /31 in a content stream") and @occurrences = "3" and @level = "SEVERE") or 
+            (contains(., "Can&apos;t parse font program of font LMFQNW+CMMI7") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font MDQWSI+CMBX10") and @occurrences = "1" and @level = "WARNING") or 
             (contains(., "Content stream (object 19 0 obj): Special graphics state operator (Q) inside Text object") and @occurrences = "5" and @level = "WARNING") or 
             (contains(., "Content stream (object 19 0 obj): Special graphics state operator (q) inside Text object") and @occurrences = "31" and @level = "WARNING") or 
             (contains(., "Content stream (object 19 0 obj): Wrong argument of Tr operator") and @occurrences = "5" and @level = "WARNING") or 
@@ -68,6 +70,8 @@
             (contains(., "Content stream string token exceeds 65535 bytes") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'SEVERE: Undefined font /21 in a content stream' with 22 occurrences, or 
             'SEVERE: Undefined font /31 in a content stream' with 3 occurrences, or 
+            'WARNING: Can't parse font program of font LMFQNW+CMMI7' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font MDQWSI+CMBX10' with 1 occurrences, or 
             'WARNING: Content stream (object 19 0 obj): Special graphics state operator (Q) inside Text object' with 5 occurrences, or 
             'WARNING: Content stream (object 19 0 obj): Special graphics state operator (q) inside Text object' with 31 occurrences, or 
             'WARNING: Content stream (object 19 0 obj): Wrong argument of Tr operator' with 5 occurrences, or 

@@ -7,7 +7,6 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/1295 -->
     <!-- File: r5-tokushoku-hogaku.pdf -->
 
-
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>

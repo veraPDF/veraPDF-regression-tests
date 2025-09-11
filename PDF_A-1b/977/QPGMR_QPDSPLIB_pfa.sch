@@ -7,7 +7,6 @@
     <!-- https://github.com/veraPDF/veraPDF-library/issues/977 -->
     <!-- File: QPGMR_QPDSPLIB_pfa.pdf -->
 
-
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
             <sch:assert test="(@isCompliant = 'false')">Failed check, Expected: isCompliant=false</sch:assert>
@@ -26,9 +25,18 @@
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking for the absence of logs">
+    <sch:pattern name = "Checking the logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '1'">Failed check, Expected: 1</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(., "Can&apos;t parse font program of font Courier") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Can't parse font program of font Courier' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 

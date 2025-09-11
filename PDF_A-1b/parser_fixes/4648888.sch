@@ -35,9 +35,30 @@
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking for the absence of logs">
+    <sch:pattern name = "Checking the logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
+            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs">
+            <sch:assert test="@logsCount = '7'">Failed check, Expected: 7</sch:assert>	
+        </sch:rule>
+
+        <sch:rule context="/report/jobs/job/logs/logMessage">
+            <sch:assert test='(contains(., "Can&apos;t parse font program of font BHQPRB+LucidaSans") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font DUBOAJ+Arial-ItalicMT") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font HYSQEK+LucidaSans-Italic") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font RPGOKA+LucidaSans-Demi") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font ZBNHSW+Arial-BoldMT") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font ZJNNKO+ArialMT") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Can&apos;t parse font program of font ZTKAPF+Garamond-Italic") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Can't parse font program of font BHQPRB+LucidaSans' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font DUBOAJ+Arial-ItalicMT' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font HYSQEK+LucidaSans-Italic' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font RPGOKA+LucidaSans-Demi' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font ZBNHSW+Arial-BoldMT' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font ZJNNKO+ArialMT' with 1 occurrences, or 
+            'WARNING: Can't parse font program of font ZTKAPF+Garamond-Italic' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
