@@ -13,7 +13,7 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '1654')">Failed check, Expected: 1654</sch:assert>	
+            <sch:assert test="(@failedRules = '1641')">Failed check, Expected: 1641</sch:assert>	
         </sch:rule>
 
     </sch:pattern>
@@ -99,7 +99,6 @@
             (@clause = 'Table 5. TFoot-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. THead-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TOC-Annot' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. TOCI-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TR-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Annot' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Annot' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
@@ -124,7 +123,6 @@
             Table 5. TFoot-Annot-1, 2 checks, or 
             Table 5. THead-Annot-1, 2 checks, or 
             Table 5. TOC-Annot-1, 2 checks, or 
-            Table 5. TOCI-Annot-1, 2 checks, or 
             Table 5. TR-Annot-1, 2 checks, or 
             Table 5. Table-Annot-1, 2 checks, or 
             Table 5. Warichu-Annot-1, 2 checks</sch:assert>
@@ -312,7 +310,6 @@
             <sch:assert test="object != 'SEBibEntry' or
             (@clause = 'Table 5. Art-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. BibEntry-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. BlockQuote-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-BibEntry' and @testNumber = '1' and @failedChecks = '2') or 
@@ -337,7 +334,6 @@
             (@clause = 'Table 5. Warichu-BibEntry' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             Table 5. Art-BibEntry-1, 2 checks, or 
             Table 5. Aside-BibEntry-1, 2 checks, or 
-            Table 5. BibEntry-BibEntry-1, 2 checks, or 
             Table 5. BlockQuote-BibEntry-1, 2 checks, or 
             Table 5. Document-BibEntry-1, 2 checks, or 
             Table 5. DocumentFragment-BibEntry-1, 2 checks, or 
@@ -570,7 +566,6 @@
             (@clause = 'Table 5. L-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Lbl-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. P-Div' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Quote-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RB-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RP-Div' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. RT-Div' and @testNumber = '1' and @failedChecks = '2') or 
@@ -594,7 +589,6 @@
             Table 5. L-Div-1, 2 checks, or 
             Table 5. Lbl-Div-1, 2 checks, or 
             Table 5. P-Div-1, 2 checks, or 
-            Table 5. Quote-Div-1, 2 checks, or 
             Table 5. RB-Div-1, 2 checks, or 
             Table 5. RP-Div-1, 2 checks, or 
             Table 5. RT-Div-1, 2 checks, or 
@@ -944,7 +938,6 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEForm' or
-            (@clause = 'Table 5. BibEntry-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Form-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Form-Code' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Form-Figure' and @testNumber = '1' and @failedChecks = '1') or 
@@ -966,7 +959,6 @@
             (@clause = 'Table 5. TR-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Form' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Form' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Table 5. BibEntry-Form-1, 2 checks, or 
             Table 5. Form-Caption-1, 1 check, or 
             Table 5. Form-Code-1, 1 check, or 
             Table 5. Form-Figure-1, 1 check, or 
@@ -996,7 +988,6 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEFormula' or
-            (@clause = 'Table 5. BibEntry-Formula' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Formula-Caption' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Formula-H' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. L-Formula' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1016,7 +1007,6 @@
             (@clause = 'Table 5. WP-Formula' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. WT-Formula' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Formula' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Table 5. BibEntry-Formula-1, 2 checks, or 
             Table 5. Formula-Caption-1, 1 check, or 
             Table 5. Formula-H-1, 1 check, or 
             Table 5. L-Formula-1, 2 checks, or 
@@ -1602,11 +1592,9 @@
             (@clause = 'Table 5. Link-H' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Link-Hn' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Link-L' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = 'Table 5. Link-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Link-P' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Link-Table' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Link-Title' and @testNumber = '1' and @failedChecks = '1') or 
-            (@clause = 'Table 5. Reference-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Ruby-Link' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Link' and @testNumber = '1' and @failedChecks = '7') or 
             (@clause = 'Table 5. TBody-Link' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1629,11 +1617,9 @@
             Table 5. Link-H-1, 1 check, or 
             Table 5. Link-Hn-1, 1 check, or 
             Table 5. Link-L-1, 1 check, or 
-            Table 5. Link-Link-1, 2 checks, or 
             Table 5. Link-P-1, 1 check, or 
             Table 5. Link-Table-1, 1 check, or 
             Table 5. Link-Title-1, 1 check, or 
-            Table 5. Reference-Link-1, 2 checks, or 
             Table 5. Ruby-Link-1, 2 checks, or 
             Table 5. StructTreeRoot-Link-1, 7 checks, or 
             Table 5. TBody-Link-1, 2 checks, or 
@@ -1844,7 +1830,6 @@
             <sch:assert test="object != 'SEQuote' or
             (@clause = 'Table 5. Art-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-Quote' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. BibEntry-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. BlockQuote-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-Quote' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-Quote' and @testNumber = '1' and @failedChecks = '2') or 
@@ -1865,7 +1850,6 @@
             (@clause = 'Table 5. Warichu-Quote' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             Table 5. Art-Quote-1, 2 checks, or 
             Table 5. Aside-Quote-1, 2 checks, or 
-            Table 5. BibEntry-Quote-1, 2 checks, or 
             Table 5. BlockQuote-Quote-1, 2 checks, or 
             Table 5. Document-Quote-1, 2 checks, or 
             Table 5. DocumentFragment-Quote-1, 2 checks, or 
@@ -2198,7 +2182,6 @@
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="object != 'SEReference' or
-            (@clause = 'Table 5. Art-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. L-Reference' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2215,7 +2198,6 @@
             (@clause = 'Table 5. Reference-Table' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Reference-Title' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Ruby-Reference' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. Sect-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. StructTreeRoot-Reference' and @testNumber = '1' and @failedChecks = '7') or 
             (@clause = 'Table 5. TBody-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. TFoot-Reference' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2224,7 +2206,6 @@
             (@clause = 'Table 5. TR-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Table-Reference' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Warichu-Reference' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
-            Table 5. Art-Reference-1, 2 checks, or 
             Table 5. Document-Reference-1, 2 checks, or 
             Table 5. DocumentFragment-Reference-1, 2 checks, or 
             Table 5. L-Reference-1, 2 checks, or 
@@ -2241,7 +2222,6 @@
             Table 5. Reference-Table-1, 1 check, or 
             Table 5. Reference-Title-1, 1 check, or 
             Table 5. Ruby-Reference-1, 2 checks, or 
-            Table 5. Sect-Reference-1, 2 checks, or 
             Table 5. StructTreeRoot-Reference-1, 7 checks, or 
             Table 5. TBody-Reference-1, 2 checks, or 
             Table 5. TFoot-Reference-1, 2 checks, or 
@@ -2261,7 +2241,6 @@
             (@clause = '8.2.5.23' and @testNumber = '1' and @failedChecks = '115') or 
             (@clause = 'Table 5. Art-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. BibEntry-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. BlockQuote-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-Ruby' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2288,7 +2267,6 @@
             8.2.5.23-1, 115 checks, or 
             Table 5. Art-Ruby-1, 2 checks, or 
             Table 5. Aside-Ruby-1, 2 checks, or 
-            Table 5. BibEntry-Ruby-1, 2 checks, or 
             Table 5. BlockQuote-Ruby-1, 2 checks, or 
             Table 5. Document-Ruby-1, 2 checks, or 
             Table 5. DocumentFragment-Ruby-1, 2 checks, or 
@@ -2496,7 +2474,6 @@
             <sch:assert test="object != 'SESub' or
             (@clause = 'Table 5. Art-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-Sub' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. BibEntry-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. BlockQuote-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-Sub' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-Sub' and @testNumber = '1' and @failedChecks = '2') or 
@@ -2521,7 +2498,6 @@
             (@clause = 'Table 5. Warichu-Sub' and @testNumber = '1' and @failedChecks = '2')">Failed rules, Expected: 
             Table 5. Art-Sub-1, 2 checks, or 
             Table 5. Aside-Sub-1, 2 checks, or 
-            Table 5. BibEntry-Sub-1, 2 checks, or 
             Table 5. BlockQuote-Sub-1, 2 checks, or 
             Table 5. Document-Sub-1, 2 checks, or 
             Table 5. DocumentFragment-Sub-1, 2 checks, or 
@@ -3735,7 +3711,6 @@
             (@clause = '8.2.5.24' and @testNumber = '1' and @failedChecks = '115') or 
             (@clause = 'Table 5. Art-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Aside-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
-            (@clause = 'Table 5. BibEntry-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. BlockQuote-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. Document-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
             (@clause = 'Table 5. DocumentFragment-Warichu' and @testNumber = '1' and @failedChecks = '2') or 
@@ -3762,7 +3737,6 @@
             8.2.5.24-1, 115 checks, or 
             Table 5. Art-Warichu-1, 2 checks, or 
             Table 5. Aside-Warichu-1, 2 checks, or 
-            Table 5. BibEntry-Warichu-1, 2 checks, or 
             Table 5. BlockQuote-Warichu-1, 2 checks, or 
             Table 5. Document-Warichu-1, 2 checks, or 
             Table 5. DocumentFragment-Warichu-1, 2 checks, or 
