@@ -23,14 +23,14 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 1812 in stream 25 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 3083 in stream 20 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 7617 in stream 11 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 9898 in stream 16 0 obj)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 1812 in stream 25 0 obj)' with 1 occurrences, or 
-            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 3083 in stream 20 0 obj)' with 1 occurrences, or 
-            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 7617 in stream 11 0 obj)' with 1 occurrences, or 
-            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstings specified(offset = 9898 in stream 16 0 obj)' with 1 occurrences</sch:assert>
+            <sch:assert test='(contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 1812 in stream 25 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 3083 in stream 20 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 7617 in stream 11 0 obj)") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 9898 in stream 16 0 obj)") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 1812 in stream 25 0 obj)' with 1 occurrences, or 
+            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 3083 in stream 20 0 obj)' with 1 occurrences, or 
+            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 7617 in stream 11 0 obj)' with 1 occurrences, or 
+            'WARNING: Error in parsing private data in Type 1 font: incorrect amount of charstrings specified(offset = 9898 in stream 16 0 obj)' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
