@@ -24,7 +24,7 @@ setup() {
 }
 
 using_fixMetadata_and_maxFails_check() {
-    local ERROR_MESSAGES='6'
+    local ERROR_MESSAGES='8'
     echo "Running: $1" >&3
     run --separate-stderr -- $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --maxfailures 1 --fixmetadata
 
