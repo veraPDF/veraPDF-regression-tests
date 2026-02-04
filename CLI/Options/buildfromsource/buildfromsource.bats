@@ -44,7 +44,7 @@ setup() {
         run mvn clean install
         [ "$status" -eq 0 ]
 
-        run echo $(ls ./greenfield-apps/target/)
+        run echo $(ls ./cli/target/)
         FILE=$(ls $BATS_TEST_TMPDIR/veraPDF-apps/cli/target/cli-${branch_list[$branch]}.jar)
         echo "File: $FILE" >&3
         assert [ -f "$FILE" ] # Check if File exists
