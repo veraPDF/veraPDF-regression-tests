@@ -2,8 +2,8 @@
 
 #Creating an associative array
 typeset -Ag branch_list
-# branch_list[master]="-*"
-branch_list[integration]="-*-SNAPSHOT"
+# branch_list[master]="*"
+branch_list[integration]="*-SNAPSHOT"
 
 setup_file() {
     echo "Dowloading Maven ... to $BATS_SUITE_TMPDIR" >&3
