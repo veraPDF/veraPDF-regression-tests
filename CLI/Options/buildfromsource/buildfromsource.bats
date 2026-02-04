@@ -45,7 +45,7 @@ setup() {
         [ "$status" -eq 0 ]
 
         run echo $(ls ./greenfield-apps/target/)
-        FILE=$(ls $BATS_TEST_TMPDIR/veraPDF-apps/greenfield-apps/target/greenfield-${branch_list[$branch]}.jar)
+        FILE=$(ls $BATS_TEST_TMPDIR/veraPDF-apps/cli/target/cli-${branch_list[$branch]}.jar)
         echo "File: $FILE" >&3
         assert [ -f "$FILE" ] # Check if File exists
     done
