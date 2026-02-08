@@ -41,8 +41,8 @@
 			6.2.3.3-1, 5154 checks, or
 			6.3.7-3, 165 checks, or
 			6.5.3-2, 1254 checks, or
-			6.7.3-7, 1 checks, or
-			6.7.3-8, 1 checks, or
+			6.7.3-7, 1 check, or
+			6.7.3-8, 1 check, or
 			6.1.12-2, 164 checks, or
 			6.5.3-3, 1089 checks, or
 			6.7.9-2, 3 checks, or
@@ -50,7 +50,7 @@
 			6.4-2, 500 checks, or
 			6.4-5, 76 checks, or
 			6.3.4-1, 4 checks, or
-			6.7.11-1, 1 checks, or
+			6.7.11-1, 1 check, or
 			6.2.4-3, 501 checks, or
 			6.4-6, 76 checks, or
 			6.4-3, 5 checks</sch:assert>
