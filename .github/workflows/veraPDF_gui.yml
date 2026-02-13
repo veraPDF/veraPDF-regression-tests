@@ -46,7 +46,7 @@ jobs:
           echo "Performing veraPDF installation ... "
           echo "#Downloading veraPDF, latest rc version ... unziping to $PWD" 
           curl -LO https://software.verapdf.org/releases/verapdf-installer-rc.zip
-          unzip verapdf-installer.zip
+          unzip verapdf-installer-rc.zip
 
           echo "Definition of the variables"
           veradir=$(ls | grep verapdf-greenfield)
