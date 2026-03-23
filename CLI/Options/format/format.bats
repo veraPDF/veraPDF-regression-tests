@@ -96,7 +96,7 @@ format_text() {
 format_html() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --format html
-    assert_output --partial '<td>PDF/A-2B validation profile</td>'
+    assert_output --partial '<td>PDF/A-2b validation profile</td>'
     [ "$status" -eq 0 ]
 }
 
@@ -104,7 +104,7 @@ format_json() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1 --format json
     assert_output --partial '"jobEndStatus" : "normal",
-  "profileName" : "PDF/A-2B validation profile",
+  "profileName" : "PDF/A-2b validation profile",
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true'
 

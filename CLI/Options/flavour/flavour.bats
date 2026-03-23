@@ -6,17 +6,17 @@ FILES_TO_CHECK=(
 
 #Creating an associative array
 typeset -Ag profiles
-profiles[1a]=PDF/A-1A
-profiles[1b]=PDF/A-1B
-profiles[2a]=PDF/A-2A
-profiles[2b]=PDF/A-2B
-profiles[2u]=PDF/A-2U
-profiles[3a]=PDF/A-3A
-profiles[3b]=PDF/A-3B
-profiles[3u]=PDF/A-3U
+profiles[1a]=PDF/A-1a
+profiles[1b]=PDF/A-1b
+profiles[2a]=PDF/A-2a
+profiles[2b]=PDF/A-2b
+profiles[2u]=PDF/A-2u
+profiles[3a]=PDF/A-3a
+profiles[3b]=PDF/A-3b
+profiles[3u]=PDF/A-3u
 profiles[4]=PDF/A-4
-profiles[4f]=PDF/A-4F
-profiles[4E]=PDF/A-4E
+profiles[4f]=PDF/A-4f
+profiles[4e]=PDF/A-4e
 profiles[ua1]=PDF/UA-1
 profiles[ua2]="PDF/UA-2 + Tagged PDF"
 
@@ -46,7 +46,7 @@ setup() {
 default_flavour_check() {
     echo "Running: $1" >&3
     run verapdf/verapdf $FILE_PATH/$1
-    assert_output --partial 'profileName="PDF/A-1B validation profile"'
+    assert_output --partial 'profileName="PDF/A-1b validation profile"'
     assert [ "$status" == 1 ]
 }
 

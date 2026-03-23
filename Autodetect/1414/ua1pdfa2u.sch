@@ -9,9 +9,9 @@
 
     <sch:pattern name = "Checking the validationReport: document is not compliant">
         <sch:rule context="/report/jobs/job/validationReport">
-            <sch:assert test="((@isCompliant = 'false' and contains(@profileName,'PDF/A-2U')) or 
+            <sch:assert test="((@isCompliant = 'false' and contains(@profileName,'PDF/A-2u')) or
             (@isCompliant = 'true' and contains(@profileName,'PDF/UA-1')))">Failed check, 
-            Expected: PDF/A-2U, isCompliant=false or PDF/UA-1, isCompliant=true</sch:assert>
+            Expected: PDF/A-2u, isCompliant=false or PDF/UA-1, isCompliant=true</sch:assert>
         </sch:rule>
     </sch:pattern>
 

@@ -13,17 +13,17 @@ setup() {
 
     [ "$status" -eq 0 ]
     assert_output --partial "veraPDF supported PDF/A and PDF/UA profiles:"
-    assert_output --partial "1a - PDF/A-1A validation profile"
-    assert_output --partial "1b - PDF/A-1B validation profile"
-    assert_output --partial "2a - PDF/A-2A validation profile"
-    assert_output --partial "2b - PDF/A-2B validation profile"
-    assert_output --partial "2u - PDF/A-2U validation profile"
-    assert_output --partial "3a - PDF/A-3A validation profile"
-    assert_output --partial "3b - PDF/A-3B validation profile"
-    assert_output --partial "3u - PDF/A-3U validation profile"
+    assert_output --partial "1a - PDF/A-1a validation profile"
+    assert_output --partial "1b - PDF/A-1b validation profile"
+    assert_output --partial "2a - PDF/A-2a validation profile"
+    assert_output --partial "2b - PDF/A-2b validation profile"
+    assert_output --partial "2u - PDF/A-2u validation profile"
+    assert_output --partial "3a - PDF/A-3a validation profile"
+    assert_output --partial "3b - PDF/A-3b validation profile"
+    assert_output --partial "3u - PDF/A-3u validation profile"
     assert_output --partial "4 - PDF/A-4 validation profile"
-    assert_output --partial "4f - PDF/A-4F validation profile"
-    assert_output --partial "4e - PDF/A-4E validation profile"
+    assert_output --partial "4f - PDF/A-4f validation profile"
+    assert_output --partial "4e - PDF/A-4e validation profile"
     assert_output --partial "ua1 - PDF/UA-1 validation profile"
 
 }
