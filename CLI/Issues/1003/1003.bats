@@ -14,7 +14,7 @@ setup() {
   assert_output --partial '<?xml version="1.0" encoding="utf-8"?>'
   assert_output --partial '<report>'
   assert_output --partial '</report>'
-  assert_output --partial '<validationReport jobEndStatus="normal" profileName="PDF/A-2B validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">'
+  assert_output --partial '<validationReport jobEndStatus="normal" profileName="PDF/A-2b validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">'
 }
 
 # https://github.com/veraPDF/veraPDF-library/pull/1003
@@ -26,7 +26,7 @@ setup() {
   assert_output --partial '<?xml version="1.0" encoding="utf-8"?>'
   assert_output --partial '<report>'
   assert_output --partial '</report>'
-  assert_output --partial '<validationReport jobEndStatus="normal" profileName="PDF/A-2B validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">'
+  assert_output --partial '<validationReport jobEndStatus="normal" profileName="PDF/A-2b validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">'
 }
 
 # https://github.com/veraPDF/veraPDF-library/pull/1003
