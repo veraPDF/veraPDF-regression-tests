@@ -16,7 +16,7 @@ profiles[3b]=PDF/A-3b
 profiles[3u]=PDF/A-3u
 profiles[4]=PDF/A-4
 profiles[4f]=PDF/A-4f
-profiles[4E]=PDF/A-4e
+profiles[4e]=PDF/A-4e
 profiles[ua1]=PDF/UA-1
 profiles[ua2]="PDF/UA-2 + Tagged PDF"
 
