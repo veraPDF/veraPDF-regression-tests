@@ -40,7 +40,7 @@ get_plugin_version() {
     PLUGIN_NAME=$1
 
 
-    PLUGIN_VERSION=$(cat "$PROJECT_ROOT/verapdf/config/plugins.xml" | grep "$PLUGIN_NAME" | grep -o [0-9].[0-9][0-9].[0-9]-RC[0-9])
+    PLUGIN_VERSION=$(cat "$PROJECT_ROOT/verapdf/config/plugins.xml" | grep "$PLUGIN_NAME" | grep -o [1-9].[1-9][0-9].[1-9][0-9]?)
 
     echo "PLUGIN_VERSION: "$PLUGIN_VERSION >&3
 
