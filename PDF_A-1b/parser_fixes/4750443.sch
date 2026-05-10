@@ -22,7 +22,7 @@
             (@clause = '6.2.3.3' and @testNumber = '2' and @failedChecks = '185') or 
             (@clause = '6.2.3.3' and @testNumber = '3' and @failedChecks = '3112') or 
             (@clause = '6.2.10' and @testNumber = '1' and @failedChecks = '3') or 
-            (@clause = '6.3.4' and @testNumber = '1' and @failedChecks = '8') or 
+            (@clause = '6.3.4' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.7.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.7.3' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '6.7.3' and @testNumber = '2' and @failedChecks = '1') or 
@@ -37,7 +37,7 @@
             6.2.3.3-2, 185 checks, or 
             6.2.3.3-3, 3112 checks, or 
             6.2.10-1, 3 checks, or 
-            6.3.4-1, 8 checks, or 
+            6.3.4-1, 1 check, or 
             6.7.2-1, 1 check, or 
             6.7.3-1, 1 check, or 
             6.7.3-2, 1 check, or 
@@ -51,28 +51,9 @@
 
     </sch:pattern>
 
-    <sch:pattern name = "Checking the logs">
+    <sch:pattern name = "Checking for the absence of logs">
         <sch:rule context="/report/jobs/job">
-            <sch:assert test="count(logs) = 1">Failed check, Expected: contains logs</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '6'">Failed check, Expected: 6</sch:assert>	
-        </sch:rule>
-
-        <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Can&apos;t parse font program of font Univers") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Can&apos;t parse font program of font Univers-Black") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Can&apos;t parse font program of font Univers-Bold") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Can&apos;t parse font program of font Univers-Condensed") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Can&apos;t parse font program of font Univers-CondensedLight") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "Can&apos;t parse font program of font Univers-Light") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
-            'WARNING: Can't parse font program of font Univers' with 1 occurrences, or 
-            'WARNING: Can't parse font program of font Univers-Black' with 1 occurrences, or 
-            'WARNING: Can't parse font program of font Univers-Bold' with 1 occurrences, or 
-            'WARNING: Can't parse font program of font Univers-Condensed' with 1 occurrences, or 
-            'WARNING: Can't parse font program of font Univers-CondensedLight' with 1 occurrences, or 
-            'WARNING: Can't parse font program of font Univers-Light' with 1 occurrences</sch:assert>
+            <sch:assert test="not(logs)">Failed check, Expected: no logs</sch:assert>
         </sch:rule>
     </sch:pattern>
 
