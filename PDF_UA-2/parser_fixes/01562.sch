@@ -13,7 +13,7 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '17')">Failed check, Expected: 17</sch:assert>	
+            <sch:assert test="(@failedRules = '15')">Failed check, Expected: 15</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
@@ -22,7 +22,6 @@
             (@clause = '6.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.2.2' and @testNumber = '1' and @failedChecks = '6238') or 
             (@clause = '8.2.5.2' and @testNumber = '2' and @failedChecks = '1') or 
-            (@clause = '8.2.5.20' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.2.5.25' and @testNumber = '1' and @failedChecks = '9') or 
             (@clause = '8.2.5.26' and @testNumber = '3' and @failedChecks = '3') or 
             (@clause = '8.2.5.26' and @testNumber = '4' and @failedChecks = '3') or 
@@ -30,7 +29,6 @@
             (@clause = '8.4.3' and @testNumber = '1' and @failedChecks = '74') or 
             (@clause = '8.4.5.5.1' and @testNumber = '1' and @failedChecks = '4') or 
             (@clause = '8.8' and @testNumber = '1' and @failedChecks = '16') or 
-            (@clause = '8.9.2.3' and @testNumber = '1' and @failedChecks = '11') or 
             (@clause = '8.9.3.3' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.11.1' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = 'Table 5. Sect-content' and @testNumber = '1' and @failedChecks = '1')">Failed rules, Expected: 
@@ -39,7 +37,6 @@
             6.2-1, 1 check, or 
             8.2.2-1, 6238 checks, or 
             8.2.5.2-2, 1 check, or 
-            8.2.5.20-1, 1 check, or 
             8.2.5.25-1, 9 checks, or 
             8.2.5.26-3, 3 checks, or 
             8.2.5.26-4, 3 checks, or 
@@ -47,7 +44,6 @@
             8.4.3-1, 74 checks, or 
             8.4.5.5.1-1, 4 checks, or 
             8.8-1, 16 checks, or 
-            8.9.2.3-1, 11 checks, or 
             8.9.3.3-1, 1 check, or 
             8.11.1-1, 1 check, or 
             Table 5. Sect-content-1, 1 check</sch:assert>
