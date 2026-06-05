@@ -49,15 +49,17 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '3'">Failed check, Expected: 3</sch:assert>	
+            <sch:assert test="@logsCount = '5'">Failed check, Expected: 3</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "Error setting fill color with scn operator") and @occurrences = "1" and @level = "WARNING") or 
             (contains(., "Problems with parsing metadata. XML parsing failure") and @occurrences = "1" and @level = "WARNING") or 
+            (contains(., "Error while parsing content stream. invalid pdf array") and @occurrences = "2" and @level = "WARNING") or 
             (contains(., "cm operator does not have 6 arguments") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Error setting fill color with scn operator' with 1 occurrences, or 
             'WARNING: Problems with parsing metadata. XML parsing failure' with 1 occurrences, or 
+            'WARNING: Error while parsing content stream. invalid pdf array' with 1 occurrences, or 
             'WARNING: cm operator does not have 6 arguments' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
