@@ -37,7 +37,6 @@
             1.3.1-3, 2 checks, or 
             1.3.1-4, 37 checks, or
             1.3.1-2, 2 checks, or
-            1.4.4-1, 22 checks
             4.1.2-22, 1 check, or
             4.1.2-15, 2 checks, or
             4.1.2-46, 3 checks, or
