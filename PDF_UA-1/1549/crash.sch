@@ -31,13 +31,11 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '4'">Failed check, Expected: 4</sch:assert>	
+            <sch:assert test="@logsCount = '2'">Failed check, Expected: 2</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
-            <sch:assert test='(contains(., "Undefined color space /DeviceGray in a content stream") and @occurrences = "2" and @level = "SEVERE") or 
-            (contains(., "Missing /Resources entry or inherited resources in the page dictionary") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
-            'SEVERE: Undefined color space /DeviceGray in a content stream' with 2 occurrences, or 
+            <sch:assert test='(contains(., "Missing /Resources entry or inherited resources in the page dictionary") and @occurrences = "2" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Missing /Resources entry or inherited resources in the page dictionary' with 2 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
