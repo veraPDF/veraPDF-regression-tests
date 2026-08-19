@@ -31,7 +31,7 @@ failuresdisplayed_max_0() {
     echo "Running: $1" >&3
     run --separate-stderr -- verapdf/verapdf $FILE_PATH/$1 --maxfailuresdisplayed 0
     [ "$status" -eq 1 ]
-    assert_output --partial "<errorMessage>XMP property does not correspond to type null</errorMessage>"
+    assert_output --partial "<errorMessage>XMP property does not correspond to type integer</errorMessage>"
 
     run echo $stderr
     assert_output --partial "WARNING: Argument 0 of option maxfailuresdisplayed is not supported and changed to 1"
