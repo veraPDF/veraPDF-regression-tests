@@ -1,8 +1,8 @@
 #!/usr/bin/env bats
 bats_require_minimum_version 1.5.0
 FILES_TO_CHECK=(
-    "68_1_fail.pdf"
-    "68_1_fail.zip")
+    "a.pdf"
+    "a.zip")
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
