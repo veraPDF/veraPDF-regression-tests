@@ -10,7 +10,7 @@ setup() {
 
     FILE_PATH="$PROJECT_ROOT/CLI/Resources"
     cp -r verapdf/* $BATS_TEST_TMPDIR
-    cp -r $FILE_PATH/68_1_fail.* $BATS_TEST_TMPDIR
+    cp -r $FILE_PATH/a.* $BATS_TEST_TMPDIR
     assert [ ${#FILES_TO_CHECK[@]} != 0 ]
 }
 
