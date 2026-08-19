@@ -54,7 +54,7 @@ maxfailuresdisplayed_ignored_maxfailures_1() {
     echo "Running: $1" >&3
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 1 --maxfailuresdisplayed 2
 
-    assert_output --partial '<td>PDF/A-3a validation profile</td>'
+    assert_output --partial '<td>PDF/A-1b validation profile</td>'
     assert_output --partial '1 occurrences'
     refute_output --partial "2 occurrences"
     [ "$status" -eq 1 ]
@@ -71,7 +71,7 @@ maxfailuresdisplayed_ignored_maxfailures_2() {
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 2 --maxfailuresdisplayed 1
 
     [ "$status" -eq 1 ]
-    assert_output --partial '<td>PDF/A-3a validation profile</td>'
+    assert_output --partial '<td>PDF/A-1b validation profile</td>'
     assert_output --partial "2 occurrences"
 
     # Checking maxfailuresdisplayed ...
