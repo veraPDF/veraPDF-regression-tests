@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 FILES_TO_CHECK=(
-    "a.pdf"
-    "a.zip")
+    "7.1-t05-fail-d.pdf"
+    "7.1-t05-fail-d.zip")
 
 setup() {
     PROJECT_ROOT="$(cd "$(dirname "$BATS_TEST_FILENAME")/../../.." >/dev/null 2>&1 && pwd)"
@@ -10,7 +10,7 @@ setup() {
 
     FILE_PATH="$PROJECT_ROOT/CLI/Resources"
     cp -r verapdf/* $BATS_TEST_TMPDIR
-    cp -r $FILE_PATH/a.* $BATS_TEST_TMPDIR
+    cp -r $FILE_PATH/7.1-t05-fail-d.* $BATS_TEST_TMPDIR
     assert [ ${#FILES_TO_CHECK[@]} != 0 ]
 }
 
@@ -54,13 +54,13 @@ maxfailuresdisplayed_ignored_maxfailures_1() {
     echo "Running: $1" >&3
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 1 --maxfailuresdisplayed 2
 
-    assert_output --partial '<td>PDF/A-1b validation profile</td>'
+    assert_output --partial '<td>PDF/UA-1 validation profile</td>'
     assert_output --partial '1 occurrences'
     refute_output --partial "2 occurrences"
     [ "$status" -eq 1 ]
 
     # Checking maxfailuresdisplayed ...
-    output_results=$(echo ${output} | grep -w -o "PDF/A Identification Schema is null instead of 1 for PDF/A-1 conforming file" | grep -w -o Identification | wc -w)
+    output_results=$(echo ${output} | grep -w -o "A circular mapping exists for Standard structure type" | grep -w -o circular | wc -w)
     run echo $output_results
     assert_equal $output_results $MESSAGES
 }
@@ -71,11 +71,12 @@ maxfailuresdisplayed_ignored_maxfailures_2() {
     run $BATS_TEST_TMPDIR/verapdf $BATS_TEST_TMPDIR/$1 --format html --maxfailures 2 --maxfailuresdisplayed 1
 
     [ "$status" -eq 1 ]
-    assert_output --partial '<td>PDF/A-1b validation profile</td>'
-    assert_output --regexp "(1|2) occurrences"
+    assert_output --partial '<td>PDF/UA-1 validation profile</td>'
+    assert_output --regexp "2 occurrences"
+    refute_output --partial "1 occurrences"
 
     # Checking maxfailuresdisplayed ...
-    output_results=$(echo ${output} | grep -w -o "PDF/A Identification Schema is null instead of 1 for PDF/A-1 conforming file" | grep -w -o Identification | wc -w)
+    output_results=$(echo ${output} | grep -w -o "A circular mapping exists for Standard structure type" | grep -w -o circular | wc -w)
     run echo $output_results
     assert_equal $output_results $MESSAGES
 }
