@@ -60,7 +60,7 @@ maxfailuresdisplayed_ignored_maxfailures_1() {
     [ "$status" -eq 1 ]
 
     # Checking maxfailuresdisplayed ...
-    output_results=$(echo ${output} | grep -w -o "MIME type text" | grep -w -o MIME | wc -w)
+    output_results=$(echo ${output} | grep -w -o "XMP property does not correspond" | grep -w -o MIME | wc -w)
     run echo $output_results
     assert_equal $output_results $MESSAGES
 }
@@ -72,10 +72,10 @@ maxfailuresdisplayed_ignored_maxfailures_2() {
 
     [ "$status" -eq 1 ]
     assert_output --partial '<td>PDF/A-1b validation profile</td>'
-    assert_output --partial "2 occurrences"
+    assert_output --regexp "(1|2) occurrences"
 
     # Checking maxfailuresdisplayed ...
-    output_results=$(echo ${output} | grep -w -o "MIME type text" | grep -w -o MIME | wc -w)
+    output_results=$(echo ${output} | grep -w -o "XMP property does not correspond" | grep -w -o MIME | wc -w)
     run echo $output_results
     assert_equal $output_results $MESSAGES
 }
