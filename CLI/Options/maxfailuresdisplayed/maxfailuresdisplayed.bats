@@ -31,7 +31,7 @@ failuresdisplayed_max_0() {
     echo "Running: $1" >&3
     run --separate-stderr -- verapdf/verapdf $FILE_PATH/$1 --maxfailuresdisplayed 0
     [ "$status" -eq 1 ]
-    assert_output --partial "<errorMessage>Properties specified in XMP form shall use either the predefined schemas defined in XMP Specification, or extension schemas that comply with XMP Specification</errorMessage>"
+    assert_output --partial "<errorMessage>XMP property does not correspond to type null</errorMessage>"
 
     run echo $stderr
     assert_output --partial "WARNING: Argument 0 of option maxfailuresdisplayed is not supported and changed to 1"
@@ -45,7 +45,7 @@ failuresdisplayed_max_2() {
     run verapdf/verapdf $FILE_PATH/$1 --maxfailuresdisplayed 2
     [ "$status" -eq 1 ]
 
-    output_results=$(echo ${output} | grep -w -o "<errorMessage>Properties specified in XMP" | grep -w -o errorMessage | wc -w)
+    output_results=$(echo ${output} | grep -w -o "<errorMessage>XMP property does not correspond" | grep -w -o errorMessage | wc -w)
     run echo $output_results
     assert_output --partial $ERROR_MESSAGES
 }
