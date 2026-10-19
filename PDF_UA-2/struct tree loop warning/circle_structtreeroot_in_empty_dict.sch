@@ -16,15 +16,17 @@
 
     <sch:pattern name = "Checking the validationReport: rules">
         <sch:rule context="/report/jobs/job/validationReport/details">
-            <sch:assert test="(@failedRules = '11')">Failed check, Expected: 11</sch:assert>	
+            <sch:assert test="(@failedRules = '12')">Failed check, Expected: 12</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/validationReport/details/rule">
             <sch:assert test="(@clause = '8.2.2' and @testNumber = '1' and @failedChecks = '14') or 
+            (@clause = '8.2.1' and @testNumber = '2' and @failedChecks = '1') or 
             (@clause = '8.2.4' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.2.5.2' and @testNumber = '1' and @failedChecks = '1') or 
             (@clause = '8.8' and @testNumber = '1' and @failedChecks = '1') or
             (@specification = 'ISO 32005:2023')">Failed rules, Expected: 
+            8.2.1-2, 1 check, or 
             8.2.2-1, 14 checks, or 
             8.2.4-1, 1 check, or 
             8.2.5.2-1, 1 check, or 
@@ -40,22 +42,18 @@
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs">
-            <sch:assert test="@logsCount = '11'">Failed check, Expected: 42</sch:assert>	
+            <sch:assert test="@logsCount = '9'">Failed check, Expected: 9</sch:assert>	
         </sch:rule>
 
         <sch:rule context="/report/jobs/job/logs/logMessage">
             <sch:assert test='(contains(., "Struct tree loop found") and @occurrences = "6" and @level = "WARNING") or 
             (contains(., "The value of P key of struct element 14 0 obj is different from the actual parent struct element 6 0 obj") and @occurrences = "1" and @level = "WARNING") or 
             (contains(., "The value of P key of struct element 23 0 obj is different from the actual parent struct element 14 0 obj") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "The value of P key of struct element 42 0 obj is different from the actual parent struct element 40 0 obj") and @occurrences = "1" and @level = "WARNING") or 
-            (contains(., "The value of P key of struct element 42 0 obj is different from the actual parent struct element 41 0 obj") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
+            (contains(., "The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj") and @occurrences = "1" and @level = "WARNING")'>Invalid logs, Expected: 
             'WARNING: Struct tree loop found' with 6 occurrences, or 
             'WARNING: The value of P key of struct element 14 0 obj is different from the actual parent struct element 6 0 obj' with 1 occurrences, or 
             'WARNING: The value of P key of struct element 23 0 obj is different from the actual parent struct element 14 0 obj' with 1 occurrences, or 
-            'WARNING: The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj' with 1 occurrences, or 
-            'WARNING: The value of P key of struct element 42 0 obj is different from the actual parent struct element 40 0 obj' with 1 occurrences, or 
-            'WARNING: The value of P key of struct element 42 0 obj is different from the actual parent struct element 41 0 obj' with 1 occurrences</sch:assert>
+            'WARNING: The value of P key of struct element 24 0 obj is different from the actual parent struct element 14 0 obj' with 1 occurrences</sch:assert>
         </sch:rule>
     </sch:pattern>
 
